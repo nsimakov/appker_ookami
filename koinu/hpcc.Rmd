@@ -1,0 +1,75 @@
+---
+title: "HPCC"
+author: nikolays
+date: 7/28/20
+output: html_notebook
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(ggplot2)
+library(dplyr)
+library(cowplot)
+library(knitr)
+library(kableExtra)
+```
+
+```{r include=FALSE}
+# Read data
+hpcc <- read.csv("data/hpcc.csv", stringsAsFactors=F) %>%
+    select(-X) %>% filter(metric != "App:Version") %>%
+    mutate(
+        value=as.numeric(value),
+        exe_type=factor(exe_type),
+        problem_size=factor(problem_size),
+        metric_type=factor(metric_type),
+        metric=factor(metric),
+        units=factor(units),
+        resource=factor(resource, c(
+            "Koinu (CPU ARM ThunderX2 32(128) cores x2)",
+            "Stampede2 SKX (CPU Intel Xeon Platinum 8160 24(48) cores x2)",
+            "Stampede2 KNL (CPU Intel Xeon Phi 7250 68(272) cores x2)",
+            "Comet (CPU Intel Xeon E5-2680v3 12 cores x2, Haswell)",
+            "Bridges (Intel E5-2695 v3 14 cores x2, Haswell)")
+        )
+    )
+#dput(unique(hpcc$resource))
+#head(hpcc)
+```
+```{r include=FALSE}
+# statistics we are interested in
+#dput(unique(hpcc$metric[hpcc$metric_type=="statistic"]))
+stats <- c(
+    "Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance",
+    "High Performance LINPACK Floating-Point Performance",
+    "Fast Fourier Transform (FFTW) Floating-Point Performance",
+    "Parallel Matrix Transpose (PTRANS)",
+    "MPI Random Access",
+    "Average STREAM 'Triad' Memory Bandwidth",
+    "Average STREAM 'Add' Memory Bandwidth",
+    "Average STREAM 'Copy' Memory Bandwidth",
+    "Average STREAM 'Scale' Memory Bandwidth"
+)
+units <- hpcc %>% group_by(metric) %>% summarise(units=as.character(first(units))) %>%
+    ungroup()
+units$units[is.na(units$units)]<-""
+```
+
+Everything is executed on single node, average of 10 runs.
+
+```{r results='asis', echo=FALSE}
+for(stat in stats) {
+    stat_units <- units$units[units$metric==stat]
+    if(stat_units=="") {
+        cap <- stat
+    } else {
+        cap <- paste0(stat, ", ", stat_units)
+    }
+    perf <- hpcc %>% filter(metric == stat) %>%
+        group_by(resource,cpus) %>%
+        summarise(mean=mean(value),stdev=sd(value))
+    print(kable(perf, caption = cap, digits = 2, "html") %>%
+  kable_styling(full_width = F))
+}
+```
