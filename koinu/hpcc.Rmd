@@ -2,7 +2,11 @@
 title: "HPCC"
 author: nikolays
 date: 7/28/20
-output: html_notebook
+output:
+  html_notebook:
+    toc: true
+    toc_depth: 3
+    toc_float: true
 ---
 
 ```{r setup, include=FALSE}
@@ -65,7 +69,7 @@ units$units[is.na(units$units)]<-""
 
 Everything is executed on single node, average of 10 runs.
 
-## Metrics
+# Metrics
 
 Some of reported HPCC metrics:
 
@@ -86,8 +90,8 @@ Some of reported HPCC metrics:
    + Embarrassingly parallel, Averaged over all MPI process, MByte per Second
    + (There is also serial metric; measured but not analysed)
 
-## Results
-### Overall Performance (That is per All MPI Processes)
+# Results
+## Overall Performance (That is per All MPI Processes)
 
 ```{r results='asis', echo=FALSE, fig.width = 11, fig.height = 6}
 for(stat in stats_overall) {
@@ -97,7 +101,7 @@ for(stat in stats_overall) {
     } else {
         cap <- paste0(stat, ", ", stat_units)
     }
-    cat(paste0("<h4>",cap,"</h4>\n"))
+    cat(paste0("<h3>",cap,"</h3>\n"))
     perf <- hpcc %>% filter(metric == stat) %>%
         group_by(resource,exe_type,cpus) %>%
         summarise(average=mean(value),stdev=sd(value)) %>%
@@ -117,7 +121,7 @@ for(stat in stats_per_core) {
     } else {
         cap <- paste0(stat, ", ", stat_units)
     }
-    cat(paste0("<h4>",cap,"</h4>\n"))
+    cat(paste0("<h3>",cap,"</h3>\n"))
     perf <- hpcc %>% filter(metric == stat) %>%
         group_by(resource,exe_type,cpus) %>%
         summarise(average=mean(value*cpus),stdev=sd(value*cpus)) %>%
@@ -142,10 +146,10 @@ for(stat in stats_overall) {
     } else {
         cap <- paste0(stat, ", ", stat_units)
     }
-    cat(paste0("<h4>",cap,"</h4>\n"))
+    cat(paste0("<h3>",cap,"</h3>\n"))
     perf <- hpcc %>% filter(metric == stat) %>%
         group_by(resource,exe_type,cpus) %>%
-        summarise(average=mean(value/cpus),stdev=sd(value)) %>%
+        summarise(average=mean(value/cpus),stdev=sd(value/cpus)) %>%
         ungroup() %>% mutate(conf=paste(resource,exe_type,cpus, sep = ", ")) %>%
         mutate(conf=factor(conf, levels = rev(conf)))
     print(ggplot(perf, aes(x=conf, y=average)) +
@@ -162,10 +166,10 @@ for(stat in stats_per_core) {
     } else {
         cap <- paste0(stat, ", ", stat_units)
     }
-    cat(paste0("<h4>",cap,"</h4>\n"))
+    cat(paste0("<h3>",cap,"</h3>\n"))
     perf <- hpcc %>% filter(metric == stat) %>%
         group_by(resource,exe_type,cpus) %>%
-        summarise(average=mean(value),stdev=sd(value*cpus)) %>%
+        summarise(average=mean(value),stdev=sd(value)) %>%
         ungroup() %>% mutate(conf=paste(resource,exe_type,cpus, sep = ", ")) %>%
         mutate(conf=factor(conf, levels = rev(conf)))
     print(ggplot(perf, aes(x=conf, y=average)) +
