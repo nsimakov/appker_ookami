@@ -1756,130 +1756,49 @@ summary {
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-text-begin -->
 <p>Everything is executed on single node, average of 10 runs.</p>
+<div id="metrics" class="section level2">
+<h2>Metrics</h2>
+<p>Some of reported HPCC metrics:</p>
+<ul>
+<li>Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance
+<ul>
+<li>Embarrassingly parallel, Averaged over all MPI process, MFLOP per Second per MPI process</li>
+<li>(There is also serial metric; measured but not analysed)</li>
+</ul></li>
+<li>High Performance LINPACK Floating-Point Performance
+<ul>
+<li>Parallel, overall MFLOP per Second</li>
+</ul></li>
+<li>Fast Fourier Transform (FFTW) Floating-Point Performance
+<ul>
+<li>Parallel, MFLOP per Second</li>
+<li>(There are also serial and embarrassingly parallel metrics; measured but not analysed)</li>
+</ul></li>
+<li>Parallel Matrix Transpose (PTRANS)
+<ul>
+<li>Parallel, overall MByte per Second</li>
+</ul></li>
+<li>MPI Random Access
+<ul>
+<li>Parallel, overall MUpdate per Second</li>
+<li>(There are also serial and embarrassingly parallel metrics; measured but not analysed)</li>
+</ul></li>
+<li>Average STREAM ‘Triad’/ ‘Add’ / ‘Copy’ / ‘Scale’ Memory Bandwidth
+<ul>
+<li>Embarrassingly parallel, Averaged over all MPI process, MByte per Second</li>
+<li>(There is also serial metric; measured but not analysed)</li>
+</ul></li>
+</ul>
+</div>
+<div id="results" class="section level2">
+<h2>Results</h2>
+<div id="overall-performance" class="section level3">
+<h3>Overall Performance</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
-<caption>
-Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance, MFLOP per Second
-</caption>
-<thead>
-<tr>
-<th style="text-align:left;">
-resource
-</th>
-<th style="text-align:right;">
-cpus
-</th>
-<th style="text-align:right;">
-mean
-</th>
-<th style="text-align:right;">
-stdev
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-Koinu (CPU ARM ThunderX2 32(128) cores x2)
-</td>
-<td style="text-align:right;">
-64
-</td>
-<td style="text-align:right;">
-896.43
-</td>
-<td style="text-align:right;">
-1.04
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Koinu (CPU ARM ThunderX2 32(128) cores x2)
-</td>
-<td style="text-align:right;">
-128
-</td>
-<td style="text-align:right;">
-482.61
-</td>
-<td style="text-align:right;">
-0.51
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Koinu (CPU ARM ThunderX2 32(128) cores x2)
-</td>
-<td style="text-align:right;">
-256
-</td>
-<td style="text-align:right;">
-253.71
-</td>
-<td style="text-align:right;">
-0.70
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Stampede2 SKX (CPU Intel Xeon Platinum 8160 24(48) cores x2)
-</td>
-<td style="text-align:right;">
-48
-</td>
-<td style="text-align:right;">
-44291.00
-</td>
-<td style="text-align:right;">
-1137.71
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Stampede2 KNL (CPU Intel Xeon Phi 7250 68(272) cores x2)
-</td>
-<td style="text-align:right;">
-68
-</td>
-<td style="text-align:right;">
-4920.40
-</td>
-<td style="text-align:right;">
-212.44
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Comet (CPU Intel Xeon E5-2680v3 12 cores x2, Haswell)
-</td>
-<td style="text-align:right;">
-24
-</td>
-<td style="text-align:right;">
-28909.50
-</td>
-<td style="text-align:right;">
-513.77
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Bridges (Intel E5-2695 v3 14 cores x2, Haswell)
-</td>
-<td style="text-align:right;">
-28
-</td>
-<td style="text-align:right;">
-25868.54
-</td>
-<td style="text-align:right;">
-478.10
-</td>
-</tr>
-</tbody>
-</table>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
 High Performance LINPACK Floating-Point Performance, MFLOP per Second
@@ -1889,6 +1808,9 @@ High Performance LINPACK Floating-Point Performance, MFLOP per Second
 <th style="text-align:left;">
 resource
 </th>
+<th style="text-align:left;">
+exe_type
+</th>
 <th style="text-align:right;">
 cpus
 </th>
@@ -1904,6 +1826,9 @@ stdev
 <tr>
 <td style="text-align:left;">
 Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
 </td>
 <td style="text-align:right;">
 64
@@ -1919,6 +1844,9 @@ Koinu (CPU ARM ThunderX2 32(128) cores x2)
 <td style="text-align:left;">
 Koinu (CPU ARM ThunderX2 32(128) cores x2)
 </td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
 <td style="text-align:right;">
 128
 </td>
@@ -1933,6 +1861,9 @@ Koinu (CPU ARM ThunderX2 32(128) cores x2)
 <td style="text-align:left;">
 Koinu (CPU ARM ThunderX2 32(128) cores x2)
 </td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
 <td style="text-align:right;">
 256
 </td>
@@ -1945,21 +1876,78 @@ Koinu (CPU ARM ThunderX2 32(128) cores x2)
 </tr>
 <tr>
 <td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+485480.90
+</td>
+<td style="text-align:right;">
+1243.16
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+458037.20
+</td>
+<td style="text-align:right;">
+2048.63
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+256
+</td>
+<td style="text-align:right;">
+421653.10
+</td>
+<td style="text-align:right;">
+3126.48
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Stampede2 SKX (CPU Intel Xeon Platinum 8160 24(48) cores x2)
+</td>
+<td style="text-align:left;">
+impi/mkl
 </td>
 <td style="text-align:right;">
 48
 </td>
 <td style="text-align:right;">
-996780.00
+987470.30
 </td>
 <td style="text-align:right;">
-15023.78
+19645.62
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Stampede2 KNL (CPU Intel Xeon Phi 7250 68(272) cores x2)
+</td>
+<td style="text-align:left;">
+impi/mkl
 </td>
 <td style="text-align:right;">
 68
@@ -1975,6 +1963,9 @@ Stampede2 KNL (CPU Intel Xeon Phi 7250 68(272) cores x2)
 <td style="text-align:left;">
 Comet (CPU Intel Xeon E5-2680v3 12 cores x2, Haswell)
 </td>
+<td style="text-align:left;">
+mvapich2/mkl
+</td>
 <td style="text-align:right;">
 24
 </td>
@@ -1988,6 +1979,9 @@ Comet (CPU Intel Xeon E5-2680v3 12 cores x2, Haswell)
 <tr>
 <td style="text-align:left;">
 Bridges (Intel E5-2695 v3 14 cores x2, Haswell)
+</td>
+<td style="text-align:left;">
+impi/mkl
 </td>
 <td style="text-align:right;">
 28
@@ -2010,6 +2004,9 @@ Fast Fourier Transform (FFTW) Floating-Point Performance, MFLOP per Second
 <th style="text-align:left;">
 resource
 </th>
+<th style="text-align:left;">
+exe_type
+</th>
 <th style="text-align:right;">
 cpus
 </th>
@@ -2026,6 +2023,9 @@ stdev
 <td style="text-align:left;">
 Koinu (CPU ARM ThunderX2 32(128) cores x2)
 </td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
 <td style="text-align:right;">
 64
 </td>
@@ -2039,6 +2039,9 @@ Koinu (CPU ARM ThunderX2 32(128) cores x2)
 <tr>
 <td style="text-align:left;">
 Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
 </td>
 <td style="text-align:right;">
 128
@@ -2054,6 +2057,9 @@ Koinu (CPU ARM ThunderX2 32(128) cores x2)
 <td style="text-align:left;">
 Koinu (CPU ARM ThunderX2 32(128) cores x2)
 </td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
 <td style="text-align:right;">
 256
 </td>
@@ -2066,21 +2072,78 @@ Koinu (CPU ARM ThunderX2 32(128) cores x2)
 </tr>
 <tr>
 <td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+15247.34
+</td>
+<td style="text-align:right;">
+165.05
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+15983.20
+</td>
+<td style="text-align:right;">
+422.39
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+256
+</td>
+<td style="text-align:right;">
+17292.98
+</td>
+<td style="text-align:right;">
+4492.64
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Stampede2 SKX (CPU Intel Xeon Platinum 8160 24(48) cores x2)
+</td>
+<td style="text-align:left;">
+impi/mkl
 </td>
 <td style="text-align:right;">
 48
 </td>
 <td style="text-align:right;">
-43964.81
+43764.26
 </td>
 <td style="text-align:right;">
-919.62
+949.33
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Stampede2 KNL (CPU Intel Xeon Phi 7250 68(272) cores x2)
+</td>
+<td style="text-align:left;">
+impi/mkl
 </td>
 <td style="text-align:right;">
 68
@@ -2096,6 +2159,9 @@ Stampede2 KNL (CPU Intel Xeon Phi 7250 68(272) cores x2)
 <td style="text-align:left;">
 Comet (CPU Intel Xeon E5-2680v3 12 cores x2, Haswell)
 </td>
+<td style="text-align:left;">
+mvapich2/mkl
+</td>
 <td style="text-align:right;">
 24
 </td>
@@ -2109,6 +2175,9 @@ Comet (CPU Intel Xeon E5-2680v3 12 cores x2, Haswell)
 <tr>
 <td style="text-align:left;">
 Bridges (Intel E5-2695 v3 14 cores x2, Haswell)
+</td>
+<td style="text-align:left;">
+impi/mkl
 </td>
 <td style="text-align:right;">
 28
@@ -2131,6 +2200,9 @@ Parallel Matrix Transpose (PTRANS), MByte per Second
 <th style="text-align:left;">
 resource
 </th>
+<th style="text-align:left;">
+exe_type
+</th>
 <th style="text-align:right;">
 cpus
 </th>
@@ -2147,6 +2219,9 @@ stdev
 <td style="text-align:left;">
 Koinu (CPU ARM ThunderX2 32(128) cores x2)
 </td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
 <td style="text-align:right;">
 64
 </td>
@@ -2160,6 +2235,9 @@ Koinu (CPU ARM ThunderX2 32(128) cores x2)
 <tr>
 <td style="text-align:left;">
 Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
 </td>
 <td style="text-align:right;">
 128
@@ -2175,6 +2253,9 @@ Koinu (CPU ARM ThunderX2 32(128) cores x2)
 <td style="text-align:left;">
 Koinu (CPU ARM ThunderX2 32(128) cores x2)
 </td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
 <td style="text-align:right;">
 256
 </td>
@@ -2187,21 +2268,78 @@ Koinu (CPU ARM ThunderX2 32(128) cores x2)
 </tr>
 <tr>
 <td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+10576.29
+</td>
+<td style="text-align:right;">
+438.45
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+9855.29
+</td>
+<td style="text-align:right;">
+260.41
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+256
+</td>
+<td style="text-align:right;">
+17883.64
+</td>
+<td style="text-align:right;">
+1688.42
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Stampede2 SKX (CPU Intel Xeon Platinum 8160 24(48) cores x2)
+</td>
+<td style="text-align:left;">
+impi/mkl
 </td>
 <td style="text-align:right;">
 48
 </td>
 <td style="text-align:right;">
-18213.37
+18052.66
 </td>
 <td style="text-align:right;">
-248.20
+434.91
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Stampede2 KNL (CPU Intel Xeon Phi 7250 68(272) cores x2)
+</td>
+<td style="text-align:left;">
+impi/mkl
 </td>
 <td style="text-align:right;">
 68
@@ -2217,6 +2355,9 @@ Stampede2 KNL (CPU Intel Xeon Phi 7250 68(272) cores x2)
 <td style="text-align:left;">
 Comet (CPU Intel Xeon E5-2680v3 12 cores x2, Haswell)
 </td>
+<td style="text-align:left;">
+mvapich2/mkl
+</td>
 <td style="text-align:right;">
 24
 </td>
@@ -2230,6 +2371,9 @@ Comet (CPU Intel Xeon E5-2680v3 12 cores x2, Haswell)
 <tr>
 <td style="text-align:left;">
 Bridges (Intel E5-2695 v3 14 cores x2, Haswell)
+</td>
+<td style="text-align:left;">
+impi/mkl
 </td>
 <td style="text-align:right;">
 28
@@ -2252,6 +2396,9 @@ MPI Random Access, MUpdate per Second
 <th style="text-align:left;">
 resource
 </th>
+<th style="text-align:left;">
+exe_type
+</th>
 <th style="text-align:right;">
 cpus
 </th>
@@ -2267,6 +2414,9 @@ stdev
 <tr>
 <td style="text-align:left;">
 Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
 </td>
 <td style="text-align:right;">
 64
@@ -2282,6 +2432,9 @@ Koinu (CPU ARM ThunderX2 32(128) cores x2)
 <td style="text-align:left;">
 Koinu (CPU ARM ThunderX2 32(128) cores x2)
 </td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
 <td style="text-align:right;">
 128
 </td>
@@ -2296,6 +2449,9 @@ Koinu (CPU ARM ThunderX2 32(128) cores x2)
 <td style="text-align:left;">
 Koinu (CPU ARM ThunderX2 32(128) cores x2)
 </td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
 <td style="text-align:right;">
 256
 </td>
@@ -2308,21 +2464,78 @@ Koinu (CPU ARM ThunderX2 32(128) cores x2)
 </tr>
 <tr>
 <td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+261.14
+</td>
+<td style="text-align:right;">
+2.88
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+253.37
+</td>
+<td style="text-align:right;">
+3.62
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+256
+</td>
+<td style="text-align:right;">
+176.40
+</td>
+<td style="text-align:right;">
+14.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Stampede2 SKX (CPU Intel Xeon Platinum 8160 24(48) cores x2)
+</td>
+<td style="text-align:left;">
+impi/mkl
 </td>
 <td style="text-align:right;">
 48
 </td>
 <td style="text-align:right;">
-39.32
+39.29
 </td>
 <td style="text-align:right;">
-0.66
+0.61
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Stampede2 KNL (CPU Intel Xeon Phi 7250 68(272) cores x2)
+</td>
+<td style="text-align:left;">
+impi/mkl
 </td>
 <td style="text-align:right;">
 68
@@ -2338,6 +2551,9 @@ Stampede2 KNL (CPU Intel Xeon Phi 7250 68(272) cores x2)
 <td style="text-align:left;">
 Comet (CPU Intel Xeon E5-2680v3 12 cores x2, Haswell)
 </td>
+<td style="text-align:left;">
+mvapich2/mkl
+</td>
 <td style="text-align:right;">
 24
 </td>
@@ -2351,6 +2567,9 @@ Comet (CPU Intel Xeon E5-2680v3 12 cores x2, Haswell)
 <tr>
 <td style="text-align:left;">
 Bridges (Intel E5-2695 v3 14 cores x2, Haswell)
+</td>
+<td style="text-align:left;">
+impi/mkl
 </td>
 <td style="text-align:right;">
 28
@@ -2366,12 +2585,15 @@ Bridges (Intel E5-2695 v3 14 cores x2, Haswell)
 </table>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-Average STREAM ‘Triad’ Memory Bandwidth, MByte per Second
+Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance, MFLOP per Second
 </caption>
 <thead>
 <tr>
 <th style="text-align:left;">
 resource
+</th>
+<th style="text-align:left;">
+exe_type
 </th>
 <th style="text-align:right;">
 cpus
@@ -2389,98 +2611,366 @@ stdev
 <td style="text-align:left;">
 Koinu (CPU ARM ThunderX2 32(128) cores x2)
 </td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
 <td style="text-align:right;">
 64
 </td>
 <td style="text-align:right;">
-2462.56
+57371.47
 </td>
 <td style="text-align:right;">
-27.83
+66.41
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
 </td>
 <td style="text-align:right;">
 128
 </td>
 <td style="text-align:right;">
-1332.11
+61774.21
 </td>
 <td style="text-align:right;">
-73.05
+64.72
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Koinu (CPU ARM ThunderX2 32(128) cores x2)
 </td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
 <td style="text-align:right;">
 256
 </td>
 <td style="text-align:right;">
-679.13
+64949.94
 </td>
 <td style="text-align:right;">
-220.39
+178.61
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+630826.24
+</td>
+<td style="text-align:right;">
+3461.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+517666.05
+</td>
+<td style="text-align:right;">
+1939.81
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+256
+</td>
+<td style="text-align:right;">
+414587.39
+</td>
+<td style="text-align:right;">
+3954.54
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Stampede2 SKX (CPU Intel Xeon Platinum 8160 24(48) cores x2)
 </td>
+<td style="text-align:left;">
+impi/mkl
+</td>
 <td style="text-align:right;">
 48
 </td>
 <td style="text-align:right;">
-3146.59
+2099994.72
 </td>
 <td style="text-align:right;">
-49.17
+83882.34
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Stampede2 KNL (CPU Intel Xeon Phi 7250 68(272) cores x2)
 </td>
+<td style="text-align:left;">
+impi/mkl
+</td>
 <td style="text-align:right;">
 68
 </td>
 <td style="text-align:right;">
-4635.51
+334587.27
 </td>
 <td style="text-align:right;">
-350.27
+14445.84
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Comet (CPU Intel Xeon E5-2680v3 12 cores x2, Haswell)
 </td>
+<td style="text-align:left;">
+mvapich2/mkl
+</td>
 <td style="text-align:right;">
 24
 </td>
 <td style="text-align:right;">
-3743.99
+693828.00
 </td>
 <td style="text-align:right;">
-36.31
+12330.59
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Bridges (Intel E5-2695 v3 14 cores x2, Haswell)
 </td>
+<td style="text-align:left;">
+impi/mkl
+</td>
 <td style="text-align:right;">
 28
 </td>
 <td style="text-align:right;">
-3119.86
+724319.12
 </td>
 <td style="text-align:right;">
-19.00
+13386.87
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+Average STREAM ‘Triad’ Memory Bandwidth, MByte per Second
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+resource
+</th>
+<th style="text-align:left;">
+exe_type
+</th>
+<th style="text-align:right;">
+cpus
+</th>
+<th style="text-align:right;">
+mean
+</th>
+<th style="text-align:right;">
+stdev
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+157604.12
+</td>
+<td style="text-align:right;">
+1781.38
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+170510.52
+</td>
+<td style="text-align:right;">
+9350.40
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
+<td style="text-align:right;">
+256
+</td>
+<td style="text-align:right;">
+173858.07
+</td>
+<td style="text-align:right;">
+56420.11
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+157605.30
+</td>
+<td style="text-align:right;">
+2097.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+169241.35
+</td>
+<td style="text-align:right;">
+6080.71
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+256
+</td>
+<td style="text-align:right;">
+147068.76
+</td>
+<td style="text-align:right;">
+1834.26
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Stampede2 SKX (CPU Intel Xeon Platinum 8160 24(48) cores x2)
+</td>
+<td style="text-align:left;">
+impi/mkl
+</td>
+<td style="text-align:right;">
+48
+</td>
+<td style="text-align:right;">
+149834.22
+</td>
+<td style="text-align:right;">
+2756.57
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Stampede2 KNL (CPU Intel Xeon Phi 7250 68(272) cores x2)
+</td>
+<td style="text-align:left;">
+impi/mkl
+</td>
+<td style="text-align:right;">
+68
+</td>
+<td style="text-align:right;">
+315214.94
+</td>
+<td style="text-align:right;">
+23818.48
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Comet (CPU Intel Xeon E5-2680v3 12 cores x2, Haswell)
+</td>
+<td style="text-align:left;">
+mvapich2/mkl
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+89855.80
+</td>
+<td style="text-align:right;">
+871.37
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Bridges (Intel E5-2695 v3 14 cores x2, Haswell)
+</td>
+<td style="text-align:left;">
+impi/mkl
+</td>
+<td style="text-align:right;">
+28
+</td>
+<td style="text-align:right;">
+87356.19
+</td>
+<td style="text-align:right;">
+532.06
 </td>
 </tr>
 </tbody>
@@ -2494,6 +2984,9 @@ Average STREAM ‘Add’ Memory Bandwidth, MByte per Second
 <th style="text-align:left;">
 resource
 </th>
+<th style="text-align:left;">
+exe_type
+</th>
 <th style="text-align:right;">
 cpus
 </th>
@@ -2510,98 +3003,170 @@ stdev
 <td style="text-align:left;">
 Koinu (CPU ARM ThunderX2 32(128) cores x2)
 </td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
 <td style="text-align:right;">
 64
 </td>
 <td style="text-align:right;">
-2359.75
+151023.98
 </td>
 <td style="text-align:right;">
-28.23
+1806.49
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
 </td>
 <td style="text-align:right;">
 128
 </td>
 <td style="text-align:right;">
-1325.68
+169686.86
 </td>
 <td style="text-align:right;">
-31.04
+3973.33
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Koinu (CPU ARM ThunderX2 32(128) cores x2)
 </td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
 <td style="text-align:right;">
 256
 </td>
 <td style="text-align:right;">
-702.00
+179711.27
 </td>
 <td style="text-align:right;">
-269.19
+68912.78
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+152415.90
+</td>
+<td style="text-align:right;">
+7146.12
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+170028.17
+</td>
+<td style="text-align:right;">
+8595.58
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+256
+</td>
+<td style="text-align:right;">
+155504.82
+</td>
+<td style="text-align:right;">
+2356.32
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Stampede2 SKX (CPU Intel Xeon Platinum 8160 24(48) cores x2)
 </td>
+<td style="text-align:left;">
+impi/mkl
+</td>
 <td style="text-align:right;">
 48
 </td>
 <td style="text-align:right;">
-3135.58
+149330.12
 </td>
 <td style="text-align:right;">
-44.43
+2498.94
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Stampede2 KNL (CPU Intel Xeon Phi 7250 68(272) cores x2)
 </td>
+<td style="text-align:left;">
+impi/mkl
+</td>
 <td style="text-align:right;">
 68
 </td>
 <td style="text-align:right;">
-4658.19
+316756.66
 </td>
 <td style="text-align:right;">
-317.60
+21596.90
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Comet (CPU Intel Xeon E5-2680v3 12 cores x2, Haswell)
 </td>
+<td style="text-align:left;">
+mvapich2/mkl
+</td>
 <td style="text-align:right;">
 24
 </td>
 <td style="text-align:right;">
-3732.92
+89590.06
 </td>
 <td style="text-align:right;">
-40.31
+967.48
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Bridges (Intel E5-2695 v3 14 cores x2, Haswell)
 </td>
+<td style="text-align:left;">
+impi/mkl
+</td>
 <td style="text-align:right;">
 28
 </td>
 <td style="text-align:right;">
-3105.59
+86956.61
 </td>
 <td style="text-align:right;">
-17.50
+489.94
 </td>
 </tr>
 </tbody>
@@ -2615,6 +3180,9 @@ Average STREAM ‘Copy’ Memory Bandwidth, MByte per Second
 <th style="text-align:left;">
 resource
 </th>
+<th style="text-align:left;">
+exe_type
+</th>
 <th style="text-align:right;">
 cpus
 </th>
@@ -2631,98 +3199,170 @@ stdev
 <td style="text-align:left;">
 Koinu (CPU ARM ThunderX2 32(128) cores x2)
 </td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
 <td style="text-align:right;">
 64
 </td>
 <td style="text-align:right;">
-2016.53
+129057.82
 </td>
 <td style="text-align:right;">
-90.84
+5813.76
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
 </td>
 <td style="text-align:right;">
 128
 </td>
 <td style="text-align:right;">
-1122.79
+143716.52
 </td>
 <td style="text-align:right;">
-40.29
+5157.72
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Koinu (CPU ARM ThunderX2 32(128) cores x2)
 </td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
 <td style="text-align:right;">
 256
 </td>
 <td style="text-align:right;">
-637.62
+163230.07
 </td>
 <td style="text-align:right;">
-256.76
+65730.92
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+133553.26
+</td>
+<td style="text-align:right;">
+6625.87
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+139392.45
+</td>
+<td style="text-align:right;">
+1139.72
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+256
+</td>
+<td style="text-align:right;">
+146985.08
+</td>
+<td style="text-align:right;">
+12762.55
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Stampede2 SKX (CPU Intel Xeon Platinum 8160 24(48) cores x2)
 </td>
+<td style="text-align:left;">
+impi/mkl
+</td>
 <td style="text-align:right;">
 48
 </td>
 <td style="text-align:right;">
-2795.98
+133019.17
 </td>
 <td style="text-align:right;">
-51.21
+2674.53
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Stampede2 KNL (CPU Intel Xeon Phi 7250 68(272) cores x2)
 </td>
+<td style="text-align:left;">
+impi/mkl
+</td>
 <td style="text-align:right;">
 68
 </td>
 <td style="text-align:right;">
-3770.44
+256389.97
 </td>
 <td style="text-align:right;">
-106.91
+7269.67
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Comet (CPU Intel Xeon E5-2680v3 12 cores x2, Haswell)
 </td>
+<td style="text-align:left;">
+mvapich2/mkl
+</td>
 <td style="text-align:right;">
 24
 </td>
 <td style="text-align:right;">
-3989.76
+95754.24
 </td>
 <td style="text-align:right;">
-12.45
+298.78
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Bridges (Intel E5-2695 v3 14 cores x2, Haswell)
 </td>
+<td style="text-align:left;">
+impi/mkl
+</td>
 <td style="text-align:right;">
 28
 </td>
 <td style="text-align:right;">
-3573.87
+100068.49
 </td>
 <td style="text-align:right;">
-13.78
+385.94
 </td>
 </tr>
 </tbody>
@@ -2736,6 +3376,9 @@ Average STREAM ‘Scale’ Memory Bandwidth, MByte per Second
 <th style="text-align:left;">
 resource
 </th>
+<th style="text-align:left;">
+exe_type
+</th>
 <th style="text-align:right;">
 cpus
 </th>
@@ -2752,6 +3395,1780 @@ stdev
 <td style="text-align:left;">
 Koinu (CPU ARM ThunderX2 32(128) cores x2)
 </td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+145269.72
+</td>
+<td style="text-align:right;">
+3584.16
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+151182.25
+</td>
+<td style="text-align:right;">
+4360.15
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
+<td style="text-align:right;">
+256
+</td>
+<td style="text-align:right;">
+152769.40
+</td>
+<td style="text-align:right;">
+50916.58
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+146640.08
+</td>
+<td style="text-align:right;">
+2347.68
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+145871.47
+</td>
+<td style="text-align:right;">
+6602.79
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+256
+</td>
+<td style="text-align:right;">
+138834.45
+</td>
+<td style="text-align:right;">
+2532.77
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Stampede2 SKX (CPU Intel Xeon Platinum 8160 24(48) cores x2)
+</td>
+<td style="text-align:left;">
+impi/mkl
+</td>
+<td style="text-align:right;">
+48
+</td>
+<td style="text-align:right;">
+131622.17
+</td>
+<td style="text-align:right;">
+3081.62
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Stampede2 KNL (CPU Intel Xeon Phi 7250 68(272) cores x2)
+</td>
+<td style="text-align:left;">
+impi/mkl
+</td>
+<td style="text-align:right;">
+68
+</td>
+<td style="text-align:right;">
+270395.12
+</td>
+<td style="text-align:right;">
+20602.43
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Comet (CPU Intel Xeon E5-2680v3 12 cores x2, Haswell)
+</td>
+<td style="text-align:left;">
+mvapich2/mkl
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+79444.35
+</td>
+<td style="text-align:right;">
+354.58
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Bridges (Intel E5-2695 v3 14 cores x2, Haswell)
+</td>
+<td style="text-align:left;">
+impi/mkl
+</td>
+<td style="text-align:right;">
+28
+</td>
+<td style="text-align:right;">
+77124.61
+</td>
+<td style="text-align:right;">
+480.41
+</td>
+</tr>
+</tbody>
+</table>
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="performance-per-core-that-is-mpi-process" class="section level3">
+<h3>Performance per Core (that is MPI Process)</h3>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+High Performance LINPACK Floating-Point Performance, MFLOP per Second
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+resource
+</th>
+<th style="text-align:left;">
+exe_type
+</th>
+<th style="text-align:right;">
+cpus
+</th>
+<th style="text-align:right;">
+mean
+</th>
+<th style="text-align:right;">
+stdev
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+727.12
+</td>
+<td style="text-align:right;">
+237.15
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+367.39
+</td>
+<td style="text-align:right;">
+141.35
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
+<td style="text-align:right;">
+256
+</td>
+<td style="text-align:right;">
+177.63
+</td>
+<td style="text-align:right;">
+69.34
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+7585.64
+</td>
+<td style="text-align:right;">
+1243.16
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+3578.42
+</td>
+<td style="text-align:right;">
+2048.63
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+256
+</td>
+<td style="text-align:right;">
+1647.08
+</td>
+<td style="text-align:right;">
+3126.48
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Stampede2 SKX (CPU Intel Xeon Platinum 8160 24(48) cores x2)
+</td>
+<td style="text-align:left;">
+impi/mkl
+</td>
+<td style="text-align:right;">
+48
+</td>
+<td style="text-align:right;">
+20572.30
+</td>
+<td style="text-align:right;">
+19645.62
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Stampede2 KNL (CPU Intel Xeon Phi 7250 68(272) cores x2)
+</td>
+<td style="text-align:left;">
+impi/mkl
+</td>
+<td style="text-align:right;">
+68
+</td>
+<td style="text-align:right;">
+14515.39
+</td>
+<td style="text-align:right;">
+14078.96
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Comet (CPU Intel Xeon E5-2680v3 12 cores x2, Haswell)
+</td>
+<td style="text-align:left;">
+mvapich2/mkl
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+21434.85
+</td>
+<td style="text-align:right;">
+10238.76
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Bridges (Intel E5-2695 v3 14 cores x2, Haswell)
+</td>
+<td style="text-align:left;">
+impi/mkl
+</td>
+<td style="text-align:right;">
+28
+</td>
+<td style="text-align:right;">
+19793.02
+</td>
+<td style="text-align:right;">
+62818.10
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+Fast Fourier Transform (FFTW) Floating-Point Performance, MFLOP per Second
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+resource
+</th>
+<th style="text-align:left;">
+exe_type
+</th>
+<th style="text-align:right;">
+cpus
+</th>
+<th style="text-align:right;">
+mean
+</th>
+<th style="text-align:right;">
+stdev
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+240.44
+</td>
+<td style="text-align:right;">
+189.37
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+128.48
+</td>
+<td style="text-align:right;">
+513.88
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
+<td style="text-align:right;">
+256
+</td>
+<td style="text-align:right;">
+71.46
+</td>
+<td style="text-align:right;">
+981.23
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+238.24
+</td>
+<td style="text-align:right;">
+165.05
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+124.87
+</td>
+<td style="text-align:right;">
+422.39
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+256
+</td>
+<td style="text-align:right;">
+67.55
+</td>
+<td style="text-align:right;">
+4492.64
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Stampede2 SKX (CPU Intel Xeon Platinum 8160 24(48) cores x2)
+</td>
+<td style="text-align:left;">
+impi/mkl
+</td>
+<td style="text-align:right;">
+48
+</td>
+<td style="text-align:right;">
+911.76
+</td>
+<td style="text-align:right;">
+949.33
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Stampede2 KNL (CPU Intel Xeon Phi 7250 68(272) cores x2)
+</td>
+<td style="text-align:left;">
+impi/mkl
+</td>
+<td style="text-align:right;">
+68
+</td>
+<td style="text-align:right;">
+686.27
+</td>
+<td style="text-align:right;">
+502.63
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Comet (CPU Intel Xeon E5-2680v3 12 cores x2, Haswell)
+</td>
+<td style="text-align:left;">
+mvapich2/mkl
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+906.42
+</td>
+<td style="text-align:right;">
+1184.63
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Bridges (Intel E5-2695 v3 14 cores x2, Haswell)
+</td>
+<td style="text-align:left;">
+impi/mkl
+</td>
+<td style="text-align:right;">
+28
+</td>
+<td style="text-align:right;">
+517.85
+</td>
+<td style="text-align:right;">
+304.43
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+Parallel Matrix Transpose (PTRANS), MByte per Second
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+resource
+</th>
+<th style="text-align:left;">
+exe_type
+</th>
+<th style="text-align:right;">
+cpus
+</th>
+<th style="text-align:right;">
+mean
+</th>
+<th style="text-align:right;">
+stdev
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+167.50
+</td>
+<td style="text-align:right;">
+326.78
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+76.89
+</td>
+<td style="text-align:right;">
+136.43
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
+<td style="text-align:right;">
+256
+</td>
+<td style="text-align:right;">
+65.81
+</td>
+<td style="text-align:right;">
+2121.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+165.25
+</td>
+<td style="text-align:right;">
+438.45
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+76.99
+</td>
+<td style="text-align:right;">
+260.41
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+256
+</td>
+<td style="text-align:right;">
+69.86
+</td>
+<td style="text-align:right;">
+1688.42
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Stampede2 SKX (CPU Intel Xeon Platinum 8160 24(48) cores x2)
+</td>
+<td style="text-align:left;">
+impi/mkl
+</td>
+<td style="text-align:right;">
+48
+</td>
+<td style="text-align:right;">
+376.10
+</td>
+<td style="text-align:right;">
+434.91
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Stampede2 KNL (CPU Intel Xeon Phi 7250 68(272) cores x2)
+</td>
+<td style="text-align:left;">
+impi/mkl
+</td>
+<td style="text-align:right;">
+68
+</td>
+<td style="text-align:right;">
+205.38
+</td>
+<td style="text-align:right;">
+209.40
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Comet (CPU Intel Xeon E5-2680v3 12 cores x2, Haswell)
+</td>
+<td style="text-align:left;">
+mvapich2/mkl
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+401.27
+</td>
+<td style="text-align:right;">
+148.64
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Bridges (Intel E5-2695 v3 14 cores x2, Haswell)
+</td>
+<td style="text-align:left;">
+impi/mkl
+</td>
+<td style="text-align:right;">
+28
+</td>
+<td style="text-align:right;">
+255.91
+</td>
+<td style="text-align:right;">
+173.95
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+MPI Random Access, MUpdate per Second
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+resource
+</th>
+<th style="text-align:left;">
+exe_type
+</th>
+<th style="text-align:right;">
+cpus
+</th>
+<th style="text-align:right;">
+mean
+</th>
+<th style="text-align:right;">
+stdev
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+4.06
+</td>
+<td style="text-align:right;">
+3.36
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+1.97
+</td>
+<td style="text-align:right;">
+4.77
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
+<td style="text-align:right;">
+256
+</td>
+<td style="text-align:right;">
+0.68
+</td>
+<td style="text-align:right;">
+6.85
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+4.08
+</td>
+<td style="text-align:right;">
+2.88
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+1.98
+</td>
+<td style="text-align:right;">
+3.62
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+256
+</td>
+<td style="text-align:right;">
+0.69
+</td>
+<td style="text-align:right;">
+14.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Stampede2 SKX (CPU Intel Xeon Platinum 8160 24(48) cores x2)
+</td>
+<td style="text-align:left;">
+impi/mkl
+</td>
+<td style="text-align:right;">
+48
+</td>
+<td style="text-align:right;">
+0.82
+</td>
+<td style="text-align:right;">
+0.61
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Stampede2 KNL (CPU Intel Xeon Phi 7250 68(272) cores x2)
+</td>
+<td style="text-align:left;">
+impi/mkl
+</td>
+<td style="text-align:right;">
+68
+</td>
+<td style="text-align:right;">
+0.05
+</td>
+<td style="text-align:right;">
+0.03
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Comet (CPU Intel Xeon E5-2680v3 12 cores x2, Haswell)
+</td>
+<td style="text-align:left;">
+mvapich2/mkl
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+1.68
+</td>
+<td style="text-align:right;">
+1.20
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Bridges (Intel E5-2695 v3 14 cores x2, Haswell)
+</td>
+<td style="text-align:left;">
+impi/mkl
+</td>
+<td style="text-align:right;">
+28
+</td>
+<td style="text-align:right;">
+4.23
+</td>
+<td style="text-align:right;">
+18.94
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance, MFLOP per Second
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+resource
+</th>
+<th style="text-align:left;">
+exe_type
+</th>
+<th style="text-align:right;">
+cpus
+</th>
+<th style="text-align:right;">
+mean
+</th>
+<th style="text-align:right;">
+stdev
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+896.43
+</td>
+<td style="text-align:right;">
+66.41
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+482.61
+</td>
+<td style="text-align:right;">
+64.72
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
+<td style="text-align:right;">
+256
+</td>
+<td style="text-align:right;">
+253.71
+</td>
+<td style="text-align:right;">
+178.61
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+9856.66
+</td>
+<td style="text-align:right;">
+3461.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+4044.27
+</td>
+<td style="text-align:right;">
+1939.81
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+256
+</td>
+<td style="text-align:right;">
+1619.48
+</td>
+<td style="text-align:right;">
+3954.54
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Stampede2 SKX (CPU Intel Xeon Platinum 8160 24(48) cores x2)
+</td>
+<td style="text-align:left;">
+impi/mkl
+</td>
+<td style="text-align:right;">
+48
+</td>
+<td style="text-align:right;">
+43749.89
+</td>
+<td style="text-align:right;">
+83882.34
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Stampede2 KNL (CPU Intel Xeon Phi 7250 68(272) cores x2)
+</td>
+<td style="text-align:left;">
+impi/mkl
+</td>
+<td style="text-align:right;">
+68
+</td>
+<td style="text-align:right;">
+4920.40
+</td>
+<td style="text-align:right;">
+14445.84
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Comet (CPU Intel Xeon E5-2680v3 12 cores x2, Haswell)
+</td>
+<td style="text-align:left;">
+mvapich2/mkl
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+28909.50
+</td>
+<td style="text-align:right;">
+12330.59
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Bridges (Intel E5-2695 v3 14 cores x2, Haswell)
+</td>
+<td style="text-align:left;">
+impi/mkl
+</td>
+<td style="text-align:right;">
+28
+</td>
+<td style="text-align:right;">
+25868.54
+</td>
+<td style="text-align:right;">
+13386.87
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+Average STREAM ‘Triad’ Memory Bandwidth, MByte per Second
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+resource
+</th>
+<th style="text-align:left;">
+exe_type
+</th>
+<th style="text-align:right;">
+cpus
+</th>
+<th style="text-align:right;">
+mean
+</th>
+<th style="text-align:right;">
+stdev
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+2462.56
+</td>
+<td style="text-align:right;">
+1781.38
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+1332.11
+</td>
+<td style="text-align:right;">
+9350.40
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
+<td style="text-align:right;">
+256
+</td>
+<td style="text-align:right;">
+679.13
+</td>
+<td style="text-align:right;">
+56420.11
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+2462.58
+</td>
+<td style="text-align:right;">
+2097.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+1322.20
+</td>
+<td style="text-align:right;">
+6080.71
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+256
+</td>
+<td style="text-align:right;">
+574.49
+</td>
+<td style="text-align:right;">
+1834.26
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Stampede2 SKX (CPU Intel Xeon Platinum 8160 24(48) cores x2)
+</td>
+<td style="text-align:left;">
+impi/mkl
+</td>
+<td style="text-align:right;">
+48
+</td>
+<td style="text-align:right;">
+3121.55
+</td>
+<td style="text-align:right;">
+2756.57
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Stampede2 KNL (CPU Intel Xeon Phi 7250 68(272) cores x2)
+</td>
+<td style="text-align:left;">
+impi/mkl
+</td>
+<td style="text-align:right;">
+68
+</td>
+<td style="text-align:right;">
+4635.51
+</td>
+<td style="text-align:right;">
+23818.48
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Comet (CPU Intel Xeon E5-2680v3 12 cores x2, Haswell)
+</td>
+<td style="text-align:left;">
+mvapich2/mkl
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+3743.99
+</td>
+<td style="text-align:right;">
+871.37
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Bridges (Intel E5-2695 v3 14 cores x2, Haswell)
+</td>
+<td style="text-align:left;">
+impi/mkl
+</td>
+<td style="text-align:right;">
+28
+</td>
+<td style="text-align:right;">
+3119.86
+</td>
+<td style="text-align:right;">
+532.06
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+Average STREAM ‘Add’ Memory Bandwidth, MByte per Second
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+resource
+</th>
+<th style="text-align:left;">
+exe_type
+</th>
+<th style="text-align:right;">
+cpus
+</th>
+<th style="text-align:right;">
+mean
+</th>
+<th style="text-align:right;">
+stdev
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+2359.75
+</td>
+<td style="text-align:right;">
+1806.49
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+1325.68
+</td>
+<td style="text-align:right;">
+3973.33
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
+<td style="text-align:right;">
+256
+</td>
+<td style="text-align:right;">
+702.00
+</td>
+<td style="text-align:right;">
+68912.78
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+2381.50
+</td>
+<td style="text-align:right;">
+7146.12
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+1328.35
+</td>
+<td style="text-align:right;">
+8595.58
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+256
+</td>
+<td style="text-align:right;">
+607.44
+</td>
+<td style="text-align:right;">
+2356.32
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Stampede2 SKX (CPU Intel Xeon Platinum 8160 24(48) cores x2)
+</td>
+<td style="text-align:left;">
+impi/mkl
+</td>
+<td style="text-align:right;">
+48
+</td>
+<td style="text-align:right;">
+3111.04
+</td>
+<td style="text-align:right;">
+2498.94
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Stampede2 KNL (CPU Intel Xeon Phi 7250 68(272) cores x2)
+</td>
+<td style="text-align:left;">
+impi/mkl
+</td>
+<td style="text-align:right;">
+68
+</td>
+<td style="text-align:right;">
+4658.19
+</td>
+<td style="text-align:right;">
+21596.90
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Comet (CPU Intel Xeon E5-2680v3 12 cores x2, Haswell)
+</td>
+<td style="text-align:left;">
+mvapich2/mkl
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+3732.92
+</td>
+<td style="text-align:right;">
+967.48
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Bridges (Intel E5-2695 v3 14 cores x2, Haswell)
+</td>
+<td style="text-align:left;">
+impi/mkl
+</td>
+<td style="text-align:right;">
+28
+</td>
+<td style="text-align:right;">
+3105.59
+</td>
+<td style="text-align:right;">
+489.94
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+Average STREAM ‘Copy’ Memory Bandwidth, MByte per Second
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+resource
+</th>
+<th style="text-align:left;">
+exe_type
+</th>
+<th style="text-align:right;">
+cpus
+</th>
+<th style="text-align:right;">
+mean
+</th>
+<th style="text-align:right;">
+stdev
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+2016.53
+</td>
+<td style="text-align:right;">
+5813.76
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+1122.79
+</td>
+<td style="text-align:right;">
+5157.72
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
+<td style="text-align:right;">
+256
+</td>
+<td style="text-align:right;">
+637.62
+</td>
+<td style="text-align:right;">
+65730.92
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+2086.77
+</td>
+<td style="text-align:right;">
+6625.87
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+1089.00
+</td>
+<td style="text-align:right;">
+1139.72
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+256
+</td>
+<td style="text-align:right;">
+574.16
+</td>
+<td style="text-align:right;">
+12762.55
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Stampede2 SKX (CPU Intel Xeon Platinum 8160 24(48) cores x2)
+</td>
+<td style="text-align:left;">
+impi/mkl
+</td>
+<td style="text-align:right;">
+48
+</td>
+<td style="text-align:right;">
+2771.23
+</td>
+<td style="text-align:right;">
+2674.53
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Stampede2 KNL (CPU Intel Xeon Phi 7250 68(272) cores x2)
+</td>
+<td style="text-align:left;">
+impi/mkl
+</td>
+<td style="text-align:right;">
+68
+</td>
+<td style="text-align:right;">
+3770.44
+</td>
+<td style="text-align:right;">
+7269.67
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Comet (CPU Intel Xeon E5-2680v3 12 cores x2, Haswell)
+</td>
+<td style="text-align:left;">
+mvapich2/mkl
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+3989.76
+</td>
+<td style="text-align:right;">
+298.78
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Bridges (Intel E5-2695 v3 14 cores x2, Haswell)
+</td>
+<td style="text-align:left;">
+impi/mkl
+</td>
+<td style="text-align:right;">
+28
+</td>
+<td style="text-align:right;">
+3573.87
+</td>
+<td style="text-align:right;">
+385.94
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+Average STREAM ‘Scale’ Memory Bandwidth, MByte per Second
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+resource
+</th>
+<th style="text-align:left;">
+exe_type
+</th>
+<th style="text-align:right;">
+cpus
+</th>
+<th style="text-align:right;">
+mean
+</th>
+<th style="text-align:right;">
+stdev
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
+</td>
 <td style="text-align:right;">
 64
 </td>
@@ -2759,12 +5176,15 @@ Koinu (CPU ARM ThunderX2 32(128) cores x2)
 2269.84
 </td>
 <td style="text-align:right;">
-56.00
+3584.16
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
 </td>
 <td style="text-align:right;">
 128
@@ -2773,12 +5193,15 @@ Koinu (CPU ARM ThunderX2 32(128) cores x2)
 1181.11
 </td>
 <td style="text-align:right;">
-34.06
+4360.15
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/sysblas/intfft
 </td>
 <td style="text-align:right;">
 256
@@ -2787,26 +5210,83 @@ Koinu (CPU ARM ThunderX2 32(128) cores x2)
 596.76
 </td>
 <td style="text-align:right;">
-198.89
+50916.58
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+2291.25
+</td>
+<td style="text-align:right;">
+2347.68
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+1139.62
+</td>
+<td style="text-align:right;">
+6602.79
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Koinu (CPU ARM ThunderX2 32(128) cores x2)
+</td>
+<td style="text-align:left;">
+openmpi/armpl/intfft
+</td>
+<td style="text-align:right;">
+256
+</td>
+<td style="text-align:right;">
+542.32
+</td>
+<td style="text-align:right;">
+2532.77
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Stampede2 SKX (CPU Intel Xeon Platinum 8160 24(48) cores x2)
 </td>
+<td style="text-align:left;">
+impi/mkl
+</td>
 <td style="text-align:right;">
 48
 </td>
 <td style="text-align:right;">
-2772.65
+2742.13
 </td>
 <td style="text-align:right;">
-52.51
+3081.62
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Stampede2 KNL (CPU Intel Xeon Phi 7250 68(272) cores x2)
+</td>
+<td style="text-align:left;">
+impi/mkl
 </td>
 <td style="text-align:right;">
 68
@@ -2815,12 +5295,15 @@ Stampede2 KNL (CPU Intel Xeon Phi 7250 68(272) cores x2)
 3976.40
 </td>
 <td style="text-align:right;">
-302.98
+20602.43
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Comet (CPU Intel Xeon E5-2680v3 12 cores x2, Haswell)
+</td>
+<td style="text-align:left;">
+mvapich2/mkl
 </td>
 <td style="text-align:right;">
 24
@@ -2829,12 +5312,15 @@ Comet (CPU Intel Xeon E5-2680v3 12 cores x2, Haswell)
 3310.18
 </td>
 <td style="text-align:right;">
-14.77
+354.58
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
 Bridges (Intel E5-2695 v3 14 cores x2, Haswell)
+</td>
+<td style="text-align:left;">
+impi/mkl
 </td>
 <td style="text-align:right;">
 28
@@ -2843,14 +5329,16 @@ Bridges (Intel E5-2695 v3 14 cores x2, Haswell)
 2754.45
 </td>
 <td style="text-align:right;">
-17.16
+480.41
 </td>
 </tr>
 </tbody>
 </table>
 <!-- rnb-chunk-end -->
+</div>
+</div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiSFBDQyIKYXV0aG9yOiBuaWtvbGF5cwpkYXRlOiA3LzI4LzIwCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCmBgYHtyIHNldHVwLCBpbmNsdWRlPUZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUpCgpsaWJyYXJ5KGdncGxvdDIpCmxpYnJhcnkoZHBseXIpCmxpYnJhcnkoY293cGxvdCkKbGlicmFyeShrbml0cikKbGlicmFyeShrYWJsZUV4dHJhKQpgYGAKCmBgYHtyIGluY2x1ZGU9RkFMU0V9CiMgUmVhZCBkYXRhCmhwY2MgPC0gcmVhZC5jc3YoImRhdGEvaHBjYy5jc3YiLCBzdHJpbmdzQXNGYWN0b3JzPUYpICU+JQogICAgc2VsZWN0KC1YKSAlPiUgZmlsdGVyKG1ldHJpYyAhPSAiQXBwOlZlcnNpb24iKSAlPiUKICAgIG11dGF0ZSgKICAgICAgICB2YWx1ZT1hcy5udW1lcmljKHZhbHVlKSwKICAgICAgICBleGVfdHlwZT1mYWN0b3IoZXhlX3R5cGUpLAogICAgICAgIHByb2JsZW1fc2l6ZT1mYWN0b3IocHJvYmxlbV9zaXplKSwKICAgICAgICBtZXRyaWNfdHlwZT1mYWN0b3IobWV0cmljX3R5cGUpLAogICAgICAgIG1ldHJpYz1mYWN0b3IobWV0cmljKSwKICAgICAgICB1bml0cz1mYWN0b3IodW5pdHMpLAogICAgICAgIHJlc291cmNlPWZhY3RvcihyZXNvdXJjZSwgYygKICAgICAgICAgICAgIktvaW51IChDUFUgQVJNIFRodW5kZXJYMiAzMigxMjgpIGNvcmVzIHgyKSIsCiAgICAgICAgICAgICJTdGFtcGVkZTIgU0tYIChDUFUgSW50ZWwgWGVvbiBQbGF0aW51bSA4MTYwIDI0KDQ4KSBjb3JlcyB4MikiLAogICAgICAgICAgICAiU3RhbXBlZGUyIEtOTCAoQ1BVIEludGVsIFhlb24gUGhpIDcyNTAgNjgoMjcyKSBjb3JlcyB4MikiLAogICAgICAgICAgICAiQ29tZXQgKENQVSBJbnRlbCBYZW9uIEU1LTI2ODB2MyAxMiBjb3JlcyB4MiwgSGFzd2VsbCkiLAogICAgICAgICAgICAiQnJpZGdlcyAoSW50ZWwgRTUtMjY5NSB2MyAxNCBjb3JlcyB4MiwgSGFzd2VsbCkiKQogICAgICAgICkKICAgICkKI2RwdXQodW5pcXVlKGhwY2MkcmVzb3VyY2UpKQojaGVhZChocGNjKQpgYGAKYGBge3IgaW5jbHVkZT1GQUxTRX0KIyBzdGF0aXN0aWNzIHdlIGFyZSBpbnRlcmVzdGVkIGluCiNkcHV0KHVuaXF1ZShocGNjJG1ldHJpY1tocGNjJG1ldHJpY190eXBlPT0ic3RhdGlzdGljIl0pKQpzdGF0cyA8LSBjKAogICAgIkF2ZXJhZ2UgRG91YmxlLVByZWNpc2lvbiBHZW5lcmFsIE1hdHJpeCBNdWx0aXBsaWNhdGlvbiAoREdFTU0pIEZsb2F0aW5nLVBvaW50IFBlcmZvcm1hbmNlIiwKICAgICJIaWdoIFBlcmZvcm1hbmNlIExJTlBBQ0sgRmxvYXRpbmctUG9pbnQgUGVyZm9ybWFuY2UiLAogICAgIkZhc3QgRm91cmllciBUcmFuc2Zvcm0gKEZGVFcpIEZsb2F0aW5nLVBvaW50IFBlcmZvcm1hbmNlIiwKICAgICJQYXJhbGxlbCBNYXRyaXggVHJhbnNwb3NlIChQVFJBTlMpIiwKICAgICJNUEkgUmFuZG9tIEFjY2VzcyIsCiAgICAiQXZlcmFnZSBTVFJFQU0gJ1RyaWFkJyBNZW1vcnkgQmFuZHdpZHRoIiwKICAgICJBdmVyYWdlIFNUUkVBTSAnQWRkJyBNZW1vcnkgQmFuZHdpZHRoIiwKICAgICJBdmVyYWdlIFNUUkVBTSAnQ29weScgTWVtb3J5IEJhbmR3aWR0aCIsCiAgICAiQXZlcmFnZSBTVFJFQU0gJ1NjYWxlJyBNZW1vcnkgQmFuZHdpZHRoIgopCnVuaXRzIDwtIGhwY2MgJT4lIGdyb3VwX2J5KG1ldHJpYykgJT4lIHN1bW1hcmlzZSh1bml0cz1hcy5jaGFyYWN0ZXIoZmlyc3QodW5pdHMpKSkgJT4lCiAgICB1bmdyb3VwKCkKdW5pdHMkdW5pdHNbaXMubmEodW5pdHMkdW5pdHMpXTwtIiIKYGBgCgpFdmVyeXRoaW5nIGlzIGV4ZWN1dGVkIG9uIHNpbmdsZSBub2RlLCBhdmVyYWdlIG9mIDEwIHJ1bnMuCgpgYGB7ciByZXN1bHRzPSdhc2lzJywgZWNobz1GQUxTRX0KZm9yKHN0YXQgaW4gc3RhdHMpIHsKICAgIHN0YXRfdW5pdHMgPC0gdW5pdHMkdW5pdHNbdW5pdHMkbWV0cmljPT1zdGF0XQogICAgaWYoc3RhdF91bml0cz09IiIpIHsKICAgICAgICBjYXAgPC0gc3RhdAogICAgfSBlbHNlIHsKICAgICAgICBjYXAgPC0gcGFzdGUwKHN0YXQsICIsICIsIHN0YXRfdW5pdHMpCiAgICB9CiAgICBwZXJmIDwtIGhwY2MgJT4lIGZpbHRlcihtZXRyaWMgPT0gc3RhdCkgJT4lCiAgICAgICAgZ3JvdXBfYnkocmVzb3VyY2UsY3B1cykgJT4lCiAgICAgICAgc3VtbWFyaXNlKG1lYW49bWVhbih2YWx1ZSksc3RkZXY9c2QodmFsdWUpKQogICAgcHJpbnQoa2FibGUocGVyZiwgY2FwdGlvbiA9IGNhcCwgZGlnaXRzID0gMiwgImh0bWwiKSAlPiUKICBrYWJsZV9zdHlsaW5nKGZ1bGxfd2lkdGggPSBGKSkKfQpgYGA=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiSFBDQyIKYXV0aG9yOiBuaWtvbGF5cwpkYXRlOiA3LzI4LzIwCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCmBgYHtyIHNldHVwLCBpbmNsdWRlPUZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUpCgpsaWJyYXJ5KGdncGxvdDIpCmxpYnJhcnkoZHBseXIpCmxpYnJhcnkoY293cGxvdCkKbGlicmFyeShrbml0cikKbGlicmFyeShrYWJsZUV4dHJhKQpgYGAKCmBgYHtyIGluY2x1ZGU9RkFMU0V9CiMgUmVhZCBkYXRhCmhwY2MgPC0gcmVhZC5jc3YoImRhdGEvaHBjYy5jc3YiLCBzdHJpbmdzQXNGYWN0b3JzPUYpICU+JQogICAgc2VsZWN0KC1YKSAlPiUgZmlsdGVyKG1ldHJpYyAhPSAiQXBwOlZlcnNpb24iKSAlPiUKICAgIG11dGF0ZSgKICAgICAgICB2YWx1ZT1hcy5udW1lcmljKHZhbHVlKSwKICAgICAgICBleGVfdHlwZT1mYWN0b3IoZXhlX3R5cGUpLAogICAgICAgIHByb2JsZW1fc2l6ZT1mYWN0b3IocHJvYmxlbV9zaXplKSwKICAgICAgICBtZXRyaWNfdHlwZT1mYWN0b3IobWV0cmljX3R5cGUpLAogICAgICAgIG1ldHJpYz1mYWN0b3IobWV0cmljKSwKICAgICAgICB1bml0cz1mYWN0b3IodW5pdHMpLAogICAgICAgIHJlc291cmNlPWZhY3RvcihyZXNvdXJjZSwgYygKICAgICAgICAgICAgIktvaW51IChDUFUgQVJNIFRodW5kZXJYMiAzMigxMjgpIGNvcmVzIHgyKSIsCiAgICAgICAgICAgICJTdGFtcGVkZTIgU0tYIChDUFUgSW50ZWwgWGVvbiBQbGF0aW51bSA4MTYwIDI0KDQ4KSBjb3JlcyB4MikiLAogICAgICAgICAgICAiU3RhbXBlZGUyIEtOTCAoQ1BVIEludGVsIFhlb24gUGhpIDcyNTAgNjgoMjcyKSBjb3JlcyB4MikiLAogICAgICAgICAgICAiQ29tZXQgKENQVSBJbnRlbCBYZW9uIEU1LTI2ODB2MyAxMiBjb3JlcyB4MiwgSGFzd2VsbCkiLAogICAgICAgICAgICAiQnJpZGdlcyAoSW50ZWwgRTUtMjY5NSB2MyAxNCBjb3JlcyB4MiwgSGFzd2VsbCkiKSksCiAgICAgICAgZXhlX3R5cGU9ZmFjdG9yKGV4ZV90eXBlLCBjKAogICAgICAgICAgICAib3Blbm1waS9zeXNibGFzL2ludGZmdCIsCiAgICAgICAgICAgICJvcGVubXBpL2FybXBsL2ludGZmdCIsCiAgICAgICAgICAgICJpbXBpL21rbCIsICJtdmFwaWNoMi9ta2wiKSkKICAgICkKI2RwdXQodW5pcXVlKGhwY2MkZXhlX3R5cGUpKQojaGVhZChocGNjKQpgYGAKCmBgYHtyIGluY2x1ZGU9RkFMU0V9CiMgc3RhdGlzdGljcyB3ZSBhcmUgaW50ZXJlc3RlZCBpbgojZHB1dCh1bmlxdWUoaHBjYyRtZXRyaWNbaHBjYyRtZXRyaWNfdHlwZT09InN0YXRpc3RpYyJdKSkKc3RhdHNfb3ZlcmFsbCA8LSBjKAogICAgIkhpZ2ggUGVyZm9ybWFuY2UgTElOUEFDSyBGbG9hdGluZy1Qb2ludCBQZXJmb3JtYW5jZSIsCiAgICAiRmFzdCBGb3VyaWVyIFRyYW5zZm9ybSAoRkZUVykgRmxvYXRpbmctUG9pbnQgUGVyZm9ybWFuY2UiLAogICAgIlBhcmFsbGVsIE1hdHJpeCBUcmFuc3Bvc2UgKFBUUkFOUykiLAogICAgIk1QSSBSYW5kb20gQWNjZXNzIgopCnN0YXRzX3Blcl9jb3JlIDwtIGMoCiAgICAiQXZlcmFnZSBEb3VibGUtUHJlY2lzaW9uIEdlbmVyYWwgTWF0cml4IE11bHRpcGxpY2F0aW9uIChER0VNTSkgRmxvYXRpbmctUG9pbnQgUGVyZm9ybWFuY2UiLAogICAgIkF2ZXJhZ2UgU1RSRUFNICdUcmlhZCcgTWVtb3J5IEJhbmR3aWR0aCIsCiAgICAiQXZlcmFnZSBTVFJFQU0gJ0FkZCcgTWVtb3J5IEJhbmR3aWR0aCIsCiAgICAiQXZlcmFnZSBTVFJFQU0gJ0NvcHknIE1lbW9yeSBCYW5kd2lkdGgiLAogICAgIkF2ZXJhZ2UgU1RSRUFNICdTY2FsZScgTWVtb3J5IEJhbmR3aWR0aCIKKQp1bml0cyA8LSBocGNjICU+JSBncm91cF9ieShtZXRyaWMpICU+JSBzdW1tYXJpc2UodW5pdHM9YXMuY2hhcmFjdGVyKGZpcnN0KHVuaXRzKSkpICU+JQogICAgdW5ncm91cCgpCnVuaXRzJHVuaXRzW2lzLm5hKHVuaXRzJHVuaXRzKV08LSIiCmBgYAoKRXZlcnl0aGluZyBpcyBleGVjdXRlZCBvbiBzaW5nbGUgbm9kZSwgYXZlcmFnZSBvZiAxMCBydW5zLgoKIyMgTWV0cmljcwoKU29tZSBvZiByZXBvcnRlZCBIUENDIG1ldHJpY3M6CgogKiBBdmVyYWdlIERvdWJsZS1QcmVjaXNpb24gR2VuZXJhbCBNYXRyaXggTXVsdGlwbGljYXRpb24gKERHRU1NKSBGbG9hdGluZy1Qb2ludCBQZXJmb3JtYW5jZQogICArIEVtYmFycmFzc2luZ2x5IHBhcmFsbGVsLCBBdmVyYWdlZCBvdmVyIGFsbCBNUEkgcHJvY2VzcywgTUZMT1AgcGVyIFNlY29uZCBwZXIgTVBJIHByb2Nlc3MKICAgKyAoVGhlcmUgaXMgYWxzbyBzZXJpYWwgbWV0cmljOyBtZWFzdXJlZCBidXQgbm90IGFuYWx5c2VkKQogKiBIaWdoIFBlcmZvcm1hbmNlIExJTlBBQ0sgRmxvYXRpbmctUG9pbnQgUGVyZm9ybWFuY2UKICAgKyBQYXJhbGxlbCwgb3ZlcmFsbCBNRkxPUCBwZXIgU2Vjb25kCiAqIEZhc3QgRm91cmllciBUcmFuc2Zvcm0gKEZGVFcpIEZsb2F0aW5nLVBvaW50IFBlcmZvcm1hbmNlCiAgICsgUGFyYWxsZWwsIE1GTE9QIHBlciBTZWNvbmQKICAgKyAoVGhlcmUgYXJlIGFsc28gc2VyaWFsIGFuZCBlbWJhcnJhc3NpbmdseSBwYXJhbGxlbCBtZXRyaWNzOyBtZWFzdXJlZCBidXQgbm90IGFuYWx5c2VkKQogKiBQYXJhbGxlbCBNYXRyaXggVHJhbnNwb3NlIChQVFJBTlMpCiAgICsgUGFyYWxsZWwsIG92ZXJhbGwgTUJ5dGUgcGVyIFNlY29uZAogKiBNUEkgUmFuZG9tIEFjY2VzcwogICArIFBhcmFsbGVsLCBvdmVyYWxsIE1VcGRhdGUgcGVyIFNlY29uZAogICArIChUaGVyZSBhcmUgYWxzbyBzZXJpYWwgYW5kIGVtYmFycmFzc2luZ2x5IHBhcmFsbGVsIG1ldHJpY3M7IG1lYXN1cmVkIGJ1dCBub3QgYW5hbHlzZWQpCiAqIEF2ZXJhZ2UgU1RSRUFNICdUcmlhZCcvICdBZGQnIC8gJ0NvcHknIC8gJ1NjYWxlJyBNZW1vcnkgQmFuZHdpZHRoCiAgICsgRW1iYXJyYXNzaW5nbHkgcGFyYWxsZWwsIEF2ZXJhZ2VkIG92ZXIgYWxsIE1QSSBwcm9jZXNzLCBNQnl0ZSBwZXIgU2Vjb25kCiAgICsgKFRoZXJlIGlzIGFsc28gc2VyaWFsIG1ldHJpYzsgbWVhc3VyZWQgYnV0IG5vdCBhbmFseXNlZCkKCiMjIFJlc3VsdHMKIyMjIE92ZXJhbGwgUGVyZm9ybWFuY2UKYGBge3IgcmVzdWx0cz0nYXNpcycsIGVjaG89RkFMU0V9CmZvcihzdGF0IGluIHN0YXRzX292ZXJhbGwpIHsKICAgIHN0YXRfdW5pdHMgPC0gdW5pdHMkdW5pdHNbdW5pdHMkbWV0cmljPT1zdGF0XQogICAgaWYoc3RhdF91bml0cz09IiIpIHsKICAgICAgICBjYXAgPC0gc3RhdAogICAgfSBlbHNlIHsKICAgICAgICBjYXAgPC0gcGFzdGUwKHN0YXQsICIsICIsIHN0YXRfdW5pdHMpCiAgICB9CiAgICBwZXJmIDwtIGhwY2MgJT4lIGZpbHRlcihtZXRyaWMgPT0gc3RhdCkgJT4lCiAgICAgICAgZ3JvdXBfYnkocmVzb3VyY2UsZXhlX3R5cGUsY3B1cykgJT4lCiAgICAgICAgc3VtbWFyaXNlKG1lYW49bWVhbih2YWx1ZSksc3RkZXY9c2QodmFsdWUpKQogICAgcHJpbnQoa2FibGUocGVyZiwgY2FwdGlvbiA9IGNhcCwgZGlnaXRzID0gMiwgImh0bWwiKSAlPiUKICBrYWJsZV9zdHlsaW5nKGZ1bGxfd2lkdGggPSBGKSkKfQpmb3Ioc3RhdCBpbiBzdGF0c19wZXJfY29yZSkgewogICAgc3RhdF91bml0cyA8LSB1bml0cyR1bml0c1t1bml0cyRtZXRyaWM9PXN0YXRdCiAgICBpZihzdGF0X3VuaXRzPT0iIikgewogICAgICAgIGNhcCA8LSBzdGF0CiAgICB9IGVsc2UgewogICAgICAgIGNhcCA8LSBwYXN0ZTAoc3RhdCwgIiwgIiwgc3RhdF91bml0cykKICAgIH0KICAgIHBlcmYgPC0gaHBjYyAlPiUgZmlsdGVyKG1ldHJpYyA9PSBzdGF0KSAlPiUKICAgICAgICBncm91cF9ieShyZXNvdXJjZSxleGVfdHlwZSxjcHVzKSAlPiUKICAgICAgICBzdW1tYXJpc2UobWVhbj1tZWFuKHZhbHVlKmNwdXMpLHN0ZGV2PXNkKHZhbHVlKmNwdXMpKQogICAgcHJpbnQoa2FibGUocGVyZiwgY2FwdGlvbiA9IGNhcCwgZGlnaXRzID0gMiwgImh0bWwiKSAlPiUKICBrYWJsZV9zdHlsaW5nKGZ1bGxfd2lkdGggPSBGKSkKfQpgYGAKIyMjIFBlcmZvcm1hbmNlIHBlciBDb3JlICh0aGF0IGlzIE1QSSBQcm9jZXNzKQpgYGB7ciByZXN1bHRzPSdhc2lzJywgZWNobz1GQUxTRX0KZm9yKHN0YXQgaW4gc3RhdHNfb3ZlcmFsbCkgewogICAgc3RhdF91bml0cyA8LSB1bml0cyR1bml0c1t1bml0cyRtZXRyaWM9PXN0YXRdCiAgICBpZihzdGF0X3VuaXRzPT0iIikgewogICAgICAgIGNhcCA8LSBzdGF0CiAgICB9IGVsc2UgewogICAgICAgIGNhcCA8LSBwYXN0ZTAoc3RhdCwgIiwgIiwgc3RhdF91bml0cykKICAgIH0KICAgIHBlcmYgPC0gaHBjYyAlPiUgZmlsdGVyKG1ldHJpYyA9PSBzdGF0KSAlPiUKICAgICAgICBncm91cF9ieShyZXNvdXJjZSxleGVfdHlwZSxjcHVzKSAlPiUKICAgICAgICBzdW1tYXJpc2UobWVhbj1tZWFuKHZhbHVlL2NwdXMpLHN0ZGV2PXNkKHZhbHVlKSkKICAgIHByaW50KGthYmxlKHBlcmYsIGNhcHRpb24gPSBjYXAsIGRpZ2l0cyA9IDIsICJodG1sIikgJT4lCiAga2FibGVfc3R5bGluZyhmdWxsX3dpZHRoID0gRikpCn0KZm9yKHN0YXQgaW4gc3RhdHNfcGVyX2NvcmUpIHsKICAgIHN0YXRfdW5pdHMgPC0gdW5pdHMkdW5pdHNbdW5pdHMkbWV0cmljPT1zdGF0XQogICAgaWYoc3RhdF91bml0cz09IiIpIHsKICAgICAgICBjYXAgPC0gc3RhdAogICAgfSBlbHNlIHsKICAgICAgICBjYXAgPC0gcGFzdGUwKHN0YXQsICIsICIsIHN0YXRfdW5pdHMpCiAgICB9CiAgICBwZXJmIDwtIGhwY2MgJT4lIGZpbHRlcihtZXRyaWMgPT0gc3RhdCkgJT4lCiAgICAgICAgZ3JvdXBfYnkocmVzb3VyY2UsZXhlX3R5cGUsY3B1cykgJT4lCiAgICAgICAgc3VtbWFyaXNlKG1lYW49bWVhbih2YWx1ZSksc3RkZXY9c2QodmFsdWUqY3B1cykpCiAgICBwcmludChrYWJsZShwZXJmLCBjYXB0aW9uID0gY2FwLCBkaWdpdHMgPSAyLCAiaHRtbCIpICU+JQogIGthYmxlX3N0eWxpbmcoZnVsbF93aWR0aCA9IEYpKQp9CmBgYAo=</div>
 
 
 

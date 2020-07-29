@@ -1,11 +1,11 @@
 #!/bin/bash
 
-export EXE=/gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_sysblas
+export EXE=/gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_armplblas
 export N_RUNS=10
 
 export NPROC=64
 export AK_WD=std_64x1
-./run_ak.sh
+#./run_ak.sh
 
 export MPIRUN_ARGS="--use-hwthread-cpus"
 

@@ -61,9 +61,11 @@ read_results_xml_from_db <- function(con, resource_name, app_name, nodes, exe_ty
 # Koinu
 hpcc_results <- NULL
 resource <- "Koinu (CPU ARM ThunderX2 32(128) cores x2)"
+
+exe_type <- "openmpi/sysblas/intfft"
 results <- read_results_xml(
     file.path("appsout", "hpcc", "sysblas", "std_64x1"),
-    exe_type <- "openmpi/sysblas/intfft")
+    exe_type=exe_type)
 results$resource <- resource
 results$nodes <- 1L
 results$cpus <- 64L
@@ -71,7 +73,7 @@ results$cpus <- 64L
 hpcc_results <- rbind(hpcc_results,results)
 results <- read_results_xml(
     file.path("appsout", "hpcc", "sysblas", "std_128x1"),
-    exe_type <- "openmpi/sysblas/intfft")
+    exe_type=exe_type)
 results$resource <- resource
 results$nodes <- 1L
 results$cpus <- 128L
@@ -79,7 +81,32 @@ hpcc_results <- rbind(hpcc_results,results)
 
 results <- read_results_xml(
     file.path("appsout", "hpcc", "sysblas", "std_256x1"),
-    exe_type <- "openmpi/sysblas/intfft")
+    exe_type=exe_type)
+results$resource <- resource
+results$nodes <- 1L
+results$cpus <- 256L
+hpcc_results <- rbind(hpcc_results,results)
+
+exe_type <- "openmpi/armpl/intfft"
+results <- read_results_xml(
+    file.path("appsout", "hpcc", "amdplblas", "std_64x1"),
+    exe_type=exe_type)
+results$resource <- resource
+results$nodes <- 1L
+results$cpus <- 64L
+
+hpcc_results <- rbind(hpcc_results,results)
+results <- read_results_xml(
+    file.path("appsout", "hpcc", "amdplblas", "std_128x1"),
+    exe_type=exe_type)
+results$resource <- resource
+results$nodes <- 1L
+results$cpus <- 128L
+hpcc_results <- rbind(hpcc_results,results)
+
+results <- read_results_xml(
+    file.path("appsout", "hpcc", "amdplblas", "std_256x1"),
+    exe_type=exe_type)
 results$resource <- resource
 results$nodes <- 1L
 results$cpus <- 256L
@@ -89,7 +116,7 @@ hpcc_results <- rbind(hpcc_results,results)
 con_xsede <- dbConnect(RMySQL::MySQL(), group = "appkernel", dbname="mod_akrr")
 
 # Stampede2 SKX
-
+app_name <- "hpcc"
 results <- read_results_xml_from_db(con_xsede, "stampede2-skx", app_name, 1L, exe_type="impi/mkl",nruns=10L)
 results$resource <- "Stampede2 SKX (CPU Intel Xeon Platinum 8160 24(48) cores x2)"
 results$nodes <- 1L

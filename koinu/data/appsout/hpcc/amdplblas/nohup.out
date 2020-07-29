@@ -1,0 +1,363 @@
+std_64x1
+Run 1
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_amdpl
+Node: tx002
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+64 total processes failed to start
+mv: cannot stat 'hpccoutf.txt': No such file or directory
+Run 2
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_amdpl
+Node: tx002
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+64 total processes failed to start
+mv: cannot stat 'hpccoutf.txt': No such file or directory
+Run 3
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_amdpl
+Node: tx002
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+64 total processes failed to start
+mv: cannot stat 'hpccoutf.txt': No such file or directory
+Run 4
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_amdpl
+Node: tx002
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+64 total processes failed to start
+mv: cannot stat 'hpccoutf.txt': No such file or directory
+Run 5
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_amdpl
+Node: tx002
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+64 total processes failed to start
+mv: cannot stat 'hpccoutf.txt': No such file or directory
+Run 6
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_amdpl
+Node: tx002
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+64 total processes failed to start
+mv: cannot stat 'hpccoutf.txt': No such file or directory
+Run 7
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_amdpl
+Node: tx002
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+64 total processes failed to start
+mv: cannot stat 'hpccoutf.txt': No such file or directory
+Run 8
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_amdpl
+Node: tx002
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+64 total processes failed to start
+mv: cannot stat 'hpccoutf.txt': No such file or directory
+Run 9
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_amdpl
+Node: tx002
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+64 total processes failed to start
+mv: cannot stat 'hpccoutf.txt': No such file or directory
+Run 10
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_amdpl
+Node: tx002
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+64 total processes failed to start
+mv: cannot stat 'hpccoutf.txt': No such file or directory
+std_128x1
+Run 1
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_amdpl
+Node: tx002
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+64 total processes failed to start
+mv: cannot stat 'hpccoutf.txt': No such file or directory
+Run 2
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_amdpl
+Node: tx002
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+64 total processes failed to start
+mv: cannot stat 'hpccoutf.txt': No such file or directory
+Run 3
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_amdpl
+Node: tx002
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+64 total processes failed to start
+mv: cannot stat 'hpccoutf.txt': No such file or directory
+Run 4
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_amdpl
+Node: tx002
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+64 total processes failed to start
+mv: cannot stat 'hpccoutf.txt': No such file or directory
+Run 5
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_amdpl
+Node: tx002
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+64 total processes failed to start
+mv: cannot stat 'hpccoutf.txt': No such file or directory
+Run 6
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_amdpl
+Node: tx002
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+64 total processes failed to start
+mv: cannot stat 'hpccoutf.txt': No such file or directory
+Run 7
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_amdpl
+Node: tx002
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+64 total processes failed to start
+mv: cannot stat 'hpccoutf.txt': No such file or directory
+Run 8
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_amdpl
+Node: tx002
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+64 total processes failed to start
+mv: cannot stat 'hpccoutf.txt': No such file or directory
+Run 9
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_amdpl
+Node: tx002
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+64 total processes failed to start
+mv: cannot stat 'hpccoutf.txt': No such file or directory
+Run 10
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_amdpl
+Node: tx002
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+64 total processes failed to start
+mv: cannot stat 'hpccoutf.txt': No such file or directory
+std_256x1
+Run 1
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_amdpl
+Node: tx002
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+64 total processes failed to start
+mv: cannot stat 'hpccoutf.txt': No such file or directory
+Run 2
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_amdpl
+Node: tx002
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+64 total processes failed to start
+mv: cannot stat 'hpccoutf.txt': No such file or directory
+Run 3
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_amdpl
+Node: tx002
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+64 total processes failed to start
+mv: cannot stat 'hpccoutf.txt': No such file or directory
+Run 4
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_amdpl
+Node: tx002
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+64 total processes failed to start
+mv: cannot stat 'hpccoutf.txt': No such file or directory
+Run 5
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_amdpl
+Node: tx002
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+64 total processes failed to start
+mv: cannot stat 'hpccoutf.txt': No such file or directory
+Run 6
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_amdpl
+Node: tx002
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+64 total processes failed to start
+mv: cannot stat 'hpccoutf.txt': No such file or directory
+Run 7
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_amdpl
+Node: tx002
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+64 total processes failed to start
+mv: cannot stat 'hpccoutf.txt': No such file or directory
+Run 8
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_amdpl
+Node: tx002
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+64 total processes failed to start
+mv: cannot stat 'hpccoutf.txt': No such file or directory
+Run 9
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_amdpl
+Node: tx002
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+64 total processes failed to start
+mv: cannot stat 'hpccoutf.txt': No such file or directory
+Run 10
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: /gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_amdpl
+Node: tx002
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+64 total processes failed to start
+mv: cannot stat 'hpccoutf.txt': No such file or directory

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export EXE=/gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc_sysblas
+export EXE=/gpfs/ookami/projects/appker/execs/build/hpcc-code/hpcc
 export N_RUNS=10
 
 export NPROC=64
