@@ -138,7 +138,7 @@ for(stat in stats_per_core) {
 
 ### Performance per Core (that is MPI Process)
 
-```{r results='asis', echo=FALSE}
+```{r results='asis', echo=FALSE, fig.width = 11, fig.height = 6}
 for(stat in stats_overall) {
     stat_units <- units$units[units$metric==stat]
     if(stat_units=="") {
