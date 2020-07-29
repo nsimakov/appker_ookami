@@ -96,5 +96,22 @@ cp hpl/Make.Linux.ARM hpl/Make.Linux.ARMPL
 
 make -j 4 arch=Linux.ARMPL
 # copy hpcc binary with descriptive suffix for futher use and comparison
-cp hpcc hpcc_armpl
+cp hpcc hpcc_armplblas
 ```
+
+## HPCC OpenBLAS, internal FFT
+```bash
+module load openmpi
+module load armpl
+
+cd /gpfs/ookami/projects/appker/execs/build/hpcc-code
+make arch=Linux.ARM clean
+cp hpl/Make.Linux.ARM hpl/Make.Linux.ARMOpenBLAS
+# edit with proper settings
+# vi hpl/Make.Linux.ARMOpenBLAS
+
+make -j 4 arch=Linux.ARMOpenBLAS
+# copy hpcc binary with descriptive suffix for futher use and comparison
+cp hpcc hpcc_openblas
+```
+

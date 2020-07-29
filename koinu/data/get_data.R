@@ -112,6 +112,31 @@ results$nodes <- 1L
 results$cpus <- 256L
 hpcc_results <- rbind(hpcc_results,results)
 
+exe_type <- "openmpi/openblas/intfft"
+results <- read_results_xml(
+    file.path("appsout", "hpcc", "openblas", "std_64x1"),
+    exe_type=exe_type)
+results$resource <- resource
+results$nodes <- 1L
+results$cpus <- 64L
+
+hpcc_results <- rbind(hpcc_results,results)
+results <- read_results_xml(
+    file.path("appsout", "hpcc", "openblas", "std_128x1"),
+    exe_type=exe_type)
+results$resource <- resource
+results$nodes <- 1L
+results$cpus <- 128L
+hpcc_results <- rbind(hpcc_results,results)
+
+results <- read_results_xml(
+    file.path("appsout", "hpcc", "openblas", "std_256x1"),
+    exe_type=exe_type)
+results$resource <- resource
+results$nodes <- 1L
+results$cpus <- 256L
+hpcc_results <- rbind(hpcc_results,results)
+
 # XSEDE systems
 con_xsede <- dbConnect(RMySQL::MySQL(), group = "appkernel", dbname="mod_akrr")
 

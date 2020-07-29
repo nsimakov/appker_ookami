@@ -34,6 +34,7 @@ hpcc <- read.csv("data/hpcc.csv", stringsAsFactors=F) %>%
             "Bridges (Intel E5-2695 v3 14 cores x2, Haswell)")),
         exe_type=factor(exe_type, c(
             "openmpi/sysblas/intfft",
+            "openmpi/openblas/intfft",
             "openmpi/armpl/intfft",
             "impi/mkl", "mvapich2/mkl"))
     )
@@ -86,8 +87,9 @@ Some of reported HPCC metrics:
    + (There is also serial metric; measured but not analysed)
 
 ## Results
-### Overall Performance
-```{r results='asis', echo=FALSE}
+### Overall Performance (That is per All MPI Processes)
+
+```{r results='asis', echo=FALSE, fig.width = 11, fig.height = 6}
 for(stat in stats_overall) {
     stat_units <- units$units[units$metric==stat]
     if(stat_units=="") {
@@ -95,11 +97,18 @@ for(stat in stats_overall) {
     } else {
         cap <- paste0(stat, ", ", stat_units)
     }
+    cat(paste0("<h4>",cap,"</h4>\n"))
     perf <- hpcc %>% filter(metric == stat) %>%
         group_by(resource,exe_type,cpus) %>%
-        summarise(mean=mean(value),stdev=sd(value))
-    print(kable(perf, caption = cap, digits = 2, "html") %>%
-  kable_styling(full_width = F))
+        summarise(average=mean(value),stdev=sd(value)) %>%
+        ungroup() %>% mutate(conf=paste(resource,exe_type,cpus, sep = ", ")) %>%
+        mutate(conf=factor(conf, levels = rev(conf)))
+    print(ggplot(perf, aes(x=conf, y=average)) +
+        geom_bar(stat="identity", fill="royalblue", color="royalblue4") +
+        geom_errorbar(aes(ymin=average-stdev, ymax=average+stdev), width=.2)+
+        coord_flip()+ylab(cap))
+    print(kable(perf %>% select(-conf), caption = cap, digits = 2, "html") %>%
+        kable_styling(full_width = F))
 }
 for(stat in stats_per_core) {
     stat_units <- units$units[units$metric==stat]
@@ -108,14 +117,23 @@ for(stat in stats_per_core) {
     } else {
         cap <- paste0(stat, ", ", stat_units)
     }
+    cat(paste0("<h4>",cap,"</h4>\n"))
     perf <- hpcc %>% filter(metric == stat) %>%
         group_by(resource,exe_type,cpus) %>%
-        summarise(mean=mean(value*cpus),stdev=sd(value*cpus))
-    print(kable(perf, caption = cap, digits = 2, "html") %>%
-  kable_styling(full_width = F))
+        summarise(average=mean(value*cpus),stdev=sd(value*cpus)) %>%
+        ungroup() %>% mutate(conf=paste(resource,exe_type,cpus, sep = ", ")) %>%
+        mutate(conf=factor(conf, levels = rev(conf)))
+    print(ggplot(perf, aes(x=conf, y=average)) +
+        geom_bar(stat="identity", fill="royalblue", color="royalblue4") +
+        geom_errorbar(aes(ymin=average-stdev, ymax=average+stdev), width=.2)+
+        coord_flip()+ylab(cap))
+    print(kable(perf %>% select(-conf), caption = cap, digits = 2, "html") %>%
+        kable_styling(full_width = F))
 }
 ```
+
 ### Performance per Core (that is MPI Process)
+
 ```{r results='asis', echo=FALSE}
 for(stat in stats_overall) {
     stat_units <- units$units[units$metric==stat]
@@ -124,11 +142,18 @@ for(stat in stats_overall) {
     } else {
         cap <- paste0(stat, ", ", stat_units)
     }
+    cat(paste0("<h4>",cap,"</h4>\n"))
     perf <- hpcc %>% filter(metric == stat) %>%
         group_by(resource,exe_type,cpus) %>%
-        summarise(mean=mean(value/cpus),stdev=sd(value))
-    print(kable(perf, caption = cap, digits = 2, "html") %>%
-  kable_styling(full_width = F))
+        summarise(average=mean(value/cpus),stdev=sd(value)) %>%
+        ungroup() %>% mutate(conf=paste(resource,exe_type,cpus, sep = ", ")) %>%
+        mutate(conf=factor(conf, levels = rev(conf)))
+    print(ggplot(perf, aes(x=conf, y=average)) +
+        geom_bar(stat="identity", fill="royalblue", color="royalblue4") +
+        geom_errorbar(aes(ymin=average-stdev, ymax=average+stdev), width=.2)+
+        coord_flip()+ylab(cap))
+    print(kable(perf %>% select(-conf), caption = cap, digits = 2, "html") %>%
+        kable_styling(full_width = F))
 }
 for(stat in stats_per_core) {
     stat_units <- units$units[units$metric==stat]
@@ -137,10 +162,17 @@ for(stat in stats_per_core) {
     } else {
         cap <- paste0(stat, ", ", stat_units)
     }
+    cat(paste0("<h4>",cap,"</h4>\n"))
     perf <- hpcc %>% filter(metric == stat) %>%
         group_by(resource,exe_type,cpus) %>%
-        summarise(mean=mean(value),stdev=sd(value*cpus))
-    print(kable(perf, caption = cap, digits = 2, "html") %>%
-  kable_styling(full_width = F))
+        summarise(average=mean(value),stdev=sd(value*cpus)) %>%
+        ungroup() %>% mutate(conf=paste(resource,exe_type,cpus, sep = ", ")) %>%
+        mutate(conf=factor(conf, levels = rev(conf)))
+    print(ggplot(perf, aes(x=conf, y=average)) +
+        geom_bar(stat="identity", fill="royalblue", color="royalblue4") +
+        geom_errorbar(aes(ymin=average-stdev, ymax=average+stdev), width=.2)+
+        coord_flip()+ylab(cap))
+    print(kable(perf %>% select(-conf), caption = cap, digits = 2, "html") %>%
+        kable_styling(full_width = F))
 }
 ```
