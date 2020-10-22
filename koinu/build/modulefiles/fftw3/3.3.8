@@ -1,0 +1,28 @@
+#%Module1.0
+
+proc ModulesHelp { } {
+        global version
+        puts stderr "Fastest Fourier Transform in the West(FFTW)"
+        puts stderr "   Add to CFLAGS/CXXFLAGS: -I\$FFTW3_INC"
+        puts stderr "   Add to LD_FLAGS:"
+        puts stderr "       serial :  -Wl,-rpath,\$FFTW3_LIB  -L\$FFTW3_LIB -lfftw3"
+        puts stderr "       MPI codes: -Wl,-rpath,\$FFTW3_LIB -L\$FFTW3_LIB -lfftw3_mpi -lfftw3"
+        puts stderr "   Add to LD_FLAGS for single-precision:"
+        puts stderr "       serial :  -Wl,-rpath,\$FFTW3_LIB  -L\$FFTW3_LIB -lfftw3f"
+        puts stderr "       MPI codes: -Wl,-rpath,\$FFTW3_LIB -L\$FFTW3_LIB -lfftw3f_mpi -lfftw3f"
+        puts stderr "   there are also multi-threaded and openmp versions"
+}
+
+module-whatis   "FFTW3"
+set     version 3.3.8
+set     pkg_ver         3.3.8
+set     pkg_home        /gpfs/ookami/software/fftw-${pkg_ver}
+
+setenv  FFTW3_DIR      ${pkg_home}
+setenv  FFTW3_LIB      ${pkg_home}/lib
+setenv  FFTW3_INC      ${pkg_home}/include
+
+prepend-path LD_LIBRARY_PATH  ${pkg_home}/lib
+prepend-path PATH             ${pkg_home}/bin
+prepend-path MANPATH          ${pkg_home}/man
+prepend-path PKG_CONFIG_PATH  ${pkg_home}/lib/pkgconfig

@@ -1,0 +1,197 @@
+---
+title: "HPCC"
+author: "nikolays"
+date: "10/22/20"
+output:
+  html_document:
+    toc: yes
+    toc_depth: '3'
+    df_print: paged
+  html_notebook:
+    toc: yes
+    toc_depth: 3
+    toc_float: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(ggplot2)
+library(dplyr)
+library(cowplot)
+library(knitr)
+library(kableExtra)
+```
+
+```{r include=FALSE}
+# Read data
+hpcc <- rbind(
+    read.csv("../koinu/data/hpcc.csv", stringsAsFactors=F),
+    read.csv("data/hpcc.csv", stringsAsFactors=F))
+unique(hpcc$exe_type)
+
+hpcc <- hpcc %>%
+    select(-X) %>% filter(metric != "App:Version") %>%
+    mutate(
+        value=as.numeric(value),
+        exe_type=factor(exe_type),
+        problem_size=factor(problem_size),
+        metric_type=factor(metric_type),
+        metric=factor(metric),
+        units=factor(units),
+        resource=factor(resource, c(
+            "Ookami",
+            "Koinu (CPU ARM ThunderX2 32(128) cores x2)",
+            "Stampede2 SKX (CPU Intel Xeon Platinum 8160 24(48) cores x2)",
+            "Stampede2 KNL (CPU Intel Xeon Phi 7250 68(272) cores x2)",
+            "Comet (CPU Intel Xeon E5-2680v3 12 cores x2, Haswell)",
+            "Bridges (Intel E5-2695 v3 14 cores x2, Haswell)")),
+        exe_type=factor(exe_type, c(
+            "mvapich2/libsci/fftw3/cce",
+            "mvapich2/libsci/intfft/cce",
+            "openmpi/armpl/armpl/gcc",
+            "openmpi/sysblas/intfft",
+            "openmpi/openblas/intfft",
+            "openmpi/armpl/intfft",
+            "impi/mkl", "mvapich2/mkl")
+        )
+    )
+#dput(unique(hpcc$exe_type))
+#head(hpcc)
+```
+
+```{r include=FALSE}
+# statistics we are interested in
+#dput(unique(hpcc$metric[hpcc$metric_type=="statistic"]))
+stats_overall <- c(
+    "High Performance LINPACK Floating-Point Performance",
+    "Fast Fourier Transform (FFTW) Floating-Point Performance",
+    "Parallel Matrix Transpose (PTRANS)",
+    "MPI Random Access"
+)
+stats_per_core <- c(
+    "Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance",
+    "Average STREAM 'Triad' Memory Bandwidth",
+    "Average STREAM 'Add' Memory Bandwidth",
+    "Average STREAM 'Copy' Memory Bandwidth",
+    "Average STREAM 'Scale' Memory Bandwidth"
+)
+units <- hpcc %>% group_by(metric) %>% summarise(units=as.character(first(units)),.groups = "drop_last") %>%
+    ungroup()
+units$units[is.na(units$units)]<-""
+```
+
+Everything is executed on single node, average of 10 runs.
+
+# Metrics
+
+Some of reported HPCC metrics:
+
+ * Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance
+   + Embarrassingly parallel, Averaged over all MPI process, MFLOP per Second per MPI process
+   + (There is also serial metric; measured but not analysed)
+ * High Performance LINPACK Floating-Point Performance
+   + Parallel, overall MFLOP per Second
+ * Fast Fourier Transform (FFTW) Floating-Point Performance
+   + Parallel, MFLOP per Second
+   + (There are also serial and embarrassingly parallel metrics; measured but not analysed)
+ * Parallel Matrix Transpose (PTRANS)
+   + Parallel, overall MByte per Second
+ * MPI Random Access
+   + Parallel, overall MUpdate per Second
+   + (There are also serial and embarrassingly parallel metrics; measured but not analysed)
+ * Average STREAM 'Triad'/ 'Add' / 'Copy' / 'Scale' Memory Bandwidth
+   + Embarrassingly parallel, Averaged over all MPI process, MByte per Second
+   + (There is also serial metric; measured but not analysed)
+
+# Results
+## Overall Performance (That is per All MPI Processes)
+
+```{r results='asis', echo=FALSE, fig.width = 11, fig.height = 6}
+for(stat in stats_overall) {
+    stat_units <- units$units[units$metric==stat]
+    if(stat_units=="") {
+        cap <- stat
+    } else {
+        cap <- paste0(stat, ", ", stat_units)
+    }
+    cat(paste0("<h3>",cap,"</h3>\n"))
+    perf <- hpcc %>% filter(metric == stat) %>%
+        group_by(resource,exe_type,cpus) %>%
+        summarise(average=mean(value),stdev=sd(value),.groups = "drop_last") %>%
+        ungroup() %>% mutate(conf=paste(resource,exe_type,cpus, sep = ", ")) %>%
+        mutate(conf=factor(conf, levels = rev(conf)))
+    print(ggplot(perf, aes(x=conf, y=average)) +
+        geom_bar(stat="identity", fill="royalblue", color="royalblue4") +
+        geom_errorbar(aes(ymin=average-stdev, ymax=average+stdev), width=.2)+
+        coord_flip()+ylab(cap))
+    cat(kable(perf %>% select(-conf), caption = cap, digits = 2, "html") %>%
+        kable_styling(full_width = F))
+}
+for(stat in stats_per_core) {
+    stat_units <- units$units[units$metric==stat]
+    if(stat_units=="") {
+        cap <- stat
+    } else {
+        cap <- paste0(stat, ", ", stat_units)
+    }
+    cat(paste0("<h3>",cap,"</h3>\n"))
+    perf <- hpcc %>% filter(metric == stat) %>%
+        group_by(resource,exe_type,cpus) %>%
+        summarise(average=mean(value*cpus),stdev=sd(value*cpus),.groups = "drop_last") %>%
+        ungroup() %>% mutate(conf=paste(resource,exe_type,cpus, sep = ", ")) %>%
+        mutate(conf=factor(conf, levels = rev(conf)))
+    print(ggplot(perf, aes(x=conf, y=average)) +
+        geom_bar(stat="identity", fill="royalblue", color="royalblue4") +
+        geom_errorbar(aes(ymin=average-stdev, ymax=average+stdev), width=.2)+
+        coord_flip()+ylab(cap))
+    cat(kable(perf %>% select(-conf), caption = cap, digits = 2, "html") %>%
+        kable_styling(full_width = F))
+}
+```
+
+### Performance per Core (that is MPI Process)
+
+```{r results='asis', echo=FALSE, fig.width = 11, fig.height = 6}
+for(stat in stats_overall) {
+    stat_units <- units$units[units$metric==stat]
+    if(stat_units=="") {
+        cap <- stat
+    } else {
+        cap <- paste0(stat, ", ", stat_units)
+    }
+    cat(paste0("<h3>",cap,"</h3>\n"))
+    perf <- hpcc %>% filter(metric == stat) %>%
+        group_by(resource,exe_type,cpus) %>%
+        summarise(average=mean(value/cpus),stdev=sd(value/cpus),.groups = "drop_last") %>%
+        ungroup() %>% mutate(conf=paste(resource,exe_type,cpus, sep = ", ")) %>%
+        mutate(conf=factor(conf, levels = rev(conf)))
+    print(ggplot(perf, aes(x=conf, y=average)) +
+        geom_bar(stat="identity", fill="royalblue", color="royalblue4") +
+        geom_errorbar(aes(ymin=average-stdev, ymax=average+stdev), width=.2)+
+        coord_flip()+ylab(cap))
+
+    cat(kable(perf %>% select(-conf), caption = cap, digits = 2, "html") %>%
+        kable_styling(full_width = F))
+}
+for(stat in stats_per_core) {
+    stat_units <- units$units[units$metric==stat]
+    if(stat_units=="") {
+        cap <- stat
+    } else {
+        cap <- paste0(stat, ", ", stat_units)
+    }
+    cat(paste0("<h3>",cap,"</h3>\n"))
+    perf <- hpcc %>% filter(metric == stat) %>%
+        group_by(resource,exe_type,cpus) %>%
+        summarise(average=mean(value),stdev=sd(value),.groups = "drop_last") %>%
+        ungroup() %>% mutate(conf=paste(resource,exe_type,cpus, sep = ", ")) %>%
+        mutate(conf=factor(conf, levels = rev(conf)))
+    print(ggplot(perf, aes(x=conf, y=average)) +
+        geom_bar(stat="identity", fill="royalblue", color="royalblue4") +
+        geom_errorbar(aes(ymin=average-stdev, ymax=average+stdev), width=.2)+
+        coord_flip()+ylab(cap))
+    cat(kable(perf %>% select(-conf), caption = cap, digits = 2, "html") %>%
+        kable_styling(full_width = F))
+}
+```

@@ -1,0 +1,109 @@
+title: "Convert Raw Data into R data tables"
+author: nikolays
+date: 7/28/20
+output:
+  html_notebook:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+```{r}
+library(data.table)
+library(XML)
+#library(DBI)
+library(dplyr)
+# read xml from file
+read_results_xml <- function(results_dir_path, exe_type="std", problem_size="akstd", nruns=20L, results_file_prefix="result_") {
+    results <- NULL
+    for(i in seq(1,nruns)) {
+        resultpath <- file.path(results_dir_path, paste0(results_file_prefix, i, ".xml"))
+
+        xml_doc <- xmlParse(file = resultpath)
+        params <- xmlToDataFrame(nodes = getNodeSet(xml_doc, "//body/performance/benchmark/parameters/parameter"))
+        params$metric_type <- "parameter"
+        stats <- xmlToDataFrame(nodes = getNodeSet(xml_doc, "//body/performance/benchmark/statistics/statistic"))
+        stats$metric_type <- "statistic"
+
+        result <- rbind(params,stats)
+        result$run_id <- i
+        results <- rbind(results,result)
+    }
+    results$exe_type <- exe_type
+    results$problem_size <- problem_size
+    results$metric <- results$ID
+    results[c("exe_type", "problem_size", "run_id", "metric_type", "metric", "value", "units")]
+}
+
+# read xml from db
+read_results_xml_from_db <- function(con, resource_name, app_name, nodes, exe_type="akstd", nruns=10L) {
+
+    problem_size <- "akstd"
+
+    rs <- dbSendQuery(con, paste0("SELECT instance_id,collected,resource,reporter,reporternickname,body
+    FROM akrr_xdmod_instanceinfo
+    WHERE resource='", resource_name,"' AND status=1 AND reporternickname='",app_name,".", nodes,"'
+    ORDER BY instance_id DESC
+    LIMIT ", nruns,";"))
+    raw <- dbFetch(rs)
+    dbClearResult(rs)
+
+    results <- NULL
+    for(i in seq(1,nrow(raw))) {
+        xml_doc <- xmlParse(raw$body[[i]])
+        params <- xmlToDataFrame(nodes = getNodeSet(xml_doc, "//parameters/parameter"))
+        params$metric_type <- "parameter"
+        stats <- xmlToDataFrame(nodes = getNodeSet(xml_doc, "//statistics/statistic"))
+        stats$metric_type <- "statistic"
+
+        result <- rbind(params,stats)
+        result$run_id <- i
+        results <- rbind(results,result)
+    }
+    results$exe_type <- exe_type
+    results$problem_size <- problem_size
+    results$metric <- results$ID
+    results[c("exe_type", "problem_size", "run_id", "metric_type", "metric", "value", "units")]
+}
+```
+
+
+```{r}
+# hpcc
+# Koinu
+hpcc_results <- NULL
+resource <- "Ookami"
+
+exe_type <- "mvapich2/libsci/fftw3/cce"
+results <- read_results_xml(
+    file.path("appsout", "hpcc", "10-21-2020", "cce_libsci_fftw3_mvapich2", "std_48x1"),
+    exe_type=exe_type)
+results$resource <- resource
+results$nodes <- 1L
+results$cpus <- 48L
+hpcc_results <- rbind(hpcc_results,results)
+
+exe_type <- "mvapich2/libsci/intfft/cce"
+results <- read_results_xml(
+    file.path("appsout", "hpcc", "10-21-2020", "cce_libsci_mvapich2", "std_48x1"),
+    exe_type=exe_type)
+results$resource <- resource
+results$nodes <- 1L
+results$cpus <- 48L
+hpcc_results <- rbind(hpcc_results,results)
+
+exe_type <- "openmpi/armpl/armpl/gcc"
+results <- read_results_xml(
+    file.path("appsout", "hpcc", "10-21-2020", "gcc_armpl_openmpi", "std_48x1"),
+    exe_type=exe_type)
+results$resource <- resource
+results$nodes <- 1L
+results$cpus <- 48L
+hpcc_results <- rbind(hpcc_results,results)
+
+
+hpcc_results <- hpcc_results %>% filter(!metric %in% c("App:ExeBinSignature", "RunEnv:Nodes", "app", "resource"))
+# "App:Version" can be removed too eventially
+
+write.csv(hpcc_results, file="hpcc.csv")
+```

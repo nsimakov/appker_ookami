@@ -1,0 +1,1201 @@
+"","exe_type","problem_size","run_id","metric_type","metric","value","units","resource","nodes","cpus"
+"1","mvapich2/libsci/fftw3/cce","akstd",1,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"2","mvapich2/libsci/fftw3/cce","akstd",1,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"3","mvapich2/libsci/fftw3/cce","akstd",1,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"4","mvapich2/libsci/fftw3/cce","akstd",1,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"5","mvapich2/libsci/fftw3/cce","akstd",1,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"6","mvapich2/libsci/fftw3/cce","akstd",1,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"7","mvapich2/libsci/fftw3/cce","akstd",1,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"8","mvapich2/libsci/fftw3/cce","akstd",1,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"9","mvapich2/libsci/fftw3/cce","akstd",1,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"10","mvapich2/libsci/fftw3/cce","akstd",1,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"11","mvapich2/libsci/fftw3/cce","akstd",1,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19893.899999999998","MFLOP per Second","Ookami",1,48
+"12","mvapich2/libsci/fftw3/cce","akstd",1,"statistic","Average STREAM 'Add' Memory Bandwidth","13264.0768","MByte per Second","Ookami",1,48
+"13","mvapich2/libsci/fftw3/cce","akstd",1,"statistic","Average STREAM 'Copy' Memory Bandwidth","11682.9184","MByte per Second","Ookami",1,48
+"14","mvapich2/libsci/fftw3/cce","akstd",1,"statistic","Average STREAM 'Scale' Memory Bandwidth","11991.1424","MByte per Second","Ookami",1,48
+"15","mvapich2/libsci/fftw3/cce","akstd",1,"statistic","Average STREAM 'Triad' Memory Bandwidth","13310.2592","MByte per Second","Ookami",1,48
+"16","mvapich2/libsci/fftw3/cce","akstd",1,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","7785.389999999999","MFLOP per Second","Ookami",1,48
+"17","mvapich2/libsci/fftw3/cce","akstd",1,"statistic","High Performance LINPACK Floating-Point Performance","797719.0","MFLOP per Second","Ookami",1,48
+"18","mvapich2/libsci/fftw3/cce","akstd",1,"statistic","High Performance LINPACK Run Time","6.68648","Second","Ookami",1,48
+"19","mvapich2/libsci/fftw3/cce","akstd",1,"statistic","MPI Random Access","13.607299999999999","MUpdate per Second","Ookami",1,48
+"20","mvapich2/libsci/fftw3/cce","akstd",1,"statistic","Parallel Matrix Transpose (PTRANS)","22191.7184","MByte per Second","Ookami",1,48
+"21","mvapich2/libsci/fftw3/cce","akstd",2,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"22","mvapich2/libsci/fftw3/cce","akstd",2,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"23","mvapich2/libsci/fftw3/cce","akstd",2,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"24","mvapich2/libsci/fftw3/cce","akstd",2,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"25","mvapich2/libsci/fftw3/cce","akstd",2,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"26","mvapich2/libsci/fftw3/cce","akstd",2,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"27","mvapich2/libsci/fftw3/cce","akstd",2,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"28","mvapich2/libsci/fftw3/cce","akstd",2,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"29","mvapich2/libsci/fftw3/cce","akstd",2,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"30","mvapich2/libsci/fftw3/cce","akstd",2,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"31","mvapich2/libsci/fftw3/cce","akstd",2,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19931.4","MFLOP per Second","Ookami",1,48
+"32","mvapich2/libsci/fftw3/cce","akstd",2,"statistic","Average STREAM 'Add' Memory Bandwidth","13255.4752","MByte per Second","Ookami",1,48
+"33","mvapich2/libsci/fftw3/cce","akstd",2,"statistic","Average STREAM 'Copy' Memory Bandwidth","11623.8336","MByte per Second","Ookami",1,48
+"34","mvapich2/libsci/fftw3/cce","akstd",2,"statistic","Average STREAM 'Scale' Memory Bandwidth","11991.9616","MByte per Second","Ookami",1,48
+"35","mvapich2/libsci/fftw3/cce","akstd",2,"statistic","Average STREAM 'Triad' Memory Bandwidth","13328.896","MByte per Second","Ookami",1,48
+"36","mvapich2/libsci/fftw3/cce","akstd",2,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","7526.07","MFLOP per Second","Ookami",1,48
+"37","mvapich2/libsci/fftw3/cce","akstd",2,"statistic","High Performance LINPACK Floating-Point Performance","796952.0","MFLOP per Second","Ookami",1,48
+"38","mvapich2/libsci/fftw3/cce","akstd",2,"statistic","High Performance LINPACK Run Time","6.69292","Second","Ookami",1,48
+"39","mvapich2/libsci/fftw3/cce","akstd",2,"statistic","MPI Random Access","13.5942","MUpdate per Second","Ookami",1,48
+"40","mvapich2/libsci/fftw3/cce","akstd",2,"statistic","Parallel Matrix Transpose (PTRANS)","22154.9568","MByte per Second","Ookami",1,48
+"41","mvapich2/libsci/fftw3/cce","akstd",3,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"42","mvapich2/libsci/fftw3/cce","akstd",3,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"43","mvapich2/libsci/fftw3/cce","akstd",3,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"44","mvapich2/libsci/fftw3/cce","akstd",3,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"45","mvapich2/libsci/fftw3/cce","akstd",3,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"46","mvapich2/libsci/fftw3/cce","akstd",3,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"47","mvapich2/libsci/fftw3/cce","akstd",3,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"48","mvapich2/libsci/fftw3/cce","akstd",3,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"49","mvapich2/libsci/fftw3/cce","akstd",3,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"50","mvapich2/libsci/fftw3/cce","akstd",3,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"51","mvapich2/libsci/fftw3/cce","akstd",3,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19893.6","MFLOP per Second","Ookami",1,48
+"52","mvapich2/libsci/fftw3/cce","akstd",3,"statistic","Average STREAM 'Add' Memory Bandwidth","13256.0896","MByte per Second","Ookami",1,48
+"53","mvapich2/libsci/fftw3/cce","akstd",3,"statistic","Average STREAM 'Copy' Memory Bandwidth","11627.4176","MByte per Second","Ookami",1,48
+"54","mvapich2/libsci/fftw3/cce","akstd",3,"statistic","Average STREAM 'Scale' Memory Bandwidth","12013.7728","MByte per Second","Ookami",1,48
+"55","mvapich2/libsci/fftw3/cce","akstd",3,"statistic","Average STREAM 'Triad' Memory Bandwidth","13309.0304","MByte per Second","Ookami",1,48
+"56","mvapich2/libsci/fftw3/cce","akstd",3,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","7518.0199999999995","MFLOP per Second","Ookami",1,48
+"57","mvapich2/libsci/fftw3/cce","akstd",3,"statistic","High Performance LINPACK Floating-Point Performance","797819.0","MFLOP per Second","Ookami",1,48
+"58","mvapich2/libsci/fftw3/cce","akstd",3,"statistic","High Performance LINPACK Run Time","6.68565","Second","Ookami",1,48
+"59","mvapich2/libsci/fftw3/cce","akstd",3,"statistic","MPI Random Access","13.6327","MUpdate per Second","Ookami",1,48
+"60","mvapich2/libsci/fftw3/cce","akstd",3,"statistic","Parallel Matrix Transpose (PTRANS)","22117.0688","MByte per Second","Ookami",1,48
+"61","mvapich2/libsci/fftw3/cce","akstd",4,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"62","mvapich2/libsci/fftw3/cce","akstd",4,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"63","mvapich2/libsci/fftw3/cce","akstd",4,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"64","mvapich2/libsci/fftw3/cce","akstd",4,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"65","mvapich2/libsci/fftw3/cce","akstd",4,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"66","mvapich2/libsci/fftw3/cce","akstd",4,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"67","mvapich2/libsci/fftw3/cce","akstd",4,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"68","mvapich2/libsci/fftw3/cce","akstd",4,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"69","mvapich2/libsci/fftw3/cce","akstd",4,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"70","mvapich2/libsci/fftw3/cce","akstd",4,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"71","mvapich2/libsci/fftw3/cce","akstd",4,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19918.199999999997","MFLOP per Second","Ookami",1,48
+"72","mvapich2/libsci/fftw3/cce","akstd",4,"statistic","Average STREAM 'Add' Memory Bandwidth","13320.192","MByte per Second","Ookami",1,48
+"73","mvapich2/libsci/fftw3/cce","akstd",4,"statistic","Average STREAM 'Copy' Memory Bandwidth","11690.8032","MByte per Second","Ookami",1,48
+"74","mvapich2/libsci/fftw3/cce","akstd",4,"statistic","Average STREAM 'Scale' Memory Bandwidth","11991.1424","MByte per Second","Ookami",1,48
+"75","mvapich2/libsci/fftw3/cce","akstd",4,"statistic","Average STREAM 'Triad' Memory Bandwidth","13307.8016","MByte per Second","Ookami",1,48
+"76","mvapich2/libsci/fftw3/cce","akstd",4,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","7203.929999999999","MFLOP per Second","Ookami",1,48
+"77","mvapich2/libsci/fftw3/cce","akstd",4,"statistic","High Performance LINPACK Floating-Point Performance","801758.0","MFLOP per Second","Ookami",1,48
+"78","mvapich2/libsci/fftw3/cce","akstd",4,"statistic","High Performance LINPACK Run Time","6.6528","Second","Ookami",1,48
+"79","mvapich2/libsci/fftw3/cce","akstd",4,"statistic","MPI Random Access","13.4718","MUpdate per Second","Ookami",1,48
+"80","mvapich2/libsci/fftw3/cce","akstd",4,"statistic","Parallel Matrix Transpose (PTRANS)","21682.9952","MByte per Second","Ookami",1,48
+"81","mvapich2/libsci/fftw3/cce","akstd",5,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"82","mvapich2/libsci/fftw3/cce","akstd",5,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"83","mvapich2/libsci/fftw3/cce","akstd",5,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"84","mvapich2/libsci/fftw3/cce","akstd",5,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"85","mvapich2/libsci/fftw3/cce","akstd",5,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"86","mvapich2/libsci/fftw3/cce","akstd",5,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"87","mvapich2/libsci/fftw3/cce","akstd",5,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"88","mvapich2/libsci/fftw3/cce","akstd",5,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"89","mvapich2/libsci/fftw3/cce","akstd",5,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"90","mvapich2/libsci/fftw3/cce","akstd",5,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"91","mvapich2/libsci/fftw3/cce","akstd",5,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19921.3","MFLOP per Second","Ookami",1,48
+"92","mvapich2/libsci/fftw3/cce","akstd",5,"statistic","Average STREAM 'Add' Memory Bandwidth","13310.8736","MByte per Second","Ookami",1,48
+"93","mvapich2/libsci/fftw3/cce","akstd",5,"statistic","Average STREAM 'Copy' Memory Bandwidth","11671.4496","MByte per Second","Ookami",1,48
+"94","mvapich2/libsci/fftw3/cce","akstd",5,"statistic","Average STREAM 'Scale' Memory Bandwidth","11996.4672","MByte per Second","Ookami",1,48
+"95","mvapich2/libsci/fftw3/cce","akstd",5,"statistic","Average STREAM 'Triad' Memory Bandwidth","13333.8112","MByte per Second","Ookami",1,48
+"96","mvapich2/libsci/fftw3/cce","akstd",5,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","7674.86","MFLOP per Second","Ookami",1,48
+"97","mvapich2/libsci/fftw3/cce","akstd",5,"statistic","High Performance LINPACK Floating-Point Performance","803274.0","MFLOP per Second","Ookami",1,48
+"98","mvapich2/libsci/fftw3/cce","akstd",5,"statistic","High Performance LINPACK Run Time","6.64024","Second","Ookami",1,48
+"99","mvapich2/libsci/fftw3/cce","akstd",5,"statistic","MPI Random Access","13.438699999999999","MUpdate per Second","Ookami",1,48
+"100","mvapich2/libsci/fftw3/cce","akstd",5,"statistic","Parallel Matrix Transpose (PTRANS)","22621.184","MByte per Second","Ookami",1,48
+"101","mvapich2/libsci/fftw3/cce","akstd",6,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"102","mvapich2/libsci/fftw3/cce","akstd",6,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"103","mvapich2/libsci/fftw3/cce","akstd",6,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"104","mvapich2/libsci/fftw3/cce","akstd",6,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"105","mvapich2/libsci/fftw3/cce","akstd",6,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"106","mvapich2/libsci/fftw3/cce","akstd",6,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"107","mvapich2/libsci/fftw3/cce","akstd",6,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"108","mvapich2/libsci/fftw3/cce","akstd",6,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"109","mvapich2/libsci/fftw3/cce","akstd",6,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"110","mvapich2/libsci/fftw3/cce","akstd",6,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"111","mvapich2/libsci/fftw3/cce","akstd",6,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19902.3","MFLOP per Second","Ookami",1,48
+"112","mvapich2/libsci/fftw3/cce","akstd",6,"statistic","Average STREAM 'Add' Memory Bandwidth","13281.8944","MByte per Second","Ookami",1,48
+"113","mvapich2/libsci/fftw3/cce","akstd",6,"statistic","Average STREAM 'Copy' Memory Bandwidth","11660.8","MByte per Second","Ookami",1,48
+"114","mvapich2/libsci/fftw3/cce","akstd",6,"statistic","Average STREAM 'Scale' Memory Bandwidth","11990.4256","MByte per Second","Ookami",1,48
+"115","mvapich2/libsci/fftw3/cce","akstd",6,"statistic","Average STREAM 'Triad' Memory Bandwidth","13288.0384","MByte per Second","Ookami",1,48
+"116","mvapich2/libsci/fftw3/cce","akstd",6,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","7594.52","MFLOP per Second","Ookami",1,48
+"117","mvapich2/libsci/fftw3/cce","akstd",6,"statistic","High Performance LINPACK Floating-Point Performance","801506.0","MFLOP per Second","Ookami",1,48
+"118","mvapich2/libsci/fftw3/cce","akstd",6,"statistic","High Performance LINPACK Run Time","6.65489","Second","Ookami",1,48
+"119","mvapich2/libsci/fftw3/cce","akstd",6,"statistic","MPI Random Access","13.706100000000001","MUpdate per Second","Ookami",1,48
+"120","mvapich2/libsci/fftw3/cce","akstd",6,"statistic","Parallel Matrix Transpose (PTRANS)","22256.0256","MByte per Second","Ookami",1,48
+"121","mvapich2/libsci/fftw3/cce","akstd",7,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"122","mvapich2/libsci/fftw3/cce","akstd",7,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"123","mvapich2/libsci/fftw3/cce","akstd",7,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"124","mvapich2/libsci/fftw3/cce","akstd",7,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"125","mvapich2/libsci/fftw3/cce","akstd",7,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"126","mvapich2/libsci/fftw3/cce","akstd",7,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"127","mvapich2/libsci/fftw3/cce","akstd",7,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"128","mvapich2/libsci/fftw3/cce","akstd",7,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"129","mvapich2/libsci/fftw3/cce","akstd",7,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"130","mvapich2/libsci/fftw3/cce","akstd",7,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"131","mvapich2/libsci/fftw3/cce","akstd",7,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19881.1","MFLOP per Second","Ookami",1,48
+"132","mvapich2/libsci/fftw3/cce","akstd",7,"statistic","Average STREAM 'Add' Memory Bandwidth","13113.4464","MByte per Second","Ookami",1,48
+"133","mvapich2/libsci/fftw3/cce","akstd",7,"statistic","Average STREAM 'Copy' Memory Bandwidth","11466.752","MByte per Second","Ookami",1,48
+"134","mvapich2/libsci/fftw3/cce","akstd",7,"statistic","Average STREAM 'Scale' Memory Bandwidth","11875.5328","MByte per Second","Ookami",1,48
+"135","mvapich2/libsci/fftw3/cce","akstd",7,"statistic","Average STREAM 'Triad' Memory Bandwidth","13215.6416","MByte per Second","Ookami",1,48
+"136","mvapich2/libsci/fftw3/cce","akstd",7,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","7815.719999999999","MFLOP per Second","Ookami",1,48
+"137","mvapich2/libsci/fftw3/cce","akstd",7,"statistic","High Performance LINPACK Floating-Point Performance","798842.0","MFLOP per Second","Ookami",1,48
+"138","mvapich2/libsci/fftw3/cce","akstd",7,"statistic","High Performance LINPACK Run Time","6.67708","Second","Ookami",1,48
+"139","mvapich2/libsci/fftw3/cce","akstd",7,"statistic","MPI Random Access","13.558900000000001","MUpdate per Second","Ookami",1,48
+"140","mvapich2/libsci/fftw3/cce","akstd",7,"statistic","Parallel Matrix Transpose (PTRANS)","22585.6512","MByte per Second","Ookami",1,48
+"141","mvapich2/libsci/fftw3/cce","akstd",8,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"142","mvapich2/libsci/fftw3/cce","akstd",8,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"143","mvapich2/libsci/fftw3/cce","akstd",8,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"144","mvapich2/libsci/fftw3/cce","akstd",8,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"145","mvapich2/libsci/fftw3/cce","akstd",8,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"146","mvapich2/libsci/fftw3/cce","akstd",8,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"147","mvapich2/libsci/fftw3/cce","akstd",8,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"148","mvapich2/libsci/fftw3/cce","akstd",8,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"149","mvapich2/libsci/fftw3/cce","akstd",8,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"150","mvapich2/libsci/fftw3/cce","akstd",8,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"151","mvapich2/libsci/fftw3/cce","akstd",8,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19910.699999999997","MFLOP per Second","Ookami",1,48
+"152","mvapich2/libsci/fftw3/cce","akstd",8,"statistic","Average STREAM 'Add' Memory Bandwidth","13283.7376","MByte per Second","Ookami",1,48
+"153","mvapich2/libsci/fftw3/cce","akstd",8,"statistic","Average STREAM 'Copy' Memory Bandwidth","11655.7824","MByte per Second","Ookami",1,48
+"154","mvapich2/libsci/fftw3/cce","akstd",8,"statistic","Average STREAM 'Scale' Memory Bandwidth","11997.9008","MByte per Second","Ookami",1,48
+"155","mvapich2/libsci/fftw3/cce","akstd",8,"statistic","Average STREAM 'Triad' Memory Bandwidth","13322.6496","MByte per Second","Ookami",1,48
+"156","mvapich2/libsci/fftw3/cce","akstd",8,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","7676.2","MFLOP per Second","Ookami",1,48
+"157","mvapich2/libsci/fftw3/cce","akstd",8,"statistic","High Performance LINPACK Floating-Point Performance","799089.0","MFLOP per Second","Ookami",1,48
+"158","mvapich2/libsci/fftw3/cce","akstd",8,"statistic","High Performance LINPACK Run Time","6.67502","Second","Ookami",1,48
+"159","mvapich2/libsci/fftw3/cce","akstd",8,"statistic","MPI Random Access","13.4711","MUpdate per Second","Ookami",1,48
+"160","mvapich2/libsci/fftw3/cce","akstd",8,"statistic","Parallel Matrix Transpose (PTRANS)","21641.1136","MByte per Second","Ookami",1,48
+"161","mvapich2/libsci/fftw3/cce","akstd",9,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"162","mvapich2/libsci/fftw3/cce","akstd",9,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"163","mvapich2/libsci/fftw3/cce","akstd",9,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"164","mvapich2/libsci/fftw3/cce","akstd",9,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"165","mvapich2/libsci/fftw3/cce","akstd",9,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"166","mvapich2/libsci/fftw3/cce","akstd",9,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"167","mvapich2/libsci/fftw3/cce","akstd",9,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"168","mvapich2/libsci/fftw3/cce","akstd",9,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"169","mvapich2/libsci/fftw3/cce","akstd",9,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"170","mvapich2/libsci/fftw3/cce","akstd",9,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"171","mvapich2/libsci/fftw3/cce","akstd",9,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19925.8","MFLOP per Second","Ookami",1,48
+"172","mvapich2/libsci/fftw3/cce","akstd",9,"statistic","Average STREAM 'Add' Memory Bandwidth","13277.5936","MByte per Second","Ookami",1,48
+"173","mvapich2/libsci/fftw3/cce","akstd",9,"statistic","Average STREAM 'Copy' Memory Bandwidth","11672.1664","MByte per Second","Ookami",1,48
+"174","mvapich2/libsci/fftw3/cce","akstd",9,"statistic","Average STREAM 'Scale' Memory Bandwidth","12003.2256","MByte per Second","Ookami",1,48
+"175","mvapich2/libsci/fftw3/cce","akstd",9,"statistic","Average STREAM 'Triad' Memory Bandwidth","13336.3712","MByte per Second","Ookami",1,48
+"176","mvapich2/libsci/fftw3/cce","akstd",9,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","7058.28","MFLOP per Second","Ookami",1,48
+"177","mvapich2/libsci/fftw3/cce","akstd",9,"statistic","High Performance LINPACK Floating-Point Performance","804686.0","MFLOP per Second","Ookami",1,48
+"178","mvapich2/libsci/fftw3/cce","akstd",9,"statistic","High Performance LINPACK Run Time","6.62859","Second","Ookami",1,48
+"179","mvapich2/libsci/fftw3/cce","akstd",9,"statistic","MPI Random Access","13.6776","MUpdate per Second","Ookami",1,48
+"180","mvapich2/libsci/fftw3/cce","akstd",9,"statistic","Parallel Matrix Transpose (PTRANS)","21114.2656","MByte per Second","Ookami",1,48
+"181","mvapich2/libsci/fftw3/cce","akstd",10,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"182","mvapich2/libsci/fftw3/cce","akstd",10,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"183","mvapich2/libsci/fftw3/cce","akstd",10,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"184","mvapich2/libsci/fftw3/cce","akstd",10,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"185","mvapich2/libsci/fftw3/cce","akstd",10,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"186","mvapich2/libsci/fftw3/cce","akstd",10,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"187","mvapich2/libsci/fftw3/cce","akstd",10,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"188","mvapich2/libsci/fftw3/cce","akstd",10,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"189","mvapich2/libsci/fftw3/cce","akstd",10,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"190","mvapich2/libsci/fftw3/cce","akstd",10,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"191","mvapich2/libsci/fftw3/cce","akstd",10,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19932.9","MFLOP per Second","Ookami",1,48
+"192","mvapich2/libsci/fftw3/cce","akstd",10,"statistic","Average STREAM 'Add' Memory Bandwidth","13307.1872","MByte per Second","Ookami",1,48
+"193","mvapich2/libsci/fftw3/cce","akstd",10,"statistic","Average STREAM 'Copy' Memory Bandwidth","11667.2512","MByte per Second","Ookami",1,48
+"194","mvapich2/libsci/fftw3/cce","akstd",10,"statistic","Average STREAM 'Scale' Memory Bandwidth","12003.9424","MByte per Second","Ookami",1,48
+"195","mvapich2/libsci/fftw3/cce","akstd",10,"statistic","Average STREAM 'Triad' Memory Bandwidth","13338.2144","MByte per Second","Ookami",1,48
+"196","mvapich2/libsci/fftw3/cce","akstd",10,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","7311.45","MFLOP per Second","Ookami",1,48
+"197","mvapich2/libsci/fftw3/cce","akstd",10,"statistic","High Performance LINPACK Floating-Point Performance","798268.0","MFLOP per Second","Ookami",1,48
+"198","mvapich2/libsci/fftw3/cce","akstd",10,"statistic","High Performance LINPACK Run Time","6.68188","Second","Ookami",1,48
+"199","mvapich2/libsci/fftw3/cce","akstd",10,"statistic","MPI Random Access","13.4753","MUpdate per Second","Ookami",1,48
+"200","mvapich2/libsci/fftw3/cce","akstd",10,"statistic","Parallel Matrix Transpose (PTRANS)","21464.7808","MByte per Second","Ookami",1,48
+"201","mvapich2/libsci/fftw3/cce","akstd",11,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"202","mvapich2/libsci/fftw3/cce","akstd",11,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"203","mvapich2/libsci/fftw3/cce","akstd",11,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"204","mvapich2/libsci/fftw3/cce","akstd",11,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"205","mvapich2/libsci/fftw3/cce","akstd",11,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"206","mvapich2/libsci/fftw3/cce","akstd",11,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"207","mvapich2/libsci/fftw3/cce","akstd",11,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"208","mvapich2/libsci/fftw3/cce","akstd",11,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"209","mvapich2/libsci/fftw3/cce","akstd",11,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"210","mvapich2/libsci/fftw3/cce","akstd",11,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"211","mvapich2/libsci/fftw3/cce","akstd",11,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19920.3","MFLOP per Second","Ookami",1,48
+"212","mvapich2/libsci/fftw3/cce","akstd",11,"statistic","Average STREAM 'Add' Memory Bandwidth","13305.9584","MByte per Second","Ookami",1,48
+"213","mvapich2/libsci/fftw3/cce","akstd",11,"statistic","Average STREAM 'Copy' Memory Bandwidth","11715.8912","MByte per Second","Ookami",1,48
+"214","mvapich2/libsci/fftw3/cce","akstd",11,"statistic","Average STREAM 'Scale' Memory Bandwidth","12019.8144","MByte per Second","Ookami",1,48
+"215","mvapich2/libsci/fftw3/cce","akstd",11,"statistic","Average STREAM 'Triad' Memory Bandwidth","13325.2096","MByte per Second","Ookami",1,48
+"216","mvapich2/libsci/fftw3/cce","akstd",11,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","7455.9","MFLOP per Second","Ookami",1,48
+"217","mvapich2/libsci/fftw3/cce","akstd",11,"statistic","High Performance LINPACK Floating-Point Performance","805808.0","MFLOP per Second","Ookami",1,48
+"218","mvapich2/libsci/fftw3/cce","akstd",11,"statistic","High Performance LINPACK Run Time","6.61936","Second","Ookami",1,48
+"219","mvapich2/libsci/fftw3/cce","akstd",11,"statistic","MPI Random Access","13.468900000000001","MUpdate per Second","Ookami",1,48
+"220","mvapich2/libsci/fftw3/cce","akstd",11,"statistic","Parallel Matrix Transpose (PTRANS)","21096.0384","MByte per Second","Ookami",1,48
+"221","mvapich2/libsci/fftw3/cce","akstd",12,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"222","mvapich2/libsci/fftw3/cce","akstd",12,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"223","mvapich2/libsci/fftw3/cce","akstd",12,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"224","mvapich2/libsci/fftw3/cce","akstd",12,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"225","mvapich2/libsci/fftw3/cce","akstd",12,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"226","mvapich2/libsci/fftw3/cce","akstd",12,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"227","mvapich2/libsci/fftw3/cce","akstd",12,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"228","mvapich2/libsci/fftw3/cce","akstd",12,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"229","mvapich2/libsci/fftw3/cce","akstd",12,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"230","mvapich2/libsci/fftw3/cce","akstd",12,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"231","mvapich2/libsci/fftw3/cce","akstd",12,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19932.4","MFLOP per Second","Ookami",1,48
+"232","mvapich2/libsci/fftw3/cce","akstd",12,"statistic","Average STREAM 'Add' Memory Bandwidth","13294.7968","MByte per Second","Ookami",1,48
+"233","mvapich2/libsci/fftw3/cce","akstd",12,"statistic","Average STREAM 'Copy' Memory Bandwidth","11685.0688","MByte per Second","Ookami",1,48
+"234","mvapich2/libsci/fftw3/cce","akstd",12,"statistic","Average STREAM 'Scale' Memory Bandwidth","11980.5952","MByte per Second","Ookami",1,48
+"235","mvapich2/libsci/fftw3/cce","akstd",12,"statistic","Average STREAM 'Triad' Memory Bandwidth","13336.3712","MByte per Second","Ookami",1,48
+"236","mvapich2/libsci/fftw3/cce","akstd",12,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","7457.03","MFLOP per Second","Ookami",1,48
+"237","mvapich2/libsci/fftw3/cce","akstd",12,"statistic","High Performance LINPACK Floating-Point Performance","809673.0","MFLOP per Second","Ookami",1,48
+"238","mvapich2/libsci/fftw3/cce","akstd",12,"statistic","High Performance LINPACK Run Time","6.58777","Second","Ookami",1,48
+"239","mvapich2/libsci/fftw3/cce","akstd",12,"statistic","MPI Random Access","13.574599999999998","MUpdate per Second","Ookami",1,48
+"240","mvapich2/libsci/fftw3/cce","akstd",12,"statistic","Parallel Matrix Transpose (PTRANS)","22030.5408","MByte per Second","Ookami",1,48
+"241","mvapich2/libsci/fftw3/cce","akstd",13,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"242","mvapich2/libsci/fftw3/cce","akstd",13,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"243","mvapich2/libsci/fftw3/cce","akstd",13,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"244","mvapich2/libsci/fftw3/cce","akstd",13,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"245","mvapich2/libsci/fftw3/cce","akstd",13,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"246","mvapich2/libsci/fftw3/cce","akstd",13,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"247","mvapich2/libsci/fftw3/cce","akstd",13,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"248","mvapich2/libsci/fftw3/cce","akstd",13,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"249","mvapich2/libsci/fftw3/cce","akstd",13,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"250","mvapich2/libsci/fftw3/cce","akstd",13,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"251","mvapich2/libsci/fftw3/cce","akstd",13,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19928.4","MFLOP per Second","Ookami",1,48
+"252","mvapich2/libsci/fftw3/cce","akstd",13,"statistic","Average STREAM 'Add' Memory Bandwidth","13307.1872","MByte per Second","Ookami",1,48
+"253","mvapich2/libsci/fftw3/cce","akstd",13,"statistic","Average STREAM 'Copy' Memory Bandwidth","11682.2016","MByte per Second","Ookami",1,48
+"254","mvapich2/libsci/fftw3/cce","akstd",13,"statistic","Average STREAM 'Scale' Memory Bandwidth","11998.72","MByte per Second","Ookami",1,48
+"255","mvapich2/libsci/fftw3/cce","akstd",13,"statistic","Average STREAM 'Triad' Memory Bandwidth","13318.9632","MByte per Second","Ookami",1,48
+"256","mvapich2/libsci/fftw3/cce","akstd",13,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","7914.240000000001","MFLOP per Second","Ookami",1,48
+"257","mvapich2/libsci/fftw3/cce","akstd",13,"statistic","High Performance LINPACK Floating-Point Performance","789885.0","MFLOP per Second","Ookami",1,48
+"258","mvapich2/libsci/fftw3/cce","akstd",13,"statistic","High Performance LINPACK Run Time","6.7528","Second","Ookami",1,48
+"259","mvapich2/libsci/fftw3/cce","akstd",13,"statistic","MPI Random Access","13.4961","MUpdate per Second","Ookami",1,48
+"260","mvapich2/libsci/fftw3/cce","akstd",13,"statistic","Parallel Matrix Transpose (PTRANS)","21859.1232","MByte per Second","Ookami",1,48
+"261","mvapich2/libsci/fftw3/cce","akstd",14,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"262","mvapich2/libsci/fftw3/cce","akstd",14,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"263","mvapich2/libsci/fftw3/cce","akstd",14,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"264","mvapich2/libsci/fftw3/cce","akstd",14,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"265","mvapich2/libsci/fftw3/cce","akstd",14,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"266","mvapich2/libsci/fftw3/cce","akstd",14,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"267","mvapich2/libsci/fftw3/cce","akstd",14,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"268","mvapich2/libsci/fftw3/cce","akstd",14,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"269","mvapich2/libsci/fftw3/cce","akstd",14,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"270","mvapich2/libsci/fftw3/cce","akstd",14,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"271","mvapich2/libsci/fftw3/cce","akstd",14,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19903.600000000002","MFLOP per Second","Ookami",1,48
+"272","mvapich2/libsci/fftw3/cce","akstd",14,"statistic","Average STREAM 'Add' Memory Bandwidth","13275.136","MByte per Second","Ookami",1,48
+"273","mvapich2/libsci/fftw3/cce","akstd",14,"statistic","Average STREAM 'Copy' Memory Bandwidth","11665.8176","MByte per Second","Ookami",1,48
+"274","mvapich2/libsci/fftw3/cce","akstd",14,"statistic","Average STREAM 'Scale' Memory Bandwidth","11984.384","MByte per Second","Ookami",1,48
+"275","mvapich2/libsci/fftw3/cce","akstd",14,"statistic","Average STREAM 'Triad' Memory Bandwidth","13340.0576","MByte per Second","Ookami",1,48
+"276","mvapich2/libsci/fftw3/cce","akstd",14,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","7896.88","MFLOP per Second","Ookami",1,48
+"277","mvapich2/libsci/fftw3/cce","akstd",14,"statistic","High Performance LINPACK Floating-Point Performance","806434.0","MFLOP per Second","Ookami",1,48
+"278","mvapich2/libsci/fftw3/cce","akstd",14,"statistic","High Performance LINPACK Run Time","6.61422","Second","Ookami",1,48
+"279","mvapich2/libsci/fftw3/cce","akstd",14,"statistic","MPI Random Access","13.6065","MUpdate per Second","Ookami",1,48
+"280","mvapich2/libsci/fftw3/cce","akstd",14,"statistic","Parallel Matrix Transpose (PTRANS)","22162.1248","MByte per Second","Ookami",1,48
+"281","mvapich2/libsci/fftw3/cce","akstd",15,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"282","mvapich2/libsci/fftw3/cce","akstd",15,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"283","mvapich2/libsci/fftw3/cce","akstd",15,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"284","mvapich2/libsci/fftw3/cce","akstd",15,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"285","mvapich2/libsci/fftw3/cce","akstd",15,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"286","mvapich2/libsci/fftw3/cce","akstd",15,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"287","mvapich2/libsci/fftw3/cce","akstd",15,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"288","mvapich2/libsci/fftw3/cce","akstd",15,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"289","mvapich2/libsci/fftw3/cce","akstd",15,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"290","mvapich2/libsci/fftw3/cce","akstd",15,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"291","mvapich2/libsci/fftw3/cce","akstd",15,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19855.6","MFLOP per Second","Ookami",1,48
+"292","mvapich2/libsci/fftw3/cce","akstd",15,"statistic","Average STREAM 'Add' Memory Bandwidth","13297.3568","MByte per Second","Ookami",1,48
+"293","mvapich2/libsci/fftw3/cce","akstd",15,"statistic","Average STREAM 'Copy' Memory Bandwidth","11618.2016","MByte per Second","Ookami",1,48
+"294","mvapich2/libsci/fftw3/cce","akstd",15,"statistic","Average STREAM 'Scale' Memory Bandwidth","12003.2256","MByte per Second","Ookami",1,48
+"295","mvapich2/libsci/fftw3/cce","akstd",15,"statistic","Average STREAM 'Triad' Memory Bandwidth","13316.5056","MByte per Second","Ookami",1,48
+"296","mvapich2/libsci/fftw3/cce","akstd",15,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","7378.650000000001","MFLOP per Second","Ookami",1,48
+"297","mvapich2/libsci/fftw3/cce","akstd",15,"statistic","High Performance LINPACK Floating-Point Performance","802580.0","MFLOP per Second","Ookami",1,48
+"298","mvapich2/libsci/fftw3/cce","akstd",15,"statistic","High Performance LINPACK Run Time","6.64598","Second","Ookami",1,48
+"299","mvapich2/libsci/fftw3/cce","akstd",15,"statistic","MPI Random Access","13.6605","MUpdate per Second","Ookami",1,48
+"300","mvapich2/libsci/fftw3/cce","akstd",15,"statistic","Parallel Matrix Transpose (PTRANS)","21602.4064","MByte per Second","Ookami",1,48
+"301","mvapich2/libsci/fftw3/cce","akstd",16,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"302","mvapich2/libsci/fftw3/cce","akstd",16,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"303","mvapich2/libsci/fftw3/cce","akstd",16,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"304","mvapich2/libsci/fftw3/cce","akstd",16,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"305","mvapich2/libsci/fftw3/cce","akstd",16,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"306","mvapich2/libsci/fftw3/cce","akstd",16,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"307","mvapich2/libsci/fftw3/cce","akstd",16,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"308","mvapich2/libsci/fftw3/cce","akstd",16,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"309","mvapich2/libsci/fftw3/cce","akstd",16,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"310","mvapich2/libsci/fftw3/cce","akstd",16,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"311","mvapich2/libsci/fftw3/cce","akstd",16,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19893.7","MFLOP per Second","Ookami",1,48
+"312","mvapich2/libsci/fftw3/cce","akstd",16,"statistic","Average STREAM 'Add' Memory Bandwidth","13292.9536","MByte per Second","Ookami",1,48
+"313","mvapich2/libsci/fftw3/cce","akstd",16,"statistic","Average STREAM 'Copy' Memory Bandwidth","11660.8","MByte per Second","Ookami",1,48
+"314","mvapich2/libsci/fftw3/cce","akstd",16,"statistic","Average STREAM 'Scale' Memory Bandwidth","11993.3952","MByte per Second","Ookami",1,48
+"315","mvapich2/libsci/fftw3/cce","akstd",16,"statistic","Average STREAM 'Triad' Memory Bandwidth","13313.4336","MByte per Second","Ookami",1,48
+"316","mvapich2/libsci/fftw3/cce","akstd",16,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","7502.0","MFLOP per Second","Ookami",1,48
+"317","mvapich2/libsci/fftw3/cce","akstd",16,"statistic","High Performance LINPACK Floating-Point Performance","805611.0","MFLOP per Second","Ookami",1,48
+"318","mvapich2/libsci/fftw3/cce","akstd",16,"statistic","High Performance LINPACK Run Time","6.62098","Second","Ookami",1,48
+"319","mvapich2/libsci/fftw3/cce","akstd",16,"statistic","MPI Random Access","13.9333","MUpdate per Second","Ookami",1,48
+"320","mvapich2/libsci/fftw3/cce","akstd",16,"statistic","Parallel Matrix Transpose (PTRANS)","22830.3872","MByte per Second","Ookami",1,48
+"321","mvapich2/libsci/fftw3/cce","akstd",17,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"322","mvapich2/libsci/fftw3/cce","akstd",17,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"323","mvapich2/libsci/fftw3/cce","akstd",17,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"324","mvapich2/libsci/fftw3/cce","akstd",17,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"325","mvapich2/libsci/fftw3/cce","akstd",17,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"326","mvapich2/libsci/fftw3/cce","akstd",17,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"327","mvapich2/libsci/fftw3/cce","akstd",17,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"328","mvapich2/libsci/fftw3/cce","akstd",17,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"329","mvapich2/libsci/fftw3/cce","akstd",17,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"330","mvapich2/libsci/fftw3/cce","akstd",17,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"331","mvapich2/libsci/fftw3/cce","akstd",17,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19927.5","MFLOP per Second","Ookami",1,48
+"332","mvapich2/libsci/fftw3/cce","akstd",17,"statistic","Average STREAM 'Add' Memory Bandwidth","13301.0432","MByte per Second","Ookami",1,48
+"333","mvapich2/libsci/fftw3/cce","akstd",17,"statistic","Average STREAM 'Copy' Memory Bandwidth","11675.7504","MByte per Second","Ookami",1,48
+"334","mvapich2/libsci/fftw3/cce","akstd",17,"statistic","Average STREAM 'Scale' Memory Bandwidth","11985.1008","MByte per Second","Ookami",1,48
+"335","mvapich2/libsci/fftw3/cce","akstd",17,"statistic","Average STREAM 'Triad' Memory Bandwidth","13336.3712","MByte per Second","Ookami",1,48
+"336","mvapich2/libsci/fftw3/cce","akstd",17,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","6774.28","MFLOP per Second","Ookami",1,48
+"337","mvapich2/libsci/fftw3/cce","akstd",17,"statistic","High Performance LINPACK Floating-Point Performance","805850.0","MFLOP per Second","Ookami",1,48
+"338","mvapich2/libsci/fftw3/cce","akstd",17,"statistic","High Performance LINPACK Run Time","6.61902","Second","Ookami",1,48
+"339","mvapich2/libsci/fftw3/cce","akstd",17,"statistic","MPI Random Access","13.8992","MUpdate per Second","Ookami",1,48
+"340","mvapich2/libsci/fftw3/cce","akstd",17,"statistic","Parallel Matrix Transpose (PTRANS)","22164.8896","MByte per Second","Ookami",1,48
+"341","mvapich2/libsci/fftw3/cce","akstd",18,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"342","mvapich2/libsci/fftw3/cce","akstd",18,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"343","mvapich2/libsci/fftw3/cce","akstd",18,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"344","mvapich2/libsci/fftw3/cce","akstd",18,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"345","mvapich2/libsci/fftw3/cce","akstd",18,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"346","mvapich2/libsci/fftw3/cce","akstd",18,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"347","mvapich2/libsci/fftw3/cce","akstd",18,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"348","mvapich2/libsci/fftw3/cce","akstd",18,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"349","mvapich2/libsci/fftw3/cce","akstd",18,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"350","mvapich2/libsci/fftw3/cce","akstd",18,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"351","mvapich2/libsci/fftw3/cce","akstd",18,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19945.699999999997","MFLOP per Second","Ookami",1,48
+"352","mvapich2/libsci/fftw3/cce","akstd",18,"statistic","Average STREAM 'Add' Memory Bandwidth","13297.3568","MByte per Second","Ookami",1,48
+"353","mvapich2/libsci/fftw3/cce","akstd",18,"statistic","Average STREAM 'Copy' Memory Bandwidth","11702.272","MByte per Second","Ookami",1,48
+"354","mvapich2/libsci/fftw3/cce","akstd",18,"statistic","Average STREAM 'Scale' Memory Bandwidth","12004.7616","MByte per Second","Ookami",1,48
+"355","mvapich2/libsci/fftw3/cce","akstd",18,"statistic","Average STREAM 'Triad' Memory Bandwidth","13301.0432","MByte per Second","Ookami",1,48
+"356","mvapich2/libsci/fftw3/cce","akstd",18,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","7795.410000000001","MFLOP per Second","Ookami",1,48
+"357","mvapich2/libsci/fftw3/cce","akstd",18,"statistic","High Performance LINPACK Floating-Point Performance","791852.0","MFLOP per Second","Ookami",1,48
+"358","mvapich2/libsci/fftw3/cce","akstd",18,"statistic","High Performance LINPACK Run Time","6.73602","Second","Ookami",1,48
+"359","mvapich2/libsci/fftw3/cce","akstd",18,"statistic","MPI Random Access","13.8429","MUpdate per Second","Ookami",1,48
+"360","mvapich2/libsci/fftw3/cce","akstd",18,"statistic","Parallel Matrix Transpose (PTRANS)","13688.7296","MByte per Second","Ookami",1,48
+"361","mvapich2/libsci/fftw3/cce","akstd",19,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"362","mvapich2/libsci/fftw3/cce","akstd",19,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"363","mvapich2/libsci/fftw3/cce","akstd",19,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"364","mvapich2/libsci/fftw3/cce","akstd",19,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"365","mvapich2/libsci/fftw3/cce","akstd",19,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"366","mvapich2/libsci/fftw3/cce","akstd",19,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"367","mvapich2/libsci/fftw3/cce","akstd",19,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"368","mvapich2/libsci/fftw3/cce","akstd",19,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"369","mvapich2/libsci/fftw3/cce","akstd",19,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"370","mvapich2/libsci/fftw3/cce","akstd",19,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"371","mvapich2/libsci/fftw3/cce","akstd",19,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19933.399999999998","MFLOP per Second","Ookami",1,48
+"372","mvapich2/libsci/fftw3/cce","akstd",19,"statistic","Average STREAM 'Add' Memory Bandwidth","13262.848","MByte per Second","Ookami",1,48
+"373","mvapich2/libsci/fftw3/cce","akstd",19,"statistic","Average STREAM 'Copy' Memory Bandwidth","11667.968","MByte per Second","Ookami",1,48
+"374","mvapich2/libsci/fftw3/cce","akstd",19,"statistic","Average STREAM 'Scale' Memory Bandwidth","12013.056","MByte per Second","Ookami",1,48
+"375","mvapich2/libsci/fftw3/cce","akstd",19,"statistic","Average STREAM 'Triad' Memory Bandwidth","13327.6672","MByte per Second","Ookami",1,48
+"376","mvapich2/libsci/fftw3/cce","akstd",19,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","7824.620000000001","MFLOP per Second","Ookami",1,48
+"377","mvapich2/libsci/fftw3/cce","akstd",19,"statistic","High Performance LINPACK Floating-Point Performance","796471.0","MFLOP per Second","Ookami",1,48
+"378","mvapich2/libsci/fftw3/cce","akstd",19,"statistic","High Performance LINPACK Run Time","6.69696","Second","Ookami",1,48
+"379","mvapich2/libsci/fftw3/cce","akstd",19,"statistic","MPI Random Access","13.8242","MUpdate per Second","Ookami",1,48
+"380","mvapich2/libsci/fftw3/cce","akstd",19,"statistic","Parallel Matrix Transpose (PTRANS)","22244.2496","MByte per Second","Ookami",1,48
+"381","mvapich2/libsci/fftw3/cce","akstd",20,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"382","mvapich2/libsci/fftw3/cce","akstd",20,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"383","mvapich2/libsci/fftw3/cce","akstd",20,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"384","mvapich2/libsci/fftw3/cce","akstd",20,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"385","mvapich2/libsci/fftw3/cce","akstd",20,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"386","mvapich2/libsci/fftw3/cce","akstd",20,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"387","mvapich2/libsci/fftw3/cce","akstd",20,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"388","mvapich2/libsci/fftw3/cce","akstd",20,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"389","mvapich2/libsci/fftw3/cce","akstd",20,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"390","mvapich2/libsci/fftw3/cce","akstd",20,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"391","mvapich2/libsci/fftw3/cce","akstd",20,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19947.3","MFLOP per Second","Ookami",1,48
+"392","mvapich2/libsci/fftw3/cce","akstd",20,"statistic","Average STREAM 'Add' Memory Bandwidth","13268.3776","MByte per Second","Ookami",1,48
+"393","mvapich2/libsci/fftw3/cce","akstd",20,"statistic","Average STREAM 'Copy' Memory Bandwidth","11665.8176","MByte per Second","Ookami",1,48
+"394","mvapich2/libsci/fftw3/cce","akstd",20,"statistic","Average STREAM 'Scale' Memory Bandwidth","11991.9616","MByte per Second","Ookami",1,48
+"395","mvapich2/libsci/fftw3/cce","akstd",20,"statistic","Average STREAM 'Triad' Memory Bandwidth","13306.5728","MByte per Second","Ookami",1,48
+"396","mvapich2/libsci/fftw3/cce","akstd",20,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","7280.92","MFLOP per Second","Ookami",1,48
+"397","mvapich2/libsci/fftw3/cce","akstd",20,"statistic","High Performance LINPACK Floating-Point Performance","793758.0","MFLOP per Second","Ookami",1,48
+"398","mvapich2/libsci/fftw3/cce","akstd",20,"statistic","High Performance LINPACK Run Time","6.71985","Second","Ookami",1,48
+"399","mvapich2/libsci/fftw3/cce","akstd",20,"statistic","MPI Random Access","13.6462","MUpdate per Second","Ookami",1,48
+"400","mvapich2/libsci/fftw3/cce","akstd",20,"statistic","Parallel Matrix Transpose (PTRANS)","23076.4544","MByte per Second","Ookami",1,48
+"401","mvapich2/libsci/intfft/cce","akstd",1,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"402","mvapich2/libsci/intfft/cce","akstd",1,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"403","mvapich2/libsci/intfft/cce","akstd",1,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"404","mvapich2/libsci/intfft/cce","akstd",1,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"405","mvapich2/libsci/intfft/cce","akstd",1,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"406","mvapich2/libsci/intfft/cce","akstd",1,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"407","mvapich2/libsci/intfft/cce","akstd",1,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"408","mvapich2/libsci/intfft/cce","akstd",1,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"409","mvapich2/libsci/intfft/cce","akstd",1,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"410","mvapich2/libsci/intfft/cce","akstd",1,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"411","mvapich2/libsci/intfft/cce","akstd",1,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19972.4","MFLOP per Second","Ookami",1,48
+"412","mvapich2/libsci/intfft/cce","akstd",1,"statistic","Average STREAM 'Add' Memory Bandwidth","13314.048","MByte per Second","Ookami",1,48
+"413","mvapich2/libsci/intfft/cce","akstd",1,"statistic","Average STREAM 'Copy' Memory Bandwidth","11704.4224","MByte per Second","Ookami",1,48
+"414","mvapich2/libsci/intfft/cce","akstd",1,"statistic","Average STREAM 'Scale' Memory Bandwidth","11982.1312","MByte per Second","Ookami",1,48
+"415","mvapich2/libsci/intfft/cce","akstd",1,"statistic","Average STREAM 'Triad' Memory Bandwidth","13348.7616","MByte per Second","Ookami",1,48
+"416","mvapich2/libsci/intfft/cce","akstd",1,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","14520.300000000001","MFLOP per Second","Ookami",1,48
+"417","mvapich2/libsci/intfft/cce","akstd",1,"statistic","High Performance LINPACK Floating-Point Performance","795561.0","MFLOP per Second","Ookami",1,48
+"418","mvapich2/libsci/intfft/cce","akstd",1,"statistic","High Performance LINPACK Run Time","6.70461","Second","Ookami",1,48
+"419","mvapich2/libsci/intfft/cce","akstd",1,"statistic","MPI Random Access","13.8162","MUpdate per Second","Ookami",1,48
+"420","mvapich2/libsci/intfft/cce","akstd",1,"statistic","Parallel Matrix Transpose (PTRANS)","21806.2848","MByte per Second","Ookami",1,48
+"421","mvapich2/libsci/intfft/cce","akstd",2,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"422","mvapich2/libsci/intfft/cce","akstd",2,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"423","mvapich2/libsci/intfft/cce","akstd",2,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"424","mvapich2/libsci/intfft/cce","akstd",2,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"425","mvapich2/libsci/intfft/cce","akstd",2,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"426","mvapich2/libsci/intfft/cce","akstd",2,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"427","mvapich2/libsci/intfft/cce","akstd",2,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"428","mvapich2/libsci/intfft/cce","akstd",2,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"429","mvapich2/libsci/intfft/cce","akstd",2,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"430","mvapich2/libsci/intfft/cce","akstd",2,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"431","mvapich2/libsci/intfft/cce","akstd",2,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19939.3","MFLOP per Second","Ookami",1,48
+"432","mvapich2/libsci/intfft/cce","akstd",2,"statistic","Average STREAM 'Add' Memory Bandwidth","13292.3392","MByte per Second","Ookami",1,48
+"433","mvapich2/libsci/intfft/cce","akstd",2,"statistic","Average STREAM 'Copy' Memory Bandwidth","11598.4384","MByte per Second","Ookami",1,48
+"434","mvapich2/libsci/intfft/cce","akstd",2,"statistic","Average STREAM 'Scale' Memory Bandwidth","12004.7616","MByte per Second","Ookami",1,48
+"435","mvapich2/libsci/intfft/cce","akstd",2,"statistic","Average STREAM 'Triad' Memory Bandwidth","13286.8096","MByte per Second","Ookami",1,48
+"436","mvapich2/libsci/intfft/cce","akstd",2,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","14267.4","MFLOP per Second","Ookami",1,48
+"437","mvapich2/libsci/intfft/cce","akstd",2,"statistic","High Performance LINPACK Floating-Point Performance","789264.0","MFLOP per Second","Ookami",1,48
+"438","mvapich2/libsci/intfft/cce","akstd",2,"statistic","High Performance LINPACK Run Time","6.75811","Second","Ookami",1,48
+"439","mvapich2/libsci/intfft/cce","akstd",2,"statistic","MPI Random Access","13.667399999999999","MUpdate per Second","Ookami",1,48
+"440","mvapich2/libsci/intfft/cce","akstd",2,"statistic","Parallel Matrix Transpose (PTRANS)","22056.3456","MByte per Second","Ookami",1,48
+"441","mvapich2/libsci/intfft/cce","akstd",3,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"442","mvapich2/libsci/intfft/cce","akstd",3,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"443","mvapich2/libsci/intfft/cce","akstd",3,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"444","mvapich2/libsci/intfft/cce","akstd",3,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"445","mvapich2/libsci/intfft/cce","akstd",3,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"446","mvapich2/libsci/intfft/cce","akstd",3,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"447","mvapich2/libsci/intfft/cce","akstd",3,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"448","mvapich2/libsci/intfft/cce","akstd",3,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"449","mvapich2/libsci/intfft/cce","akstd",3,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"450","mvapich2/libsci/intfft/cce","akstd",3,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"451","mvapich2/libsci/intfft/cce","akstd",3,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19976.4","MFLOP per Second","Ookami",1,48
+"452","mvapich2/libsci/intfft/cce","akstd",3,"statistic","Average STREAM 'Add' Memory Bandwidth","13287.424","MByte per Second","Ookami",1,48
+"453","mvapich2/libsci/intfft/cce","akstd",3,"statistic","Average STREAM 'Copy' Memory Bandwidth","11687.936","MByte per Second","Ookami",1,48
+"454","mvapich2/libsci/intfft/cce","akstd",3,"statistic","Average STREAM 'Scale' Memory Bandwidth","11982.848","MByte per Second","Ookami",1,48
+"455","mvapich2/libsci/intfft/cce","akstd",3,"statistic","Average STREAM 'Triad' Memory Bandwidth","13336.3712","MByte per Second","Ookami",1,48
+"456","mvapich2/libsci/intfft/cce","akstd",3,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","14334.300000000001","MFLOP per Second","Ookami",1,48
+"457","mvapich2/libsci/intfft/cce","akstd",3,"statistic","High Performance LINPACK Floating-Point Performance","805902.0","MFLOP per Second","Ookami",1,48
+"458","mvapich2/libsci/intfft/cce","akstd",3,"statistic","High Performance LINPACK Run Time","6.61859","Second","Ookami",1,48
+"459","mvapich2/libsci/intfft/cce","akstd",3,"statistic","MPI Random Access","13.8178","MUpdate per Second","Ookami",1,48
+"460","mvapich2/libsci/intfft/cce","akstd",3,"statistic","Parallel Matrix Transpose (PTRANS)","21258.9568","MByte per Second","Ookami",1,48
+"461","mvapich2/libsci/intfft/cce","akstd",4,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"462","mvapich2/libsci/intfft/cce","akstd",4,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"463","mvapich2/libsci/intfft/cce","akstd",4,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"464","mvapich2/libsci/intfft/cce","akstd",4,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"465","mvapich2/libsci/intfft/cce","akstd",4,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"466","mvapich2/libsci/intfft/cce","akstd",4,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"467","mvapich2/libsci/intfft/cce","akstd",4,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"468","mvapich2/libsci/intfft/cce","akstd",4,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"469","mvapich2/libsci/intfft/cce","akstd",4,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"470","mvapich2/libsci/intfft/cce","akstd",4,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"471","mvapich2/libsci/intfft/cce","akstd",4,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19960.8","MFLOP per Second","Ookami",1,48
+"472","mvapich2/libsci/intfft/cce","akstd",4,"statistic","Average STREAM 'Add' Memory Bandwidth","13290.496","MByte per Second","Ookami",1,48
+"473","mvapich2/libsci/intfft/cce","akstd",4,"statistic","Average STREAM 'Copy' Memory Bandwidth","11690.0864","MByte per Second","Ookami",1,48
+"474","mvapich2/libsci/intfft/cce","akstd",4,"statistic","Average STREAM 'Scale' Memory Bandwidth","12006.2976","MByte per Second","Ookami",1,48
+"475","mvapich2/libsci/intfft/cce","akstd",4,"statistic","Average STREAM 'Triad' Memory Bandwidth","13328.896","MByte per Second","Ookami",1,48
+"476","mvapich2/libsci/intfft/cce","akstd",4,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","14888.400000000001","MFLOP per Second","Ookami",1,48
+"477","mvapich2/libsci/intfft/cce","akstd",4,"statistic","High Performance LINPACK Floating-Point Performance","794937.0","MFLOP per Second","Ookami",1,48
+"478","mvapich2/libsci/intfft/cce","akstd",4,"statistic","High Performance LINPACK Run Time","6.70988","Second","Ookami",1,48
+"479","mvapich2/libsci/intfft/cce","akstd",4,"statistic","MPI Random Access","13.897","MUpdate per Second","Ookami",1,48
+"480","mvapich2/libsci/intfft/cce","akstd",4,"statistic","Parallel Matrix Transpose (PTRANS)","22443.2128","MByte per Second","Ookami",1,48
+"481","mvapich2/libsci/intfft/cce","akstd",5,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"482","mvapich2/libsci/intfft/cce","akstd",5,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"483","mvapich2/libsci/intfft/cce","akstd",5,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"484","mvapich2/libsci/intfft/cce","akstd",5,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"485","mvapich2/libsci/intfft/cce","akstd",5,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"486","mvapich2/libsci/intfft/cce","akstd",5,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"487","mvapich2/libsci/intfft/cce","akstd",5,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"488","mvapich2/libsci/intfft/cce","akstd",5,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"489","mvapich2/libsci/intfft/cce","akstd",5,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"490","mvapich2/libsci/intfft/cce","akstd",5,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"491","mvapich2/libsci/intfft/cce","akstd",5,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19961.1","MFLOP per Second","Ookami",1,48
+"492","mvapich2/libsci/intfft/cce","akstd",5,"statistic","Average STREAM 'Add' Memory Bandwidth","13281.28","MByte per Second","Ookami",1,48
+"493","mvapich2/libsci/intfft/cce","akstd",5,"statistic","Average STREAM 'Copy' Memory Bandwidth","11670.8352","MByte per Second","Ookami",1,48
+"494","mvapich2/libsci/intfft/cce","akstd",5,"statistic","Average STREAM 'Scale' Memory Bandwidth","11982.848","MByte per Second","Ookami",1,48
+"495","mvapich2/libsci/intfft/cce","akstd",5,"statistic","Average STREAM 'Triad' Memory Bandwidth","13314.6624","MByte per Second","Ookami",1,48
+"496","mvapich2/libsci/intfft/cce","akstd",5,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","14511.300000000001","MFLOP per Second","Ookami",1,48
+"497","mvapich2/libsci/intfft/cce","akstd",5,"statistic","High Performance LINPACK Floating-Point Performance","787633.0","MFLOP per Second","Ookami",1,48
+"498","mvapich2/libsci/intfft/cce","akstd",5,"statistic","High Performance LINPACK Run Time","6.7721","Second","Ookami",1,48
+"499","mvapich2/libsci/intfft/cce","akstd",5,"statistic","MPI Random Access","13.781099999999999","MUpdate per Second","Ookami",1,48
+"500","mvapich2/libsci/intfft/cce","akstd",5,"statistic","Parallel Matrix Transpose (PTRANS)","23465.2672","MByte per Second","Ookami",1,48
+"501","mvapich2/libsci/intfft/cce","akstd",6,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"502","mvapich2/libsci/intfft/cce","akstd",6,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"503","mvapich2/libsci/intfft/cce","akstd",6,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"504","mvapich2/libsci/intfft/cce","akstd",6,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"505","mvapich2/libsci/intfft/cce","akstd",6,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"506","mvapich2/libsci/intfft/cce","akstd",6,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"507","mvapich2/libsci/intfft/cce","akstd",6,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"508","mvapich2/libsci/intfft/cce","akstd",6,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"509","mvapich2/libsci/intfft/cce","akstd",6,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"510","mvapich2/libsci/intfft/cce","akstd",6,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"511","mvapich2/libsci/intfft/cce","akstd",6,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19979.7","MFLOP per Second","Ookami",1,48
+"512","mvapich2/libsci/intfft/cce","akstd",6,"statistic","Average STREAM 'Add' Memory Bandwidth","13323.264","MByte per Second","Ookami",1,48
+"513","mvapich2/libsci/intfft/cce","akstd",6,"statistic","Average STREAM 'Copy' Memory Bandwidth","11715.1744","MByte per Second","Ookami",1,48
+"514","mvapich2/libsci/intfft/cce","akstd",6,"statistic","Average STREAM 'Scale' Memory Bandwidth","11985.1008","MByte per Second","Ookami",1,48
+"515","mvapich2/libsci/intfft/cce","akstd",6,"statistic","Average STREAM 'Triad' Memory Bandwidth","13378.6624","MByte per Second","Ookami",1,48
+"516","mvapich2/libsci/intfft/cce","akstd",6,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","14868.1","MFLOP per Second","Ookami",1,48
+"517","mvapich2/libsci/intfft/cce","akstd",6,"statistic","High Performance LINPACK Floating-Point Performance","795835.0","MFLOP per Second","Ookami",1,48
+"518","mvapich2/libsci/intfft/cce","akstd",6,"statistic","High Performance LINPACK Run Time","6.70231","Second","Ookami",1,48
+"519","mvapich2/libsci/intfft/cce","akstd",6,"statistic","MPI Random Access","13.658399999999999","MUpdate per Second","Ookami",1,48
+"520","mvapich2/libsci/intfft/cce","akstd",6,"statistic","Parallel Matrix Transpose (PTRANS)","22232.576","MByte per Second","Ookami",1,48
+"521","mvapich2/libsci/intfft/cce","akstd",7,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"522","mvapich2/libsci/intfft/cce","akstd",7,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"523","mvapich2/libsci/intfft/cce","akstd",7,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"524","mvapich2/libsci/intfft/cce","akstd",7,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"525","mvapich2/libsci/intfft/cce","akstd",7,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"526","mvapich2/libsci/intfft/cce","akstd",7,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"527","mvapich2/libsci/intfft/cce","akstd",7,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"528","mvapich2/libsci/intfft/cce","akstd",7,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"529","mvapich2/libsci/intfft/cce","akstd",7,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"530","mvapich2/libsci/intfft/cce","akstd",7,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"531","mvapich2/libsci/intfft/cce","akstd",7,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19980.0","MFLOP per Second","Ookami",1,48
+"532","mvapich2/libsci/intfft/cce","akstd",7,"statistic","Average STREAM 'Add' Memory Bandwidth","13294.1824","MByte per Second","Ookami",1,48
+"533","mvapich2/libsci/intfft/cce","akstd",7,"statistic","Average STREAM 'Copy' Memory Bandwidth","11694.3872","MByte per Second","Ookami",1,48
+"534","mvapich2/libsci/intfft/cce","akstd",7,"statistic","Average STREAM 'Scale' Memory Bandwidth","11981.4144","MByte per Second","Ookami",1,48
+"535","mvapich2/libsci/intfft/cce","akstd",7,"statistic","Average STREAM 'Triad' Memory Bandwidth","13325.2096","MByte per Second","Ookami",1,48
+"536","mvapich2/libsci/intfft/cce","akstd",7,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","14778.7","MFLOP per Second","Ookami",1,48
+"537","mvapich2/libsci/intfft/cce","akstd",7,"statistic","High Performance LINPACK Floating-Point Performance","797104.0","MFLOP per Second","Ookami",1,48
+"538","mvapich2/libsci/intfft/cce","akstd",7,"statistic","High Performance LINPACK Run Time","6.69164","Second","Ookami",1,48
+"539","mvapich2/libsci/intfft/cce","akstd",7,"statistic","MPI Random Access","13.8872","MUpdate per Second","Ookami",1,48
+"540","mvapich2/libsci/intfft/cce","akstd",7,"statistic","Parallel Matrix Transpose (PTRANS)","22056.0384","MByte per Second","Ookami",1,48
+"541","mvapich2/libsci/intfft/cce","akstd",8,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"542","mvapich2/libsci/intfft/cce","akstd",8,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"543","mvapich2/libsci/intfft/cce","akstd",8,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"544","mvapich2/libsci/intfft/cce","akstd",8,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"545","mvapich2/libsci/intfft/cce","akstd",8,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"546","mvapich2/libsci/intfft/cce","akstd",8,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"547","mvapich2/libsci/intfft/cce","akstd",8,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"548","mvapich2/libsci/intfft/cce","akstd",8,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"549","mvapich2/libsci/intfft/cce","akstd",8,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"550","mvapich2/libsci/intfft/cce","akstd",8,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"551","mvapich2/libsci/intfft/cce","akstd",8,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19963.0","MFLOP per Second","Ookami",1,48
+"552","mvapich2/libsci/intfft/cce","akstd",8,"statistic","Average STREAM 'Add' Memory Bandwidth","13293.568","MByte per Second","Ookami",1,48
+"553","mvapich2/libsci/intfft/cce","akstd",8,"statistic","Average STREAM 'Copy' Memory Bandwidth","11711.5904","MByte per Second","Ookami",1,48
+"554","mvapich2/libsci/intfft/cce","akstd",8,"statistic","Average STREAM 'Scale' Memory Bandwidth","12010.8032","MByte per Second","Ookami",1,48
+"555","mvapich2/libsci/intfft/cce","akstd",8,"statistic","Average STREAM 'Triad' Memory Bandwidth","13317.12","MByte per Second","Ookami",1,48
+"556","mvapich2/libsci/intfft/cce","akstd",8,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","13800.7","MFLOP per Second","Ookami",1,48
+"557","mvapich2/libsci/intfft/cce","akstd",8,"statistic","High Performance LINPACK Floating-Point Performance","791491.0","MFLOP per Second","Ookami",1,48
+"558","mvapich2/libsci/intfft/cce","akstd",8,"statistic","High Performance LINPACK Run Time","6.7391","Second","Ookami",1,48
+"559","mvapich2/libsci/intfft/cce","akstd",8,"statistic","MPI Random Access","13.8519","MUpdate per Second","Ookami",1,48
+"560","mvapich2/libsci/intfft/cce","akstd",8,"statistic","Parallel Matrix Transpose (PTRANS)","21681.3568","MByte per Second","Ookami",1,48
+"561","mvapich2/libsci/intfft/cce","akstd",9,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"562","mvapich2/libsci/intfft/cce","akstd",9,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"563","mvapich2/libsci/intfft/cce","akstd",9,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"564","mvapich2/libsci/intfft/cce","akstd",9,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"565","mvapich2/libsci/intfft/cce","akstd",9,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"566","mvapich2/libsci/intfft/cce","akstd",9,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"567","mvapich2/libsci/intfft/cce","akstd",9,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"568","mvapich2/libsci/intfft/cce","akstd",9,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"569","mvapich2/libsci/intfft/cce","akstd",9,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"570","mvapich2/libsci/intfft/cce","akstd",9,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"571","mvapich2/libsci/intfft/cce","akstd",9,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19956.800000000003","MFLOP per Second","Ookami",1,48
+"572","mvapich2/libsci/intfft/cce","akstd",9,"statistic","Average STREAM 'Add' Memory Bandwidth","13325.824","MByte per Second","Ookami",1,48
+"573","mvapich2/libsci/intfft/cce","akstd",9,"statistic","Average STREAM 'Copy' Memory Bandwidth","11660.0832","MByte per Second","Ookami",1,48
+"574","mvapich2/libsci/intfft/cce","akstd",9,"statistic","Average STREAM 'Scale' Memory Bandwidth","11982.1312","MByte per Second","Ookami",1,48
+"575","mvapich2/libsci/intfft/cce","akstd",9,"statistic","Average STREAM 'Triad' Memory Bandwidth","13354.3936","MByte per Second","Ookami",1,48
+"576","mvapich2/libsci/intfft/cce","akstd",9,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","14421.0","MFLOP per Second","Ookami",1,48
+"577","mvapich2/libsci/intfft/cce","akstd",9,"statistic","High Performance LINPACK Floating-Point Performance","796834.0","MFLOP per Second","Ookami",1,48
+"578","mvapich2/libsci/intfft/cce","akstd",9,"statistic","High Performance LINPACK Run Time","6.69391","Second","Ookami",1,48
+"579","mvapich2/libsci/intfft/cce","akstd",9,"statistic","MPI Random Access","13.825199999999999","MUpdate per Second","Ookami",1,48
+"580","mvapich2/libsci/intfft/cce","akstd",9,"statistic","Parallel Matrix Transpose (PTRANS)","21928.2432","MByte per Second","Ookami",1,48
+"581","mvapich2/libsci/intfft/cce","akstd",10,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"582","mvapich2/libsci/intfft/cce","akstd",10,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"583","mvapich2/libsci/intfft/cce","akstd",10,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"584","mvapich2/libsci/intfft/cce","akstd",10,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"585","mvapich2/libsci/intfft/cce","akstd",10,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"586","mvapich2/libsci/intfft/cce","akstd",10,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"587","mvapich2/libsci/intfft/cce","akstd",10,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"588","mvapich2/libsci/intfft/cce","akstd",10,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"589","mvapich2/libsci/intfft/cce","akstd",10,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"590","mvapich2/libsci/intfft/cce","akstd",10,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"591","mvapich2/libsci/intfft/cce","akstd",10,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19956.399999999998","MFLOP per Second","Ookami",1,48
+"592","mvapich2/libsci/intfft/cce","akstd",10,"statistic","Average STREAM 'Add' Memory Bandwidth","13301.6576","MByte per Second","Ookami",1,48
+"593","mvapich2/libsci/intfft/cce","akstd",10,"statistic","Average STREAM 'Copy' Memory Bandwidth","11711.5904","MByte per Second","Ookami",1,48
+"594","mvapich2/libsci/intfft/cce","akstd",10,"statistic","Average STREAM 'Scale' Memory Bandwidth","11992.6784","MByte per Second","Ookami",1,48
+"595","mvapich2/libsci/intfft/cce","akstd",10,"statistic","Average STREAM 'Triad' Memory Bandwidth","13328.896","MByte per Second","Ookami",1,48
+"596","mvapich2/libsci/intfft/cce","akstd",10,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","14605.1","MFLOP per Second","Ookami",1,48
+"597","mvapich2/libsci/intfft/cce","akstd",10,"statistic","High Performance LINPACK Floating-Point Performance","803448.0","MFLOP per Second","Ookami",1,48
+"598","mvapich2/libsci/intfft/cce","akstd",10,"statistic","High Performance LINPACK Run Time","6.6388","Second","Ookami",1,48
+"599","mvapich2/libsci/intfft/cce","akstd",10,"statistic","MPI Random Access","13.641300000000001","MUpdate per Second","Ookami",1,48
+"600","mvapich2/libsci/intfft/cce","akstd",10,"statistic","Parallel Matrix Transpose (PTRANS)","22084.9152","MByte per Second","Ookami",1,48
+"601","mvapich2/libsci/intfft/cce","akstd",11,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"602","mvapich2/libsci/intfft/cce","akstd",11,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"603","mvapich2/libsci/intfft/cce","akstd",11,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"604","mvapich2/libsci/intfft/cce","akstd",11,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"605","mvapich2/libsci/intfft/cce","akstd",11,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"606","mvapich2/libsci/intfft/cce","akstd",11,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"607","mvapich2/libsci/intfft/cce","akstd",11,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"608","mvapich2/libsci/intfft/cce","akstd",11,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"609","mvapich2/libsci/intfft/cce","akstd",11,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"610","mvapich2/libsci/intfft/cce","akstd",11,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"611","mvapich2/libsci/intfft/cce","akstd",11,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19963.8","MFLOP per Second","Ookami",1,48
+"612","mvapich2/libsci/intfft/cce","akstd",11,"statistic","Average STREAM 'Add' Memory Bandwidth","13302.272","MByte per Second","Ookami",1,48
+"613","mvapich2/libsci/intfft/cce","akstd",11,"statistic","Average STREAM 'Copy' Memory Bandwidth","11665.1008","MByte per Second","Ookami",1,48
+"614","mvapich2/libsci/intfft/cce","akstd",11,"statistic","Average STREAM 'Scale' Memory Bandwidth","11982.848","MByte per Second","Ookami",1,48
+"615","mvapich2/libsci/intfft/cce","akstd",11,"statistic","Average STREAM 'Triad' Memory Bandwidth","13332.5824","MByte per Second","Ookami",1,48
+"616","mvapich2/libsci/intfft/cce","akstd",11,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","14633.1","MFLOP per Second","Ookami",1,48
+"617","mvapich2/libsci/intfft/cce","akstd",11,"statistic","High Performance LINPACK Floating-Point Performance","796074.0","MFLOP per Second","Ookami",1,48
+"618","mvapich2/libsci/intfft/cce","akstd",11,"statistic","High Performance LINPACK Run Time","6.7003","Second","Ookami",1,48
+"619","mvapich2/libsci/intfft/cce","akstd",11,"statistic","MPI Random Access","13.8532","MUpdate per Second","Ookami",1,48
+"620","mvapich2/libsci/intfft/cce","akstd",11,"statistic","Parallel Matrix Transpose (PTRANS)","23075.7376","MByte per Second","Ookami",1,48
+"621","mvapich2/libsci/intfft/cce","akstd",12,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"622","mvapich2/libsci/intfft/cce","akstd",12,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"623","mvapich2/libsci/intfft/cce","akstd",12,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"624","mvapich2/libsci/intfft/cce","akstd",12,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"625","mvapich2/libsci/intfft/cce","akstd",12,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"626","mvapich2/libsci/intfft/cce","akstd",12,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"627","mvapich2/libsci/intfft/cce","akstd",12,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"628","mvapich2/libsci/intfft/cce","akstd",12,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"629","mvapich2/libsci/intfft/cce","akstd",12,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"630","mvapich2/libsci/intfft/cce","akstd",12,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"631","mvapich2/libsci/intfft/cce","akstd",12,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19960.3","MFLOP per Second","Ookami",1,48
+"632","mvapich2/libsci/intfft/cce","akstd",12,"statistic","Average STREAM 'Add' Memory Bandwidth","13289.8816","MByte per Second","Ookami",1,48
+"633","mvapich2/libsci/intfft/cce","akstd",12,"statistic","Average STREAM 'Copy' Memory Bandwidth","11680.768","MByte per Second","Ookami",1,48
+"634","mvapich2/libsci/intfft/cce","akstd",12,"statistic","Average STREAM 'Scale' Memory Bandwidth","11779.584","MByte per Second","Ookami",1,48
+"635","mvapich2/libsci/intfft/cce","akstd",12,"statistic","Average STREAM 'Triad' Memory Bandwidth","13301.6576","MByte per Second","Ookami",1,48
+"636","mvapich2/libsci/intfft/cce","akstd",12,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","14086.1","MFLOP per Second","Ookami",1,48
+"637","mvapich2/libsci/intfft/cce","akstd",12,"statistic","High Performance LINPACK Floating-Point Performance","795330.0","MFLOP per Second","Ookami",1,48
+"638","mvapich2/libsci/intfft/cce","akstd",12,"statistic","High Performance LINPACK Run Time","6.70656","Second","Ookami",1,48
+"639","mvapich2/libsci/intfft/cce","akstd",12,"statistic","MPI Random Access","13.8034","MUpdate per Second","Ookami",1,48
+"640","mvapich2/libsci/intfft/cce","akstd",12,"statistic","Parallel Matrix Transpose (PTRANS)","23089.0496","MByte per Second","Ookami",1,48
+"641","mvapich2/libsci/intfft/cce","akstd",13,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"642","mvapich2/libsci/intfft/cce","akstd",13,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"643","mvapich2/libsci/intfft/cce","akstd",13,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"644","mvapich2/libsci/intfft/cce","akstd",13,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"645","mvapich2/libsci/intfft/cce","akstd",13,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"646","mvapich2/libsci/intfft/cce","akstd",13,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"647","mvapich2/libsci/intfft/cce","akstd",13,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"648","mvapich2/libsci/intfft/cce","akstd",13,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"649","mvapich2/libsci/intfft/cce","akstd",13,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"650","mvapich2/libsci/intfft/cce","akstd",13,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"651","mvapich2/libsci/intfft/cce","akstd",13,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19968.5","MFLOP per Second","Ookami",1,48
+"652","mvapich2/libsci/intfft/cce","akstd",13,"statistic","Average STREAM 'Add' Memory Bandwidth","13286.1952","MByte per Second","Ookami",1,48
+"653","mvapich2/libsci/intfft/cce","akstd",13,"statistic","Average STREAM 'Copy' Memory Bandwidth","11713.024","MByte per Second","Ookami",1,48
+"654","mvapich2/libsci/intfft/cce","akstd",13,"statistic","Average STREAM 'Scale' Memory Bandwidth","11979.1616","MByte per Second","Ookami",1,48
+"655","mvapich2/libsci/intfft/cce","akstd",13,"statistic","Average STREAM 'Triad' Memory Bandwidth","13357.4656","MByte per Second","Ookami",1,48
+"656","mvapich2/libsci/intfft/cce","akstd",13,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","14662.3","MFLOP per Second","Ookami",1,48
+"657","mvapich2/libsci/intfft/cce","akstd",13,"statistic","High Performance LINPACK Floating-Point Performance","802413.0","MFLOP per Second","Ookami",1,48
+"658","mvapich2/libsci/intfft/cce","akstd",13,"statistic","High Performance LINPACK Run Time","6.64737","Second","Ookami",1,48
+"659","mvapich2/libsci/intfft/cce","akstd",13,"statistic","MPI Random Access","13.559099999999999","MUpdate per Second","Ookami",1,48
+"660","mvapich2/libsci/intfft/cce","akstd",13,"statistic","Parallel Matrix Transpose (PTRANS)","22422.4256","MByte per Second","Ookami",1,48
+"661","mvapich2/libsci/intfft/cce","akstd",14,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"662","mvapich2/libsci/intfft/cce","akstd",14,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"663","mvapich2/libsci/intfft/cce","akstd",14,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"664","mvapich2/libsci/intfft/cce","akstd",14,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"665","mvapich2/libsci/intfft/cce","akstd",14,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"666","mvapich2/libsci/intfft/cce","akstd",14,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"667","mvapich2/libsci/intfft/cce","akstd",14,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"668","mvapich2/libsci/intfft/cce","akstd",14,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"669","mvapich2/libsci/intfft/cce","akstd",14,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"670","mvapich2/libsci/intfft/cce","akstd",14,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"671","mvapich2/libsci/intfft/cce","akstd",14,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19967.0","MFLOP per Second","Ookami",1,48
+"672","mvapich2/libsci/intfft/cce","akstd",14,"statistic","Average STREAM 'Add' Memory Bandwidth","13235.8144","MByte per Second","Ookami",1,48
+"673","mvapich2/libsci/intfft/cce","akstd",14,"statistic","Average STREAM 'Copy' Memory Bandwidth","11641.6512","MByte per Second","Ookami",1,48
+"674","mvapich2/libsci/intfft/cce","akstd",14,"statistic","Average STREAM 'Scale' Memory Bandwidth","12003.2256","MByte per Second","Ookami",1,48
+"675","mvapich2/libsci/intfft/cce","akstd",14,"statistic","Average STREAM 'Triad' Memory Bandwidth","13337.6","MByte per Second","Ookami",1,48
+"676","mvapich2/libsci/intfft/cce","akstd",14,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","14440.6","MFLOP per Second","Ookami",1,48
+"677","mvapich2/libsci/intfft/cce","akstd",14,"statistic","High Performance LINPACK Floating-Point Performance","797428.0","MFLOP per Second","Ookami",1,48
+"678","mvapich2/libsci/intfft/cce","akstd",14,"statistic","High Performance LINPACK Run Time","6.68892","Second","Ookami",1,48
+"679","mvapich2/libsci/intfft/cce","akstd",14,"statistic","MPI Random Access","13.771","MUpdate per Second","Ookami",1,48
+"680","mvapich2/libsci/intfft/cce","akstd",14,"statistic","Parallel Matrix Transpose (PTRANS)","22399.488","MByte per Second","Ookami",1,48
+"681","mvapich2/libsci/intfft/cce","akstd",15,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"682","mvapich2/libsci/intfft/cce","akstd",15,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"683","mvapich2/libsci/intfft/cce","akstd",15,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"684","mvapich2/libsci/intfft/cce","akstd",15,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"685","mvapich2/libsci/intfft/cce","akstd",15,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"686","mvapich2/libsci/intfft/cce","akstd",15,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"687","mvapich2/libsci/intfft/cce","akstd",15,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"688","mvapich2/libsci/intfft/cce","akstd",15,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"689","mvapich2/libsci/intfft/cce","akstd",15,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"690","mvapich2/libsci/intfft/cce","akstd",15,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"691","mvapich2/libsci/intfft/cce","akstd",15,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19954.8","MFLOP per Second","Ookami",1,48
+"692","mvapich2/libsci/intfft/cce","akstd",15,"statistic","Average STREAM 'Add' Memory Bandwidth","13297.9712","MByte per Second","Ookami",1,48
+"693","mvapich2/libsci/intfft/cce","akstd",15,"statistic","Average STREAM 'Copy' Memory Bandwidth","11587.1744","MByte per Second","Ookami",1,48
+"694","mvapich2/libsci/intfft/cce","akstd",15,"statistic","Average STREAM 'Scale' Memory Bandwidth","11945.3696","MByte per Second","Ookami",1,48
+"695","mvapich2/libsci/intfft/cce","akstd",15,"statistic","Average STREAM 'Triad' Memory Bandwidth","13346.9184","MByte per Second","Ookami",1,48
+"696","mvapich2/libsci/intfft/cce","akstd",15,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","14221.9","MFLOP per Second","Ookami",1,48
+"697","mvapich2/libsci/intfft/cce","akstd",15,"statistic","High Performance LINPACK Floating-Point Performance","789189.0","MFLOP per Second","Ookami",1,48
+"698","mvapich2/libsci/intfft/cce","akstd",15,"statistic","High Performance LINPACK Run Time","6.75876","Second","Ookami",1,48
+"699","mvapich2/libsci/intfft/cce","akstd",15,"statistic","MPI Random Access","13.905199999999999","MUpdate per Second","Ookami",1,48
+"700","mvapich2/libsci/intfft/cce","akstd",15,"statistic","Parallel Matrix Transpose (PTRANS)","23203.9424","MByte per Second","Ookami",1,48
+"701","mvapich2/libsci/intfft/cce","akstd",16,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"702","mvapich2/libsci/intfft/cce","akstd",16,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"703","mvapich2/libsci/intfft/cce","akstd",16,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"704","mvapich2/libsci/intfft/cce","akstd",16,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"705","mvapich2/libsci/intfft/cce","akstd",16,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"706","mvapich2/libsci/intfft/cce","akstd",16,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"707","mvapich2/libsci/intfft/cce","akstd",16,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"708","mvapich2/libsci/intfft/cce","akstd",16,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"709","mvapich2/libsci/intfft/cce","akstd",16,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"710","mvapich2/libsci/intfft/cce","akstd",16,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"711","mvapich2/libsci/intfft/cce","akstd",16,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19960.4","MFLOP per Second","Ookami",1,48
+"712","mvapich2/libsci/intfft/cce","akstd",16,"statistic","Average STREAM 'Add' Memory Bandwidth","13291.1104","MByte per Second","Ookami",1,48
+"713","mvapich2/libsci/intfft/cce","akstd",16,"statistic","Average STREAM 'Copy' Memory Bandwidth","11680.768","MByte per Second","Ookami",1,48
+"714","mvapich2/libsci/intfft/cce","akstd",16,"statistic","Average STREAM 'Scale' Memory Bandwidth","11971.584","MByte per Second","Ookami",1,48
+"715","mvapich2/libsci/intfft/cce","akstd",16,"statistic","Average STREAM 'Triad' Memory Bandwidth","13340.0576","MByte per Second","Ookami",1,48
+"716","mvapich2/libsci/intfft/cce","akstd",16,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","14424.4","MFLOP per Second","Ookami",1,48
+"717","mvapich2/libsci/intfft/cce","akstd",16,"statistic","High Performance LINPACK Floating-Point Performance","785350.0","MFLOP per Second","Ookami",1,48
+"718","mvapich2/libsci/intfft/cce","akstd",16,"statistic","High Performance LINPACK Run Time","6.79179","Second","Ookami",1,48
+"719","mvapich2/libsci/intfft/cce","akstd",16,"statistic","MPI Random Access","14.2799","MUpdate per Second","Ookami",1,48
+"720","mvapich2/libsci/intfft/cce","akstd",16,"statistic","Parallel Matrix Transpose (PTRANS)","22263.0912","MByte per Second","Ookami",1,48
+"721","mvapich2/libsci/intfft/cce","akstd",17,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"722","mvapich2/libsci/intfft/cce","akstd",17,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"723","mvapich2/libsci/intfft/cce","akstd",17,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"724","mvapich2/libsci/intfft/cce","akstd",17,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"725","mvapich2/libsci/intfft/cce","akstd",17,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"726","mvapich2/libsci/intfft/cce","akstd",17,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"727","mvapich2/libsci/intfft/cce","akstd",17,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"728","mvapich2/libsci/intfft/cce","akstd",17,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"729","mvapich2/libsci/intfft/cce","akstd",17,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"730","mvapich2/libsci/intfft/cce","akstd",17,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"731","mvapich2/libsci/intfft/cce","akstd",17,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19964.5","MFLOP per Second","Ookami",1,48
+"732","mvapich2/libsci/intfft/cce","akstd",17,"statistic","Average STREAM 'Add' Memory Bandwidth","13289.2672","MByte per Second","Ookami",1,48
+"733","mvapich2/libsci/intfft/cce","akstd",17,"statistic","Average STREAM 'Copy' Memory Bandwidth","11652.3008","MByte per Second","Ookami",1,48
+"734","mvapich2/libsci/intfft/cce","akstd",17,"statistic","Average STREAM 'Scale' Memory Bandwidth","12000.256","MByte per Second","Ookami",1,48
+"735","mvapich2/libsci/intfft/cce","akstd",17,"statistic","Average STREAM 'Triad' Memory Bandwidth","13335.04","MByte per Second","Ookami",1,48
+"736","mvapich2/libsci/intfft/cce","akstd",17,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","13878.5","MFLOP per Second","Ookami",1,48
+"737","mvapich2/libsci/intfft/cce","akstd",17,"statistic","High Performance LINPACK Floating-Point Performance","798614.0","MFLOP per Second","Ookami",1,48
+"738","mvapich2/libsci/intfft/cce","akstd",17,"statistic","High Performance LINPACK Run Time","6.67899","Second","Ookami",1,48
+"739","mvapich2/libsci/intfft/cce","akstd",17,"statistic","MPI Random Access","14.250499999999999","MUpdate per Second","Ookami",1,48
+"740","mvapich2/libsci/intfft/cce","akstd",17,"statistic","Parallel Matrix Transpose (PTRANS)","21795.6352","MByte per Second","Ookami",1,48
+"741","mvapich2/libsci/intfft/cce","akstd",18,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"742","mvapich2/libsci/intfft/cce","akstd",18,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"743","mvapich2/libsci/intfft/cce","akstd",18,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"744","mvapich2/libsci/intfft/cce","akstd",18,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"745","mvapich2/libsci/intfft/cce","akstd",18,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"746","mvapich2/libsci/intfft/cce","akstd",18,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"747","mvapich2/libsci/intfft/cce","akstd",18,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"748","mvapich2/libsci/intfft/cce","akstd",18,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"749","mvapich2/libsci/intfft/cce","akstd",18,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"750","mvapich2/libsci/intfft/cce","akstd",18,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"751","mvapich2/libsci/intfft/cce","akstd",18,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19963.2","MFLOP per Second","Ookami",1,48
+"752","mvapich2/libsci/intfft/cce","akstd",18,"statistic","Average STREAM 'Add' Memory Bandwidth","13323.264","MByte per Second","Ookami",1,48
+"753","mvapich2/libsci/intfft/cce","akstd",18,"statistic","Average STREAM 'Copy' Memory Bandwidth","11692.2368","MByte per Second","Ookami",1,48
+"754","mvapich2/libsci/intfft/cce","akstd",18,"statistic","Average STREAM 'Scale' Memory Bandwidth","11995.648","MByte per Second","Ookami",1,48
+"755","mvapich2/libsci/intfft/cce","akstd",18,"statistic","Average STREAM 'Triad' Memory Bandwidth","13358.08","MByte per Second","Ookami",1,48
+"756","mvapich2/libsci/intfft/cce","akstd",18,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","14111.1","MFLOP per Second","Ookami",1,48
+"757","mvapich2/libsci/intfft/cce","akstd",18,"statistic","High Performance LINPACK Floating-Point Performance","794817.0","MFLOP per Second","Ookami",1,48
+"758","mvapich2/libsci/intfft/cce","akstd",18,"statistic","High Performance LINPACK Run Time","6.7109","Second","Ookami",1,48
+"759","mvapich2/libsci/intfft/cce","akstd",18,"statistic","MPI Random Access","14.1061","MUpdate per Second","Ookami",1,48
+"760","mvapich2/libsci/intfft/cce","akstd",18,"statistic","Parallel Matrix Transpose (PTRANS)","22118.8096","MByte per Second","Ookami",1,48
+"761","mvapich2/libsci/intfft/cce","akstd",19,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"762","mvapich2/libsci/intfft/cce","akstd",19,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"763","mvapich2/libsci/intfft/cce","akstd",19,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"764","mvapich2/libsci/intfft/cce","akstd",19,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"765","mvapich2/libsci/intfft/cce","akstd",19,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"766","mvapich2/libsci/intfft/cce","akstd",19,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"767","mvapich2/libsci/intfft/cce","akstd",19,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"768","mvapich2/libsci/intfft/cce","akstd",19,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"769","mvapich2/libsci/intfft/cce","akstd",19,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"770","mvapich2/libsci/intfft/cce","akstd",19,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"771","mvapich2/libsci/intfft/cce","akstd",19,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19961.4","MFLOP per Second","Ookami",1,48
+"772","mvapich2/libsci/intfft/cce","akstd",19,"statistic","Average STREAM 'Add' Memory Bandwidth","13305.9584","MByte per Second","Ookami",1,48
+"773","mvapich2/libsci/intfft/cce","akstd",19,"statistic","Average STREAM 'Copy' Memory Bandwidth","11708.0064","MByte per Second","Ookami",1,48
+"774","mvapich2/libsci/intfft/cce","akstd",19,"statistic","Average STREAM 'Scale' Memory Bandwidth","11990.4256","MByte per Second","Ookami",1,48
+"775","mvapich2/libsci/intfft/cce","akstd",19,"statistic","Average STREAM 'Triad' Memory Bandwidth","13333.8112","MByte per Second","Ookami",1,48
+"776","mvapich2/libsci/intfft/cce","akstd",19,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","16218.3","MFLOP per Second","Ookami",1,48
+"777","mvapich2/libsci/intfft/cce","akstd",19,"statistic","High Performance LINPACK Floating-Point Performance","790151.0","MFLOP per Second","Ookami",1,48
+"778","mvapich2/libsci/intfft/cce","akstd",19,"statistic","High Performance LINPACK Run Time","6.75053","Second","Ookami",1,48
+"779","mvapich2/libsci/intfft/cce","akstd",19,"statistic","MPI Random Access","14.142800000000001","MUpdate per Second","Ookami",1,48
+"780","mvapich2/libsci/intfft/cce","akstd",19,"statistic","Parallel Matrix Transpose (PTRANS)","22806.6304","MByte per Second","Ookami",1,48
+"781","mvapich2/libsci/intfft/cce","akstd",20,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"782","mvapich2/libsci/intfft/cce","akstd",20,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"783","mvapich2/libsci/intfft/cce","akstd",20,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"784","mvapich2/libsci/intfft/cce","akstd",20,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"785","mvapich2/libsci/intfft/cce","akstd",20,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"786","mvapich2/libsci/intfft/cce","akstd",20,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"787","mvapich2/libsci/intfft/cce","akstd",20,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"788","mvapich2/libsci/intfft/cce","akstd",20,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"789","mvapich2/libsci/intfft/cce","akstd",20,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"790","mvapich2/libsci/intfft/cce","akstd",20,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"791","mvapich2/libsci/intfft/cce","akstd",20,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","19954.2","MFLOP per Second","Ookami",1,48
+"792","mvapich2/libsci/intfft/cce","akstd",20,"statistic","Average STREAM 'Add' Memory Bandwidth","13263.4624","MByte per Second","Ookami",1,48
+"793","mvapich2/libsci/intfft/cce","akstd",20,"statistic","Average STREAM 'Copy' Memory Bandwidth","11677.9008","MByte per Second","Ookami",1,48
+"794","mvapich2/libsci/intfft/cce","akstd",20,"statistic","Average STREAM 'Scale' Memory Bandwidth","11982.848","MByte per Second","Ookami",1,48
+"795","mvapich2/libsci/intfft/cce","akstd",20,"statistic","Average STREAM 'Triad' Memory Bandwidth","13326.4384","MByte per Second","Ookami",1,48
+"796","mvapich2/libsci/intfft/cce","akstd",20,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","14168.300000000001","MFLOP per Second","Ookami",1,48
+"797","mvapich2/libsci/intfft/cce","akstd",20,"statistic","High Performance LINPACK Floating-Point Performance","792082.0","MFLOP per Second","Ookami",1,48
+"798","mvapich2/libsci/intfft/cce","akstd",20,"statistic","High Performance LINPACK Run Time","6.73406","Second","Ookami",1,48
+"799","mvapich2/libsci/intfft/cce","akstd",20,"statistic","MPI Random Access","14.260399999999999","MUpdate per Second","Ookami",1,48
+"800","mvapich2/libsci/intfft/cce","akstd",20,"statistic","Parallel Matrix Transpose (PTRANS)","15609.856","MByte per Second","Ookami",1,48
+"801","openmpi/armpl/armpl/gcc","akstd",1,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"802","openmpi/armpl/armpl/gcc","akstd",1,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"803","openmpi/armpl/armpl/gcc","akstd",1,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"804","openmpi/armpl/armpl/gcc","akstd",1,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"805","openmpi/armpl/armpl/gcc","akstd",1,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"806","openmpi/armpl/armpl/gcc","akstd",1,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"807","openmpi/armpl/armpl/gcc","akstd",1,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"808","openmpi/armpl/armpl/gcc","akstd",1,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"809","openmpi/armpl/armpl/gcc","akstd",1,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"810","openmpi/armpl/armpl/gcc","akstd",1,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"811","openmpi/armpl/armpl/gcc","akstd",1,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","2461.21","MFLOP per Second","Ookami",1,48
+"812","openmpi/armpl/armpl/gcc","akstd",1,"statistic","Average STREAM 'Add' Memory Bandwidth","12813.6192","MByte per Second","Ookami",1,48
+"813","openmpi/armpl/armpl/gcc","akstd",1,"statistic","Average STREAM 'Copy' Memory Bandwidth","11566.6944","MByte per Second","Ookami",1,48
+"814","openmpi/armpl/armpl/gcc","akstd",1,"statistic","Average STREAM 'Scale' Memory Bandwidth","11674.3168","MByte per Second","Ookami",1,48
+"815","openmpi/armpl/armpl/gcc","akstd",1,"statistic","Average STREAM 'Triad' Memory Bandwidth","12779.4176","MByte per Second","Ookami",1,48
+"816","openmpi/armpl/armpl/gcc","akstd",1,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","285.10799999999995","MFLOP per Second","Ookami",1,48
+"817","openmpi/armpl/armpl/gcc","akstd",1,"statistic","High Performance LINPACK Floating-Point Performance","3616.58","MFLOP per Second","Ookami",1,48
+"818","openmpi/armpl/armpl/gcc","akstd",1,"statistic","High Performance LINPACK Run Time","1474.86","Second","Ookami",1,48
+"819","openmpi/armpl/armpl/gcc","akstd",1,"statistic","MPI Random Access","22.334799999999998","MUpdate per Second","Ookami",1,48
+"820","openmpi/armpl/armpl/gcc","akstd",1,"statistic","Parallel Matrix Transpose (PTRANS)","16364.4416","MByte per Second","Ookami",1,48
+"821","openmpi/armpl/armpl/gcc","akstd",2,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"822","openmpi/armpl/armpl/gcc","akstd",2,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"823","openmpi/armpl/armpl/gcc","akstd",2,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"824","openmpi/armpl/armpl/gcc","akstd",2,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"825","openmpi/armpl/armpl/gcc","akstd",2,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"826","openmpi/armpl/armpl/gcc","akstd",2,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"827","openmpi/armpl/armpl/gcc","akstd",2,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"828","openmpi/armpl/armpl/gcc","akstd",2,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"829","openmpi/armpl/armpl/gcc","akstd",2,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"830","openmpi/armpl/armpl/gcc","akstd",2,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"831","openmpi/armpl/armpl/gcc","akstd",2,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","2466.18","MFLOP per Second","Ookami",1,48
+"832","openmpi/armpl/armpl/gcc","akstd",2,"statistic","Average STREAM 'Add' Memory Bandwidth","12802.3552","MByte per Second","Ookami",1,48
+"833","openmpi/armpl/armpl/gcc","akstd",2,"statistic","Average STREAM 'Copy' Memory Bandwidth","11574.3744","MByte per Second","Ookami",1,48
+"834","openmpi/armpl/armpl/gcc","akstd",2,"statistic","Average STREAM 'Scale' Memory Bandwidth","11650.56","MByte per Second","Ookami",1,48
+"835","openmpi/armpl/armpl/gcc","akstd",2,"statistic","Average STREAM 'Triad' Memory Bandwidth","12755.2512","MByte per Second","Ookami",1,48
+"836","openmpi/armpl/armpl/gcc","akstd",2,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","279.051","MFLOP per Second","Ookami",1,48
+"837","openmpi/armpl/armpl/gcc","akstd",2,"statistic","High Performance LINPACK Floating-Point Performance","3605.99","MFLOP per Second","Ookami",1,48
+"838","openmpi/armpl/armpl/gcc","akstd",2,"statistic","High Performance LINPACK Run Time","1479.19","Second","Ookami",1,48
+"839","openmpi/armpl/armpl/gcc","akstd",2,"statistic","MPI Random Access","22.5108","MUpdate per Second","Ookami",1,48
+"840","openmpi/armpl/armpl/gcc","akstd",2,"statistic","Parallel Matrix Transpose (PTRANS)","16157.9008","MByte per Second","Ookami",1,48
+"841","openmpi/armpl/armpl/gcc","akstd",3,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"842","openmpi/armpl/armpl/gcc","akstd",3,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"843","openmpi/armpl/armpl/gcc","akstd",3,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"844","openmpi/armpl/armpl/gcc","akstd",3,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"845","openmpi/armpl/armpl/gcc","akstd",3,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"846","openmpi/armpl/armpl/gcc","akstd",3,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"847","openmpi/armpl/armpl/gcc","akstd",3,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"848","openmpi/armpl/armpl/gcc","akstd",3,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"849","openmpi/armpl/armpl/gcc","akstd",3,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"850","openmpi/armpl/armpl/gcc","akstd",3,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"851","openmpi/armpl/armpl/gcc","akstd",3,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","2483.6800000000003","MFLOP per Second","Ookami",1,48
+"852","openmpi/armpl/armpl/gcc","akstd",3,"statistic","Average STREAM 'Add' Memory Bandwidth","12810.1376","MByte per Second","Ookami",1,48
+"853","openmpi/armpl/armpl/gcc","akstd",3,"statistic","Average STREAM 'Copy' Memory Bandwidth","11551.8464","MByte per Second","Ookami",1,48
+"854","openmpi/armpl/armpl/gcc","akstd",3,"statistic","Average STREAM 'Scale' Memory Bandwidth","11647.488","MByte per Second","Ookami",1,48
+"855","openmpi/armpl/armpl/gcc","akstd",3,"statistic","Average STREAM 'Triad' Memory Bandwidth","12748.8","MByte per Second","Ookami",1,48
+"856","openmpi/armpl/armpl/gcc","akstd",3,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","291.292","MFLOP per Second","Ookami",1,48
+"857","openmpi/armpl/armpl/gcc","akstd",3,"statistic","High Performance LINPACK Floating-Point Performance","3608.31","MFLOP per Second","Ookami",1,48
+"858","openmpi/armpl/armpl/gcc","akstd",3,"statistic","High Performance LINPACK Run Time","1478.23","Second","Ookami",1,48
+"859","openmpi/armpl/armpl/gcc","akstd",3,"statistic","MPI Random Access","22.4358","MUpdate per Second","Ookami",1,48
+"860","openmpi/armpl/armpl/gcc","akstd",3,"statistic","Parallel Matrix Transpose (PTRANS)","16218.4192","MByte per Second","Ookami",1,48
+"861","openmpi/armpl/armpl/gcc","akstd",4,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"862","openmpi/armpl/armpl/gcc","akstd",4,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"863","openmpi/armpl/armpl/gcc","akstd",4,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"864","openmpi/armpl/armpl/gcc","akstd",4,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"865","openmpi/armpl/armpl/gcc","akstd",4,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"866","openmpi/armpl/armpl/gcc","akstd",4,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"867","openmpi/armpl/armpl/gcc","akstd",4,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"868","openmpi/armpl/armpl/gcc","akstd",4,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"869","openmpi/armpl/armpl/gcc","akstd",4,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"870","openmpi/armpl/armpl/gcc","akstd",4,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"871","openmpi/armpl/armpl/gcc","akstd",4,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","2498.51","MFLOP per Second","Ookami",1,48
+"872","openmpi/armpl/armpl/gcc","akstd",4,"statistic","Average STREAM 'Add' Memory Bandwidth","12704.0512","MByte per Second","Ookami",1,48
+"873","openmpi/armpl/armpl/gcc","akstd",4,"statistic","Average STREAM 'Copy' Memory Bandwidth","11523.2768","MByte per Second","Ookami",1,48
+"874","openmpi/armpl/armpl/gcc","akstd",4,"statistic","Average STREAM 'Scale' Memory Bandwidth","11543.552","MByte per Second","Ookami",1,48
+"875","openmpi/armpl/armpl/gcc","akstd",4,"statistic","Average STREAM 'Triad' Memory Bandwidth","12655.8208","MByte per Second","Ookami",1,48
+"876","openmpi/armpl/armpl/gcc","akstd",4,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","286.339","MFLOP per Second","Ookami",1,48
+"877","openmpi/armpl/armpl/gcc","akstd",4,"statistic","High Performance LINPACK Floating-Point Performance","3594.22","MFLOP per Second","Ookami",1,48
+"878","openmpi/armpl/armpl/gcc","akstd",4,"statistic","High Performance LINPACK Run Time","1484.03","Second","Ookami",1,48
+"879","openmpi/armpl/armpl/gcc","akstd",4,"statistic","MPI Random Access","22.5405","MUpdate per Second","Ookami",1,48
+"880","openmpi/armpl/armpl/gcc","akstd",4,"statistic","Parallel Matrix Transpose (PTRANS)","9754.8288","MByte per Second","Ookami",1,48
+"881","openmpi/armpl/armpl/gcc","akstd",5,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"882","openmpi/armpl/armpl/gcc","akstd",5,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"883","openmpi/armpl/armpl/gcc","akstd",5,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"884","openmpi/armpl/armpl/gcc","akstd",5,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"885","openmpi/armpl/armpl/gcc","akstd",5,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"886","openmpi/armpl/armpl/gcc","akstd",5,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"887","openmpi/armpl/armpl/gcc","akstd",5,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"888","openmpi/armpl/armpl/gcc","akstd",5,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"889","openmpi/armpl/armpl/gcc","akstd",5,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"890","openmpi/armpl/armpl/gcc","akstd",5,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"891","openmpi/armpl/armpl/gcc","akstd",5,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","2447.6","MFLOP per Second","Ookami",1,48
+"892","openmpi/armpl/armpl/gcc","akstd",5,"statistic","Average STREAM 'Add' Memory Bandwidth","12779.9296","MByte per Second","Ookami",1,48
+"893","openmpi/armpl/armpl/gcc","akstd",5,"statistic","Average STREAM 'Copy' Memory Bandwidth","11524.7104","MByte per Second","Ookami",1,48
+"894","openmpi/armpl/armpl/gcc","akstd",5,"statistic","Average STREAM 'Scale' Memory Bandwidth","11623.8336","MByte per Second","Ookami",1,48
+"895","openmpi/armpl/armpl/gcc","akstd",5,"statistic","Average STREAM 'Triad' Memory Bandwidth","12755.7632","MByte per Second","Ookami",1,48
+"896","openmpi/armpl/armpl/gcc","akstd",5,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","289.04","MFLOP per Second","Ookami",1,48
+"897","openmpi/armpl/armpl/gcc","akstd",5,"statistic","High Performance LINPACK Floating-Point Performance","3616.1","MFLOP per Second","Ookami",1,48
+"898","openmpi/armpl/armpl/gcc","akstd",5,"statistic","High Performance LINPACK Run Time","1475.05","Second","Ookami",1,48
+"899","openmpi/armpl/armpl/gcc","akstd",5,"statistic","MPI Random Access","22.387","MUpdate per Second","Ookami",1,48
+"900","openmpi/armpl/armpl/gcc","akstd",5,"statistic","Parallel Matrix Transpose (PTRANS)","11770.1632","MByte per Second","Ookami",1,48
+"901","openmpi/armpl/armpl/gcc","akstd",6,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"902","openmpi/armpl/armpl/gcc","akstd",6,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"903","openmpi/armpl/armpl/gcc","akstd",6,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"904","openmpi/armpl/armpl/gcc","akstd",6,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"905","openmpi/armpl/armpl/gcc","akstd",6,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"906","openmpi/armpl/armpl/gcc","akstd",6,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"907","openmpi/armpl/armpl/gcc","akstd",6,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"908","openmpi/armpl/armpl/gcc","akstd",6,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"909","openmpi/armpl/armpl/gcc","akstd",6,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"910","openmpi/armpl/armpl/gcc","akstd",6,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"911","openmpi/armpl/armpl/gcc","akstd",6,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","2438.5699999999997","MFLOP per Second","Ookami",1,48
+"912","openmpi/armpl/armpl/gcc","akstd",6,"statistic","Average STREAM 'Add' Memory Bandwidth","12792.5248","MByte per Second","Ookami",1,48
+"913","openmpi/armpl/armpl/gcc","akstd",6,"statistic","Average STREAM 'Copy' Memory Bandwidth","11476.992","MByte per Second","Ookami",1,48
+"914","openmpi/armpl/armpl/gcc","akstd",6,"statistic","Average STREAM 'Scale' Memory Bandwidth","11640.2176","MByte per Second","Ookami",1,48
+"915","openmpi/armpl/armpl/gcc","akstd",6,"statistic","Average STREAM 'Triad' Memory Bandwidth","12754.2272","MByte per Second","Ookami",1,48
+"916","openmpi/armpl/armpl/gcc","akstd",6,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","283.00199999999995","MFLOP per Second","Ookami",1,48
+"917","openmpi/armpl/armpl/gcc","akstd",6,"statistic","High Performance LINPACK Floating-Point Performance","3596.6499999999996","MFLOP per Second","Ookami",1,48
+"918","openmpi/armpl/armpl/gcc","akstd",6,"statistic","High Performance LINPACK Run Time","1483.03","Second","Ookami",1,48
+"919","openmpi/armpl/armpl/gcc","akstd",6,"statistic","MPI Random Access","22.5911","MUpdate per Second","Ookami",1,48
+"920","openmpi/armpl/armpl/gcc","akstd",6,"statistic","Parallel Matrix Transpose (PTRANS)","16331.0592","MByte per Second","Ookami",1,48
+"921","openmpi/armpl/armpl/gcc","akstd",7,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"922","openmpi/armpl/armpl/gcc","akstd",7,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"923","openmpi/armpl/armpl/gcc","akstd",7,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"924","openmpi/armpl/armpl/gcc","akstd",7,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"925","openmpi/armpl/armpl/gcc","akstd",7,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"926","openmpi/armpl/armpl/gcc","akstd",7,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"927","openmpi/armpl/armpl/gcc","akstd",7,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"928","openmpi/armpl/armpl/gcc","akstd",7,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"929","openmpi/armpl/armpl/gcc","akstd",7,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"930","openmpi/armpl/armpl/gcc","akstd",7,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"931","openmpi/armpl/armpl/gcc","akstd",7,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","2466.66","MFLOP per Second","Ookami",1,48
+"932","openmpi/armpl/armpl/gcc","akstd",7,"statistic","Average STREAM 'Add' Memory Bandwidth","12793.1392","MByte per Second","Ookami",1,48
+"933","openmpi/armpl/armpl/gcc","akstd",7,"statistic","Average STREAM 'Copy' Memory Bandwidth","11557.6832","MByte per Second","Ookami",1,48
+"934","openmpi/armpl/armpl/gcc","akstd",7,"statistic","Average STREAM 'Scale' Memory Bandwidth","11654.5536","MByte per Second","Ookami",1,48
+"935","openmpi/armpl/armpl/gcc","akstd",7,"statistic","Average STREAM 'Triad' Memory Bandwidth","12782.3872","MByte per Second","Ookami",1,48
+"936","openmpi/armpl/armpl/gcc","akstd",7,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","292.662","MFLOP per Second","Ookami",1,48
+"937","openmpi/armpl/armpl/gcc","akstd",7,"statistic","High Performance LINPACK Floating-Point Performance","3610.15","MFLOP per Second","Ookami",1,48
+"938","openmpi/armpl/armpl/gcc","akstd",7,"statistic","High Performance LINPACK Run Time","1477.48","Second","Ookami",1,48
+"939","openmpi/armpl/armpl/gcc","akstd",7,"statistic","MPI Random Access","22.2463","MUpdate per Second","Ookami",1,48
+"940","openmpi/armpl/armpl/gcc","akstd",7,"statistic","Parallel Matrix Transpose (PTRANS)","16273.3056","MByte per Second","Ookami",1,48
+"941","openmpi/armpl/armpl/gcc","akstd",8,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"942","openmpi/armpl/armpl/gcc","akstd",8,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"943","openmpi/armpl/armpl/gcc","akstd",8,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"944","openmpi/armpl/armpl/gcc","akstd",8,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"945","openmpi/armpl/armpl/gcc","akstd",8,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"946","openmpi/armpl/armpl/gcc","akstd",8,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"947","openmpi/armpl/armpl/gcc","akstd",8,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"948","openmpi/armpl/armpl/gcc","akstd",8,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"949","openmpi/armpl/armpl/gcc","akstd",8,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"950","openmpi/armpl/armpl/gcc","akstd",8,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"951","openmpi/armpl/armpl/gcc","akstd",8,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","2468.68","MFLOP per Second","Ookami",1,48
+"952","openmpi/armpl/armpl/gcc","akstd",8,"statistic","Average STREAM 'Add' Memory Bandwidth","12776.6528","MByte per Second","Ookami",1,48
+"953","openmpi/armpl/armpl/gcc","akstd",8,"statistic","Average STREAM 'Copy' Memory Bandwidth","11540.8896","MByte per Second","Ookami",1,48
+"954","openmpi/armpl/armpl/gcc","akstd",8,"statistic","Average STREAM 'Scale' Memory Bandwidth","11638.1696","MByte per Second","Ookami",1,48
+"955","openmpi/armpl/armpl/gcc","akstd",8,"statistic","Average STREAM 'Triad' Memory Bandwidth","12777.3696","MByte per Second","Ookami",1,48
+"956","openmpi/armpl/armpl/gcc","akstd",8,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","283.072","MFLOP per Second","Ookami",1,48
+"957","openmpi/armpl/armpl/gcc","akstd",8,"statistic","High Performance LINPACK Floating-Point Performance","3636.41","MFLOP per Second","Ookami",1,48
+"958","openmpi/armpl/armpl/gcc","akstd",8,"statistic","High Performance LINPACK Run Time","1466.81","Second","Ookami",1,48
+"959","openmpi/armpl/armpl/gcc","akstd",8,"statistic","MPI Random Access","21.8709","MUpdate per Second","Ookami",1,48
+"960","openmpi/armpl/armpl/gcc","akstd",8,"statistic","Parallel Matrix Transpose (PTRANS)","15851.52","MByte per Second","Ookami",1,48
+"961","openmpi/armpl/armpl/gcc","akstd",9,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"962","openmpi/armpl/armpl/gcc","akstd",9,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"963","openmpi/armpl/armpl/gcc","akstd",9,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"964","openmpi/armpl/armpl/gcc","akstd",9,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"965","openmpi/armpl/armpl/gcc","akstd",9,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"966","openmpi/armpl/armpl/gcc","akstd",9,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"967","openmpi/armpl/armpl/gcc","akstd",9,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"968","openmpi/armpl/armpl/gcc","akstd",9,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"969","openmpi/armpl/armpl/gcc","akstd",9,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"970","openmpi/armpl/armpl/gcc","akstd",9,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"971","openmpi/armpl/armpl/gcc","akstd",9,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","2481.47","MFLOP per Second","Ookami",1,48
+"972","openmpi/armpl/armpl/gcc","akstd",9,"statistic","Average STREAM 'Add' Memory Bandwidth","12790.272","MByte per Second","Ookami",1,48
+"973","openmpi/armpl/armpl/gcc","akstd",9,"statistic","Average STREAM 'Copy' Memory Bandwidth","11493.4784","MByte per Second","Ookami",1,48
+"974","openmpi/armpl/armpl/gcc","akstd",9,"statistic","Average STREAM 'Scale' Memory Bandwidth","11648.8192","MByte per Second","Ookami",1,48
+"975","openmpi/armpl/armpl/gcc","akstd",9,"statistic","Average STREAM 'Triad' Memory Bandwidth","12765.2864","MByte per Second","Ookami",1,48
+"976","openmpi/armpl/armpl/gcc","akstd",9,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","289.608","MFLOP per Second","Ookami",1,48
+"977","openmpi/armpl/armpl/gcc","akstd",9,"statistic","High Performance LINPACK Floating-Point Performance","3607.13","MFLOP per Second","Ookami",1,48
+"978","openmpi/armpl/armpl/gcc","akstd",9,"statistic","High Performance LINPACK Run Time","1478.72","Second","Ookami",1,48
+"979","openmpi/armpl/armpl/gcc","akstd",9,"statistic","MPI Random Access","22.2042","MUpdate per Second","Ookami",1,48
+"980","openmpi/armpl/armpl/gcc","akstd",9,"statistic","Parallel Matrix Transpose (PTRANS)","16313.9584","MByte per Second","Ookami",1,48
+"981","openmpi/armpl/armpl/gcc","akstd",10,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"982","openmpi/armpl/armpl/gcc","akstd",10,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"983","openmpi/armpl/armpl/gcc","akstd",10,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"984","openmpi/armpl/armpl/gcc","akstd",10,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"985","openmpi/armpl/armpl/gcc","akstd",10,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"986","openmpi/armpl/armpl/gcc","akstd",10,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"987","openmpi/armpl/armpl/gcc","akstd",10,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"988","openmpi/armpl/armpl/gcc","akstd",10,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"989","openmpi/armpl/armpl/gcc","akstd",10,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"990","openmpi/armpl/armpl/gcc","akstd",10,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"991","openmpi/armpl/armpl/gcc","akstd",10,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","2465.3999999999996","MFLOP per Second","Ookami",1,48
+"992","openmpi/armpl/armpl/gcc","akstd",10,"statistic","Average STREAM 'Add' Memory Bandwidth","12783.2064","MByte per Second","Ookami",1,48
+"993","openmpi/armpl/armpl/gcc","akstd",10,"statistic","Average STREAM 'Copy' Memory Bandwidth","11539.8656","MByte per Second","Ookami",1,48
+"994","openmpi/armpl/armpl/gcc","akstd",10,"statistic","Average STREAM 'Scale' Memory Bandwidth","11640.2176","MByte per Second","Ookami",1,48
+"995","openmpi/armpl/armpl/gcc","akstd",10,"statistic","Average STREAM 'Triad' Memory Bandwidth","12767.4368","MByte per Second","Ookami",1,48
+"996","openmpi/armpl/armpl/gcc","akstd",10,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","291.77799999999996","MFLOP per Second","Ookami",1,48
+"997","openmpi/armpl/armpl/gcc","akstd",10,"statistic","High Performance LINPACK Floating-Point Performance","3612.35","MFLOP per Second","Ookami",1,48
+"998","openmpi/armpl/armpl/gcc","akstd",10,"statistic","High Performance LINPACK Run Time","1476.58","Second","Ookami",1,48
+"999","openmpi/armpl/armpl/gcc","akstd",10,"statistic","MPI Random Access","22.2821","MUpdate per Second","Ookami",1,48
+"1000","openmpi/armpl/armpl/gcc","akstd",10,"statistic","Parallel Matrix Transpose (PTRANS)","16101.1712","MByte per Second","Ookami",1,48
+"1001","openmpi/armpl/armpl/gcc","akstd",11,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"1002","openmpi/armpl/armpl/gcc","akstd",11,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"1003","openmpi/armpl/armpl/gcc","akstd",11,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"1004","openmpi/armpl/armpl/gcc","akstd",11,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"1005","openmpi/armpl/armpl/gcc","akstd",11,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"1006","openmpi/armpl/armpl/gcc","akstd",11,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"1007","openmpi/armpl/armpl/gcc","akstd",11,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"1008","openmpi/armpl/armpl/gcc","akstd",11,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"1009","openmpi/armpl/armpl/gcc","akstd",11,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"1010","openmpi/armpl/armpl/gcc","akstd",11,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"1011","openmpi/armpl/armpl/gcc","akstd",11,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","2427.8900000000003","MFLOP per Second","Ookami",1,48
+"1012","openmpi/armpl/armpl/gcc","akstd",11,"statistic","Average STREAM 'Add' Memory Bandwidth","12739.1744","MByte per Second","Ookami",1,48
+"1013","openmpi/armpl/armpl/gcc","akstd",11,"statistic","Average STREAM 'Copy' Memory Bandwidth","10494.5664","MByte per Second","Ookami",1,48
+"1014","openmpi/armpl/armpl/gcc","akstd",11,"statistic","Average STREAM 'Scale' Memory Bandwidth","11645.7472","MByte per Second","Ookami",1,48
+"1015","openmpi/armpl/armpl/gcc","akstd",11,"statistic","Average STREAM 'Triad' Memory Bandwidth","12776.448","MByte per Second","Ookami",1,48
+"1016","openmpi/armpl/armpl/gcc","akstd",11,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","283.979","MFLOP per Second","Ookami",1,48
+"1017","openmpi/armpl/armpl/gcc","akstd",11,"statistic","High Performance LINPACK Floating-Point Performance","3611.14","MFLOP per Second","Ookami",1,48
+"1018","openmpi/armpl/armpl/gcc","akstd",11,"statistic","High Performance LINPACK Run Time","1477.08","Second","Ookami",1,48
+"1019","openmpi/armpl/armpl/gcc","akstd",11,"statistic","MPI Random Access","22.404","MUpdate per Second","Ookami",1,48
+"1020","openmpi/armpl/armpl/gcc","akstd",11,"statistic","Parallel Matrix Transpose (PTRANS)","16220.2624","MByte per Second","Ookami",1,48
+"1021","openmpi/armpl/armpl/gcc","akstd",12,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"1022","openmpi/armpl/armpl/gcc","akstd",12,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"1023","openmpi/armpl/armpl/gcc","akstd",12,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"1024","openmpi/armpl/armpl/gcc","akstd",12,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"1025","openmpi/armpl/armpl/gcc","akstd",12,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"1026","openmpi/armpl/armpl/gcc","akstd",12,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"1027","openmpi/armpl/armpl/gcc","akstd",12,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"1028","openmpi/armpl/armpl/gcc","akstd",12,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"1029","openmpi/armpl/armpl/gcc","akstd",12,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"1030","openmpi/armpl/armpl/gcc","akstd",12,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"1031","openmpi/armpl/armpl/gcc","akstd",12,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","2459.13","MFLOP per Second","Ookami",1,48
+"1032","openmpi/armpl/armpl/gcc","akstd",12,"statistic","Average STREAM 'Add' Memory Bandwidth","12794.368","MByte per Second","Ookami",1,48
+"1033","openmpi/armpl/armpl/gcc","akstd",12,"statistic","Average STREAM 'Copy' Memory Bandwidth","11539.968","MByte per Second","Ookami",1,48
+"1034","openmpi/armpl/armpl/gcc","akstd",12,"statistic","Average STREAM 'Scale' Memory Bandwidth","11659.0592","MByte per Second","Ookami",1,48
+"1035","openmpi/armpl/armpl/gcc","akstd",12,"statistic","Average STREAM 'Triad' Memory Bandwidth","12784.3328","MByte per Second","Ookami",1,48
+"1036","openmpi/armpl/armpl/gcc","akstd",12,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","306.33700000000005","MFLOP per Second","Ookami",1,48
+"1037","openmpi/armpl/armpl/gcc","akstd",12,"statistic","High Performance LINPACK Floating-Point Performance","3613.64","MFLOP per Second","Ookami",1,48
+"1038","openmpi/armpl/armpl/gcc","akstd",12,"statistic","High Performance LINPACK Run Time","1476.06","Second","Ookami",1,48
+"1039","openmpi/armpl/armpl/gcc","akstd",12,"statistic","MPI Random Access","22.6141","MUpdate per Second","Ookami",1,48
+"1040","openmpi/armpl/armpl/gcc","akstd",12,"statistic","Parallel Matrix Transpose (PTRANS)","16305.5616","MByte per Second","Ookami",1,48
+"1041","openmpi/armpl/armpl/gcc","akstd",13,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"1042","openmpi/armpl/armpl/gcc","akstd",13,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"1043","openmpi/armpl/armpl/gcc","akstd",13,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"1044","openmpi/armpl/armpl/gcc","akstd",13,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"1045","openmpi/armpl/armpl/gcc","akstd",13,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"1046","openmpi/armpl/armpl/gcc","akstd",13,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"1047","openmpi/armpl/armpl/gcc","akstd",13,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"1048","openmpi/armpl/armpl/gcc","akstd",13,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"1049","openmpi/armpl/armpl/gcc","akstd",13,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"1050","openmpi/armpl/armpl/gcc","akstd",13,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"1051","openmpi/armpl/armpl/gcc","akstd",13,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","2480.2","MFLOP per Second","Ookami",1,48
+"1052","openmpi/armpl/armpl/gcc","akstd",13,"statistic","Average STREAM 'Add' Memory Bandwidth","12715.9296","MByte per Second","Ookami",1,48
+"1053","openmpi/armpl/armpl/gcc","akstd",13,"statistic","Average STREAM 'Copy' Memory Bandwidth","11617.3824","MByte per Second","Ookami",1,48
+"1054","openmpi/armpl/armpl/gcc","akstd",13,"statistic","Average STREAM 'Scale' Memory Bandwidth","11577.4464","MByte per Second","Ookami",1,48
+"1055","openmpi/armpl/armpl/gcc","akstd",13,"statistic","Average STREAM 'Triad' Memory Bandwidth","12693.504","MByte per Second","Ookami",1,48
+"1056","openmpi/armpl/armpl/gcc","akstd",13,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","306.07800000000003","MFLOP per Second","Ookami",1,48
+"1057","openmpi/armpl/armpl/gcc","akstd",13,"statistic","High Performance LINPACK Floating-Point Performance","3604.95","MFLOP per Second","Ookami",1,48
+"1058","openmpi/armpl/armpl/gcc","akstd",13,"statistic","High Performance LINPACK Run Time","1479.62","Second","Ookami",1,48
+"1059","openmpi/armpl/armpl/gcc","akstd",13,"statistic","MPI Random Access","22.6779","MUpdate per Second","Ookami",1,48
+"1060","openmpi/armpl/armpl/gcc","akstd",13,"statistic","Parallel Matrix Transpose (PTRANS)","16125.2352","MByte per Second","Ookami",1,48
+"1061","openmpi/armpl/armpl/gcc","akstd",14,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"1062","openmpi/armpl/armpl/gcc","akstd",14,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"1063","openmpi/armpl/armpl/gcc","akstd",14,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"1064","openmpi/armpl/armpl/gcc","akstd",14,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"1065","openmpi/armpl/armpl/gcc","akstd",14,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"1066","openmpi/armpl/armpl/gcc","akstd",14,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"1067","openmpi/armpl/armpl/gcc","akstd",14,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"1068","openmpi/armpl/armpl/gcc","akstd",14,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"1069","openmpi/armpl/armpl/gcc","akstd",14,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"1070","openmpi/armpl/armpl/gcc","akstd",14,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"1071","openmpi/armpl/armpl/gcc","akstd",14,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","2428.07","MFLOP per Second","Ookami",1,48
+"1072","openmpi/armpl/armpl/gcc","akstd",14,"statistic","Average STREAM 'Add' Memory Bandwidth","12737.9456","MByte per Second","Ookami",1,48
+"1073","openmpi/armpl/armpl/gcc","akstd",14,"statistic","Average STREAM 'Copy' Memory Bandwidth","11441.3568","MByte per Second","Ookami",1,48
+"1074","openmpi/armpl/armpl/gcc","akstd",14,"statistic","Average STREAM 'Scale' Memory Bandwidth","11581.5424","MByte per Second","Ookami",1,48
+"1075","openmpi/armpl/armpl/gcc","akstd",14,"statistic","Average STREAM 'Triad' Memory Bandwidth","12682.3424","MByte per Second","Ookami",1,48
+"1076","openmpi/armpl/armpl/gcc","akstd",14,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","303.91499999999996","MFLOP per Second","Ookami",1,48
+"1077","openmpi/armpl/armpl/gcc","akstd",14,"statistic","High Performance LINPACK Floating-Point Performance","3621.7799999999997","MFLOP per Second","Ookami",1,48
+"1078","openmpi/armpl/armpl/gcc","akstd",14,"statistic","High Performance LINPACK Run Time","1472.74","Second","Ookami",1,48
+"1079","openmpi/armpl/armpl/gcc","akstd",14,"statistic","MPI Random Access","22.1691","MUpdate per Second","Ookami",1,48
+"1080","openmpi/armpl/armpl/gcc","akstd",14,"statistic","Parallel Matrix Transpose (PTRANS)","16381.952","MByte per Second","Ookami",1,48
+"1081","openmpi/armpl/armpl/gcc","akstd",15,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"1082","openmpi/armpl/armpl/gcc","akstd",15,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"1083","openmpi/armpl/armpl/gcc","akstd",15,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"1084","openmpi/armpl/armpl/gcc","akstd",15,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"1085","openmpi/armpl/armpl/gcc","akstd",15,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"1086","openmpi/armpl/armpl/gcc","akstd",15,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"1087","openmpi/armpl/armpl/gcc","akstd",15,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"1088","openmpi/armpl/armpl/gcc","akstd",15,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"1089","openmpi/armpl/armpl/gcc","akstd",15,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"1090","openmpi/armpl/armpl/gcc","akstd",15,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"1091","openmpi/armpl/armpl/gcc","akstd",15,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","2482.14","MFLOP per Second","Ookami",1,48
+"1092","openmpi/armpl/armpl/gcc","akstd",15,"statistic","Average STREAM 'Add' Memory Bandwidth","12584.0384","MByte per Second","Ookami",1,48
+"1093","openmpi/armpl/armpl/gcc","akstd",15,"statistic","Average STREAM 'Copy' Memory Bandwidth","11555.328","MByte per Second","Ookami",1,48
+"1094","openmpi/armpl/armpl/gcc","akstd",15,"statistic","Average STREAM 'Scale' Memory Bandwidth","11663.1552","MByte per Second","Ookami",1,48
+"1095","openmpi/armpl/armpl/gcc","akstd",15,"statistic","Average STREAM 'Triad' Memory Bandwidth","12781.6704","MByte per Second","Ookami",1,48
+"1096","openmpi/armpl/armpl/gcc","akstd",15,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","306.327","MFLOP per Second","Ookami",1,48
+"1097","openmpi/armpl/armpl/gcc","akstd",15,"statistic","High Performance LINPACK Floating-Point Performance","3610.14","MFLOP per Second","Ookami",1,48
+"1098","openmpi/armpl/armpl/gcc","akstd",15,"statistic","High Performance LINPACK Run Time","1477.49","Second","Ookami",1,48
+"1099","openmpi/armpl/armpl/gcc","akstd",15,"statistic","MPI Random Access","22.685","MUpdate per Second","Ookami",1,48
+"1100","openmpi/armpl/armpl/gcc","akstd",15,"statistic","Parallel Matrix Transpose (PTRANS)","16173.7728","MByte per Second","Ookami",1,48
+"1101","openmpi/armpl/armpl/gcc","akstd",16,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"1102","openmpi/armpl/armpl/gcc","akstd",16,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"1103","openmpi/armpl/armpl/gcc","akstd",16,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"1104","openmpi/armpl/armpl/gcc","akstd",16,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"1105","openmpi/armpl/armpl/gcc","akstd",16,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"1106","openmpi/armpl/armpl/gcc","akstd",16,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"1107","openmpi/armpl/armpl/gcc","akstd",16,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"1108","openmpi/armpl/armpl/gcc","akstd",16,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"1109","openmpi/armpl/armpl/gcc","akstd",16,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"1110","openmpi/armpl/armpl/gcc","akstd",16,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"1111","openmpi/armpl/armpl/gcc","akstd",16,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","2475.67","MFLOP per Second","Ookami",1,48
+"1112","openmpi/armpl/armpl/gcc","akstd",16,"statistic","Average STREAM 'Add' Memory Bandwidth","12740.4032","MByte per Second","Ookami",1,48
+"1113","openmpi/armpl/armpl/gcc","akstd",16,"statistic","Average STREAM 'Copy' Memory Bandwidth","11562.0864","MByte per Second","Ookami",1,48
+"1114","openmpi/armpl/armpl/gcc","akstd",16,"statistic","Average STREAM 'Scale' Memory Bandwidth","11655.8848","MByte per Second","Ookami",1,48
+"1115","openmpi/armpl/armpl/gcc","akstd",16,"statistic","Average STREAM 'Triad' Memory Bandwidth","12786.8928","MByte per Second","Ookami",1,48
+"1116","openmpi/armpl/armpl/gcc","akstd",16,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","306.66900000000004","MFLOP per Second","Ookami",1,48
+"1117","openmpi/armpl/armpl/gcc","akstd",16,"statistic","High Performance LINPACK Floating-Point Performance","3606.22","MFLOP per Second","Ookami",1,48
+"1118","openmpi/armpl/armpl/gcc","akstd",16,"statistic","High Performance LINPACK Run Time","1479.09","Second","Ookami",1,48
+"1119","openmpi/armpl/armpl/gcc","akstd",16,"statistic","MPI Random Access","22.629900000000003","MUpdate per Second","Ookami",1,48
+"1120","openmpi/armpl/armpl/gcc","akstd",16,"statistic","Parallel Matrix Transpose (PTRANS)","16179.2","MByte per Second","Ookami",1,48
+"1121","openmpi/armpl/armpl/gcc","akstd",17,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"1122","openmpi/armpl/armpl/gcc","akstd",17,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"1123","openmpi/armpl/armpl/gcc","akstd",17,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"1124","openmpi/armpl/armpl/gcc","akstd",17,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"1125","openmpi/armpl/armpl/gcc","akstd",17,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"1126","openmpi/armpl/armpl/gcc","akstd",17,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"1127","openmpi/armpl/armpl/gcc","akstd",17,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"1128","openmpi/armpl/armpl/gcc","akstd",17,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"1129","openmpi/armpl/armpl/gcc","akstd",17,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"1130","openmpi/armpl/armpl/gcc","akstd",17,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"1131","openmpi/armpl/armpl/gcc","akstd",17,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","2456.9700000000003","MFLOP per Second","Ookami",1,48
+"1132","openmpi/armpl/armpl/gcc","akstd",17,"statistic","Average STREAM 'Add' Memory Bandwidth","12728.6272","MByte per Second","Ookami",1,48
+"1133","openmpi/armpl/armpl/gcc","akstd",17,"statistic","Average STREAM 'Copy' Memory Bandwidth","11467.4688","MByte per Second","Ookami",1,48
+"1134","openmpi/armpl/armpl/gcc","akstd",17,"statistic","Average STREAM 'Scale' Memory Bandwidth","11642.5728","MByte per Second","Ookami",1,48
+"1135","openmpi/armpl/armpl/gcc","akstd",17,"statistic","Average STREAM 'Triad' Memory Bandwidth","12764.5696","MByte per Second","Ookami",1,48
+"1136","openmpi/armpl/armpl/gcc","akstd",17,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","299.301","MFLOP per Second","Ookami",1,48
+"1137","openmpi/armpl/armpl/gcc","akstd",17,"statistic","High Performance LINPACK Floating-Point Performance","3611.77","MFLOP per Second","Ookami",1,48
+"1138","openmpi/armpl/armpl/gcc","akstd",17,"statistic","High Performance LINPACK Run Time","1476.82","Second","Ookami",1,48
+"1139","openmpi/armpl/armpl/gcc","akstd",17,"statistic","MPI Random Access","22.2213","MUpdate per Second","Ookami",1,48
+"1140","openmpi/armpl/armpl/gcc","akstd",17,"statistic","Parallel Matrix Transpose (PTRANS)","16413.9008","MByte per Second","Ookami",1,48
+"1141","openmpi/armpl/armpl/gcc","akstd",18,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"1142","openmpi/armpl/armpl/gcc","akstd",18,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"1143","openmpi/armpl/armpl/gcc","akstd",18,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"1144","openmpi/armpl/armpl/gcc","akstd",18,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"1145","openmpi/armpl/armpl/gcc","akstd",18,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"1146","openmpi/armpl/armpl/gcc","akstd",18,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"1147","openmpi/armpl/armpl/gcc","akstd",18,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"1148","openmpi/armpl/armpl/gcc","akstd",18,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"1149","openmpi/armpl/armpl/gcc","akstd",18,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"1150","openmpi/armpl/armpl/gcc","akstd",18,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"1151","openmpi/armpl/armpl/gcc","akstd",18,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","2471.85","MFLOP per Second","Ookami",1,48
+"1152","openmpi/armpl/armpl/gcc","akstd",18,"statistic","Average STREAM 'Add' Memory Bandwidth","12808.3968","MByte per Second","Ookami",1,48
+"1153","openmpi/armpl/armpl/gcc","akstd",18,"statistic","Average STREAM 'Copy' Memory Bandwidth","11594.752","MByte per Second","Ookami",1,48
+"1154","openmpi/armpl/armpl/gcc","akstd",18,"statistic","Average STREAM 'Scale' Memory Bandwidth","11670.3232","MByte per Second","Ookami",1,48
+"1155","openmpi/armpl/armpl/gcc","akstd",18,"statistic","Average STREAM 'Triad' Memory Bandwidth","12767.9488","MByte per Second","Ookami",1,48
+"1156","openmpi/armpl/armpl/gcc","akstd",18,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","305.02099999999996","MFLOP per Second","Ookami",1,48
+"1157","openmpi/armpl/armpl/gcc","akstd",18,"statistic","High Performance LINPACK Floating-Point Performance","3621.44","MFLOP per Second","Ookami",1,48
+"1158","openmpi/armpl/armpl/gcc","akstd",18,"statistic","High Performance LINPACK Run Time","1472.88","Second","Ookami",1,48
+"1159","openmpi/armpl/armpl/gcc","akstd",18,"statistic","MPI Random Access","22.501199999999997","MUpdate per Second","Ookami",1,48
+"1160","openmpi/armpl/armpl/gcc","akstd",18,"statistic","Parallel Matrix Transpose (PTRANS)","16273.6128","MByte per Second","Ookami",1,48
+"1161","openmpi/armpl/armpl/gcc","akstd",19,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"1162","openmpi/armpl/armpl/gcc","akstd",19,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"1163","openmpi/armpl/armpl/gcc","akstd",19,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"1164","openmpi/armpl/armpl/gcc","akstd",19,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"1165","openmpi/armpl/armpl/gcc","akstd",19,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"1166","openmpi/armpl/armpl/gcc","akstd",19,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"1167","openmpi/armpl/armpl/gcc","akstd",19,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"1168","openmpi/armpl/armpl/gcc","akstd",19,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"1169","openmpi/armpl/armpl/gcc","akstd",19,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"1170","openmpi/armpl/armpl/gcc","akstd",19,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"1171","openmpi/armpl/armpl/gcc","akstd",19,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","2476.63","MFLOP per Second","Ookami",1,48
+"1172","openmpi/armpl/armpl/gcc","akstd",19,"statistic","Average STREAM 'Add' Memory Bandwidth","12800.6144","MByte per Second","Ookami",1,48
+"1173","openmpi/armpl/armpl/gcc","akstd",19,"statistic","Average STREAM 'Copy' Memory Bandwidth","11551.8464","MByte per Second","Ookami",1,48
+"1174","openmpi/armpl/armpl/gcc","akstd",19,"statistic","Average STREAM 'Scale' Memory Bandwidth","11668.6848","MByte per Second","Ookami",1,48
+"1175","openmpi/armpl/armpl/gcc","akstd",19,"statistic","Average STREAM 'Triad' Memory Bandwidth","12792.5248","MByte per Second","Ookami",1,48
+"1176","openmpi/armpl/armpl/gcc","akstd",19,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","303.468","MFLOP per Second","Ookami",1,48
+"1177","openmpi/armpl/armpl/gcc","akstd",19,"statistic","High Performance LINPACK Floating-Point Performance","3610.56","MFLOP per Second","Ookami",1,48
+"1178","openmpi/armpl/armpl/gcc","akstd",19,"statistic","High Performance LINPACK Run Time","1477.31","Second","Ookami",1,48
+"1179","openmpi/armpl/armpl/gcc","akstd",19,"statistic","MPI Random Access","22.641000000000002","MUpdate per Second","Ookami",1,48
+"1180","openmpi/armpl/armpl/gcc","akstd",19,"statistic","Parallel Matrix Transpose (PTRANS)","16151.2448","MByte per Second","Ookami",1,48
+"1181","openmpi/armpl/armpl/gcc","akstd",20,"parameter","App:Version","1.5.0f",NA,"Ookami",1,48
+"1182","openmpi/armpl/armpl/gcc","akstd",20,"parameter","Input:DGEMM Problem Size","1666",NA,"Ookami",1,48
+"1183","openmpi/armpl/armpl/gcc","akstd",20,"parameter","Input:High Performance LINPACK Grid Cols","12",NA,"Ookami",1,48
+"1184","openmpi/armpl/armpl/gcc","akstd",20,"parameter","Input:High Performance LINPACK Grid Rows","4",NA,"Ookami",1,48
+"1185","openmpi/armpl/armpl/gcc","akstd",20,"parameter","Input:High Performance LINPACK Problem Size","20000",NA,"Ookami",1,48
+"1186","openmpi/armpl/armpl/gcc","akstd",20,"parameter","Input:MPI Ranks","48",NA,"Ookami",1,48
+"1187","openmpi/armpl/armpl/gcc","akstd",20,"parameter","Input:MPIRandom Problem Size","256.0","MWord","Ookami",1,48
+"1188","openmpi/armpl/armpl/gcc","akstd",20,"parameter","Input:OpenMP Threads","0",NA,"Ookami",1,48
+"1189","openmpi/armpl/armpl/gcc","akstd",20,"parameter","Input:PTRANS Problem Size","10000",NA,"Ookami",1,48
+"1190","openmpi/armpl/armpl/gcc","akstd",20,"parameter","Input:STREAM Array Size","2777777","MWord","Ookami",1,48
+"1191","openmpi/armpl/armpl/gcc","akstd",20,"statistic","Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance","2424.4500000000003","MFLOP per Second","Ookami",1,48
+"1192","openmpi/armpl/armpl/gcc","akstd",20,"statistic","Average STREAM 'Add' Memory Bandwidth","12717.4656","MByte per Second","Ookami",1,48
+"1193","openmpi/armpl/armpl/gcc","akstd",20,"statistic","Average STREAM 'Copy' Memory Bandwidth","11499.3152","MByte per Second","Ookami",1,48
+"1194","openmpi/armpl/armpl/gcc","akstd",20,"statistic","Average STREAM 'Scale' Memory Bandwidth","11550.1056","MByte per Second","Ookami",1,48
+"1195","openmpi/armpl/armpl/gcc","akstd",20,"statistic","Average STREAM 'Triad' Memory Bandwidth","12621.6192","MByte per Second","Ookami",1,48
+"1196","openmpi/armpl/armpl/gcc","akstd",20,"statistic","Fast Fourier Transform (FFTW) Floating-Point Performance","301.64000000000004","MFLOP per Second","Ookami",1,48
+"1197","openmpi/armpl/armpl/gcc","akstd",20,"statistic","High Performance LINPACK Floating-Point Performance","3618.92","MFLOP per Second","Ookami",1,48
+"1198","openmpi/armpl/armpl/gcc","akstd",20,"statistic","High Performance LINPACK Run Time","1473.9","Second","Ookami",1,48
+"1199","openmpi/armpl/armpl/gcc","akstd",20,"statistic","MPI Random Access","22.348300000000002","MUpdate per Second","Ookami",1,48
+"1200","openmpi/armpl/armpl/gcc","akstd",20,"statistic","Parallel Matrix Transpose (PTRANS)","16017.5104","MByte per Second","Ookami",1,48
