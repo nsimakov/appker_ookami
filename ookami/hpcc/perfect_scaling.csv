@@ -1,0 +1,17 @@
+config;nodes;average
+Ookami, LibSci;1;798.4122
+Ookami, LibSci;2;1596.8244
+Ookami, LibSci;4;3193.6488
+Ookami, LibSci;8;6387.2976
+Ookami, LibSci;16;12774.5952
+Ookami, ARMPL;1;969.0925
+Ookami, ARMPL;2;1938.185
+Ookami, ARMPL;4;3876.37
+Ookami, OpenBLAS;1;121.7243
+Ookami, OpenBLAS;2;243.4486
+Ookami, OpenBLAS;4;486.8972
+Stampede2-SKX, MKL;1;1136.8909
+Stampede2-SKX, MKL;2;2273.7818
+Stampede2-SKX, MKL;4;4547.5636
+Stampede2-SKX, MKL;8;9095.1272
+Stampede2-SKX, MKL;16;18190.2544

@@ -47,6 +47,7 @@ hpcc <- hpcc %>%
             "Comet (CPU Intel Xeon E5-2680v3 12 cores x2, Haswell)",
             "Bridges (Intel E5-2695 v3 14 cores x2, Haswell)")),
         exe_type=factor(exe_type, c(
+            "mvapich/armpl/armpl/armc",
             "mvapich2/libsci/fftw3/cce",
             "mvapich2/libsci/intfft/cce",
             "openmpi/armpl/armpl/gcc",

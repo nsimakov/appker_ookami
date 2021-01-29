@@ -1,0 +1,17 @@
+sys2;nodes;average
+Ookami, FFTW-Cray;1;21.8416
+Ookami, FFTW-Cray;2;43.6832
+Ookami, FFTW-Cray;4;87.3664
+Ookami, FFTW-Cray;8;174.7328
+Ookami, FFTW-Cray;16;349.4656
+Ookami, ARMPL;1;0.2976909
+Ookami, ARMPL;2;0.5953818
+Ookami, ARMPL;4;1.1907636
+Ookami, FFTW-Dolbeau;1;22.5259
+Ookami, FFTW-Dolbeau;2;45.0518
+Ookami, FFTW-Dolbeau;4;90.1036
+Stampede2-SKX, MKL;1;41.1576364
+Stampede2-SKX, MKL;2;82.3152728
+Stampede2-SKX, MKL;4;164.6305456
+Stampede2-SKX, MKL;8;329.2610912
+Stampede2-SKX, MKL;16;658.5221824

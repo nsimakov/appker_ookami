@@ -1,0 +1,430 @@
+---
+title: "HPCC"
+author: "nikolays"
+date: "11/30/20"
+output:
+  html_document:
+    toc: yes
+    toc_depth: '3'
+    df_print: paged
+  html_notebook:
+    toc: yes
+    toc_depth: 3
+    toc_float: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(ggplot2)
+library(dplyr)
+library(cowplot)
+library(knitr)
+library(kableExtra)
+```
+
+```{r include=FALSE}
+# Read data
+load("hpcc.Rdata")
+hpcc_nov <- filter(hpcc,cores == 48L)
+hpcc_nov$config <- paste0(hpcc_nov$config,"; Nov")
+hpcc_nov$resource <- "Ookami"
+hpcc_nov$nodes <- NULL
+
+hpcc_oct <- rbind(
+    read.csv("../../koinu/data/hpcc.csv", stringsAsFactors=F),
+    read.csv("../data/hpcc.csv", stringsAsFactors=F))
+hpcc_oct$X <- NULL
+hpcc_oct$problem_size <- NULL
+hpcc_oct$nodes <- NULL
+hpcc_oct$value <- as.numeric(hpcc_oct$value)
+hpcc_oct <- hpcc_oct %>% filter(!is.na(value))
+hpcc_oct <- hpcc_oct %>% rename(config=exe_type,id=run_id,cores=cpus)
+hpcc_oct <- hpcc_oct %>% filter(resource!="Stampede2 SKX (CPU Intel Xeon Platinum 8160 24(48) cores x2)")
+hpcc_oct <- hpcc_oct %>% filter(!(resource=="Koinu (CPU ARM ThunderX2 32(128) cores x2)" & cores!=64))
+
+hpcc_oct$config <- paste0(hpcc_oct$resource, "; ",hpcc_oct$config)
+
+m <- hpcc_oct$resource=="Ookami"
+hpcc_oct$config[m] <- paste0(hpcc_oct$config[m],"; Oct")
+
+
+hpcc <- rbind(
+  hpcc_oct,
+  hpcc_nov
+)
+unique(paste0(as.character(hpcc_nov$config[m]),"; Oct"))
+colnames(hpcc_nov)
+colnames(hpcc_oct)
+unique(hpcc_oct$resource)
+```
+
+
+
+```{r include=FALSE}
+# statistics we are interested in
+#dput(unique(hpcc$metric[hpcc$metric_type=="statistic"]))
+stats_overall <- c(
+    "High Performance LINPACK Floating-Point Performance",
+    "Fast Fourier Transform (FFTW) Floating-Point Performance",
+    "Parallel Matrix Transpose (PTRANS)",
+    "MPI Random Access"
+)
+stats_per_core <- c(
+    "Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance",
+    "Average STREAM 'Triad' Memory Bandwidth",
+    "Average STREAM 'Add' Memory Bandwidth",
+    "Average STREAM 'Copy' Memory Bandwidth",
+    "Average STREAM 'Scale' Memory Bandwidth"
+)
+units <- hpcc %>% group_by(metric) %>% summarise(units=as.character(first(units)),.groups = "drop_last") %>%
+    ungroup()
+units$units[is.na(units$units)]<-""
+```
+
+Everything is executed on single node, average of 10 runs.
+
+# Metrics
+
+Some of reported HPCC metrics:
+
+ * Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance
+   + Embarrassingly parallel, Averaged over all MPI process, MFLOP per Second per MPI process
+   + (There is also serial metric; measured but not analysed)
+ * High Performance LINPACK Floating-Point Performance
+   + Parallel, overall MFLOP per Second
+ * Fast Fourier Transform (FFTW) Floating-Point Performance
+   + Parallel, MFLOP per Second
+   + (There are also serial and embarrassingly parallel metrics; measured but not analysed)
+ * Parallel Matrix Transpose (PTRANS)
+   + Parallel, overall MByte per Second
+ * MPI Random Access
+   + Parallel, overall MUpdate per Second
+   + (There are also serial and embarrassingly parallel metrics; measured but not analysed)
+ * Average STREAM 'Triad'/ 'Add' / 'Copy' / 'Scale' Memory Bandwidth
+   + Embarrassingly parallel, Averaged over all MPI process, MByte per Second
+   + (There is also serial metric; measured but not analysed)
+
+# Results
+## Selected metrics
+
+### DGEMM
+```{r results='asis', echo=FALSE, fig.width = 6.4, fig.height = 8}
+
+# Averaged over all MPI process
+# so report per core
+s_dgemm <- "Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance"
+dgemm <- hpcc %>% filter(metric == s_dgemm) %>%
+        group_by(config) %>%
+        summarise(average=mean(value),stdev=sd(value),.groups = "drop_last") %>%
+        ungroup()
+#dput(unique(dgemm$config))
+
+dgemm$average <- dgemm$average / 1000
+dgemm$stdev <- dgemm$stdev / 1000
+dgemm$tflops <- 57.6
+dgemm$tflops[grepl("Stampede2-SKX",dgemm$config)] <- 44.8
+dgemm$tflops[!(grepl("Stampede2-SKX",dgemm$config) | grepl("Ookami",dgemm$config))] <- NA
+
+dgemm <- dgemm %>% filter(config != "Koinu (CPU ARM ThunderX2 32(128) cores x2); openmpi/sysblas/intfft") %>% 
+  filter(config != "Ookami; mvapich2/libsci/intfft/cce; Oct")
+
+dgemm$label <- paste0(round(dgemm$average,1),if_else(is.na(dgemm$tflops),"", paste0(" (",round(100*dgemm$average/dgemm$tflops,1),"%)")))
+# ookami: single core peak (57.6 GFLOP/s)
+# stampede avx512 base 1.4 GHz turbo 2.0
+# https://www.intel.com/content/dam/www/public/us/en/documents/specification-updates/xeon-scalable-spec-update.pdf
+# freq*8(width)*2*(fma)*2(units)
+# stampede peak=44.8 (64 at turbo)
+
+LArename <- list(
+  "Ookami; openmpi/armpl/armpl/gcc; Oct"="Ookami, ARMPL (Early Oct)",
+  "Ookami; mvapich/armpl/armpl/armc; Oct"="Ookami, ARMPL (Oct)",
+  "Ookami; mvapich2/libsci/fftw3/cce; Oct"="Ookami, LibSci (Oct)",
+  
+  "Ookami; gcc,armpl,mvapich; Nov"="Ookami, ARMPL (Nov)", 
+  "Ookami; cray,libsci,fftw-cray,mvapich; Nov"="Ookami, LibSci (Nov)", 
+  "Ookami; gcc,openblas,fftw-rd,mvapich; Nov"="Ookami, OpenBLAS (Nov)",
+  
+  "Koinu (CPU ARM ThunderX2 32(128) cores x2); openmpi/armpl/intfft"="Koinu (ARM ThunderX2), ARMPL", 
+  "Koinu (CPU ARM ThunderX2 32(128) cores x2); openmpi/openblas/intfft"="Koinu (ARM ThunderX2), OpenBLAS", 
+  
+  "Stampede2-SKX; icc,mkl,intel-mpi; Nov"="Stampede2 (Skylake-X), MKL",
+  "Stampede2 KNL (CPU Intel Xeon Phi 7250 68(272) cores x2); impi/mkl"="Stampede2 (Knights Landing), MKL",
+  
+  "Bridges (Intel E5-2695 v3 14 cores x2, Haswell); impi/mkl"="Bridges (Haswell), MKL", 
+  "Comet (CPU Intel Xeon E5-2680v3 12 cores x2, Haswell); mvapich2/mkl"="Comet (Haswell), MKL"
+)
+dgemm$config <- recode(dgemm$config,!!!LArename)
+LAorder <- LArename
+names(LAorder) <- NULL
+dgemm$config <- factor(dgemm$config,levels = rev(LAorder))
+
+dgemm$color2 <- "purple"
+dgemm$color2[grepl("Oct",dgemm$config)] <- "greenyellow"
+dgemm$color2[grepl("Nov",dgemm$config)] <- "royalblue"
+dgemm$color2[grepl("MKL",dgemm$config)] <- "skyblue"
+dgemm$color2[grepl("Skylake-X",dgemm$config)] <- "royalblue1"
+
+ggplot(dgemm, aes(x=config, y=average)) +
+        geom_bar(stat="identity", fill=dgemm$color2, color="black") +
+        geom_errorbar(aes(ymin=average-stdev, ymax=average+stdev), width=.2)+
+  geom_text(aes(label=label),hjust=-.2, vjust=0.5)+
+        ylab("Matrix Multiplication (DGEMM), GFLOP/s per core")+
+        coord_flip()+ ylim(0,65)+
+  theme(axis.title.y=element_blank(),
+        axis.text.y = element_text(color="black",size=12))
+
+```
+
+### HPL
+```{r results='asis', echo=FALSE, fig.width = 6, fig.height = 2}
+
+# Averaged over all MPI process
+# so report per core
+s_hpl <- "High Performance LINPACK Floating-Point Performance"
+hpl <- hpcc %>% filter(metric == s_hpl) %>%
+        group_by(config,cores) %>%
+        summarise(average=mean(value),stdev=sd(value),.groups = "drop_last") %>%
+        ungroup()
+
+hpl$config <- recode(hpl$config,!!!LArename)
+hpl$config <- factor(hpl$config,levels = rev(c("Ookami, LibSci","Ookami, ARMPL","Ookami, OpenBLAS","Stampede2-SKX, MKL")))
+hpl$nodes <- as.integer(hpl$cores/48)
+hpl$average <- hpl$average / 1000
+hpl$stdev <- hpl$stdev / 1000
+hpl$tflops <- 57.6 * hpl$cores
+hpl$tflops[grepl("Stampede2",hpl$config)] <- 44.8 * hpl$cores
+hpl$label <- paste0(round(hpl$average,0)," (",
+                      round(100*hpl$average/hpl$tflops,1),"%)")
+# ookami: single core peak (57.6 GFLOP/s)
+# stampede avx512 base 1.4 GHz turbo 2.0
+# https://www.intel.com/content/dam/www/public/us/en/documents/specification-updates/xeon-scalable-spec-update.pdf
+# freq*8(width)*2*(fma)*2(units)
+# stampede peak=44.8 (64 at turbo)
+
+
+ggplot(hpl %>% filter(nodes==1), aes(x=config, y=average)) +
+        geom_bar(stat="identity", fill="royalblue", color="royalblue4") +
+        geom_errorbar(aes(ymin=average-stdev, ymax=average+stdev), width=.2)+
+  geom_text(aes(label=label),hjust=-.15, vjust=0.5)+
+        ylab("High Performance LINPACK, GFLOP/s per node")+
+        coord_flip()+ ylim(0,1500)+
+  theme(axis.title.y=element_blank(),
+        axis.text.y = element_text(color="black",size=12))
+```
+
+```{r results='asis', echo=FALSE, fig.width = 4, fig.height = 4}
+hpl_perf <- read.csv("perfect_scaling.csv",sep=";",as.is = T)
+hpl$sys <- factor(as.character(hpl$config),levels = c("Ookami, LibSci","Ookami, ARMPL","Ookami, OpenBLAS","Stampede2-SKX, MKL"))
+hpl_perf$sys <- factor(as.character(hpl_perf$config),levels = c("Ookami, LibSci","Ookami, ARMPL","Ookami, OpenBLAS","Stampede2-SKX, MKL"))
+
+ggplot(hpl, aes(x=nodes, y=average, color=sys)) + geom_point() + geom_line() +
+  geom_errorbar(aes(ymin=average-stdev, ymax=average+stdev), width=0.05) + labs(color="") +
+  geom_line(data = hpl_perf,mapping = aes(x=nodes, y=average, color=sys), linetype = 2) +
+  scale_x_continuous(trans='log2') +
+  scale_y_continuous(trans='log10') +
+  ylab("High Performance LINPACK, GFLOP/s")+
+  theme(legend.position="bottom")+guides(color=guide_legend(nrow=2,byrow=TRUE))
+ggsave("hpl2.png",width = 4, height = 4,dpi = 300)
+```
+
+### FFT
+
+```{r results='asis', echo=FALSE, fig.width = 6, fig.height = 2}
+
+# Averaged over all MPI process
+# so report per core
+s_fft <- "Fast Fourier Transform (FFTW) Floating-Point Performance"
+fft <- hpcc %>% filter(metric == s_fft) %>%
+        group_by(config,cores) %>%
+        summarise(average=mean(value),stdev=sd(value),.groups = "drop_last") %>%
+        ungroup()
+# dput(unique(fft$config))
+FFTrename <- list(
+  "Ookami; cray,libsci,fftw-cray,mvapich"="Ookami, FFTW-Cray",
+  "Ookami; gcc,armpl,mvapich"="Ookami, ARMPL",
+  "Ookami; gcc,openblas,fftw-rd,mvapich"="Ookami, FFTW-Dolbeau",
+  "Stampede2-SKX; icc,mkl,intel-mpi"="Stampede2-SKX, MKL"
+)
+fft$sys <- recode(fft$config,!!!FFTrename)
+fft$sys <- factor(fft$sys,levels = rev(FFTrename))
+fft$nodes <- as.integer(fft$cores/48)
+fft$average <- fft$average / 1000
+fft$stdev <- fft$stdev / 1000
+fft$tflops <- 57.6 * fft$cores
+fft$tflops[grepl("Stampede2",fft$sys)] <- 44.8 * fft$cores
+fft$label <- paste0(round(fft$average,2)," (",
+                      round(100*fft$average/fft$tflops,2),"%)")
+# ookami: single core peak (57.6 GFLOP/s)
+# stampede avx512 base 1.4 GHz turbo 2.0
+# https://www.intel.com/content/dam/www/public/us/en/documents/specification-updates/xeon-scalable-spec-update.pdf
+# freq*8(width)*2*(fma)*2(units)
+# stampede peak=44.8 (64 at turbo)
+
+
+ggplot(fft %>% filter(nodes==1), aes(x=sys, y=average)) +
+        geom_bar(stat="identity", fill="royalblue", color="royalblue4") +
+        geom_errorbar(aes(ymin=average-stdev, ymax=average+stdev), width=.2)+
+  geom_text(aes(label=label),hjust=-.2, vjust=0.5)+
+        ylab("Fast Fourier Transform (FFT), GFLOP/s per node")+
+        coord_flip()+ ylim(0,60)+
+  theme(axis.title.y=element_blank(),
+        axis.text.y = element_text(color="black",size=12))
+```
+```{r results='asis', echo=FALSE, fig.width = 4, fig.height = 4}
+#hpl$sys <- factor(as.character(hpl$config),levels = c("Ookami, LibSci","Ookami, ARMPL","Ookami, OpenBLAS","Stampede2-SKX, MKL"))
+#FFTrename
+fft$sys2 <- factor(as.character(fft$sys),levels = c("Ookami, FFTW-Cray","Ookami, ARMPL","Ookami, FFTW-Dolbeau","Stampede2-SKX, MKL"))
+fft_perf <- read.csv("perfect_scaling_fft.csv",sep=";",as.is = T)
+fft_perf$sys2 <- factor(as.character(fft_perf$sys2),levels = c("Ookami, FFTW-Cray","Ookami, ARMPL","Ookami, FFTW-Dolbeau","Stampede2-SKX, MKL"))
+
+
+ggplot(fft, aes(x=nodes, y=average, color=sys)) + geom_point() + geom_line() +
+  geom_errorbar(aes(ymin=average-stdev, ymax=average+stdev), width=0.05) + labs(color="") +
+  geom_line(data = fft_perf,mapping = aes(x=nodes, y=average, color=sys2), linetype = 2) +
+  scale_x_continuous(trans='log2') +
+  scale_y_continuous(trans='log10') +
+  ylab("Fast Fourier Transform, GFLOP/s")+
+  theme(legend.position="right")+
+  theme(legend.position="bottom")+guides(color=guide_legend(nrow=2,byrow=TRUE))
+ggsave("fft2.png",width = 4, height = 4,dpi = 300)
+```
+
+### STREAM
+
+```{r results='asis', echo=FALSE, fig.width = 6, fig.height = 2}
+
+# Averaged over all MPI process
+# so report per core
+s_stream <- "Average STREAM 'Triad' Memory Bandwidth"
+stream <- hpcc %>% filter(metric == s_stream) %>%
+        group_by(config,cores) %>%
+        summarise(average=mean(value),stdev=sd(value),.groups = "drop_last") %>%
+        ungroup()
+# dput(unique(stream$config))
+streamrename <- list(
+  "Ookami; cray,libsci,fftw-cray,mvapich"="Ookami, cray, LibSci",
+  "Ookami; gcc,armpl,mvapich"="Ookami, gcc, ARMPL",
+  "Ookami; gcc,openblas,fftw-rd,mvapich"="Ookami, gcc, OpenBLAS",
+  "Stampede2-SKX; icc,mkl,intel-mpi"="Stampede2-SKX, icc, MKL"
+)
+stream$sys <- recode(stream$config,!!!streamrename)
+stream$sys <- factor(stream$sys,levels = rev(streamrename))
+stream$nodes <- as.integer(stream$cores/48)
+stream$average <- stream$cores * stream$average / 1024
+stream$stdev <- stream$cores * stream$stdev / 1024
+stream$tgbs <- 1024 * stream$nodes
+stream$tgbs[grepl("Stampede2",stream$sys)] <- (21333.33/1024) * 12 * stream$nodes
+stream$label <- paste0(round(stream$average,2)," (",
+                      round(100*stream$average/stream$tgbs,2),"%)")
+# ookami: single core peak (57.6 GFLOP/s)
+# stampede avx512 base 1.4 GHz turbo 2.0
+# https://www.intel.com/content/dam/www/public/us/en/documents/specification-updates/xeon-scalable-spec-update.pdf
+# freq*8(width)*2*(fma)*2(units)
+# stampede peak=44.8 (64 at turbo)
+
+
+ggplot(stream %>% filter(nodes==1), aes(x=sys, y=average)) +
+        geom_bar(stat="identity", fill="royalblue", color="royalblue4") +
+        geom_errorbar(aes(ymin=average-stdev, ymax=average+stdev), width=.2)+
+  geom_text(aes(label=label),hjust=-.2, vjust=0.5)+
+        ylab("STREAM 'Triad' Memory Bandwidth, GB/s per node")+
+        coord_flip()+ #ylim(0,60)+
+  theme(axis.title.y=element_blank(),
+        axis.text.y = element_text(color="black",size=12))
+```
+
+
+## Overall Performance (That is per All MPI Processes)
+
+```{r results='asis', echo=FALSE, fig.width = 11, fig.height = 6}
+for(stat in stats_overall) {
+    stat_units <- units$units[units$metric==stat]
+    if(stat_units=="") {
+        cap <- stat
+    } else {
+        cap <- paste0(stat, ", ", stat_units)
+    }
+    cat(paste0("<h3>",cap,"</h3>\n"))
+    perf <- hpcc %>% filter(metric == stat) %>%
+        group_by(config,cores) %>%
+        summarise(average=mean(value),stdev=sd(value),.groups = "drop_last") %>%
+        ungroup() %>% mutate(conf=paste(config,cores, sep = ", ")) %>%
+        mutate(conf=factor(conf, levels = rev(conf)))
+    print(ggplot(perf, aes(x=conf, y=average)) +
+        geom_bar(stat="identity", fill="royalblue", color="royalblue4") +
+        geom_errorbar(aes(ymin=average-stdev, ymax=average+stdev), width=.2)+
+        coord_flip()+ylab(cap))
+    cat(kable(perf %>% select(-conf), caption = cap, digits = 2, "html") %>%
+        kable_styling(full_width = F))
+}
+for(stat in stats_per_core) {
+    stat_units <- units$units[units$metric==stat]
+    if(stat_units=="") {
+        cap <- stat
+    } else {
+        cap <- paste0(stat, ", ", stat_units)
+    }
+    cat(paste0("<h3>",cap,"</h3>\n"))
+    perf <- hpcc %>% filter(metric == stat) %>%
+        group_by(config,cores) %>%
+        summarise(average=mean(value*cores),stdev=sd(value*cores),.groups = "drop_last") %>%
+        ungroup() %>% mutate(conf=paste(config,cores, sep = ", ")) %>%
+        mutate(conf=factor(conf, levels = rev(conf)))
+    print(ggplot(perf, aes(x=conf, y=average)) +
+        geom_bar(stat="identity", fill="royalblue", color="royalblue4") +
+        geom_errorbar(aes(ymin=average-stdev, ymax=average+stdev), width=.2)+
+        coord_flip()+ylab(cap))
+    cat(kable(perf %>% select(-conf), caption = cap, digits = 2, "html") %>%
+        kable_styling(full_width = F))
+}
+```
+
+### Performance per Core (that is MPI Process)
+
+```{r results='asis', echo=FALSE, fig.width = 11, fig.height = 6}
+for(stat in stats_overall) {
+    stat_units <- units$units[units$metric==stat]
+    if(stat_units=="") {
+        cap <- stat
+    } else {
+        cap <- paste0(stat, ", ", stat_units)
+    }
+    cat(paste0("<h3>",cap,"</h3>\n"))
+    perf <- hpcc %>% filter(metric == stat) %>%
+        group_by(config,cores) %>%
+        summarise(average=mean(value/cores),stdev=sd(value/cores),.groups = "drop_last") %>%
+        ungroup() %>% mutate(conf=paste(config,cores, sep = ", ")) %>%
+        mutate(conf=factor(conf, levels = rev(conf)))
+    print(ggplot(perf, aes(x=conf, y=average)) +
+        geom_bar(stat="identity", fill="royalblue", color="royalblue4") +
+        geom_errorbar(aes(ymin=average-stdev, ymax=average+stdev), width=.2)+
+        coord_flip()+ylab(cap))
+
+    cat(kable(perf %>% select(-conf), caption = cap, digits = 2, "html") %>%
+        kable_styling(full_width = F))
+}
+for(stat in stats_per_core) {
+    stat_units <- units$units[units$metric==stat]
+    if(stat_units=="") {
+        cap <- stat
+    } else {
+        cap <- paste0(stat, ", ", stat_units)
+    }
+    cat(paste0("<h3>",cap,"</h3>\n"))
+    perf <- hpcc %>% filter(metric == stat) %>%
+        group_by(config,cores) %>%
+        summarise(average=mean(value),stdev=sd(value),.groups = "drop_last") %>%
+        ungroup() %>% mutate(conf=paste(config,cores, sep = ", ")) %>%
+        mutate(conf=factor(conf, levels = rev(conf)))
+    print(ggplot(perf, aes(x=conf, y=average)) +
+        geom_bar(stat="identity", fill="royalblue", color="royalblue4") +
+        geom_errorbar(aes(ymin=average-stdev, ymax=average+stdev), width=.2)+
+        coord_flip()+ylab(cap))
+    cat(kable(perf %>% select(-conf), caption = cap, digits = 2, "html") %>%
+        kable_styling(full_width = F))
+}
+```
+
+
+
