@@ -5,20 +5,118 @@ date: 11/30/20
 output: html_notebook
 ---
 
-The [R plugin](https://www.jetbrains.com/help/pycharm/r-plugin-support.html) for IntelliJ-based IDEs provides
-handy capabilities to work with the [R Markdown](https://www.jetbrains.com/help/pycharm/r-markdown.html) files.
-To [add](https://www.jetbrains.com/help/pycharm/r-markdown.html#add-code-chunk) a new R chunk,
-position the caret at any line or the code chunk, then click "+".
 
-The code chunk appears:
-```{r}
+```{r setup, include=FALSE}
+library(stringr)
 ```
 
-Type any R code in the chunk, for example:
+
 ```{r}
-mycars <- within(mtcars, { cyl <- ordered(cyl) })
-mycars
+process_hpcg_out <- function(filename) {
+    con <- file(filename, "r", blocking = FALSE)
+    text <- readLines(con)
+    close(con)
+    text <- text[grepl("=", text, fixed = T)]
+    text <- text[!grepl("==", text, fixed = T)]
+    text <- text[!grepl("##", text, fixed = T)]
+    text <- text[!grepl("=$", text, fixed = F, perl=T)]
+    text <- text[!grepl("PASSED", text, fixed = T)]
+    text <- text[!grepl("version=", text, fixed = F, perl=T)]
+    text <- text[!grepl("Release date=", text, fixed = F, perl=T)]
+    text <- text[!grepl("Performance results are most likely suboptimal", text, fixed = T)]
+    text <- text[!grepl("Final Summary::Results are valid but execution time" , text , fixed = T)]
+    text <- text[!grepl("Final Summary::Official results execution time (sec) must be at least" , text , fixed = T)]
+
+    level <- 0
+    for(i in grep("Multigrid Information::Coarse Grids", text, fixed = T)) {
+        m <- str_match(text[i], "Multigrid Information::Coarse Grids::Grid Level=([0-9]+)")
+        if(!is.na(m[1,1])) {
+            level <- m[1,2]
+        } else {
+            text[i] <- str_replace(text[i], "Multigrid Information::Coarse Grids::",paste0("Multigrid Information::Coarse Grids::Level ",level,"::"))
+        }
+    }
+    text <- text[!grepl("Multigrid Information::Coarse Grids::Grid Level=[0-9]+" , text , perl = T)]
+
+    level <- 0
+    for(i in grep("Memory Use Information::Coarse Grids::", text, fixed = T)) {
+        m <- str_match(text[i], "Memory Use Information::Coarse Grids::Grid Level=([0-9]+)")
+        if(!is.na(m[1,1])) {
+            level <- m[1,2]
+        } else {
+            text[i] <- str_replace(text[i], "Memory Use Information::Coarse Grids::",paste0("Memory Use Information::Coarse Grids::Level ",level,"::"))
+        }
+    }
+    text <- text[!grepl("Memory Use Information::Coarse Grids::Grid Level=[0-9]+" , text , perl = T)]
+    metrics <- str_split_fixed(text,"=",n=2)
+    data.frame(metric=metrics[,1], value=metrics[,2])
+}
+process_many_hpcg_out <- function(config, pathname, id=1L, mode="benchmark") {
+    results <- NULL
+
+    path1 <- list.dirs(path=pathname, full.names = F, recursive = F)
+    if(mode=="benchmark") {
+        path1 <- path1[grepl("run",path1, perl = T)]
+    } else if(mode=="akrr") {
+        path1 <- path1[grepl("[0-9]+",path1, perl = T)]
+    }
+    for(m_path1 in path1) {
+        path2 <- list.dirs(path=file.path(pathname,m_path1), full.names = F, recursive = F)
+        if(mode=="benchmark") {
+            path2 <- path2[grepl("N_",path2, perl = T)]
+        } else if(mode=="akrr") {
+            path2 <- path2[grepl("[0-9]+",path2, perl = T)]
+        }
+
+        for(m_path2 in path2) {
+            path3 <- list.dirs(path=file.path(pathname,m_path1,m_path2), full.names = F, recursive = F)
+
+            if(mode=="benchmark") {
+                path3 <- path3[grepl("[0-9]+",path3, perl = T)]
+            } else if(mode=="akrr") {
+                path3 <- path3[grepl("[0-9.]+",path3, perl = T)]
+            }
+            for(m_path3 in path3) {
+                if(mode=="benchmark") {
+                    path4 <- file.path(pathname,m_path1,m_path2,m_path3,"appstdout")
+                } else if(mode=="akrr") {
+                    path4 <- file.path(pathname,m_path1,m_path2,m_path3, "jobfiles", "appstdout")
+                }
+
+                if(file.exists(path4)) {
+                    df <- process_hpcg_out(path4)
+                    if(!is.null(df) & nrow(df)>5) {
+                        results<-rbind(
+                            results,
+                            data.frame(
+                                config=config,
+                                id=id,
+                                metric=df$metric,
+                                value=df$value
+                            )
+                        )
+                    }
+
+                }
+                id <- id + 1L
+            }
+        }
+    }
+
+    results
+}
+
 ```
 
-Now, click the **Run** button on the chunk toolbar to [execute](https://www.jetbrains.com/help/pycharm/r-markdown.html#run-r-code) the chunk code. The result should be placed under the chunk.
-Click the **Knit and Open Document** to built and preview an output.
+```{r}
+pathname <- "/home/nikolays/xdmod_wsp/appker_ookami/ookami/data/appsout/hpcg/2020-11-27/gcc_openmpi/run1/N_2/1/appstdout"
+
+results <- rbind(
+    process_name_hpcg_out("ookami, gcc_openmpi",
+                          "/home/nikolays/xdmod_wsp/appker_ookami/ookami/data/appsout/hpcg/2020-11-27/gcc_openmpi"),
+    process_name_hpcg_out("ookami, gcc_mvapich2",
+                          "/home/nikolays/xdmod_wsp/appker_ookami/ookami/data/appsout/hpcg/2020-11-27/gcc_mvapich2"),
+
+)
+
+```

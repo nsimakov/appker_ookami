@@ -1,0 +1,115 @@
+---
+title: "HPCC"
+author: "nikolays"
+date: "12/01/20"
+output:
+  html_document:
+    toc: yes
+    toc_depth: '3'
+    df_print: paged
+  html_notebook:
+    toc: yes
+    toc_depth: 3
+    toc_float: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(cowplot)
+library(knitr)
+library(kableExtra)
+```
+
+```{r include=FALSE}
+# Read data
+load("hpcg.Rdata")
+hpcg <- hpcg %>% filter(!(is.na(nodes)|is.na(value)))
+config_order <- unique(hpcg$config)
+config_rev_order <- rev(config_order)
+```
+
+
+### HPCG GFLOPS
+```{r results='asis', echo=FALSE, fig.width = 6, fig.height = 2}
+
+# Averaged over all MPI process
+# so report per core
+s_flops <- "HPCG, GFLOP/s"
+flops <- hpcg %>% filter(metric == s_flops) %>%
+        group_by(config,nodes) %>%
+        summarise(average=mean(value),stdev=sd(value),.groups = "drop_last") %>%
+        ungroup()
+#dput(unique(flops$config))
+
+#flops$config <- recode(flops$config,!!!LArename)
+flops$config <- factor(flops$config,levels = config_rev_order)
+#flops$average <- flops$average
+#flops$stdev <- flops$stdev
+
+
+flops$tflops <- 57.6 * 48 * flops$nodes
+flops$tflops[grepl("Stampede2",flops$config)] <- 44.8 * 48 * flops$nodes[grepl("Stampede2",flops$config)]
+flops$label <- paste0(round(flops$average,1)," (",
+                      round(100*flops$average/flops$tflops,1),"%)")
+# ookami: single core peak (57.6 GFLOP/s)
+# stampede avx512 base 1.4 GHz turbo 2.0
+# https://www.intel.com/content/dam/www/public/us/en/documents/specification-updates/xeon-scalable-spec-update.pdf
+# freq*8(width)*2*(fma)*2(units)
+# stampede peak=44.8 (64 at turbo)
+flops1 <- flops %>% filter(nodes==1)
+flops1$color <- c("cadetblue1","cadetblue1","green","cadetblue2", "royalblue")
+  
+ggplot(flops1, aes(x=config, y=average)) +
+        geom_bar(stat="identity", fill=flops1$color, color="black") +
+        geom_errorbar(aes(ymin=average-stdev, ymax=average+stdev), width=.2)+
+  geom_text(aes(label=label),hjust=-.2, vjust=-0.1)+
+        ylab("HPCG, GFLOP/s")+
+        coord_flip()+ ylim(0,95)+
+  theme(axis.title.y=element_blank(),
+        axis.text.y = element_text(color="black",size=12))
+
+symm<-hpcg %>% filter(metric == "Departure for SpMV") %>%
+  group_by(config,nodes) %>%
+  summarise(mmin=min(value),mmax=min(value),average=mean(value),stdev=sd(value),.groups = "drop_last") %>%
+  ungroup()
+
+```
+
+
+```{r}
+flops$sys <- factor(as.character(flops$config),levels = config_order)
+
+ggplot(flops, aes(x=nodes, y=average, color=sys)) + geom_point() + geom_line() +
+  geom_errorbar(aes(ymin=average-stdev, ymax=average+stdev), width=0.05) + labs(color="") +
+  scale_x_continuous(trans='log2') +
+  scale_y_continuous(trans='log10') +
+  ylab("HPCG, GFLOP/s")+
+  theme(legend.position="right")
+ggsave("hpcg2.png",width = 6, height = 3,dpi = 300)
+```
+
+
+# Validation
+```{r}
+hpcg %>% filter(metric == "Scaled residual mean") %>%
+        group_by(config,nodes) %>%
+        summarise(average=mean(value),.groups = "drop_last") %>%
+        ungroup() %>% spread(nodes,average)
+
+hpcg %>% filter(metric == "Departure for SpMV") %>%
+        group_by(config,nodes) %>%
+        summarise(average=mean(value),.groups = "drop_last") %>%
+        ungroup() %>% spread(nodes,average)
+
+hpcg %>% filter(metric == "Departure for MG") %>%
+        group_by(config,nodes) %>%
+        summarise(average=mean(value),.groups = "drop_last") %>%
+        ungroup() %>% spread(nodes,average)
+"Scaled residual mean"
+"Departure for SpMV"
+"Departure for MG"
+```

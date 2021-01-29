@@ -1,24 +1,38 @@
----
-title: "R Notebook"
-author: nikolays
-date: 11/27/20
-output: html_notebook
----
+# HPCG
 
-The [R plugin](https://www.jetbrains.com/help/pycharm/r-plugin-support.html) for IntelliJ-based IDEs provides
-handy capabilities to work with the [R Markdown](https://www.jetbrains.com/help/pycharm/r-markdown.html) files.
-To [add](https://www.jetbrains.com/help/pycharm/r-markdown.html#add-code-chunk) a new R chunk,
-position the caret at any line or the code chunk, then click "+".
+```bash
+cd /lustre/projects/Buffalo/appker/execs/src
 
-The code chunk appears:
-```{r}
+
+mkdir -p /lustre/projects/Buffalo/appker/execs/hpcg
+cd /lustre/projects/Buffalo/appker/execs/hpcg
+wget http://www.hpcg-benchmark.org/downloads/hpcg-3.1.tar.gz
+tar -xf hpcg-3.1.tar.gz
+mv hpcg-3.1 3.1
+
+cd /lustre/projects/Buffalo/appker/execs/hpcg/3.1/setup
+cp Make.Linux_MPI Make.Linux_gcc_mpi
+# edit Make.Linux_gcc_mpi largely CXXFLAGS
+# CXXFLAGS     = $(HPCG_DEFS) -O3 -ffast-math -ftree-vectorize -ftree-vectorizer-verbose=0 -mtune=native -mcpu=native -march=armv8.2-a+sve -msve-vector-bits=512
+
+mkdir -p  /lustre/projects/Buffalo/appker/execs/hpcg/3.1/3.1_gcc_openmpi
+cd /lustre/projects/Buffalo/appker/execs/hpcg/3.1/3.1_gcc_openmpi
+module load slurm gcc/10.2.0 openmpi/4.0.5
+../configure Linux_gcc_mpi
+make -j 32
+
+
+mkdir -p  /lustre/projects/Buffalo/appker/execs/hpcg/3.1/3.1_gcc_mvapich2
+cd /lustre/projects/Buffalo/appker/execs/hpcg/3.1/3.1_gcc_mvapich2
+module load gcc/10.2.0 mvapich2/2.3.4
+../configure Linux_gcc_mpi
+make -j 32
+
 ```
 
-Type any R code in the chunk, for example:
-```{r}
-mycars <- within(mtcars, { cyl <- ordered(cyl) })
-mycars
-```
+48 cores:
+ls
+Final Summary::HPCG result is VALID with a GFLOP/s rating of=19.9973
+Final Summary::HPCG result is VALID with a GFLOP/s rating of=22.4261
 
-Now, click the **Run** button on the chunk toolbar to [execute](https://www.jetbrains.com/help/pycharm/r-markdown.html#run-r-code) the chunk code. The result should be placed under the chunk.
-Click the **Knit and Open Document** to built and preview an output.
+768
