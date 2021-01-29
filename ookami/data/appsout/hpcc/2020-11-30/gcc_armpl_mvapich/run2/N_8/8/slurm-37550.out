@@ -1,0 +1,63 @@
+Loading arm/arm-linux-compiler/armpl/20.3.0
+  Loading requirement: arm/gcc/9.3.0 arm/arm-linux-compiler/20.3
+loaded modules:
+Currently Loaded Modulefiles:
+ 1) slurm/slurm/19.05.7   4) arm/gcc/9.3.0                        
+ 2) gcc/10.2.0            5) arm/arm-linux-compiler/20.3          
+ 3) mvapich2/2.3.4        6) arm/arm-linux-compiler/armpl/20.3.0  
+Running script on host: fj033
+Working directory: /lustre/projects/Buffalo/appker/benchmarks/hpcc/2020-11-30/gcc_armpl_mvapich/run2/N_8/8
+SLURM_NTASKS: 384
+Hostnames to use: fj[033-040]
+fj033:48
+fj034:48
+fj035:48
+fj036:48
+fj037:48
+fj038:48
+fj039:48
+fj040:48
+which mpirun: /lustre/projects/global/software/a64fx/mvapich2/2.3.4/bin/mpirun
+which app: /lustre/projects/Buffalo/appker/execs/hpcc/hpcc/hpcc_gcc_armpl_mvapich
+[fj033:mpi_rank_0][rdma_open_hca] [Warning] Setting the  multirail policy to MV2_MRAIL_SHARING since RDMA_CM based multicast  is enabled.
+mlx5: fj033: got completion with error:
+00000000 00000000 00000000 00000000
+00000000 00000000 00000000 00000000
+0000007b 00000000 00000000 00000000
+00000000 00008813 10028643 124a7dd3
+[fj033:mpi_rank_0][handle_cqe] Send desc error in msg to 383, wc_opcode=0
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 42768 RUNNING AT fj037
+=   EXIT CODE: 9
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:0@fj033] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:0@fj033] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:0@fj033] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:1@fj034] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:1@fj034] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:1@fj034] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:3@fj036] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:3@fj036] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:3@fj036] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:7@fj040] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:7@fj040] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:7@fj040] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:6@fj039] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:6@fj039] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:6@fj039] main (pm/pmiserv/pmip.c:252): demux engine error waiting for event
+[proxy:0:2@fj035] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:2@fj035] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:2@fj035] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+srun: error: fj034: task 1: Exited with exit code 7
+srun: error: fj033: task 0: Exited with exit code 7
+srun: error: fj039: task 6: Exited with exit code 7
+srun: error: fj040: task 7: Exited with exit code 7
+srun: error: fj036: task 3: Exited with exit code 7
+srun: error: fj035: task 2: Exited with exit code 7
+YOUR APPLICATION TERMINATED WITH THE EXIT STRING: Killed (signal 9)
+This typically refers to a problem with your application.
+Please see the FAQ page for debugging suggestions

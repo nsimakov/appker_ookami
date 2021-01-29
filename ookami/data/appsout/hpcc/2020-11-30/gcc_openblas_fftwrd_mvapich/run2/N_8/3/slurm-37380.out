@@ -1,0 +1,68 @@
+loaded modules:
+Currently Loaded Modulefiles:
+ 1) slurm/slurm/19.05.7   3) mvapich2/2.3.4                     
+ 2) gcc/10.2.0            4) fftw/3.3.9-rdolbeau-armcl-mvapich  
+Running script on host: fj045
+Working directory: /lustre/projects/Buffalo/appker/benchmarks/hpcc/2020-11-30/gcc_openblas_fftwrd_mvapich/run2/N_8/3
+SLURM_NTASKS: 384
+Hostnames to use: fj[045-052]
+fj045:48
+fj046:48
+fj047:48
+fj048:48
+fj049:48
+fj050:48
+fj051:48
+fj052:48
+which mpirun: /lustre/projects/global/software/a64fx/mvapich2/2.3.4/bin/mpirun
+which app: /lustre/projects/Buffalo/appker/execs/hpcc/hpcc/hpcc_gcc_openblas_fftwrd_mvapich
+[fj045:mpi_rank_0][rdma_open_hca] [Warning] Setting the  multirail policy to MV2_MRAIL_SHARING since RDMA_CM based multicast  is enabled.
+mlx5: fj052: got completion with error:
+00000000 00000000 00000000 00000000
+00000000 00000000 00000000 00000000
+00000052 00000000 00000000 00000000
+00000000 00008914 0a00881a 100c5bd3
+[fj052:mpi_rank_383][handle_cqe] Send desc error in msg to 0, wc_opcode=0
+[fj052:mpi_rank_383][handle_cqe] Msg from 0: wc.status=11 (remote operation error), wc.wr_id=0x40004c368fd0, wc.opcode=0, vbuf->phead->type=32 = MPIDI_CH3_PKT_RNDV_REQ_TO_SEND
+[fj052:mpi_rank_383][mv2_print_wc_status_error] IBV_WC_REM_OP_ERR: This event is generated when an operation cannot be completed successfully by the responder. The failure to complete the operation may be due to QP related errors which prevent the responder from completing the request or a malformed WQE on the Receive Queue. Relevant to: RC or DC QPs.
+[fj052:mpi_rank_383][handle_cqe] src/mpid/ch3/channels/mrail/src/gen2/ibv_channel_manager.c:725: [] Got completion with error 11, vendor code=0x89, dest rank=0
+: Invalid argument (22)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 33549 RUNNING AT fj045
+=   EXIT CODE: 9
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:3@fj048] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:3@fj048] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:3@fj048] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:5@fj050] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:5@fj050] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:5@fj050] main (pm/pmiserv/pmip.c:252): demux engine error waiting for event
+[proxy:0:1@fj046] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:1@fj046] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:1@fj046] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:6@fj051] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:6@fj051] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:6@fj051] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:4@fj049] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:4@fj049] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:4@fj049] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:2@fj047] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:2@fj047] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:2@fj047] main (pm/pmiserv/pmip.c:252): demux engine error waiting for event
+[proxy:0:7@fj052] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:7@fj052] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:7@fj052] main (pm/pmiserv/pmip.c:252): demux engine error waiting for event
+srun: error: fj048: task 3: Exited with exit code 7
+srun: error: fj050: task 5: Exited with exit code 7
+srun: error: fj047: task 2: Exited with exit code 7
+srun: error: fj046: task 1: Exited with exit code 7
+srun: error: fj052: task 7: Exited with exit code 7
+srun: error: fj051: task 6: Exited with exit code 7
+srun: error: fj049: task 4: Exited with exit code 7
+YOUR APPLICATION TERMINATED WITH THE EXIT STRING: Killed (signal 9)
+This typically refers to a problem with your application.
+Please see the FAQ page for debugging suggestions

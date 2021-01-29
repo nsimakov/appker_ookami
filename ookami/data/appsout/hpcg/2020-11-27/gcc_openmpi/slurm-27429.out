@@ -1,0 +1,17 @@
+Loading hpcg/3.1_gcc_openmpi
+  Loading requirement: gcc/10.2.0 openmpi/4.0.5
+loaded modules:
+Currently Loaded Modulefiles:
+ 1) slurm/19.05.7   2) gcc/10.2.0   3) openmpi/4.0.5   4) hpcg/3.1_gcc_openmpi  
+scontrol: error: s_p_parse_file: unable to status file /etc/slurm/slurm.conf: No such file or directory, retrying in 1sec up to 60sec
+scontrol: error: ClusterName needs to be specified
+scontrol: fatal: Unable to process configuration file
+Running script on host: fj096
+Working directory: /lustre/projects/Buffalo/appker/benchmarks/hpcg/2020-11-27/gcc_openmpi
+SLURM_NTASKS: 768
+Hostnames to use: fj[096-111]
+which mpirun: /lustre/projects/global/software/a64fx/openmpi/4.0.5/bin/mpirun
+which app: /lustre/projects/Buffalo/appker/execs/hpcg/3.1/3.1_gcc_openmpi/bin/xhpcg
+srun: error: s_p_parse_file: unable to status file /etc/slurm/slurm.conf: No such file or directory, retrying in 1sec up to 60sec
+srun: error: ClusterName needs to be specified
+srun: fatal: Unable to process configuration file

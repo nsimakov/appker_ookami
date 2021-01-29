@@ -1,0 +1,20 @@
+loaded modules:
+Currently Loaded Modulefiles:
+ 1) slurm/19.05.7   2) slurm/slurm/19.05.7   3) gcc/10.2.0   4) mvapich2/2.3.4  
+Running script on host: fj012
+Working directory: /lustre/projects/Buffalo/appker/benchmarks/hpcg/2020-11-12/gcc_mvapich
+SLURM_NTASKS: 384
+Hostnames to use: fj[012-019]
+fj012:48
+fj013:48
+fj014:48
+fj015:48
+fj016:48
+fj017:48
+fj018:48
+fj019:48
+which app: /lustre/projects/Buffalo/appker/execs/hpcg-3.1/build_gcc_mvapich/bin/xhpcg
+srun: error: s_p_parse_file: unable to status file /etc/slurm/slurm.conf: No such file or directory, retrying in 1sec up to 60sec
+srun: error: ClusterName needs to be specified
+srun: fatal: Unable to process configuration file
+slurmstepd: error: *** JOB 7558 ON fj012 CANCELLED AT 2020-11-16T14:46:17 ***

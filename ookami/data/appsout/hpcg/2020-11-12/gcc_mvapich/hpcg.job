@@ -1,0 +1,30 @@
+#!/bin/bash
+#SBATCH --nodes=8
+#SBATCH --ntasks-per-node=48
+#SBATCH -t 24:00:00
+#SBATCH -p long
+#SBATCH -q long
+
+#module purge
+#module avail
+module load slurm gcc/10.2.0 mvapich2/2.3.4
+echo "loaded modules:"
+module list
+
+#cp /lustre/projects/Buffalo/appker/inputs/hpcg/hpcg.dat ./
+scontrol show hostnames $SLURM_JOB_NODELIST > hostnames0
+awk '$0=$0":48"' hostnames0 > hostnames
+
+echo "Running script on host: $(hostname)"
+echo "Working directory: $(pwd)"
+echo "SLURM_NTASKS: $SLURM_NTASKS"
+echo "Hostnames to use: $SLURM_JOB_NODELIST"
+cat hostnames
+
+EXE=/lustre/projects/Buffalo/appker/execs/hpcg-3.1/build_gcc_mvapich/bin/xhpcg
+
+echo "which mpirun: $(which mpirun)"
+echo "which app: $EXE"
+
+MV2_ENABLE_AFFINITY=0 mpirun -n $SLURM_NTASKS -f hostnames -launcher ssh $EXE 72 64 64 120
+

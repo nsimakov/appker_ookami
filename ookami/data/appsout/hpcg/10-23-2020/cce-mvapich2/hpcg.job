@@ -1,0 +1,22 @@
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=48
+#SBATCH -t 24:00:00
+#SBATCH -p long
+#SBATCH -q long
+##SBATCH -w fj[047-174]
+
+pwd
+
+
+module restore PrgEnv-cray
+module load cray-mvapich2_nogpu_svealpha
+#module load cray-fftw 
+module load slurm
+
+# spack load hpcg@3.1 target=a64fx %cce ^mvapich2
+spack load hpcg@3.1 target=aarch64 %cce ^mvapich2
+
+EXE=${EXE:-$(which xhpcg)}
+srun --nodes=1 --ntasks-per-node=48  $EXE 
+

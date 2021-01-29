@@ -1,0 +1,181 @@
+Loading hpcg/3.1_gcc_mvapich2
+  Loading requirement: gcc/10.2.0 mvapich2/2.3.4
+loaded modules:
+Currently Loaded Modulefiles:
+ 1) slurm/19.05.7         3) gcc/10.2.0       5) hpcg/3.1_gcc_mvapich2  
+ 2) slurm/slurm/19.05.7   4) mvapich2/2.3.4  
+Running script on host: fj025
+Working directory: /lustre/projects/Buffalo/appker/benchmarks/hpcg/2020-11-27/gcc_mvapich2/run2/N_32/9
+SLURM_NTASKS: 1536
+Hostnames to use: fj[025-032,065-072,157-172]
+fj025:48
+fj026:48
+fj027:48
+fj028:48
+fj029:48
+fj030:48
+fj031:48
+fj032:48
+fj065:48
+fj066:48
+fj067:48
+fj068:48
+fj069:48
+fj070:48
+fj071:48
+fj072:48
+fj157:48
+fj158:48
+fj159:48
+fj160:48
+fj161:48
+fj162:48
+fj163:48
+fj164:48
+fj165:48
+fj166:48
+fj167:48
+fj168:48
+fj169:48
+fj170:48
+fj171:48
+fj172:48
+which mpirun: /lustre/projects/global/software/a64fx/mvapich2/2.3.4/bin/mpirun
+which app: /lustre/projects/Buffalo/appker/execs/hpcg/3.1/3.1_gcc_mvapich2/bin/xhpcg
+[fj025:mpi_rank_0][rdma_open_hca] [Warning] Setting the  multirail policy to MV2_MRAIL_SHARING since RDMA_CM based multicast  is enabled.
+[fj168:mpi_rank_1306][error_sighandler] Caught error: Bus error (signal 7)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 31319 RUNNING AT fj168
+=   EXIT CODE: 135
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:0@fj025] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:0@fj025] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:0@fj025] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:2@fj027] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:2@fj027] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:2@fj027] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:3@fj028] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:3@fj028] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:3@fj028] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:1@fj026] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:1@fj026] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:1@fj026] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:5@fj030] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:5@fj030] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:5@fj030] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:9@fj066] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:9@fj066] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:9@fj066] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:6@fj031] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:6@fj031] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:6@fj031] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:15@fj072] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:15@fj072] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:15@fj072] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:7@fj032] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:7@fj032] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:7@fj032] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:10@fj067] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:10@fj067] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:10@fj067] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:11@fj068] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:11@fj068] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:11@fj068] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:8@fj065] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:8@fj065] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:8@fj065] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:18@fj159] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:18@fj159] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:18@fj159] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:16@fj157] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:16@fj157] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:16@fj157] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:13@fj070] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:13@fj070] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:13@fj070] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:17@fj158] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:17@fj158] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:17@fj158] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:14@fj071] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:14@fj071] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:14@fj071] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:21@fj162] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:21@fj162] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:21@fj162] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:22@fj163] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:22@fj163] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:22@fj163] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:20@fj161] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:20@fj161] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:20@fj161] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:25@fj166] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:25@fj166] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:25@fj166] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:24@fj165] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:24@fj165] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:24@fj165] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:28@fj169] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:28@fj169] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:28@fj169] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:23@fj164] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:23@fj164] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:23@fj164] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:29@fj170] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:29@fj170] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:29@fj170] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:26@fj167] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:26@fj167] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:26@fj167] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:30@fj171] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:30@fj171] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:30@fj171] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:31@fj172] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:31@fj172] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:31@fj172] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:19@fj160] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:19@fj160] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:19@fj160] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:12@fj069] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:12@fj069] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:12@fj069] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:4@fj029] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:4@fj029] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:4@fj029] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+srun: error: fj068: task 11: Exited with exit code 7
+srun: error: fj159: task 18: Exited with exit code 7
+srun: error: fj170: task 29: Exited with exit code 7
+srun: error: fj072: task 15: Exited with exit code 7
+srun: error: fj032: task 7: Exited with exit code 7
+srun: error: fj164: task 23: Exited with exit code 7
+srun: error: fj158: task 17: Exited with exit code 7
+srun: error: fj169: task 28: Exited with exit code 7
+srun: error: fj027: task 2: Exited with exit code 7
+srun: error: fj161: task 20: Exited with exit code 7
+srun: error: fj160: task 19: Exited with exit code 7
+srun: error: fj028: task 3: Exited with exit code 7
+srun: error: fj069: task 12: Exited with exit code 7
+srun: error: fj026: task 1: Exited with exit code 7
+srun: error: fj171: task 30: Exited with exit code 7
+srun: error: fj167: task 26: Exited with exit code 7
+srun: error: fj025: task 0: Exited with exit code 7
+srun: error: fj162: task 21: Exited with exit code 7
+srun: error: fj172: task 31: Exited with exit code 7
+srun: error: fj066: task 9: Exited with exit code 7
+srun: error: fj165: task 24: Exited with exit code 7
+srun: error: fj071: task 14: Exited with exit code 7
+srun: error: fj029: task 4: Exited with exit code 7
+srun: error: fj070: task 13: Exited with exit code 7
+srun: error: fj030: task 5: Exited with exit code 7
+srun: error: fj067: task 10: Exited with exit code 7
+srun: error: fj157: task 16: Exited with exit code 7
+srun: error: fj163: task 22: Exited with exit code 7
+srun: error: fj166: task 25: Exited with exit code 7
+srun: error: fj031: task 6: Exited with exit code 7
+srun: error: fj065: task 8: Exited with exit code 7
+YOUR APPLICATION TERMINATED WITH THE EXIT STRING: Bus error (signal 7)
+This typically refers to a problem with your application.
+Please see the FAQ page for debugging suggestions

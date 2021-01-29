@@ -1,0 +1,10 @@
+/lustre/projects/Buffalo/appker/benchmarks/hpcc/10-21-2020/cce_libsci_fftw3_mvapich2/std_48x1/8
+Unloading slurm/slurm/19.05.7
+WARNING: Did not unuse /cm/shared/modulefiles
+WARNING: Did not unuse /cm/local/modulefiles
+Loading cpe-cray
+Loading cce-sve/10.0.1
+Loading craype/2.7.0
+Loading craype-arm-nsp1
+Loading craype-network-infiniband
+Loading cray-libsci/20.10.1.2

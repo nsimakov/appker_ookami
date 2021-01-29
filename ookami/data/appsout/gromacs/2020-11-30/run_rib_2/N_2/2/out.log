@@ -1,0 +1,788 @@
+ Data for JOB [1641,1] offset 0 Total slots allocated 96
+
+ Mapper requested: NULL  Last mapper: round_robin  Mapping policy: BYCORE:NOOVERSUBSCRIBE  Ranking policy: SLOT
+ Binding policy: CORE:IF-SUPPORTED  Cpu set: NULL  PPR: NULL  Cpus-per-rank: 0
+ 	Num new daemons: 0	New daemon starting vpid INVALID
+ 	Num nodes: 2
+
+ Data for node: fj119	State: 3	Flags: 11
+ 	Daemon: [[1641,0],0]	Daemon launched: True
+ 	Num slots: 48	Slots in use: 48	Oversubscribed: FALSE
+ 	Num slots allocated: 48	Max slots: 0
+ 	Num procs: 48	Next node_rank: 48
+ 	Data for proc: [[1641,1],0]
+ 		Pid: 0	Local rank: 0	Node rank: 0	App rank: 0
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [B/././././././././././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: [B/././././././././././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],1]
+ 		Pid: 0	Local rank: 1	Node rank: 1	App rank: 1
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./B/./././././././././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: [./B/./././././././././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],2]
+ 		Pid: 0	Local rank: 2	Node rank: 2	App rank: 2
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [././B/././././././././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: [././B/././././././././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],3]
+ 		Pid: 0	Local rank: 3	Node rank: 3	App rank: 3
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././B/./././././././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: [./././B/./././././././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],4]
+ 		Pid: 0	Local rank: 4	Node rank: 4	App rank: 4
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [././././B/././././././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: [././././B/././././././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],5]
+ 		Pid: 0	Local rank: 5	Node rank: 5	App rank: 5
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././B/./././././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: [./././././B/./././././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],6]
+ 		Pid: 0	Local rank: 6	Node rank: 6	App rank: 6
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [././././././B/././././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: [././././././B/././././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],7]
+ 		Pid: 0	Local rank: 7	Node rank: 7	App rank: 7
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././B/./././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: [./././././././B/./././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],8]
+ 		Pid: 0	Local rank: 8	Node rank: 8	App rank: 8
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [././././././././B/././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: [././././././././B/././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],9]
+ 		Pid: 0	Local rank: 9	Node rank: 9	App rank: 9
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././B/./.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: [./././././././././B/./.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],10]
+ 		Pid: 0	Local rank: 10	Node rank: 10	App rank: 10
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [././././././././././B/.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: [././././././././././B/.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],11]
+ 		Pid: 0	Local rank: 11	Node rank: 11	App rank: 11
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././B][./././././././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: [./././././././././././B][./././././././././././.][./././././././././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],12]
+ 		Pid: 0	Local rank: 12	Node rank: 12	App rank: 12
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][B/././././././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: [./././././././././././.][B/././././././././././.][./././././././././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],13]
+ 		Pid: 0	Local rank: 13	Node rank: 13	App rank: 13
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./B/./././././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: [./././././././././././.][./B/./././././././././.][./././././././././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],14]
+ 		Pid: 0	Local rank: 14	Node rank: 14	App rank: 14
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][././B/././././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: [./././././././././././.][././B/././././././././.][./././././././././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],15]
+ 		Pid: 0	Local rank: 15	Node rank: 15	App rank: 15
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././B/./././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: [./././././././././././.][./././B/./././././././.][./././././././././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],16]
+ 		Pid: 0	Local rank: 16	Node rank: 16	App rank: 16
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][././././B/././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: [./././././././././././.][././././B/././././././.][./././././././././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],17]
+ 		Pid: 0	Local rank: 17	Node rank: 17	App rank: 17
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././B/./././././.][./././././././././././.][./././././././././././.]
+ 		Binding: [./././././././././././.][./././././B/./././././.][./././././././././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],18]
+ 		Pid: 0	Local rank: 18	Node rank: 18	App rank: 18
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][././././././B/././././.][./././././././././././.][./././././././././././.]
+ 		Binding: [./././././././././././.][././././././B/././././.][./././././././././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],19]
+ 		Pid: 0	Local rank: 19	Node rank: 19	App rank: 19
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././B/./././.][./././././././././././.][./././././././././././.]
+ 		Binding: [./././././././././././.][./././././././B/./././.][./././././././././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],20]
+ 		Pid: 0	Local rank: 20	Node rank: 20	App rank: 20
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][././././././././B/././.][./././././././././././.][./././././././././././.]
+ 		Binding: [./././././././././././.][././././././././B/././.][./././././././././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],21]
+ 		Pid: 0	Local rank: 21	Node rank: 21	App rank: 21
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././B/./.][./././././././././././.][./././././././././././.]
+ 		Binding: [./././././././././././.][./././././././././B/./.][./././././././././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],22]
+ 		Pid: 0	Local rank: 22	Node rank: 22	App rank: 22
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][././././././././././B/.][./././././././././././.][./././././././././././.]
+ 		Binding: [./././././././././././.][././././././././././B/.][./././././././././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],23]
+ 		Pid: 0	Local rank: 23	Node rank: 23	App rank: 23
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././B][./././././././././././.][./././././././././././.]
+ 		Binding: [./././././././././././.][./././././././././././B][./././././././././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],24]
+ 		Pid: 0	Local rank: 24	Node rank: 24	App rank: 24
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][B/././././././././././.][./././././././././././.]
+ 		Binding: [./././././././././././.][./././././././././././.][B/././././././././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],25]
+ 		Pid: 0	Local rank: 25	Node rank: 25	App rank: 25
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./B/./././././././././.][./././././././././././.]
+ 		Binding: [./././././././././././.][./././././././././././.][./B/./././././././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],26]
+ 		Pid: 0	Local rank: 26	Node rank: 26	App rank: 26
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][././B/././././././././.][./././././././././././.]
+ 		Binding: [./././././././././././.][./././././././././././.][././B/././././././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],27]
+ 		Pid: 0	Local rank: 27	Node rank: 27	App rank: 27
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././B/./././././././.][./././././././././././.]
+ 		Binding: [./././././././././././.][./././././././././././.][./././B/./././././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],28]
+ 		Pid: 0	Local rank: 28	Node rank: 28	App rank: 28
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][././././B/././././././.][./././././././././././.]
+ 		Binding: [./././././././././././.][./././././././././././.][././././B/././././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],29]
+ 		Pid: 0	Local rank: 29	Node rank: 29	App rank: 29
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././B/./././././.][./././././././././././.]
+ 		Binding: [./././././././././././.][./././././././././././.][./././././B/./././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],30]
+ 		Pid: 0	Local rank: 30	Node rank: 30	App rank: 30
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][././././././B/././././.][./././././././././././.]
+ 		Binding: [./././././././././././.][./././././././././././.][././././././B/././././.][./././././././././././.]
+ 	Data for proc: [[1641,1],31]
+ 		Pid: 0	Local rank: 31	Node rank: 31	App rank: 31
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././././B/./././.][./././././././././././.]
+ 		Binding: [./././././././././././.][./././././././././././.][./././././././B/./././.][./././././././././././.]
+ 	Data for proc: [[1641,1],32]
+ 		Pid: 0	Local rank: 32	Node rank: 32	App rank: 32
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][././././././././B/././.][./././././././././././.]
+ 		Binding: [./././././././././././.][./././././././././././.][././././././././B/././.][./././././././././././.]
+ 	Data for proc: [[1641,1],33]
+ 		Pid: 0	Local rank: 33	Node rank: 33	App rank: 33
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././././././B/./.][./././././././././././.]
+ 		Binding: [./././././././././././.][./././././././././././.][./././././././././B/./.][./././././././././././.]
+ 	Data for proc: [[1641,1],34]
+ 		Pid: 0	Local rank: 34	Node rank: 34	App rank: 34
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][././././././././././B/.][./././././././././././.]
+ 		Binding: [./././././././././././.][./././././././././././.][././././././././././B/.][./././././././././././.]
+ 	Data for proc: [[1641,1],35]
+ 		Pid: 0	Local rank: 35	Node rank: 35	App rank: 35
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././././././././B][./././././././././././.]
+ 		Binding: [./././././././././././.][./././././././././././.][./././././././././././B][./././././././././././.]
+ 	Data for proc: [[1641,1],36]
+ 		Pid: 0	Local rank: 36	Node rank: 36	App rank: 36
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././././././././.][B/././././././././././.]
+ 		Binding: [./././././././././././.][./././././././././././.][./././././././././././.][B/././././././././././.]
+ 	Data for proc: [[1641,1],37]
+ 		Pid: 0	Local rank: 37	Node rank: 37	App rank: 37
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././././././././.][./B/./././././././././.]
+ 		Binding: [./././././././././././.][./././././././././././.][./././././././././././.][./B/./././././././././.]
+ 	Data for proc: [[1641,1],38]
+ 		Pid: 0	Local rank: 38	Node rank: 38	App rank: 38
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././././././././.][././B/././././././././.]
+ 		Binding: [./././././././././././.][./././././././././././.][./././././././././././.][././B/././././././././.]
+ 	Data for proc: [[1641,1],39]
+ 		Pid: 0	Local rank: 39	Node rank: 39	App rank: 39
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././././././././.][./././B/./././././././.]
+ 		Binding: [./././././././././././.][./././././././././././.][./././././././././././.][./././B/./././././././.]
+ 	Data for proc: [[1641,1],40]
+ 		Pid: 0	Local rank: 40	Node rank: 40	App rank: 40
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././././././././.][././././B/././././././.]
+ 		Binding: [./././././././././././.][./././././././././././.][./././././././././././.][././././B/././././././.]
+ 	Data for proc: [[1641,1],41]
+ 		Pid: 0	Local rank: 41	Node rank: 41	App rank: 41
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././././././././.][./././././B/./././././.]
+ 		Binding: [./././././././././././.][./././././././././././.][./././././././././././.][./././././B/./././././.]
+ 	Data for proc: [[1641,1],42]
+ 		Pid: 0	Local rank: 42	Node rank: 42	App rank: 42
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././././././././.][././././././B/././././.]
+ 		Binding: [./././././././././././.][./././././././././././.][./././././././././././.][././././././B/././././.]
+ 	Data for proc: [[1641,1],43]
+ 		Pid: 0	Local rank: 43	Node rank: 43	App rank: 43
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././././././././.][./././././././B/./././.]
+ 		Binding: [./././././././././././.][./././././././././././.][./././././././././././.][./././././././B/./././.]
+ 	Data for proc: [[1641,1],44]
+ 		Pid: 0	Local rank: 44	Node rank: 44	App rank: 44
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././././././././.][././././././././B/././.]
+ 		Binding: [./././././././././././.][./././././././././././.][./././././././././././.][././././././././B/././.]
+ 	Data for proc: [[1641,1],45]
+ 		Pid: 0	Local rank: 45	Node rank: 45	App rank: 45
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././././././././.][./././././././././B/./.]
+ 		Binding: [./././././././././././.][./././././././././././.][./././././././././././.][./././././././././B/./.]
+ 	Data for proc: [[1641,1],46]
+ 		Pid: 0	Local rank: 46	Node rank: 46	App rank: 46
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././././././././.][././././././././././B/.]
+ 		Binding: [./././././././././././.][./././././././././././.][./././././././././././.][././././././././././B/.]
+ 	Data for proc: [[1641,1],47]
+ 		Pid: 0	Local rank: 47	Node rank: 47	App rank: 47
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././././././././.][./././././././././././B]
+ 		Binding: [./././././././././././.][./././././././././././.][./././././././././././.][./././././././././././B]
+
+ Data for node: fj120	State: 3	Flags: 11
+ 	Daemon: [[1641,0],1]	Daemon launched: True
+ 	Num slots: 48	Slots in use: 48	Oversubscribed: FALSE
+ 	Num slots allocated: 48	Max slots: 0
+ 	Num procs: 48	Next node_rank: 48
+ 	Data for proc: [[1641,1],48]
+ 		Pid: 0	Local rank: 0	Node rank: 0	App rank: 48
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [B/././././././././././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],49]
+ 		Pid: 0	Local rank: 1	Node rank: 1	App rank: 49
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./B/./././././././././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],50]
+ 		Pid: 0	Local rank: 2	Node rank: 2	App rank: 50
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [././B/././././././././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],51]
+ 		Pid: 0	Local rank: 3	Node rank: 3	App rank: 51
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././B/./././././././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],52]
+ 		Pid: 0	Local rank: 4	Node rank: 4	App rank: 52
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [././././B/././././././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],53]
+ 		Pid: 0	Local rank: 5	Node rank: 5	App rank: 53
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././B/./././././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],54]
+ 		Pid: 0	Local rank: 6	Node rank: 6	App rank: 54
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [././././././B/././././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],55]
+ 		Pid: 0	Local rank: 7	Node rank: 7	App rank: 55
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././B/./././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],56]
+ 		Pid: 0	Local rank: 8	Node rank: 8	App rank: 56
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [././././././././B/././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],57]
+ 		Pid: 0	Local rank: 9	Node rank: 9	App rank: 57
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././B/./.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],58]
+ 		Pid: 0	Local rank: 10	Node rank: 10	App rank: 58
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [././././././././././B/.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],59]
+ 		Pid: 0	Local rank: 11	Node rank: 11	App rank: 59
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././B][./././././././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],60]
+ 		Pid: 0	Local rank: 12	Node rank: 12	App rank: 60
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][B/././././././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],61]
+ 		Pid: 0	Local rank: 13	Node rank: 13	App rank: 61
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./B/./././././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],62]
+ 		Pid: 0	Local rank: 14	Node rank: 14	App rank: 62
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][././B/././././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],63]
+ 		Pid: 0	Local rank: 15	Node rank: 15	App rank: 63
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././B/./././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],64]
+ 		Pid: 0	Local rank: 16	Node rank: 16	App rank: 64
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][././././B/././././././.][./././././././././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],65]
+ 		Pid: 0	Local rank: 17	Node rank: 17	App rank: 65
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././B/./././././.][./././././././././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],66]
+ 		Pid: 0	Local rank: 18	Node rank: 18	App rank: 66
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][././././././B/././././.][./././././././././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],67]
+ 		Pid: 0	Local rank: 19	Node rank: 19	App rank: 67
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././B/./././.][./././././././././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],68]
+ 		Pid: 0	Local rank: 20	Node rank: 20	App rank: 68
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][././././././././B/././.][./././././././././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],69]
+ 		Pid: 0	Local rank: 21	Node rank: 21	App rank: 69
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././B/./.][./././././././././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],70]
+ 		Pid: 0	Local rank: 22	Node rank: 22	App rank: 70
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][././././././././././B/.][./././././././././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],71]
+ 		Pid: 0	Local rank: 23	Node rank: 23	App rank: 71
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././B][./././././././././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],72]
+ 		Pid: 0	Local rank: 24	Node rank: 24	App rank: 72
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][B/././././././././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],73]
+ 		Pid: 0	Local rank: 25	Node rank: 25	App rank: 73
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./B/./././././././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],74]
+ 		Pid: 0	Local rank: 26	Node rank: 26	App rank: 74
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][././B/././././././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],75]
+ 		Pid: 0	Local rank: 27	Node rank: 27	App rank: 75
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././B/./././././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],76]
+ 		Pid: 0	Local rank: 28	Node rank: 28	App rank: 76
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][././././B/././././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],77]
+ 		Pid: 0	Local rank: 29	Node rank: 29	App rank: 77
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././B/./././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],78]
+ 		Pid: 0	Local rank: 30	Node rank: 30	App rank: 78
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][././././././B/././././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],79]
+ 		Pid: 0	Local rank: 31	Node rank: 31	App rank: 79
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././././B/./././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],80]
+ 		Pid: 0	Local rank: 32	Node rank: 32	App rank: 80
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][././././././././B/././.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],81]
+ 		Pid: 0	Local rank: 33	Node rank: 33	App rank: 81
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././././././B/./.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],82]
+ 		Pid: 0	Local rank: 34	Node rank: 34	App rank: 82
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][././././././././././B/.][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],83]
+ 		Pid: 0	Local rank: 35	Node rank: 35	App rank: 83
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././././././././B][./././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],84]
+ 		Pid: 0	Local rank: 36	Node rank: 36	App rank: 84
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././././././././.][B/././././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],85]
+ 		Pid: 0	Local rank: 37	Node rank: 37	App rank: 85
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././././././././.][./B/./././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],86]
+ 		Pid: 0	Local rank: 38	Node rank: 38	App rank: 86
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././././././././.][././B/././././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],87]
+ 		Pid: 0	Local rank: 39	Node rank: 39	App rank: 87
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././././././././.][./././B/./././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],88]
+ 		Pid: 0	Local rank: 40	Node rank: 40	App rank: 88
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././././././././.][././././B/././././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],89]
+ 		Pid: 0	Local rank: 41	Node rank: 41	App rank: 89
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././././././././.][./././././B/./././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],90]
+ 		Pid: 0	Local rank: 42	Node rank: 42	App rank: 90
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././././././././.][././././././B/././././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],91]
+ 		Pid: 0	Local rank: 43	Node rank: 43	App rank: 91
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././././././././.][./././././././B/./././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],92]
+ 		Pid: 0	Local rank: 44	Node rank: 44	App rank: 92
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././././././././.][././././././././B/././.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],93]
+ 		Pid: 0	Local rank: 45	Node rank: 45	App rank: 93
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././././././././.][./././././././././B/./.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],94]
+ 		Pid: 0	Local rank: 46	Node rank: 46	App rank: 94
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././././././././.][././././././././././B/.]
+ 		Binding: UNBOUND
+ 	Data for proc: [[1641,1],95]
+ 		Pid: 0	Local rank: 47	Node rank: 47	App rank: 95
+ 		State: INITIALIZED	App_context: 0
+ 		Locale:  [./././././././././././.][./././././././././././.][./././././././././././.][./././././././././././B]
+ 		Binding: UNBOUND
+               :-) GROMACS - gmx mdrun, 2021-beta2-UNCHECKED (-:
+
+                            GROMACS is written by:
+     Andrey Alekseenko              Emile Apol              Rossen Apostolov     
+         Paul Bauer           Herman J.C. Berendsen           Par Bjelkmar       
+       Christian Blau           Viacheslav Bolnykh             Kevin Boyd        
+     Aldert van Buuren           Rudi van Drunen             Anton Feenstra      
+         Alan Gray               Gerrit Groenhof             Anca Hamuraru       
+     Vincent Hindriksen          M. Eric Irrgang            Aleksei Iupinov      
+     Christoph Junghans             Joe Jordan            Dimitrios Karkoulis    
+        Peter Kasson                Jiri Kraus              Carsten Kutzner      
+        Per Larsson              Justin A. Lemkul            Viveca Lindahl      
+      Magnus Lundborg             Erik Marklund               Pascal Merz        
+     Pieter Meulenhoff            Teemu Murtola               Szilard Pall       
+        Sander Pronk              Roland Schulz              Michael Shirts      
+      Alexey Shvetsov             Alfons Sijbers             Peter Tieleman      
+        Jon Vincent              Teemu Virolainen          Christian Wennberg    
+        Maarten Wolf              Artem Zhmurov       
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, version 2021-beta2-UNCHECKED
+Executable:   /lustre/projects/global/testsuite/gromacs/gromacs/2021-beta2_gcc_openmpi/bin/gmx_mpi
+Data prefix:  /lustre/projects/global/testsuite/gromacs/gromacs/2021-beta2_gcc_openmpi
+Working dir:  /lustre/projects/global/testsuite/gromacs/run_rib_2/N_2/2
+Command line:
+  gmx_mpi mdrun -nsteps -1 -ntomp 1 -v
+
+Reading file topol.tpr, VERSION 4.6.2-dev-20130529-36d170c (single precision)
+Note: file tpx version 83, software tpx version 122
+Overriding nsteps with value passed on the command line: -1 steps
+Changing nstlist from 25 to 80, rlist from 1 to 1.096
+
+
+Using 96 MPI processes
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 1 OpenMP thread per MPI process
+
+starting mdrun 'Protein'
+-1 steps, infinite ps.
+step 0
+step 100 performance: 1.0 ns/day    
+step 200 performance: 1.4 ns/day    
+step 300 performance: 1.7 ns/day    
+vol 0.84  imb F  7% pme/F 0.92 step 400 performance: 1.8 ns/day    
+step 500 performance: 2.0 ns/day    
+step 600 performance: 2.1 ns/day    
+step 700 performance: 2.2 ns/day    
+vol 0.79  imb F  1% pme/F 0.93 step 800 performance: 2.3 ns/day    
+step 900 performance: 2.3 ns/day    
+step 1000 performance: 2.4 ns/day    
+step 1100 performance: 2.5 ns/day    
+vol 0.79  imb F  5% pme/F 0.92 step 1200 performance: 2.5 ns/day    
+step 1300 performance: 2.5 ns/day    
+step 1400 performance: 2.5 ns/day    
+step 1500 performance: 2.6 ns/day    
+vol 0.80  imb F  1% pme/F 0.95 step 1600 performance: 2.6 ns/day    
+step 1700 performance: 2.6 ns/day    
+step 1800 performance: 2.6 ns/day    
+step 1900 performance: 2.7 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 step 2000 performance: 2.7 ns/day    
+step 2100 performance: 2.7 ns/day    
+step 2200 performance: 2.7 ns/day    
+step 2300 performance: 2.7 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 step 2400 performance: 2.7 ns/day    
+step 2500 performance: 2.7 ns/day    
+step 2600 performance: 2.7 ns/day    
+step 2700 performance: 2.8 ns/day    
+vol 0.80  imb F  1% pme/F 0.95 step 2800 performance: 2.8 ns/day    
+step 2900 performance: 2.8 ns/day    
+step 3000 performance: 2.8 ns/day    
+step 3100 performance: 2.8 ns/day    
+vol 0.80  imb F  1% pme/F 0.95 step 3200 performance: 2.8 ns/day    
+step 3300 performance: 2.8 ns/day    
+step 3400 performance: 2.8 ns/day    
+step 3500 performance: 2.8 ns/day    
+vol 0.80  imb F  1% pme/F 0.95 step 3600 performance: 2.8 ns/day    
+step 3700 performance: 2.8 ns/day    
+step 3800 performance: 2.8 ns/day    
+step 3900 performance: 2.8 ns/day    
+vol 0.80  imb F  1% pme/F 0.95 step 4000 performance: 2.8 ns/day    
+step 4100 performance: 2.8 ns/day    
+step 4200 performance: 2.8 ns/day    
+step 4300 performance: 2.8 ns/day    
+vol 0.80  imb F  1% pme/F 0.95 step 4400 performance: 2.8 ns/day    
+step 4500 performance: 2.9 ns/day    
+step 4600 performance: 2.9 ns/day    
+step 4700 performance: 2.9 ns/day    
+vol 0.80  imb F  1% pme/F 0.96 step 4800 performance: 2.9 ns/day    
+step 4900 performance: 2.9 ns/day    
+step 5000 performance: 2.9 ns/day    
+step 5100 performance: 2.9 ns/day    
+vol 0.80  imb F  1% pme/F 0.95 step 5200 performance: 2.9 ns/day    
+step 5300 performance: 2.9 ns/day    
+step 5400 performance: 2.9 ns/day    
+step 5500 performance: 2.9 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 step 5600 performance: 2.9 ns/day    
+step 5700 performance: 2.9 ns/day    
+step 5800 performance: 2.9 ns/day    
+step 5900 performance: 2.9 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 step 6000 performance: 2.9 ns/day    
+step 6100 performance: 2.9 ns/day    
+step 6200 performance: 2.9 ns/day    
+step 6300 performance: 2.9 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 step 6400 performance: 2.9 ns/day    
+step 6500 performance: 2.9 ns/day    
+step 6600 performance: 2.9 ns/day    
+step 6700 performance: 2.9 ns/day    
+vol 0.80  imb F  1% pme/F 0.93 step 6800 performance: 2.9 ns/day    
+step 6900 performance: 2.9 ns/day    
+step 7000 performance: 2.9 ns/day    
+step 7100 performance: 2.9 ns/day    
+vol 0.80  imb F  1% pme/F 0.93 step 7200 performance: 2.9 ns/day    
+step 7300 performance: 2.9 ns/day    
+step 7400 performance: 2.9 ns/day    
+step 7500 performance: 2.9 ns/day    
+vol 0.80  imb F  1% pme/F 0.96 step 7600 performance: 2.9 ns/day    
+step 7700 performance: 2.9 ns/day    
+step 7800 performance: 2.9 ns/day    
+step 7900 performance: 2.9 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 step 8000 performance: 2.9 ns/day    
+step 8100 performance: 2.9 ns/day    
+step 8200 performance: 2.9 ns/day    
+step 8300 performance: 2.9 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 step 8400 performance: 2.9 ns/day    
+step 8500 performance: 2.9 ns/day    
+step 8600 performance: 2.9 ns/day    
+step 8700 performance: 2.9 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 step 8800 performance: 2.9 ns/day    
+step 8900 performance: 2.9 ns/day    
+step 9000 performance: 2.9 ns/day    
+step 9100 performance: 2.9 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 step 9200 performance: 2.9 ns/day    
+step 9300 performance: 2.9 ns/day    
+step 9400 performance: 2.9 ns/day    
+step 9500 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 step 9600 performance: 3.0 ns/day    
+step 9700 performance: 3.0 ns/day    
+step 9800 performance: 3.0 ns/day    
+step 9900 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 step 10000 performance: 3.0 ns/day    
+step 10100 performance: 3.0 ns/day    
+step 10200 performance: 3.0 ns/day    
+step 10300 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 step 10400 performance: 3.0 ns/day    
+step 10500 performance: 3.0 ns/day    
+step 10600 performance: 3.0 ns/day    
+step 10700 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 step 10800 performance: 3.0 ns/day    
+step 10900 performance: 3.0 ns/day    
+step 11000 performance: 3.0 ns/day    
+step 11100 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.93 step 11200 performance: 3.0 ns/day    
+step 11300 performance: 3.0 ns/day    
+step 11400 performance: 3.0 ns/day    
+step 11500 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.93 step 11600 performance: 3.0 ns/day    
+step 11700 performance: 3.0 ns/day    
+step 11800 performance: 3.0 ns/day    
+step 11900 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 step 12000 performance: 3.0 ns/day    
+step 12100 performance: 3.0 ns/day    
+step 12200 performance: 3.0 ns/day    
+step 12300 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 step 12400 performance: 3.0 ns/day    
+step 12500 performance: 3.0 ns/day    
+step 12600 performance: 3.0 ns/day    
+step 12700 performance: 3.0 ns/day    
+vol 0.80  imb F  2% pme/F 0.92 step 12800 performance: 3.0 ns/day    
+step 12900 performance: 3.0 ns/day    
+step 13000 performance: 3.0 ns/day    
+step 13100 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.95 step 13200 performance: 3.0 ns/day    
+step 13300 performance: 3.0 ns/day    
+step 13400 performance: 3.0 ns/day    
+step 13500 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 step 13600 performance: 3.0 ns/day    
+step 13700 performance: 3.0 ns/day    
+step 13800 performance: 3.0 ns/day    
+step 13900 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.93 step 14000 performance: 3.0 ns/day    
+step 14100 performance: 3.0 ns/day    
+step 14200 performance: 3.0 ns/day    
+step 14300 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 step 14400 performance: 3.0 ns/day    
+step 14500 performance: 3.0 ns/day    
+step 14600 performance: 3.0 ns/day    
+step 14700 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 step 14800 performance: 3.0 ns/day    
+step 14900 performance: 3.0 ns/day    
+step 15000 performance: 3.0 ns/day    
+step 15100 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 step 15200 performance: 3.0 ns/day    
+step 15300 performance: 3.0 ns/day    
+step 15400 performance: 3.0 ns/day    
+step 15500 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 step 15600 performance: 3.0 ns/day    
+step 15700 performance: 3.0 ns/day    
+step 15800 performance: 3.0 ns/day    
+step 15900 performance: 3.0 ns/day    
+vol 0.80  imb F  2% pme/F 0.97 step 16000 performance: 3.0 ns/day    
+step 16100 performance: 3.0 ns/day    
+step 16200 performance: 3.0 ns/day    
+step 16300 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 step 16400 performance: 3.0 ns/day    
+step 16500 performance: 3.0 ns/day    
+step 16600 performance: 3.0 ns/day    
+step 16700 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 step 16800 performance: 3.0 ns/day    
+step 16900 performance: 3.0 ns/day    
+step 17000 performance: 3.0 ns/day    
+step 17100 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 step 17200 performance: 3.0 ns/day    
+step 17300 performance: 3.0 ns/day    
+step 17400 performance: 3.0 ns/day    
+step 17500 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.95 step 17600 performance: 3.0 ns/day    
+step 17700 performance: 3.0 ns/day    
+step 17800 performance: 3.0 ns/day    
+step 17900 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 step 18000 performance: 3.0 ns/day    
+step 18100 performance: 3.0 ns/day    
+step 18200 performance: 3.0 ns/day    
+step 18300 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.93 step 18400 performance: 3.0 ns/day    
+step 18500 performance: 3.0 ns/day    
+step 18600 performance: 3.0 ns/day    
+step 18700 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 step 18800 performance: 3.0 ns/day    
+step 18900 performance: 3.0 ns/day    
+step 19000 performance: 3.0 ns/day    
+step 19100 performance: 3.0 ns/day    
+vol 0.80  imb F  3% pme/F 0.96 step 19200 performance: 3.0 ns/day    
+step 19300 performance: 3.0 ns/day    
+step 19400 performance: 3.0 ns/day    
+step 19500 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 step 19600 performance: 3.0 ns/day    
+step 19700 performance: 3.0 ns/day    
+step 19800 performance: 3.0 ns/day    
+step 19900 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.93 step 20000 performance: 3.0 ns/day    
+step 20100 performance: 3.0 ns/day    
+step 20200 performance: 3.0 ns/day    
+step 20300 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 step 20400 performance: 3.0 ns/day    
+step 20500 performance: 3.0 ns/day    
+step 20600 performance: 3.0 ns/day    
+step 20700 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.93 step 20800 performance: 3.0 ns/day    
+step 20900 performance: 3.0 ns/day    
+step 21000 performance: 3.0 ns/day    
+step 21100 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 step 21200 performance: 3.0 ns/day    
+step 21300 performance: 3.0 ns/day    
+step 21400 performance: 3.0 ns/day    
+step 21500 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.93 step 21600 performance: 3.0 ns/day    
+step 21700 performance: 3.0 ns/day    
+step 21800 performance: 3.0 ns/day    
+step 21900 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 step 22000 performance: 3.0 ns/day    
+step 22100 performance: 3.0 ns/day    
+step 22200 performance: 3.0 ns/day    
+step 22300 performance: 3.0 ns/day    
+vol 0.80  imb F  4% pme/F 0.96 step 22400 performance: 3.0 ns/day    
+step 22500 performance: 3.0 ns/day    
+step 22600 performance: 3.0 ns/day    
+step 22700 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.93 step 22800 performance: 3.0 ns/day    
+step 22900 performance: 3.0 ns/day    
+step 23000 performance: 3.0 ns/day    
+step 23100 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 step 23200 performance: 3.0 ns/day    
+step 23300 performance: 3.0 ns/day    
+step 23400 performance: 3.0 ns/day    
+step 23500 performance: 3.0 ns/day    
+vol 0.80  imb F  1% pme/F 0.94 

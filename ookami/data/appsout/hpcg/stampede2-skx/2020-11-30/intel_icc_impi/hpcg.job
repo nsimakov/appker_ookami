@@ -1,0 +1,46 @@
+#!/bin/bash
+##SBATCH --nodes=16
+##SBATCH --ntasks-per-node=48
+##SBATCH -t 24:00:00
+##SBATCH -p stren
+
+#module purge
+#module avail
+#module load slurm
+#module load hpcg/3.1_gcc_openmpi
+echo "loaded modules:"
+module list
+
+#cp /lustre/projects/Buffalo/appker/inputs/hpcg/hpcg.dat ./
+#scontrol show hostnames $SLURM_JOB_NODELIST > hostnames0
+#awk '$0=$0" slots=48"' hostnames0 > hostnames
+
+echo "Running script on host: $(hostname)"
+echo "Working directory: $(pwd)"
+echo "SLURM_NTASKS: $SLURM_NTASKS"
+#echo "Hostnames to use: $SLURM_JOB_NODELIST"
+#cat hostnames
+
+#EXE=/work/01482/xdtas/appker/stampede2-skx/execs/hpcg/3.1/icc_impi/bin/xhpcg
+EXE=$MKLROOT/benchmarks/hpcg/bin/xhpcg_skx
+
+# Set how to run app kernel
+export OMP_NUM_THREADS=1
+
+
+echo "which mpirun: $(which mpirun)"
+echo "which app: $EXE"
+
+#mpirun -n $SLURM_NTASKS -machinefile hostnames -display-map --bind-to core $EXE 96 64 64 60
+ibrun $EXE 96 64 64 600
+#srun $EXE 96 64 64 60
+
+
+AKRR_APP_STDOUT_FILE=appstdout
+for f in *.txt
+do
+    echo "====== $f Start ======"  >> $AKRR_APP_STDOUT_FILE 2>&1
+    cat $f  >> $AKRR_APP_STDOUT_FILE 2>&1
+    echo "====== $f End   ======" >> $AKRR_APP_STDOUT_FILE 2>&1
+done
+

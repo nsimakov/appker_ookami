@@ -1,0 +1,7 @@
+Hosts: fj[029-030,038-042,050-051,065-067,076-077,162-163]
+Woring dir: /lustre/projects/global/testsuite/gromacs/run_rib_2/N_16/9
+Script executed on: fj029
+Currently Loaded Modulefiles:
+ 1) slurm/19.05.7         3) gcc/10.2.0      5) fftw/3.3.8-serial-single        
+ 2) slurm/slurm/19.05.7   4) openmpi/4.0.5   6) gromacs/2021-beta2_gcc_openmpi  
+slurmstepd: error: *** JOB 39290 ON fj029 CANCELLED AT 2020-12-01T03:17:22 DUE TO TIME LIMIT ***

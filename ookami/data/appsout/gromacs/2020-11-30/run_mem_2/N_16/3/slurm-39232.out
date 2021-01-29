@@ -1,0 +1,6 @@
+Hosts: fj[027,035,043,051,059,067,075,083,091,099,107,123,133,135,137,139]
+Woring dir: /lustre/projects/global/testsuite/gromacs/run_mem_2/N_16/3
+Script executed on: fj027
+Currently Loaded Modulefiles:
+ 1) slurm/19.05.7         3) gcc/10.2.0      5) fftw/3.3.8-serial-single        
+ 2) slurm/slurm/19.05.7   4) openmpi/4.0.5   6) gromacs/2021-beta2_gcc_openmpi  

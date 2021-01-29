@@ -1,0 +1,6 @@
+====== *.txt Start ======
+cat: '*.txt': No such file or directory
+====== *.txt End   ======
+====== *.txt Start ======
+cat: '*.txt': No such file or directory
+====== *.txt End   ======

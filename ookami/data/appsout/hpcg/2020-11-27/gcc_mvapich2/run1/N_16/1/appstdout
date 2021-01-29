@@ -1,0 +1,143 @@
+====== hpcg20201127T204735.txt Start ======
+WARNING: PERFORMING UNPRECONDITIONED ITERATIONS
+Call [0] Number of Iterations [11] Scaled Residual [2.31651e-14]
+WARNING: PERFORMING UNPRECONDITIONED ITERATIONS
+Call [1] Number of Iterations [11] Scaled Residual [2.31651e-14]
+Call [0] Number of Iterations [2] Scaled Residual [4.36185e-17]
+Call [1] Number of Iterations [2] Scaled Residual [4.36185e-17]
+Departure from symmetry (scaled) for SpMV abs(x'*A*y - y'*A*x) = 3.89813e-11
+Departure from symmetry (scaled) for MG abs(x'*Minv*y - y'*Minv*x) = 1.55925e-11
+SpMV call [0] Residual [0]
+SpMV call [1] Residual [0]
+Call [0] Scaled Residual [0.00491412]
+Call [1] Scaled Residual [0.00491412]
+Call [2] Scaled Residual [0.00491412]
+====== hpcg20201127T204735.txt End   ======
+====== HPCG-Benchmark_3.1_2020-11-27_20-49-48.txt Start ======
+HPCG-Benchmark
+version=3.1
+Release date=March 28, 2019
+Machine Summary=
+Machine Summary::Distributed Processes=768
+Machine Summary::Threads per processes=1
+Global Problem Dimensions=
+Global Problem Dimensions::Global nx=768
+Global Problem Dimensions::Global ny=512
+Global Problem Dimensions::Global nz=768
+Processor Dimensions=
+Processor Dimensions::npx=8
+Processor Dimensions::npy=8
+Processor Dimensions::npz=12
+Local Domain Dimensions=
+Local Domain Dimensions::nx=96
+Local Domain Dimensions::ny=64
+Local Domain Dimensions::Lower ipz=0
+Local Domain Dimensions::Upper ipz=11
+Local Domain Dimensions::nz=64
+########## Problem Summary  ##########=
+Setup Information=
+Setup Information::Setup Time=2.3643
+Linear System Information=
+Linear System Information::Number of Equations=301989888
+Linear System Information::Number of Nonzero Terms=8128978936
+Multigrid Information=
+Multigrid Information::Number of coarse grid levels=3
+Multigrid Information::Coarse Grids=
+Multigrid Information::Coarse Grids::Grid Level=1
+Multigrid Information::Coarse Grids::Number of Equations=37748736
+Multigrid Information::Coarse Grids::Number of Nonzero Terms=1013035000
+Multigrid Information::Coarse Grids::Number of Presmoother Steps=1
+Multigrid Information::Coarse Grids::Number of Postsmoother Steps=1
+Multigrid Information::Coarse Grids::Grid Level=2
+Multigrid Information::Coarse Grids::Number of Equations=4718592
+Multigrid Information::Coarse Grids::Number of Nonzero Terms=125859832
+Multigrid Information::Coarse Grids::Number of Presmoother Steps=1
+Multigrid Information::Coarse Grids::Number of Postsmoother Steps=1
+Multigrid Information::Coarse Grids::Grid Level=3
+Multigrid Information::Coarse Grids::Number of Equations=589824
+Multigrid Information::Coarse Grids::Number of Nonzero Terms=15541240
+Multigrid Information::Coarse Grids::Number of Presmoother Steps=1
+Multigrid Information::Coarse Grids::Number of Postsmoother Steps=1
+########## Memory Use Summary  ##########=
+Memory Use Information=
+Memory Use Information::Total memory used for data (Gbytes)=216.102
+Memory Use Information::Memory used for OptimizeProblem data (Gbytes)=0
+Memory Use Information::Bytes per equation (Total memory / Number of Equations)=715.592
+Memory Use Information::Memory used for linear system and CG (Gbytes)=190.156
+Memory Use Information::Coarse Grids=
+Memory Use Information::Coarse Grids::Grid Level=1
+Memory Use Information::Coarse Grids::Memory used=22.7388
+Memory Use Information::Coarse Grids::Grid Level=2
+Memory Use Information::Coarse Grids::Memory used=2.84917
+Memory Use Information::Coarse Grids::Grid Level=3
+Memory Use Information::Coarse Grids::Memory used=0.35799
+########## V&V Testing Summary  ##########=
+Spectral Convergence Tests=
+Spectral Convergence Tests::Result=PASSED
+Spectral Convergence Tests::Unpreconditioned=
+Spectral Convergence Tests::Unpreconditioned::Maximum iteration count=11
+Spectral Convergence Tests::Unpreconditioned::Expected iteration count=12
+Spectral Convergence Tests::Preconditioned=
+Spectral Convergence Tests::Preconditioned::Maximum iteration count=2
+Spectral Convergence Tests::Preconditioned::Expected iteration count=2
+Departure from Symmetry |x'Ay-y'Ax|/(2*||x||*||A||*||y||)/epsilon=
+Departure from Symmetry |x'Ay-y'Ax|/(2*||x||*||A||*||y||)/epsilon::Result=PASSED
+Departure from Symmetry |x'Ay-y'Ax|/(2*||x||*||A||*||y||)/epsilon::Departure for SpMV=3.89813e-11
+Departure from Symmetry |x'Ay-y'Ax|/(2*||x||*||A||*||y||)/epsilon::Departure for MG=1.55925e-11
+########## Iterations Summary  ##########=
+Iteration Count Information=
+Iteration Count Information::Result=PASSED
+Iteration Count Information::Reference CG iterations per set=50
+Iteration Count Information::Optimized CG iterations per set=50
+Iteration Count Information::Total number of reference iterations=150
+Iteration Count Information::Total number of optimized iterations=150
+########## Reproducibility Summary  ##########=
+Reproducibility Information=
+Reproducibility Information::Result=PASSED
+Reproducibility Information::Scaled residual mean=0.00491412
+Reproducibility Information::Scaled residual variance=0
+########## Performance Summary (times in sec) ##########=
+Benchmark Time Summary=
+Benchmark Time Summary::Optimization phase=4.76837e-07
+Benchmark Time Summary::DDOT=3.05949
+Benchmark Time Summary::WAXPBY=0.243627
+Benchmark Time Summary::SpMV=8.03108
+Benchmark Time Summary::MG=58.1933
+Benchmark Time Summary::Total=69.5293
+Floating Point Operations Summary=
+Floating Point Operations Summary::Raw DDOT=2.73603e+11
+Floating Point Operations Summary::Raw WAXPBY=2.73603e+11
+Floating Point Operations Summary::Raw SpMV=2.48747e+12
+Floating Point Operations Summary::Raw MG=1.39111e+13
+Floating Point Operations Summary::Total=1.69458e+13
+Floating Point Operations Summary::Total with convergence overhead=1.69458e+13
+GB/s Summary=
+GB/s Summary::Raw Read B/W=1501.23
+GB/s Summary::Raw Write B/W=346.918
+GB/s Summary::Raw Total B/W=1848.15
+GB/s Summary::Total with convergence and optimization phase overhead=1829.49
+GFLOP/s Summary=
+GFLOP/s Summary::Raw DDOT=89.4275
+GFLOP/s Summary::Raw WAXPBY=1123.04
+GFLOP/s Summary::Raw SpMV=309.73
+GFLOP/s Summary::Raw MG=239.05
+GFLOP/s Summary::Raw Total=243.722
+GFLOP/s Summary::Total with convergence overhead=243.722
+GFLOP/s Summary::Total with convergence and optimization phase overhead=241.261
+User Optimization Overheads=
+User Optimization Overheads::Optimization phase time (sec)=4.76837e-07
+User Optimization Overheads::Optimization phase time vs reference SpMV+MG time=9.63605e-07
+DDOT Timing Variations=
+DDOT Timing Variations::Min DDOT MPI_Allreduce time=1.40664
+DDOT Timing Variations::Max DDOT MPI_Allreduce time=2.82537
+DDOT Timing Variations::Avg DDOT MPI_Allreduce time=1.96179
+Final Summary=
+Final Summary::HPCG result is VALID with a GFLOP/s rating of=241.261
+Final Summary::HPCG 2.4 rating for historical reasons is=243.722
+Final Summary::Reference version of ComputeDotProduct used=Performance results are most likely suboptimal
+Final Summary::Reference version of ComputeSPMV used=Performance results are most likely suboptimal
+Final Summary::Reference version of ComputeMG used=Performance results are most likely suboptimal
+Final Summary::Reference version of ComputeWAXPBY used=Performance results are most likely suboptimal
+Final Summary::Results are valid but execution time (sec) is=69.5293
+Final Summary::Official results execution time (sec) must be at least=1800
+====== HPCG-Benchmark_3.1_2020-11-27_20-49-48.txt End   ======

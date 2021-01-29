@@ -1,0 +1,38 @@
+Loading hpcg/3.1_gcc_openmpi
+  Loading requirement: gcc/10.2.0 openmpi/4.0.5
+loaded modules:
+Currently Loaded Modulefiles:
+ 1) slurm/19.05.7   2) gcc/10.2.0   3) openmpi/4.0.5   4) hpcg/3.1_gcc_openmpi  
+scontrol: error: s_p_parse_file: unable to status file /etc/slurm/slurm.conf: No such file or directory, retrying in 1sec up to 60sec
+scontrol: error: ClusterName needs to be specified
+scontrol: fatal: Unable to process configuration file
+Running script on host: fj125
+Working directory: /lustre/projects/Buffalo/appker/benchmarks/hpcg/2020-11-27/gcc_openmpi
+SLURM_NTASKS: 768
+Hostnames to use: fj[125-140]
+fj141 slots=48
+fj142 slots=48
+fj143 slots=48
+fj144 slots=48
+fj145 slots=48
+fj146 slots=48
+fj147 slots=48
+fj148 slots=48
+fj149 slots=48
+fj150 slots=48
+fj151 slots=48
+fj152 slots=48
+fj153 slots=48
+fj154 slots=48
+fj155 slots=48
+fj156 slots=48
+which mpirun: /lustre/projects/global/software/a64fx/openmpi/4.0.5/bin/mpirun
+which app: /lustre/projects/Buffalo/appker/execs/hpcg/3.1/3.1_gcc_openmpi/bin/xhpcg
+--------------------------------------------------------------------------
+An ORTE daemon has unexpectedly failed after launch and before
+communicating back to mpirun. This could be caused by a number
+of factors, including an inability to create a connection back
+to mpirun due to a lack of common network interfaces and/or no
+route found between them. Please check network connectivity
+(including firewalls and network routing requirements).
+--------------------------------------------------------------------------

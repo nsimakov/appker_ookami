@@ -1,0 +1,515 @@
+To access the system:
+
+1) If not using ssh-keys, please enter your TACC password at the password prompt
+2) At the TACC Token prompt, enter your 6-digit code followed by <return>.  
+
+ echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+export PS1='PROMPTtTtT ';\
+echo ExeCUTEd_SucCeSsFully
+ 
+ 
+Last login: Mon Nov 30 16:51:07 2020 from 199.109.193.251
+------------------------------------------------------------------------------
+                   Welcome to the Stampede2 Supercomputer
+      Texas Advanced Computing Center, The University of Texas at Austin
+------------------------------------------------------------------------------
+
+              ** Unauthorized use/access is prohibited. **
+
+If you log on to this computer system, you acknowledge your awareness
+of and concurrence with the UT Austin Acceptable Use Policy. The
+University will prosecute violators to the full extent of the law.
+
+TACC Usage Policies:
+http://www.tacc.utexas.edu/user-services/usage-policies/
+______________________________________________________________________________
+
+Welcome to Stampede2, *please* read these important system notes:
+
+--> Stampede2 user documentation is available at:
+       https://portal.tacc.utexas.edu/user-guides/stampede2
+
+ echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+export PS1='PROMPTtTtT ';\
+echo ExeCUTEd_SucCeSsFully
+ 
+ 
+----------------------- Project balances for user xdtas -----------------------
+| Name           Avail SUs     Expires |                                      |
+| TG-CCR120014        2877  2021-09-30 |                                      |
+------------------------- Disk quotas for user xdtas --------------------------
+| Disk         Usage (GB)     Limit    %Used   File Usage       Limit   %Used |
+| /home1              0.0      10.0     0.11         1232      200000    0.62 |
+| /work             166.2    1024.0    16.23       224624     3000000    7.49 |
+| /scratch            2.3       0.0     0.00       323900           0    0.00 |
+-------------------------------------------------------------------------------
+
+Tip 163   (See "module help tacc_tips" for features or how to disable)
+
+   Another way to follow a growing file is to use:
+       $ less +F <file>
+   This is just like tail -F but it allows you to move back and forth in the
+   file.
+
+login3.stampede2(1001)$  echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+> export PS1='PROMPTtTtT ';\
+> echo ExeCUTEd_SucCeSsFully
+StArTEd_ExeCUTEtIoM_SucCeSsFully
+ExeCUTEd_SucCeSsFully
+PROMPTtTtT  
+PROMPTtTtT  
+PROMPTtTtT  echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+> echo TeStTeStTeStThEproMPT;\
+> echo ExeCUTEd_SucCeSsFully
+StArTEd_ExeCUTEtIoM_SucCeSsFully
+TeStTeStTeStThEproMPT
+ExeCUTEd_SucCeSsFully
+PROMPTtTtT  echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+> if [ -d "/scratch/01482/xdtas/akrrdata/stampede2-skx" ]
+>  then 
+>  echo EXIST
+>  else echo DOES_NOT_EXIST
+>  fi;\
+> echo ExeCUTEd_SucCeSsFully
+StArTEd_ExeCUTEtIoM_SucCeSsFully
+EXIST
+ExeCUTEd_SucCeSsFully
+PROMPTtTtT  echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+> echo test > /scratch/01482/xdtas/akrrdata/stampede2-skx/akrr_test_write;\
+> echo ExeCUTEd_SucCeSsFully
+StArTEd_ExeCUTEtIoM_SucCeSsFully
+ExeCUTEd_SucCeSsFully
+PROMPTtTtT  echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+> cat /scratch/01482/xdtas/akrrdata/stampede2-skx/akrr_test_write;\
+> echo ExeCUTEd_SucCeSsFully
+StArTEd_ExeCUTEtIoM_SucCeSsFully
+test
+ExeCUTEd_SucCeSsFully
+PROMPTtTtT  echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+> rm /scratch/01482/xdtas/akrrdata/stampede2-skx/akrr_test_write;\
+> echo ExeCUTEd_SucCeSsFully
+StArTEd_ExeCUTEtIoM_SucCeSsFully
+rm: cannot remove ‘/scratch/01482/xdtas/akrrdata/stampede2-skx/akrr_test_write’: No such file or directory
+ExeCUTEd_SucCeSsFully
+PROMPTtTtT  echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+> if [ -d "/scratch/01482/xdtas/akrrdata/stampede2-skx/hpcc" ]
+>  then 
+>  echo EXIST
+>  else echo DOES_NOT_EXIST
+>  fi;\
+> echo ExeCUTEd_SucCeSsFully
+StArTEd_ExeCUTEtIoM_SucCeSsFully
+EXIST
+ExeCUTEd_SucCeSsFully
+PROMPTtTtT  echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+> echo test > /scratch/01482/xdtas/akrrdata/stampede2-skx/hpcc/akrr_test_writ<2/xdtas/akrrdata/stampede2-skx/hpcc/akrr_test_write                         ;\
+> echo ExeCUTEd_SucCeSsFully
+StArTEd_ExeCUTEtIoM_SucCeSsFully
+ExeCUTEd_SucCeSsFully
+PROMPTtTtT  echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+> cat /scratch/01482/xdtas/akrrdata/stampede2-skx/hpcc/akrr_test_write;\
+> echo ExeCUTEd_SucCeSsFully
+StArTEd_ExeCUTEtIoM_SucCeSsFully
+test
+ExeCUTEd_SucCeSsFully
+PROMPTtTtT  echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+> rm /scratch/01482/xdtas/akrrdata/stampede2-skx/hpcc/akrr_test_write;\
+> echo ExeCUTEd_SucCeSsFully
+StArTEd_ExeCUTEtIoM_SucCeSsFully
+rm: cannot remove ‘/scratch/01482/xdtas/akrrdata/stampede2-skx/hpcc/akrr_test_write’: No such file or directory
+ExeCUTEd_SucCeSsFully
+PROMPTtTtT  echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+> if [ -d "/scratch/01482/xdtas/akrrdata/stampede2-skx/hpcc/2020.11.30.17.50.<dtas/akrrdata/stampede2-skx/hpcc/2020.11.30.17.50.0                         5.866164" ]
+>  then 
+>  echo EXIST
+>  else echo DOES_NOT_EXIST
+>  fi;\
+> echo ExeCUTEd_SucCeSsFully
+StArTEd_ExeCUTEtIoM_SucCeSsFully
+DOES_NOT_EXIST
+ExeCUTEd_SucCeSsFully
+PROMPTtTtT  echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+> mkdir -p "/scratch/01482/xdtas/akrrdata/stampede2-skx/hpcc/2020.11.30.17.50<xdtas/akrrdata/stampede2-skx/hpcc/2020.11.30.17.50.                         05.866164";\
+> echo ExeCUTEd_SucCeSsFully
+StArTEd_ExeCUTEtIoM_SucCeSsFully
+ExeCUTEd_SucCeSsFully
+PROMPTtTtT  echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+> if [ -d "/scratch/01482/xdtas/akrrdata/stampede2-skx/hpcc/2020.11.30.17.50.<dtas/akrrdata/stampede2-skx/hpcc/2020.11.30.17.50.0                         5.866164" ]
+>  then 
+>  echo EXIST
+>  else echo DOES_NOT_EXIST
+>  fi;\
+> echo ExeCUTEd_SucCeSsFully
+StArTEd_ExeCUTEtIoM_SucCeSsFully
+EXIST
+ExeCUTEd_SucCeSsFully
+PROMPTtTtT  echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+> echo test > /scratch/01482/xdtas/akrrdata/stampede2-skx/hpcc/2020.11.30.17.<2/xdtas/akrrdata/stampede2-skx/hpcc/2020.11.30.17.5                         0.05.866164/akrr_test_wri<-skx/hpcc/2020.11.30.17.50.05.866164/akrr_test_writ                         e;\
+> echo ExeCUTEd_SucCeSsFully
+StArTEd_ExeCUTEtIoM_SucCeSsFully
+ExeCUTEd_SucCeSsFully
+PROMPTtTtT  echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+> cat /scratch/01482/xdtas/akrrdata/stampede2-skx/hpcc/2020.11.30.17.50.05.86<akrrdata/stampede2-skx/hpcc/2020.11.30.17.50.05.866                         164/akrr_test_write;\
+> echo ExeCUTEd_SucCeSsFully
+StArTEd_ExeCUTEtIoM_SucCeSsFully
+test
+ExeCUTEd_SucCeSsFully
+PROMPTtTtT  echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+> rm /scratch/01482/xdtas/akrrdata/stampede2-skx/hpcc/2020.11.30.17.50.05.866<krrdata/stampede2-skx/hpcc/2020.11.30.17.50.05.8661                         64/akrr_test_write;\
+> echo ExeCUTEd_SucCeSsFully
+StArTEd_ExeCUTEtIoM_SucCeSsFully
+ExeCUTEd_SucCeSsFully
+PROMPTtTtT  echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+> cd /scratch/01482/xdtas/akrrdata/stampede2-skx/hpcc/2020.11.30.17.50.05.866<krrdata/stampede2-skx/hpcc/2020.11.30.17.50.05.8661                         64;\
+> echo ExeCUTEd_SucCeSsFully
+StArTEd_ExeCUTEtIoM_SucCeSsFully
+ExeCUTEd_SucCeSsFully
+PROMPTtTtT To access the system:
+
+1) If not using ssh-keys, please enter your TACC password at the password prompt
+2) At the TACC Token prompt, enter your 6-digit code followed by <return>.  
+
+hpcc.job                                        0%    0     0.0KB/s   --:-- ETAhpcc.job                                      100% 2549    59.1KB/s   00:00    
+ echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+> cat hpcc.job ;\
+> echo ExeCUTEd_SucCeSsFully
+StArTEd_ExeCUTEtIoM_SucCeSsFully
+#!/bin/bash
+#SBATCH --partition=skx-normal
+#SBATCH --qos=normal
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=48
+#SBATCH --time=00:02:00
+#SBATCH --output=/scratch/01482/xdtas/akrrdata/stampede2-skx/hpcc/2020.11.30.17.50.05.866164/stdout
+#SBATCH --error=/scratch/01482/xdtas/akrrdata/stampede2-skx/hpcc/2020.11.30.17.50.05.866164/stderr
+#SBATCH --exclusive
+
+
+#Common commands
+export AKRR_NODES=2
+export AKRR_CORES=96
+export AKRR_CORES_PER_NODE=48
+export AKRR_NETWORK_SCRATCH="/scratch/01482/xdtas"
+export AKRR_LOCAL_SCRATCH="/tmp"
+export AKRR_TASK_WORKDIR="/scratch/01482/xdtas/akrrdata/stampede2-skx/hpcc/2020.11.30.17.50.05.866164"
+export AKRR_APPKER_DIR="/work/01482/xdtas/appker/stampede2-skx"
+export AKRR_AKRR_DIR="/scratch/01482/xdtas/akrrdata/stampede2-skx"
+
+export AKRR_APPKER_NAME="hpcc"
+export AKRR_RESOURCE_NAME="stampede2-skx"
+export AKRR_TIMESTAMP="2020.11.30.17.50.05.866164"
+export AKRR_APP_STDOUT_FILE="$AKRR_TASK_WORKDIR/appstdout"
+
+export AKRR_APPKERNEL_INPUT="/work/01482/xdtas/appker/stampede2-skx/inputs/hpcc/hpccinf.txt.48x2"
+export AKRR_APPKERNEL_EXECUTABLE="/work/01482/xdtas/appker/stampede2-skx/execs/hpcc/hpcc"
+
+source "$AKRR_APPKER_DIR/execs/bin/akrr_util.bash"
+
+#Populate list of nodes per MPI process
+export AKRR_NODELIST=`srun -l --ntasks-per-node=$AKRR_CORES_PER_NODE -n $AKRR_CORES hostname -s|sort -n| awk '{printf "%s ",$2}' `
+
+export PATH="$AKRR_APPKER_DIR/execs/bin:$PATH"
+
+cd "$AKRR_TASK_WORKDIR"
+
+#run common tests
+akrr_perform_common_tests
+
+#Write some info to gen.info, JSON-Like file
+akrr_write_to_gen_info "start_time" "`date`"
+akrr_write_to_gen_info "node_list" "$AKRR_NODELIST"
+
+
+#create working dir
+mkdir workdir
+cd workdir
+
+#Copy inputs
+cp /work/01482/xdtas/appker/stampede2-skx/inputs/hpcc/hpccinf.txt.48x2 ./hpccinf.txt
+
+EXE=/work/01482/xdtas/appker/stampede2-skx/execs/hpcc/hpcc
+
+ulimit -s unlimited
+
+
+
+#Load application enviroment
+module list
+
+#set how to run app kernel
+RUN_APPKERNEL="ibrun /work/01482/xdtas/appker/stampede2-skx/execs/hpcc/hpcc"
+
+
+# Generate AppKer signature
+appsigcheck.sh $EXE $AKRR_TASK_WORKDIR/.. >> $AKRR_APP_STDOUT_FILE
+
+
+#Execute AppKer
+akrr_write_to_gen_info "appkernel_start_time" "`date`"
+$RUN_APPKERNEL >> $AKRR_APP_STDOUT_FILE 2>&1
+akrr_write_to_gen_info "appkernel_end_time" "`date`"
+
+
+
+
+cat hpccoutf.txt  >> $AKRR_APP_STDOUT_FILE 2>&1
+
+cd ..
+
+akrr_write_to_gen_info "cpu_speed" "`grep 'cpu MHz' /proc/cpuinfo`"
+
+#clean-up
+if [ "${AKRR_DEBUG=no}" = "no" ]
+then
+        echo "Deleting input files"
+        rm -rf workdir
+fi
+
+
+
+akrr_write_to_gen_info "end_time" "`date`"
+ExeCUTEd_SucCeSsFully
+PROMPTtTtT  echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+> sbatch hpcc.job;\
+> echo ExeCUTEd_SucCeSsFully
+StArTEd_ExeCUTEtIoM_SucCeSsFully
+
+-----------------------------------------------------------------
+          Welcome to the Stampede2 Supercomputer                 
+-----------------------------------------------------------------
+
+No reservation for this job
+--> Verifying valid submit host (login3)...OK
+--> Verifying valid jobname...OK
+--> Enforcing max jobs per user...OK
+--> Verifying availability of your home dir (/home1/01482/xdtas)...OK
+--> Verifying availability of your work dir (/work/01482/xdtas/stampede2)...OK
+--> Verifying availability of your scratch dir (/scratch/01482/xdtas)...OK
+--> Verifying valid ssh keys...OK
+--> Verifying access to desired queue (skx-normal)...OK
+--> Verifying job request is within current queue limits...OK
+--> Checking available allocation (TG-CCR120014)...OK
+Submitted batch job 6922711
+ExeCUTEd_SucCeSsFully
+PROMPTtTtT  echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+> echo 6922711 > job.id;\
+> echo ExeCUTEd_SucCeSsFully
+StArTEd_ExeCUTEtIoM_SucCeSsFully
+ExeCUTEd_SucCeSsFully
+PROMPTtTtT 
+RemoteJobID= 6922711
+copying files from remote machine
+To access the system:
+
+1) If not using ssh-keys, please enter your TACC password at the password prompt
+2) At the TACC Token prompt, enter your 6-digit code followed by <return>.  
+
+hpcc.job                                        0%    0     0.0KB/s   --:-- ETAhpcc.job                                      100% 2549    58.8KB/s   00:00    
+job.id                                          0%    0     0.0KB/s   --:-- ETAjob.id                                        100%    8     0.2KB/s   00:00    
+### Checking the job status on remote machine
+To access the system:
+
+1) If not using ssh-keys, please enter your TACC password at the password prompt
+2) At the TACC Token prompt, enter your 6-digit code followed by <return>.  
+
+ echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+export PS1='PROMPTtTtT ';\
+echo ExeCUTEd_SucCeSsFully
+ 
+ 
+Last login: Mon Nov 30 16:51:07 2020 from 199.109.193.251
+------------------------------------------------------------------------------
+                   Welcome to the Stampede2 Supercomputer
+      Texas Advanced Computing Center, The University of Texas at Austin
+------------------------------------------------------------------------------
+
+              ** Unauthorized use/access is prohibited. **
+
+If you log on to this computer system, you acknowledge your awareness
+of and concurrence with the UT Austin Acceptable Use Policy. The
+University will prosecute violators to the full extent of the law.
+
+TACC Usage Policies:
+http://www.tacc.utexas.edu/user-services/usage-policies/
+______________________________________________________________________________
+
+Welcome to Stampede2, *please* read these important system notes:
+
+--> Stampede2 user documentation is available at:
+       https://portal.tacc.utexas.edu/user-guides/stampede2
+
+ echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+export PS1='PROMPTtTtT ';\
+echo ExeCUTEd_SucCeSsFully
+ 
+ 
+----------------------- Project balances for user xdtas -----------------------
+| Name           Avail SUs     Expires |                                      |
+| TG-CCR120014        2877  2021-09-30 |                                      |
+------------------------- Disk quotas for user xdtas --------------------------
+| Disk         Usage (GB)     Limit    %Used   File Usage       Limit   %Used |
+| /home1              0.0      10.0     0.11         1232      200000    0.62 |
+| /work             166.2    1024.0    16.23       224624     3000000    7.49 |
+| /scratch            2.3       0.0     0.00       323911           0    0.00 |
+-------------------------------------------------------------------------------
+
+Tip 82   (See "module help tacc_tips" for features or how to disable)
+
+   If you want to know more about a bash command ? try to use the "--help"
+   command. For example with mkdir:
+     $ mkdir --help
+
+login3.stampede2(1001)$  echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+> export PS1='PROMPTtTtT ';\
+> echo ExeCUTEd_SucCeSsFully
+StArTEd_ExeCUTEtIoM_SucCeSsFully
+ExeCUTEd_SucCeSsFully
+PROMPTtTtT  
+PROMPTtTtT  
+PROMPTtTtT  echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+> echo TeStTeStTeStThEproMPT;\
+> echo ExeCUTEd_SucCeSsFully
+StArTEd_ExeCUTEtIoM_SucCeSsFully
+TeStTeStTeStThEproMPT
+ExeCUTEd_SucCeSsFully
+PROMPTtTtT  echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+> squeue -u $USER 2>&1;\
+> echo ExeCUTEd_SucCeSsFully
+StArTEd_ExeCUTEtIoM_SucCeSsFully
+             JOBID   PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           6919252  skx-normal hpcg.job    xdtas PD       0:00     64 (Priority)
+           6919283  skx-normal hpcg.job    xdtas PD       0:00     64 (Priority)
+           6919282  skx-normal hpcg.job    xdtas PD       0:00     32 (Priority)
+           6920460  skx-normal hpcg.job    xdtas PD       0:00     64 (Priority)
+           6920459  skx-normal hpcg.job    xdtas PD       0:00     64 (Priority)
+           6920457  skx-normal hpcg.job    xdtas PD       0:00     32 (Priority)
+           6920458  skx-normal hpcg.job    xdtas PD       0:00     32 (Priority)
+           6920455  skx-normal hpcg.job    xdtas PD       0:00     16 (Priority)
+           6920456  skx-normal hpcg.job    xdtas PD       0:00     16 (Priority)
+           6920454  skx-normal hpcg.job    xdtas PD       0:00      8 (Priority)
+           6921291  skx-normal hpcg.job    xdtas PD       0:00     64 (Priority)
+           6921290  skx-normal hpcg.job    xdtas PD       0:00     32 (Priority)
+           6921289  skx-normal hpcg.job    xdtas PD       0:00     16 (Priority)
+           6921286  skx-normal hpcg.job    xdtas PD       0:00      8 (Priority)
+           6921285  skx-normal hpcg.job    xdtas PD       0:00      4 (Priority)
+           6922082  skx-normal hpcc.job    xdtas PD       0:00     16 (Priority)
+           6922087  skx-normal hpcc.job    xdtas PD       0:00     16 (Priority)
+           6922362  skx-normal hpcc.job    xdtas PD       0:00     16 (Priority)
+           6922536  skx-normal hpcc.job    xdtas PD       0:00     16 (Priority)
+           6922695  skx-normal hpcc.job    xdtas PD       0:00     16 (Priority)
+           6922693  skx-normal hpcc.job    xdtas PD       0:00      8 (Priority)
+           6922694  skx-normal hpcc.job    xdtas PD       0:00      4 (Priority)
+           6922710  skx-normal hpcc.job    xdtas PD       0:00      4 (Priority)
+           6922711  skx-normal hpcc.job    xdtas PD       0:00      2 (Priority)
+           6922709  skx-normal hpcc.job    xdtas PD       0:00      1 (Priority)
+           6920452  skx-normal hpcg.job    xdtas  R       2:22      4 c496-[063,124],c502-[062-063]
+ExeCUTEd_SucCeSsFully
+PROMPTtTtT ### Checking the job status on remote machine
+To access the system:
+
+1) If not using ssh-keys, please enter your TACC password at the password prompt
+2) At the TACC Token prompt, enter your 6-digit code followed by <return>.  
+
+ echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+export PS1='PROMPTtTtT ';\
+echo ExeCUTEd_SucCeSsFully
+ 
+ 
+Last login: Mon Nov 30 17:17:47 2020 from 199.109.193.251
+------------------------------------------------------------------------------
+                   Welcome to the Stampede2 Supercomputer
+      Texas Advanced Computing Center, The University of Texas at Austin
+------------------------------------------------------------------------------
+
+              ** Unauthorized use/access is prohibited. **
+
+If you log on to this computer system, you acknowledge your awareness
+of and concurrence with the UT Austin Acceptable Use Policy. The
+University will prosecute violators to the full extent of the law.
+
+TACC Usage Policies:
+http://www.tacc.utexas.edu/user-services/usage-policies/
+______________________________________________________________________________
+
+Welcome to Stampede2, *please* read these important system notes:
+
+--> Stampede2 user documentation is available at:
+       https://portal.tacc.utexas.edu/user-guides/stampede2
+
+ echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+export PS1='PROMPTtTtT ';\
+echo ExeCUTEd_SucCeSsFully
+ 
+ 
+----------------------- Project balances for user xdtas -----------------------
+| Name           Avail SUs     Expires |                                      |
+| TG-CCR120014        2877  2021-09-30 |                                      |
+------------------------- Disk quotas for user xdtas --------------------------
+| Disk         Usage (GB)     Limit    %Used   File Usage       Limit   %Used |
+| /home1              0.0      10.0     0.11         1238      200000    0.62 |
+| /work             166.2    1024.0    16.23       224626     3000000    7.49 |
+| /scratch            2.3       0.0     0.00       323931           0    0.00 |
+-------------------------------------------------------------------------------
+
+Tip 2   (See "module help tacc_tips" for features or how to disable)
+
+   Run "dos2unix" command to convert files from Windows/DOS format to Unix
+   format when you transfer them to TACC resources.
+
+login4.stampede2(1001)$  echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+> export PS1='PROMPTtTtT ';\
+> echo ExeCUTEd_SucCeSsFully
+StArTEd_ExeCUTEtIoM_SucCeSsFully
+ExeCUTEd_SucCeSsFully
+PROMPTtTtT  
+PROMPTtTtT  
+PROMPTtTtT  echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+> echo TeStTeStTeStThEproMPT;\
+> echo ExeCUTEd_SucCeSsFully
+StArTEd_ExeCUTEtIoM_SucCeSsFully
+TeStTeStTeStThEproMPT
+ExeCUTEd_SucCeSsFully
+PROMPTtTtT  echo StArTEd_ExeCUTEtIoM_SucCeSsFully;\
+> squeue -u $USER 2>&1;\
+> echo ExeCUTEd_SucCeSsFully
+StArTEd_ExeCUTEtIoM_SucCeSsFully
+             JOBID   PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           6919252  skx-normal hpcg.job    xdtas PD       0:00     64 (Priority)
+           6919283  skx-normal hpcg.job    xdtas PD       0:00     64 (Priority)
+           6919282  skx-normal hpcg.job    xdtas PD       0:00     32 (Priority)
+           6920459  skx-normal hpcg.job    xdtas PD       0:00     64 (Priority)
+           6920460  skx-normal hpcg.job    xdtas PD       0:00     64 (Priority)
+           6920457  skx-normal hpcg.job    xdtas PD       0:00     32 (Priority)
+           6920458  skx-normal hpcg.job    xdtas PD       0:00     32 (Priority)
+           6920455  skx-normal hpcg.job    xdtas PD       0:00     16 (Priority)
+           6920456  skx-normal hpcg.job    xdtas PD       0:00     16 (Priority)
+           6920454  skx-normal hpcg.job    xdtas PD       0:00      8 (Priority)
+           6921291  skx-normal hpcg.job    xdtas PD       0:00     64 (Priority)
+           6921290  skx-normal hpcg.job    xdtas PD       0:00     32 (Priority)
+           6921289  skx-normal hpcg.job    xdtas PD       0:00     16 (Priority)
+           6921286  skx-normal hpcg.job    xdtas PD       0:00      8 (Priority)
+           6921285  skx-normal hpcg.job    xdtas PD       0:00      4 (Priority)
+           6922082  skx-normal hpcc.job    xdtas PD       0:00     16 (Priority)
+           6922087  skx-normal hpcc.job    xdtas PD       0:00     16 (Priority)
+           6922362  skx-normal hpcc.job    xdtas PD       0:00     16 (Priority)
+           6922536  skx-normal hpcc.job    xdtas PD       0:00     16 (Priority)
+           6922695  skx-normal hpcc.job    xdtas PD       0:00     16 (Priority)
+ExeCUTEd_SucCeSsFully
+PROMPTtTtT To access the system:
+
+1) If not using ssh-keys, please enter your TACC password at the password prompt
+2) At the TACC Token prompt, enter your 6-digit code followed by <return>.  
+
+appstdout                                       0%    0     0.0KB/s   --:-- ETAappstdout                                     100%   21KB 208.3KB/s   00:00    
+gen.info                                        0%    0     0.0KB/s   --:-- ETAgen.info                                      100% 3035    61.3KB/s   00:00    
+hpcc.job                                        0%    0     0.0KB/s   --:-- ETAhpcc.job                                      100% 2549    60.8KB/s   00:00    
+job.id                                          0%    0     0.0KB/s   --:-- ETAjob.id                                        100%    8     0.1KB/s   00:00    
+stderr                                          0%    0     0.0KB/s   --:-- ETAstderr                                        100%  269     5.6KB/s   00:00    
+stdout                                          0%    0     0.0KB/s   --:-- ETAstdout                                        100%   21     0.3KB/s   00:00    
+To access the system:
+
+1) If not using ssh-keys, please enter your TACC password at the password prompt
+2) At the TACC Token prompt, enter your 6-digit code followed by <return>.  
+
+StArTEd_ExeCUTEtIoM_SucCeSsFully
+ExeCUTEd_SucCeSsFully

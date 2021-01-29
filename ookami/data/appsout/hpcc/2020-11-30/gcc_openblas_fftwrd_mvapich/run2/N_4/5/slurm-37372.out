@@ -1,0 +1,14 @@
+loaded modules:
+Currently Loaded Modulefiles:
+ 1) slurm/slurm/19.05.7   3) mvapich2/2.3.4                     
+ 2) gcc/10.2.0            4) fftw/3.3.9-rdolbeau-armcl-mvapich  
+Running script on host: fj005
+Working directory: /lustre/projects/Buffalo/appker/benchmarks/hpcc/2020-11-30/gcc_openblas_fftwrd_mvapich/run2/N_4/5
+SLURM_NTASKS: 192
+Hostnames to use: fj[005-008]
+fj005:48
+fj006:48
+fj007:48
+fj008:48
+which mpirun: /lustre/projects/global/software/a64fx/mvapich2/2.3.4/bin/mpirun
+which app: /lustre/projects/Buffalo/appker/execs/hpcc/hpcc/hpcc_gcc_openblas_fftwrd_mvapich

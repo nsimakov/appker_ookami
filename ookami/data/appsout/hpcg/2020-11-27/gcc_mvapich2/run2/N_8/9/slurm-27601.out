@@ -1,0 +1,21 @@
+Loading hpcg/3.1_gcc_mvapich2
+  Loading requirement: gcc/10.2.0 mvapich2/2.3.4
+loaded modules:
+Currently Loaded Modulefiles:
+ 1) slurm/19.05.7         3) gcc/10.2.0       5) hpcg/3.1_gcc_mvapich2  
+ 2) slurm/slurm/19.05.7   4) mvapich2/2.3.4  
+Running script on host: fj081
+Working directory: /lustre/projects/Buffalo/appker/benchmarks/hpcg/2020-11-27/gcc_mvapich2/run2/N_8/9
+SLURM_NTASKS: 384
+Hostnames to use: fj[081-088]
+fj081:48
+fj082:48
+fj083:48
+fj084:48
+fj085:48
+fj086:48
+fj087:48
+fj088:48
+which mpirun: /lustre/projects/global/software/a64fx/mvapich2/2.3.4/bin/mpirun
+which app: /lustre/projects/Buffalo/appker/execs/hpcg/3.1/3.1_gcc_mvapich2/bin/xhpcg
+[fj081:mpi_rank_0][rdma_open_hca] [Warning] Setting the  multirail policy to MV2_MRAIL_SHARING since RDMA_CM based multicast  is enabled.

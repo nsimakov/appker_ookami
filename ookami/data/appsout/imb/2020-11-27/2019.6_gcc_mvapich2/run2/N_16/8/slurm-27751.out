@@ -1,0 +1,17 @@
+ERROR: Unable to locate a modulefile for 'imb/2019.6_gcc_mavpich2'
+loaded modules:
+Currently Loaded Modulefiles:
+ 1) slurm/19.05.7  
+scontrol: error: s_p_parse_file: unable to status file /etc/slurm/slurm.conf: No such file or directory, retrying in 1sec up to 60sec
+scontrol: error: ClusterName needs to be specified
+scontrol: fatal: Unable to process configuration file
+Running script on host: fj079
+Working directory: /lustre/projects/Buffalo/appker/benchmarks/imb/2020-11-27/2019.6_gcc_mvapich2/run2/N_16/8
+SLURM_NTASKS: 16
+Hostnames to use: fj[079-094]
+cat: hostnames: No such file or directory
+which: no IMB-MPI1 in (/cm/shared/apps/slurm/19.05.7/sbin:/cm/shared/apps/slurm/19.05.7/bin:/lustre/projects/Buffalo/spack/bin:/cm/local/apps/environment-modules/4.4.0//bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/sbin:/cm/local/apps/environment-modules/4.4.0/bin:/lustre/home/nsimakov/bin)
+which: no IMB-EXT in (/cm/shared/apps/slurm/19.05.7/sbin:/cm/shared/apps/slurm/19.05.7/bin:/lustre/projects/Buffalo/spack/bin:/cm/local/apps/environment-modules/4.4.0//bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/sbin:/cm/local/apps/environment-modules/4.4.0/bin:/lustre/home/nsimakov/bin)
+which: no mpirun in (/cm/shared/apps/slurm/19.05.7/sbin:/cm/shared/apps/slurm/19.05.7/bin:/lustre/projects/Buffalo/spack/bin:/cm/local/apps/environment-modules/4.4.0//bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/sbin:/cm/local/apps/environment-modules/4.4.0/bin:/lustre/home/nsimakov/bin)
+which mpirun: 
+which app: 

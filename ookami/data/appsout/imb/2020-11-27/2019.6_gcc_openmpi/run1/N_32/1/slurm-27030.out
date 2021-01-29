@@ -1,0 +1,11 @@
+loaded modules:
+Currently Loaded Modulefiles:
+ 1) slurm/slurm/19.05.7   3) openmpi/4.0.5           
+ 2) gcc/10.2.0            4) imb/2019.6_gcc_openmpi  
+Running script on host: fj017
+Working directory: /lustre/projects/Buffalo/appker/benchmarks/imb/2020-11-27/2019.6_gcc_openmpi/run1/N_32/1
+SLURM_NTASKS: 32
+Hostnames to use: fj[017-048]
+cat: hostnames: No such file or directory
+which mpirun: /lustre/projects/global/software/a64fx/openmpi/4.0.5/bin/mpirun
+which app: /lustre/projects/Buffalo/appker/execs/imb/2019.6_gcc_openmpi/IMB-MPI1

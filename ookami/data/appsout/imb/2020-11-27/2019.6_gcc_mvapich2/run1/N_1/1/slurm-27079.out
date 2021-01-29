@@ -1,0 +1,12 @@
+ERROR: Unable to locate a modulefile for 'imb/2019.6_gcc_mavpich2'
+loaded modules:
+Currently Loaded Modulefiles:
+ 1) slurm/slurm/19.05.7   3) mvapich2/2.3.4           
+ 2) gcc/10.2.0            4) imb/2019.6_gcc_mvapich2  
+Running script on host: fj146
+Working directory: /lustre/projects/Buffalo/appker/benchmarks/imb/2020-11-27/2019.6_gcc_mvapich2/run1/N_1/1
+SLURM_NTASKS: 1
+Hostnames to use: fj146
+cat: hostnames: No such file or directory
+which mpirun: /lustre/projects/global/software/a64fx/mvapich2/2.3.4/bin/mpirun
+which app: /lustre/projects/Buffalo/appker/execs/imb/2019.6_gcc_mvapich2/IMB-MPI1

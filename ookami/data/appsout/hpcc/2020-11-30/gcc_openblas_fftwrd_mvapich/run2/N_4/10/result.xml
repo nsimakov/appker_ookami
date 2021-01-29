@@ -1,0 +1,110 @@
+<?xml version="1.0" ?>
+<rep:report xmlns:rep="report">
+  <body>
+    <performance>
+      <ID>hpcc</ID>
+      <benchmark>
+        <ID>hpcc</ID>
+        <parameters>
+          <parameter>
+            <ID>App:Version</ID>
+            <value>1.5.0f</value>
+          </parameter>
+          <parameter>
+            <ID>Input:DGEMM Problem Size</ID>
+            <value>1666</value>
+          </parameter>
+          <parameter>
+            <ID>Input:High Performance LINPACK Grid Cols</ID>
+            <value>12</value>
+          </parameter>
+          <parameter>
+            <ID>Input:High Performance LINPACK Grid Rows</ID>
+            <value>16</value>
+          </parameter>
+          <parameter>
+            <ID>Input:High Performance LINPACK Problem Size</ID>
+            <value>40000</value>
+          </parameter>
+          <parameter>
+            <ID>Input:MPI Ranks</ID>
+            <value>192</value>
+          </parameter>
+          <parameter>
+            <ID>Input:MPIRandom Problem Size</ID>
+            <value>1024.0</value>
+            <units>MWord</units>
+          </parameter>
+          <parameter>
+            <ID>Input:OpenMP Threads</ID>
+            <value>0</value>
+          </parameter>
+          <parameter>
+            <ID>Input:PTRANS Problem Size</ID>
+            <value>20000</value>
+          </parameter>
+          <parameter>
+            <ID>Input:STREAM Array Size</ID>
+            <value>2777777</value>
+            <units>MWord</units>
+          </parameter>
+        </parameters>
+        <statistics>
+          <statistic>
+            <ID>Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance</ID>
+            <value>2958.49</value>
+            <units>MFLOP per Second</units>
+          </statistic>
+          <statistic>
+            <ID>Average STREAM 'Add' Memory Bandwidth</ID>
+            <value>12648.8576</value>
+            <units>MByte per Second</units>
+          </statistic>
+          <statistic>
+            <ID>Average STREAM 'Copy' Memory Bandwidth</ID>
+            <value>11459.1744</value>
+            <units>MByte per Second</units>
+          </statistic>
+          <statistic>
+            <ID>Average STREAM 'Scale' Memory Bandwidth</ID>
+            <value>11489.5872</value>
+            <units>MByte per Second</units>
+          </statistic>
+          <statistic>
+            <ID>Average STREAM 'Triad' Memory Bandwidth</ID>
+            <value>12804.4032</value>
+            <units>MByte per Second</units>
+          </statistic>
+          <statistic>
+            <ID>Fast Fourier Transform (FFTW) Floating-Point Performance</ID>
+            <value>31477.2</value>
+            <units>MFLOP per Second</units>
+          </statistic>
+          <statistic>
+            <ID>High Performance LINPACK Floating-Point Performance</ID>
+            <value>418601.0</value>
+            <units>MFLOP per Second</units>
+          </statistic>
+          <statistic>
+            <ID>High Performance LINPACK Run Time</ID>
+            <value>101.933</value>
+            <units>Second</units>
+          </statistic>
+          <statistic>
+            <ID>MPI Random Access</ID>
+            <value>3.0975</value>
+            <units>MUpdate per Second</units>
+          </statistic>
+          <statistic>
+            <ID>Parallel Matrix Transpose (PTRANS)</ID>
+            <value>29953.024</value>
+            <units>MByte per Second</units>
+          </statistic>
+        </statistics>
+      </benchmark>
+    </performance>
+  </body>
+  <exitStatus>
+    <completed>false</completed>
+  </exitStatus>
+</rep:report>

@@ -1,0 +1,32 @@
+#!/bin/bash
+##SBATCH --nodes=1
+##SBATCH --ntasks-per-node=48
+##SBATCH -t 24:00:00
+##SBATCH -p long
+##SBATCH -q long
+##SBATCH -w fj[047-174]
+
+module restore PrgEnv-cray
+module load slurm cray-mvapich2_nogpu_svealpha/2.3.4 cray-libsci/20.10.1.2 cray-fftw/3.3.8.8
+
+echo "loaded modules:"
+module list
+
+#cp /lustre/projects/Buffalo/appker/inputs/hpcg/hpcg.dat ./
+scontrol show hostnames $SLURM_JOB_NODELIST > hostnames0
+awk '$0=$0":48"' hostnames0 > hostnames
+
+echo "Running script on host: $(hostname)"
+echo "Working directory: $(pwd)"
+echo "SLURM_NTASKS: $SLURM_NTASKS"
+echo "Hostnames to use: $SLURM_JOB_NODELIST"
+cat hostnames
+
+
+EXE=/lustre/projects/Buffalo/appker/execs/hpcc/hpcc/hpcc_cray_libsci_fftwcray_mvapich
+
+
+echo "which app: $EXE"
+
+srun $EXE 
+

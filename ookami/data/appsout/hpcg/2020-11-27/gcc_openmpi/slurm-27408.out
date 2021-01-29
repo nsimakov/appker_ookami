@@ -1,0 +1,833 @@
+Loading hpcg/3.1_gcc_openmpi
+  Loading requirement: gcc/10.2.0 openmpi/4.0.5
+loaded modules:
+Currently Loaded Modulefiles:
+ 1) slurm/slurm/19.05.7   3) openmpi/4.0.5         
+ 2) gcc/10.2.0            4) hpcg/3.1_gcc_openmpi  
+Running script on host: fj096
+Working directory: /lustre/projects/Buffalo/appker/benchmarks/hpcg/2020-11-27/gcc_openmpi
+SLURM_NTASKS: 768
+Hostnames to use: fj[096-111]
+fj096 slots=48
+fj097 slots=48
+fj098 slots=48
+fj099 slots=48
+fj100 slots=48
+fj101 slots=48
+fj102 slots=48
+fj103 slots=48
+fj104 slots=48
+fj105 slots=48
+fj106 slots=48
+fj107 slots=48
+fj108 slots=48
+fj109 slots=48
+fj110 slots=48
+fj111 slots=48
+which mpirun: /lustre/projects/global/software/a64fx/openmpi/4.0.5/bin/mpirun
+which app: /lustre/projects/Buffalo/appker/execs/hpcg/3.1/3.1_gcc_openmpi/bin/xhpcg
+ Data for JOB [57786,1] offset 0 Total slots allocated 768
+
+ ========================   JOB MAP   ========================
+
+ Data for node: fj096	Num slots: 48	Max slots: 0	Num procs: 48
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 0 Bound: socket 0[core 0[hwt 0]]:[B/././././././././././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 1 Bound: socket 1[core 12[hwt 0]]:[./././././././././././.][B/././././././././././.][./././././././././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 2 Bound: socket 2[core 24[hwt 0]]:[./././././././././././.][./././././././././././.][B/././././././././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 3 Bound: socket 3[core 36[hwt 0]]:[./././././././././././.][./././././././././././.][./././././././././././.][B/././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 4 Bound: socket 0[core 1[hwt 0]]:[./B/./././././././././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 5 Bound: socket 1[core 13[hwt 0]]:[./././././././././././.][./B/./././././././././.][./././././././././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 6 Bound: socket 2[core 25[hwt 0]]:[./././././././././././.][./././././././././././.][./B/./././././././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 7 Bound: socket 3[core 37[hwt 0]]:[./././././././././././.][./././././././././././.][./././././././././././.][./B/./././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 8 Bound: socket 0[core 2[hwt 0]]:[././B/././././././././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 9 Bound: socket 1[core 14[hwt 0]]:[./././././././././././.][././B/././././././././.][./././././././././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 10 Bound: socket 2[core 26[hwt 0]]:[./././././././././././.][./././././././././././.][././B/././././././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 11 Bound: socket 3[core 38[hwt 0]]:[./././././././././././.][./././././././././././.][./././././././././././.][././B/././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 12 Bound: socket 0[core 3[hwt 0]]:[./././B/./././././././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 13 Bound: socket 1[core 15[hwt 0]]:[./././././././././././.][./././B/./././././././.][./././././././././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 14 Bound: socket 2[core 27[hwt 0]]:[./././././././././././.][./././././././././././.][./././B/./././././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 15 Bound: socket 3[core 39[hwt 0]]:[./././././././././././.][./././././././././././.][./././././././././././.][./././B/./././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 16 Bound: socket 0[core 4[hwt 0]]:[././././B/././././././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 17 Bound: socket 1[core 16[hwt 0]]:[./././././././././././.][././././B/././././././.][./././././././././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 18 Bound: socket 2[core 28[hwt 0]]:[./././././././././././.][./././././././././././.][././././B/././././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 19 Bound: socket 3[core 40[hwt 0]]:[./././././././././././.][./././././././././././.][./././././././././././.][././././B/././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 20 Bound: socket 0[core 5[hwt 0]]:[./././././B/./././././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 21 Bound: socket 1[core 17[hwt 0]]:[./././././././././././.][./././././B/./././././.][./././././././././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 22 Bound: socket 2[core 29[hwt 0]]:[./././././././././././.][./././././././././././.][./././././B/./././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 23 Bound: socket 3[core 41[hwt 0]]:[./././././././././././.][./././././././././././.][./././././././././././.][./././././B/./././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 24 Bound: socket 0[core 6[hwt 0]]:[././././././B/././././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 25 Bound: socket 1[core 18[hwt 0]]:[./././././././././././.][././././././B/././././.][./././././././././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 26 Bound: socket 2[core 30[hwt 0]]:[./././././././././././.][./././././././././././.][././././././B/././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 27 Bound: socket 3[core 42[hwt 0]]:[./././././././././././.][./././././././././././.][./././././././././././.][././././././B/././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 28 Bound: socket 0[core 7[hwt 0]]:[./././././././B/./././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 29 Bound: socket 1[core 19[hwt 0]]:[./././././././././././.][./././././././B/./././.][./././././././././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 30 Bound: socket 2[core 31[hwt 0]]:[./././././././././././.][./././././././././././.][./././././././B/./././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 31 Bound: socket 3[core 43[hwt 0]]:[./././././././././././.][./././././././././././.][./././././././././././.][./././././././B/./././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 32 Bound: socket 0[core 8[hwt 0]]:[././././././././B/././.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 33 Bound: socket 1[core 20[hwt 0]]:[./././././././././././.][././././././././B/././.][./././././././././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 34 Bound: socket 2[core 32[hwt 0]]:[./././././././././././.][./././././././././././.][././././././././B/././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 35 Bound: socket 3[core 44[hwt 0]]:[./././././././././././.][./././././././././././.][./././././././././././.][././././././././B/././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 36 Bound: socket 0[core 9[hwt 0]]:[./././././././././B/./.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 37 Bound: socket 1[core 21[hwt 0]]:[./././././././././././.][./././././././././B/./.][./././././././././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 38 Bound: socket 2[core 33[hwt 0]]:[./././././././././././.][./././././././././././.][./././././././././B/./.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 39 Bound: socket 3[core 45[hwt 0]]:[./././././././././././.][./././././././././././.][./././././././././././.][./././././././././B/./.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 40 Bound: socket 0[core 10[hwt 0]]:[././././././././././B/.][./././././././././././.][./././././././././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 41 Bound: socket 1[core 22[hwt 0]]:[./././././././././././.][././././././././././B/.][./././././././././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 42 Bound: socket 2[core 34[hwt 0]]:[./././././././././././.][./././././././././././.][././././././././././B/.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 43 Bound: socket 3[core 46[hwt 0]]:[./././././././././././.][./././././././././././.][./././././././././././.][././././././././././B/.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 44 Bound: socket 0[core 11[hwt 0]]:[./././././././././././B][./././././././././././.][./././././././././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 45 Bound: socket 1[core 23[hwt 0]]:[./././././././././././.][./././././././././././B][./././././././././././.][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 46 Bound: socket 2[core 35[hwt 0]]:[./././././././././././.][./././././././././././.][./././././././././././B][./././././././././././.]
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 47 Bound: socket 3[core 47[hwt 0]]:[./././././././././././.][./././././././././././.][./././././././././././.][./././././././././././B]
+
+ Data for node: fj097	Num slots: 48	Max slots: 0	Num procs: 48
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 48 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 49 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 50 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 51 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 52 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 53 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 54 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 55 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 56 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 57 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 58 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 59 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 60 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 61 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 62 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 63 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 64 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 65 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 66 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 67 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 68 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 69 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 70 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 71 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 72 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 73 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 74 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 75 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 76 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 77 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 78 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 79 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 80 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 81 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 82 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 83 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 84 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 85 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 86 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 87 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 88 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 89 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 90 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 91 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 92 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 93 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 94 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 95 Bound: N/A
+
+ Data for node: fj098	Num slots: 48	Max slots: 0	Num procs: 48
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 96 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 97 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 98 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 99 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 100 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 101 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 102 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 103 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 104 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 105 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 106 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 107 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 108 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 109 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 110 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 111 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 112 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 113 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 114 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 115 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 116 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 117 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 118 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 119 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 120 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 121 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 122 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 123 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 124 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 125 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 126 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 127 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 128 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 129 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 130 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 131 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 132 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 133 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 134 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 135 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 136 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 137 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 138 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 139 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 140 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 141 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 142 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 143 Bound: N/A
+
+ Data for node: fj099	Num slots: 48	Max slots: 0	Num procs: 48
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 144 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 145 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 146 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 147 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 148 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 149 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 150 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 151 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 152 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 153 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 154 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 155 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 156 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 157 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 158 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 159 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 160 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 161 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 162 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 163 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 164 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 165 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 166 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 167 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 168 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 169 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 170 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 171 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 172 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 173 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 174 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 175 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 176 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 177 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 178 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 179 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 180 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 181 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 182 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 183 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 184 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 185 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 186 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 187 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 188 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 189 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 190 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 191 Bound: N/A
+
+ Data for node: fj100	Num slots: 48	Max slots: 0	Num procs: 48
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 192 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 193 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 194 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 195 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 196 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 197 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 198 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 199 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 200 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 201 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 202 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 203 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 204 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 205 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 206 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 207 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 208 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 209 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 210 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 211 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 212 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 213 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 214 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 215 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 216 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 217 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 218 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 219 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 220 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 221 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 222 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 223 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 224 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 225 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 226 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 227 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 228 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 229 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 230 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 231 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 232 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 233 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 234 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 235 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 236 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 237 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 238 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 239 Bound: N/A
+
+ Data for node: fj101	Num slots: 48	Max slots: 0	Num procs: 48
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 240 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 241 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 242 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 243 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 244 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 245 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 246 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 247 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 248 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 249 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 250 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 251 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 252 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 253 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 254 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 255 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 256 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 257 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 258 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 259 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 260 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 261 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 262 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 263 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 264 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 265 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 266 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 267 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 268 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 269 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 270 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 271 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 272 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 273 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 274 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 275 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 276 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 277 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 278 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 279 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 280 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 281 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 282 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 283 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 284 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 285 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 286 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 287 Bound: N/A
+
+ Data for node: fj102	Num slots: 48	Max slots: 0	Num procs: 48
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 288 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 289 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 290 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 291 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 292 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 293 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 294 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 295 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 296 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 297 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 298 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 299 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 300 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 301 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 302 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 303 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 304 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 305 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 306 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 307 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 308 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 309 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 310 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 311 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 312 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 313 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 314 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 315 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 316 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 317 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 318 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 319 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 320 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 321 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 322 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 323 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 324 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 325 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 326 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 327 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 328 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 329 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 330 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 331 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 332 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 333 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 334 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 335 Bound: N/A
+
+ Data for node: fj103	Num slots: 48	Max slots: 0	Num procs: 48
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 336 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 337 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 338 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 339 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 340 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 341 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 342 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 343 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 344 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 345 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 346 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 347 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 348 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 349 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 350 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 351 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 352 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 353 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 354 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 355 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 356 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 357 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 358 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 359 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 360 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 361 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 362 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 363 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 364 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 365 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 366 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 367 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 368 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 369 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 370 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 371 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 372 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 373 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 374 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 375 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 376 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 377 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 378 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 379 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 380 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 381 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 382 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 383 Bound: N/A
+
+ Data for node: fj104	Num slots: 48	Max slots: 0	Num procs: 48
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 384 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 385 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 386 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 387 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 388 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 389 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 390 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 391 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 392 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 393 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 394 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 395 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 396 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 397 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 398 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 399 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 400 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 401 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 402 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 403 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 404 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 405 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 406 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 407 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 408 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 409 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 410 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 411 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 412 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 413 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 414 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 415 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 416 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 417 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 418 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 419 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 420 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 421 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 422 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 423 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 424 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 425 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 426 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 427 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 428 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 429 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 430 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 431 Bound: N/A
+
+ Data for node: fj105	Num slots: 48	Max slots: 0	Num procs: 48
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 432 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 433 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 434 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 435 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 436 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 437 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 438 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 439 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 440 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 441 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 442 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 443 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 444 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 445 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 446 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 447 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 448 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 449 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 450 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 451 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 452 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 453 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 454 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 455 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 456 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 457 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 458 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 459 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 460 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 461 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 462 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 463 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 464 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 465 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 466 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 467 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 468 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 469 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 470 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 471 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 472 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 473 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 474 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 475 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 476 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 477 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 478 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 479 Bound: N/A
+
+ Data for node: fj106	Num slots: 48	Max slots: 0	Num procs: 48
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 480 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 481 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 482 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 483 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 484 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 485 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 486 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 487 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 488 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 489 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 490 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 491 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 492 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 493 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 494 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 495 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 496 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 497 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 498 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 499 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 500 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 501 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 502 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 503 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 504 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 505 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 506 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 507 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 508 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 509 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 510 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 511 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 512 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 513 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 514 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 515 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 516 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 517 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 518 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 519 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 520 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 521 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 522 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 523 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 524 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 525 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 526 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 527 Bound: N/A
+
+ Data for node: fj107	Num slots: 48	Max slots: 0	Num procs: 48
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 528 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 529 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 530 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 531 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 532 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 533 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 534 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 535 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 536 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 537 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 538 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 539 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 540 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 541 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 542 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 543 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 544 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 545 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 546 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 547 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 548 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 549 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 550 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 551 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 552 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 553 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 554 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 555 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 556 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 557 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 558 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 559 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 560 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 561 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 562 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 563 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 564 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 565 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 566 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 567 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 568 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 569 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 570 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 571 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 572 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 573 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 574 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 575 Bound: N/A
+
+ Data for node: fj108	Num slots: 48	Max slots: 0	Num procs: 48
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 576 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 577 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 578 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 579 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 580 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 581 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 582 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 583 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 584 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 585 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 586 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 587 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 588 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 589 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 590 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 591 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 592 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 593 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 594 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 595 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 596 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 597 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 598 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 599 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 600 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 601 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 602 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 603 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 604 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 605 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 606 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 607 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 608 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 609 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 610 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 611 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 612 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 613 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 614 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 615 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 616 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 617 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 618 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 619 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 620 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 621 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 622 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 623 Bound: N/A
+
+ Data for node: fj109	Num slots: 48	Max slots: 0	Num procs: 48
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 624 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 625 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 626 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 627 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 628 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 629 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 630 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 631 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 632 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 633 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 634 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 635 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 636 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 637 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 638 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 639 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 640 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 641 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 642 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 643 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 644 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 645 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 646 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 647 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 648 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 649 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 650 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 651 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 652 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 653 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 654 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 655 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 656 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 657 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 658 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 659 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 660 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 661 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 662 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 663 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 664 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 665 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 666 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 667 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 668 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 669 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 670 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 671 Bound: N/A
+
+ Data for node: fj110	Num slots: 48	Max slots: 0	Num procs: 48
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 672 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 673 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 674 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 675 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 676 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 677 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 678 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 679 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 680 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 681 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 682 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 683 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 684 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 685 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 686 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 687 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 688 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 689 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 690 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 691 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 692 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 693 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 694 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 695 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 696 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 697 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 698 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 699 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 700 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 701 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 702 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 703 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 704 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 705 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 706 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 707 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 708 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 709 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 710 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 711 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 712 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 713 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 714 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 715 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 716 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 717 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 718 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 719 Bound: N/A
+
+ Data for node: fj111	Num slots: 48	Max slots: 0	Num procs: 48
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 720 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 721 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 722 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 723 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 724 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 725 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 726 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 727 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 728 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 729 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 730 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 731 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 732 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 733 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 734 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 735 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 736 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 737 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 738 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 739 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 740 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 741 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 742 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 743 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 744 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 745 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 746 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 747 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 748 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 749 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 750 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 751 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 752 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 753 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 754 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 755 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 756 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 757 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 758 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 759 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 760 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 761 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 762 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 763 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 764 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 765 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 766 Bound: N/A
+ 	Process OMPI jobid: [57786,1] App: 0 Process rank: 767 Bound: N/A
+
+ =============================================================

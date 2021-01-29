@@ -1,0 +1,138 @@
+########################################################################
+This is the DARPA/DOE HPC Challenge Benchmark version 1.5.0 October 2012
+Produced by Jack Dongarra and Piotr Luszczek
+Innovative Computing Laboratory
+University of Tennessee Knoxville and Oak Ridge National Laboratory
+
+See the source files for authors of specific codes.
+Compiled on Nov 30 2020 at 15:19:08
+Current time (1606768072) is Mon Nov 30 15:27:52 2020
+
+Hostname: 'fj049'
+########################################################################
+================================================================================
+HPLinpack 2.0  --  High-Performance Linpack benchmark  --   September 10, 2008
+Written by A. Petitet and R. Clint Whaley,  Innovative Computing Laboratory, UTK
+Modified by Piotr Luszczek, Innovative Computing Laboratory, UTK
+Modified by Julien Langou, University of Colorado Denver
+================================================================================
+
+An explanation of the input/output parameters follows:
+T/V    : Wall time / encoded variant.
+N      : The order of the coefficient matrix A.
+NB     : The partitioning blocking factor.
+P      : The number of process rows.
+Q      : The number of process columns.
+Time   : Time in seconds to solve the linear system.
+Gflops : Rate of execution for solving the linear system.
+
+The following parameter values will be used:
+
+N      :   56568 
+NB     :     112 
+PMAP   : Row-major process mapping
+P      :      16 
+Q      :      24 
+PFACT  :   Right 
+NBMIN  :       4 
+NDIV   :       3 
+RFACT  :   Right 
+BCAST  :  2ringM 
+DEPTH  :       0 
+SWAP   : Mix (threshold = 64)
+L1     : transposed form
+U      : transposed form
+EQUIL  : yes
+ALIGN  : 16 double precision words
+
+--------------------------------------------------------------------------------
+
+- The matrix A is randomly generated for each test.
+- The following scaled residual check will be computed:
+      ||Ax-b||_oo / ( eps * ( || x ||_oo * || A ||_oo + || b ||_oo ) * N )
+- The relative machine precision (eps) is taken to be               1.110223e-16
+- Computational tests pass if scaled residuals are less than                16.0
+
+Begin of MPIRandomAccess section.
+Running on 384 processors
+Total Main table size = 2^31 = 2147483648 words
+PE Main table size = (2^31)/384  = 5592406 words/PE MAX
+Default number of updates (RECOMMENDED) = 8589934592
+Number of updates EXECUTED = 1890881280 (for a TIME BOUND of 60.00 secs)
+CPU time used = 539.619391 seconds
+Real time used = 541.069842 seconds
+0.003494708 Billion(10^9) Updates    per second [GUP/s]
+0.000009101 Billion(10^9) Updates/PE per second [GUP/s]
+Verification:  CPU time used = 4.920298 seconds
+Verification:  Real time used = 4.952240 seconds
+Found 0 errors in 2147483648 locations (passed).
+Current time (1606768621) is Mon Nov 30 15:37:01 2020
+
+End of MPIRandomAccess section.
+Begin of StarRandomAccess section.
+Main table size   = 2^22 = 4194304 words
+Number of updates = 16777216
+CPU time used  = 0.733919 seconds
+Real time used = 0.733943 seconds
+0.022859018 Billion(10^9) Updates    per second [GUP/s]
+Found 0 errors in 4194304 locations (passed).
+Node(s) with error 0
+Minimum GUP/s 0.022440
+Average GUP/s 0.022700
+Maximum GUP/s 0.023025
+Current time (1606768623) is Mon Nov 30 15:37:03 2020
+
+End of StarRandomAccess section.
+Begin of SingleRandomAccess section.
+Node(s) with error 0
+Node selected 53
+Single GUP/s 0.004126
+Current time (1606768630) is Mon Nov 30 15:37:10 2020
+
+End of SingleRandomAccess section.
+Begin of MPIRandomAccess_LCG section.
+Running on 384 processors
+Total Main table size = 2^31 = 2147483648 words
+PE Main table size = (2^31)/384  = 5592406 words/PE MAX
+Default number of updates (RECOMMENDED) = 8589934592
+Number of updates EXECUTED = 187769472 (for a TIME BOUND of 60.00 secs)
+CPU time used = 60.586704 seconds
+Real time used = 60.865650 seconds
+0.003084983 Billion(10^9) Updates    per second [GUP/s]
+0.000008034 Billion(10^9) Updates/PE per second [GUP/s]
+Verification:  CPU time used = 0.221493 seconds
+Verification:  Real time used = 0.221517 seconds
+Found 0 errors in 2147483648 locations (passed).
+Current time (1606768719) is Mon Nov 30 15:38:39 2020
+
+End of MPIRandomAccess_LCG section.
+Begin of StarRandomAccess_LCG section.
+Main table size   = 2^22 = 4194304 words
+Number of updates = 16777216
+CPU time used  = 0.738213 seconds
+Real time used = 0.738234 seconds
+0.022726163 Billion(10^9) Updates    per second [GUP/s]
+Found 0 errors in 4194304 locations (passed).
+Node(s) with error 0
+Minimum GUP/s 0.022001
+Average GUP/s 0.022573
+Maximum GUP/s 0.022890
+Current time (1606768720) is Mon Nov 30 15:38:40 2020
+
+End of StarRandomAccess_LCG section.
+Begin of SingleRandomAccess_LCG section.
+Node(s) with error 0
+Node selected 154
+Single GUP/s 0.017172
+Current time (1606768722) is Mon Nov 30 15:38:42 2020
+
+End of SingleRandomAccess_LCG section.
+Begin of PTRANS section.
+M: 28284
+N: 28284
+MB: 112
+NB: 112
+P: 16
+Q: 24
+TIME   M     N    MB  NB  P   Q     TIME   CHECK   GB/s   RESID
+---- ----- ----- --- --- --- --- -------- ------ -------- -----

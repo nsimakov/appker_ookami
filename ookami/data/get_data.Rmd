@@ -101,6 +101,15 @@ results$nodes <- 1L
 results$cpus <- 48L
 hpcc_results <- rbind(hpcc_results,results)
 
+exe_type <- "mvapich/armpl/armpl/armc"
+results <- read_results_xml(
+    file.path("appsout", "hpcc", "11-02-2020", "hpcc_arm_compiler_armpl_mvapich", "std_48x1"),
+    exe_type=exe_type, nruns=11L)
+results$resource <- resource
+results$nodes <- 1L
+results$cpus <- 48L
+hpcc_results <- rbind(hpcc_results,results)
+
 
 hpcc_results <- hpcc_results %>% filter(!metric %in% c("App:ExeBinSignature", "RunEnv:Nodes", "app", "resource"))
 # "App:Version" can be removed too eventially

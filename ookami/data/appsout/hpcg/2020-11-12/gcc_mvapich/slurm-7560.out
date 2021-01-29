@@ -1,0 +1,45 @@
+loaded modules:
+Currently Loaded Modulefiles:
+ 1) slurm/19.05.7   2) slurm/slurm/19.05.7   3) gcc/10.2.0   4) mvapich2/2.3.4  
+Running script on host: fj012
+Working directory: /lustre/projects/Buffalo/appker/benchmarks/hpcg/2020-11-12/gcc_mvapich
+SLURM_NTASKS: 384
+Hostnames to use: fj[012-019]
+fj012:48
+fj013:48
+fj014:48
+fj015:48
+fj016:48
+fj017:48
+fj018:48
+fj019:48
+which mpirun: /lustre/projects/global/software/a64fx/mvapich2/2.3.4/bin/mpirun
+which app: /lustre/projects/Buffalo/appker/execs/hpcg-3.1/build_gcc_mvapich/bin/xhpcg
+[fj012:mpi_rank_0][rdma_open_hca] [Warning] Setting the  multirail policy to MV2_MRAIL_SHARING since RDMA_CM based multicast  is enabled.
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 35118 RUNNING AT fj014
+=   EXIT CODE: 9
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:3@fj015] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:3@fj015] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:3@fj015] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:4@fj016] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:4@fj016] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:4@fj016] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:5@fj017] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:5@fj017] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:5@fj017] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:0@fj012] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:0@fj012] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:0@fj012] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:6@fj018] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:6@fj018] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:6@fj018] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[mpiexec@fj012] HYDT_bscu_wait_for_completion (tools/bootstrap/utils/bscu_wait.c:76): one of the processes terminated badly; aborting
+[mpiexec@fj012] HYDT_bsci_wait_for_completion (tools/bootstrap/src/bsci_wait.c:23): launcher returned error waiting for completion
+[mpiexec@fj012] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:218): launcher returned error waiting for completion
+[mpiexec@fj012] main (ui/mpich/mpiexec.c:340): process manager error waiting for completion

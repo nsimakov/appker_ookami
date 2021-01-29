@@ -1,0 +1,17 @@
+loaded modules:
+
+Currently Loaded Modules:
+  1) intel/18.0.2      4) git/2.24.1       7) cmake/3.16.1
+  2) libfabric/1.7.0   5) autotools/1.1    8) xalt/2.8
+  3) impi/18.0.2       6) python2/2.7.15   9) TACC
+
+ 
+
+Running script on host: c499-113.stampede2.tacc.utexas.edu
+Working directory: /work/01482/xdtas/appker/stampede2-skx/benchmarks/hpcg/2020-11-30/org_icc_impi/run2/N_1/3
+SLURM_NTASKS: 48
+which mpirun: /opt/intel/compilers_and_libraries_2018.2.199/linux/mpi/intel64/bin/mpirun
+which app: /work/01482/xdtas/appker/stampede2-skx/execs/hpcg/3.1/icc_impi/bin/xhpcg
+TACC:  Starting up job 6919603 
+TACC:  Starting parallel tasks... 
+TACC:  Shutdown complete. Exiting. 

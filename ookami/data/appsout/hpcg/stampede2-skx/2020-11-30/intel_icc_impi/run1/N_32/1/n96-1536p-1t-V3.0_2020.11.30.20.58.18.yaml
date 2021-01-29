@@ -1,0 +1,122 @@
+n96-1536p-1t version: V3.0
+Release date: November 11, 2015
+Machine Summary: 
+  Distributed Processes: 1536
+  Threads per processes: 1
+Global Problem Dimensions: 
+  Global nx: 768
+  Global ny: 1024
+  Global nz: 768
+Processor Dimensions: 
+  npx: 8
+  npy: 16
+  npz: 12
+Local Domain Dimensions: 
+  nx: 96
+  ny: 64
+  nz: 64
+########## Problem Summary  ##########: 
+Setup Information: 
+  Setup Time: 0.3854
+Linear System Information: 
+  Number of Equations: 603979776
+  Number of Nonzero Terms: 16268556280
+Multigrid Information: 
+  Number of coarse grid levels: 3
+  Coarse Grids: 
+    Grid Level: 1
+    Number of Equations: 75497472
+    Number of Nonzero Terms: 2028715000
+    Number of Presmoother Steps: 1
+    Number of Postsmoother Steps: 1
+    Grid Level: 2
+    Number of Equations: 9437184
+    Number of Nonzero Terms: 252378616
+    Number of Presmoother Steps: 1
+    Number of Postsmoother Steps: 1
+    Grid Level: 3
+    Number of Equations: 1179648
+    Number of Nonzero Terms: 31246072
+    Number of Presmoother Steps: 1
+    Number of Postsmoother Steps: 1
+########## Memory Use Summary  ##########: 
+Memory Use Information: 
+  Total memory used for data (Gbytes): 432.203
+  Memory used for OptimizeProblem data (Gbytes): 0
+  Bytes per equation (Total memory / Number of Equations): 715.592
+  Memory used for linear system and CG (Gbytes): 380.311
+  Coarse Grids: 
+    Grid Level: 1
+    Memory used: 45.4775
+    Grid Level: 2
+    Memory used: 5.69833
+    Grid Level: 3
+    Memory used: 0.715977
+########## V&V Testing Summary  ##########: 
+Spectral Convergence Tests: 
+  Result: PASSED
+  Unpreconditioned: 
+    Maximum iteration count: 11
+    Expected iteration count: 12
+  Preconditioned: 
+    Maximum iteration count: 2
+    Expected iteration count: 2
+Departure from Symmetry |x'Ay-y'Ax|/(2*||x||*||A||*||y||)/epsilon: 
+  Result: PASSED
+  Departure for SpMV: 4.22293e-12
+  Departure for MG: 1.29936e-12
+########## Iterations Summary  ##########: 
+Iteration Count Information: 
+  Result: PASSED
+  Reference CG iterations per set: 50
+  Optimized CG iterations per set: 50
+  Total number of reference iterations: 3050
+  Total number of optimized iterations: 3050
+########## Reproducibility Summary  ##########: 
+Reproducibility Information: 
+  Result: PASSED
+  Scaled residual mean: 0.00502112
+  Scaled residual variance: 0
+########## Performance Summary (times in sec) ##########: 
+Benchmark Time Summary: 
+  Optimization phase: 0.32812
+  DDOT: 3.91011
+  WAXPBY: 12.5146
+  SpMV: 105.38
+  MG: 448.076
+  ALL_reduce: 30.1035
+  Total: 599.991
+Floating Point Operations Summary: 
+  Raw DDOT: 1.11265e+13
+  Raw WAXPBY: 1.11265e+13
+  Raw SpMV: 1.01223e+14
+  Raw MG: 5.66146e+14
+  Total: 6.89622e+14
+  Total with convergence overhead: 6.89622e+14
+GB/s Summary: 
+  Raw Read B/W: 7079.64
+  Raw Write B/W: 1636.02
+  Raw Total B/W: 8715.66
+  Total with convergence and optimization phase overhead: 8652.89
+GFLOP/s Summary: 
+  Raw DDOT: 2845.58
+  Raw WAXPBY: 889.085
+  Raw SpMV: 960.554
+  Raw MG: 1263.5
+  Raw Total: 1149.39
+  Total with convergence overhead: 1149.39
+  Total with convergence and optimization phase overhead: 1141.11
+User Optimization Overheads: 
+  Problem setup time (sec): 0.3854
+  Optimization phase time (sec): 0.32812
+  Optimization phase time vs reference SpMV+MG time: 1.30285
+DDOT Timing Variations: 
+  Min DDOT MPI_Allreduce time: 14.9053
+  Max DDOT MPI_Allreduce time: 35.0403
+  Avg DDOT MPI_Allreduce time: 24.9942
+__________ Final Summary __________: 
+  HPCG result is VALID with a GFLOP/s rating of: 1141.11
+      HPCG 2.4 Rating (for historical value) is: 1145.56
+  Reference version of ComputeDotProduct used: Performance results are most likely suboptimal
+  Results are valid but execution time (sec) is: 599.991
+       Official results execution time (sec) must be at least: 1800

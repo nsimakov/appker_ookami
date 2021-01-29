@@ -1,0 +1,21 @@
+loaded modules:
+Currently Loaded Modulefiles:
+ 1) slurm/19.05.7   2) slurm/slurm/19.05.7   3) gcc/10.2.0   4) mvapich2/2.3.4  
+Running script on host: fj021
+Working directory: /lustre/projects/Buffalo/appker/benchmarks/hpcg/2020-11-12/gcc_mvapich
+SLURM_NTASKS: 384
+Hostnames to use: fj[021-028]
+fj021:48
+fj022:48
+fj023:48
+fj024:48
+fj025:48
+fj026:48
+fj027:48
+fj028:48
+which app: /lustre/projects/Buffalo/appker/execs/hpcg-3.1/build_gcc_mvapich/bin/xhpcg
+Warning: Permanently added 'fj026,10.10.0.26' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'fj024,10.10.0.24' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'fj027,10.10.0.27' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'fj025,10.10.0.25' (ECDSA) to the list of known hosts.
+[fj021:mpi_rank_0][rdma_open_hca] [Warning] Setting the  multirail policy to MV2_MRAIL_SHARING since RDMA_CM based multicast  is enabled.

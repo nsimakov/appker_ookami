@@ -1,0 +1,289 @@
+loaded modules:
+Currently Loaded Modulefiles:
+ 1) slurm/slurm/19.05.7   3) mvapich2/2.3.4                     
+ 2) gcc/10.2.0            4) fftw/3.3.9-rdolbeau-armcl-mvapich  
+Running script on host: fj029
+Working directory: /lustre/projects/Buffalo/appker/benchmarks/hpcc/2020-11-30/gcc_openblas_fftwrd_mvapich/run2/N_16/7
+SLURM_NTASKS: 768
+Hostnames to use: fj[029-036,069-076]
+fj029:48
+fj030:48
+fj031:48
+fj032:48
+fj033:48
+fj034:48
+fj035:48
+fj036:48
+fj069:48
+fj070:48
+fj071:48
+fj072:48
+fj073:48
+fj074:48
+fj075:48
+fj076:48
+which mpirun: /lustre/projects/global/software/a64fx/mvapich2/2.3.4/bin/mpirun
+which app: /lustre/projects/Buffalo/appker/execs/hpcc/hpcc/hpcc_gcc_openblas_fftwrd_mvapich
+[fj029:mpi_rank_0][rdma_open_hca] [Warning] Setting the  multirail policy to MV2_MRAIL_SHARING since RDMA_CM based multicast  is enabled.
+[fj069:mpi_rank_384][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj075:mpi_rank_679][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj071:mpi_rank_480][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj072:mpi_rank_542][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj073:mpi_rank_610][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj074:mpi_rank_665][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_432][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_341][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_385][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj075:mpi_rank_678][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj071:mpi_rank_481][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj072:mpi_rank_543][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj073:mpi_rank_614][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj074:mpi_rank_669][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_433][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_342][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_386][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj071:mpi_rank_486][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj072:mpi_rank_548][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj073:mpi_rank_615][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj074:mpi_rank_670][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_434][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_343][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_387][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj071:mpi_rank_495][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj072:mpi_rank_557][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj073:mpi_rank_619][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj074:mpi_rank_671][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_435][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_344][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_388][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj071:mpi_rank_498][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj072:mpi_rank_553][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj074:mpi_rank_667][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_436][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_345][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_389][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj071:mpi_rank_494][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj074:mpi_rank_668][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_437][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_346][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_390][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj071:mpi_rank_483][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj074:mpi_rank_666][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_438][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_347][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_391][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj071:mpi_rank_491][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj072:mpi_rank_547][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj073:mpi_rank_604][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_439][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_348][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_392][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj071:mpi_rank_482][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj072:mpi_rank_556][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj073:mpi_rank_620][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_440][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_349][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_393][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj071:mpi_rank_485][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj072:mpi_rank_541][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj073:mpi_rank_603][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_441][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_350][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_394][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj071:mpi_rank_487][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj072:mpi_rank_545][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj073:mpi_rank_612][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_442][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_351][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_395][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj071:mpi_rank_489][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj072:mpi_rank_546][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj073:mpi_rank_616][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_443][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_352][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_396][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj071:mpi_rank_490][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj073:mpi_rank_618][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_444][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_353][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_397][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj071:mpi_rank_497][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj072:mpi_rank_549][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj073:mpi_rank_621][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_445][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_354][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_398][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj071:mpi_rank_499][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj072:mpi_rank_550][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj073:mpi_rank_605][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_446][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_355][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_399][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj071:mpi_rank_492][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj072:mpi_rank_551][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj073:mpi_rank_606][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_447][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_356][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_400][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj071:mpi_rank_496][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj072:mpi_rank_552][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj073:mpi_rank_608][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_448][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_357][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_401][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj071:mpi_rank_488][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj072:mpi_rank_554][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj073:mpi_rank_609][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_449][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_358][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_402][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj071:mpi_rank_493][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj072:mpi_rank_558][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj073:mpi_rank_611][error_sighandler] Caught error: Bus error (signal 7)
+[fj070:mpi_rank_450][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_359][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_403][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj071:mpi_rank_484][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj072:mpi_rank_560][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj073:mpi_rank_613][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_451][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_360][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_404][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj072:mpi_rank_544][error_sighandler] Caught error: Bus error (signal 7)
+[fj073:mpi_rank_617][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_452][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_361][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_405][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj072:mpi_rank_559][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj073:mpi_rank_607][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_453][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_362][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_406][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj072:mpi_rank_555][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj073:mpi_rank_602][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_454][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_363][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_407][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_455][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_364][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_408][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_456][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_365][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_409][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_457][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_366][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_410][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_458][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_367][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_411][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_459][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_368][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_412][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_460][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_369][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_413][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_461][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_370][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_414][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_462][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_371][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_415][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_463][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_372][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_416][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_464][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_373][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_417][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_465][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_374][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_418][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_466][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_375][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_419][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_467][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_376][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_420][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_468][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_377][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_421][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_472][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_378][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_422][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_473][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_379][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_423][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_475][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_380][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_424][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj072:mpi_rank_540][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_476][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_381][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_425][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_477][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_382][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_426][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj070:mpi_rank_479][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj036:mpi_rank_383][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_427][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_428][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_429][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_430][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj069:mpi_rank_431][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj072:mpi_rank_539][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj073:mpi_rank_601][error_sighandler] Caught error: Bus error (signal 7)
+[fj072:mpi_rank_538][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj074:mpi_rank_664][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj073:mpi_rank_600][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj073:mpi_rank_599][error_sighandler] Caught error: Segmentation fault (signal 11)
+[fj073:mpi_rank_598][error_sighandler] Caught error: Segmentation fault (signal 11)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 33842 RUNNING AT fj069
+=   EXIT CODE: 139
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:13@fj074] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:13@fj074] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:14@fj075] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:14@fj075] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:14@fj075] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:0@fj029] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:0@fj029] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:0@fj029] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:6@fj035] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:6@fj035] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:6@fj035] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:13@fj074] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:1@fj030] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:1@fj030] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:1@fj030] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:3@fj032] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:3@fj032] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:3@fj032] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:2@fj031] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:2@fj031] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:2@fj031] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:15@fj076] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:15@fj076] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:15@fj076] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:4@fj033] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:4@fj033] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:4@fj033] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+[proxy:0:5@fj034] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:911): assert (!closed) failed
+[proxy:0:5@fj034] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:5@fj034] main (pm/pmiserv/pmip.c:202): demux engine error waiting for event
+srun: error: fj074: task 13: Exited with exit code 7
+srun: error: fj075: task 14: Exited with exit code 7
+srun: error: fj035: task 6: Exited with exit code 7
+srun: error: fj032: task 3: Exited with exit code 7
+srun: error: fj030: task 1: Exited with exit code 7
+srun: error: fj029: task 0: Exited with exit code 7
+srun: error: fj031: task 2: Exited with exit code 7
+srun: error: fj076: task 15: Exited with exit code 7
+srun: error: fj033: task 4: Exited with exit code 7
+srun: error: fj034: task 5: Exited with exit code 7
+YOUR APPLICATION TERMINATED WITH THE EXIT STRING: Segmentation fault (signal 11)
+This typically refers to a problem with your application.
+Please see the FAQ page for debugging suggestions

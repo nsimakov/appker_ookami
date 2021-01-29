@@ -1,0 +1,9 @@
+/lustre/projects/Buffalo/appker/benchmarks/hpcg/10-23-2020/cce-mvapich2
+Unloading slurm/slurm/19.05.7
+Unloading cray-mvapich2_nogpu_svealpha/2.3.4
+WARNING: Did not unuse /opt/cray/pe/craype/2.7.0/modulefiles
+WARNING: Did not unuse /cm/shared/modulefiles
+WARNING: Did not unuse /cm/local/modulefiles
+WARNING: Did not unuse /opt/cray/pe/modulefiles
+which: no hpcg in (/lustre/projects/Buffalo/spack/opt/spack/cray-centos8-aarch64/cce-10.0.1/hpcg-3.1-gkcnwbaycu5rpivkb2r3s6lwqgeghvxx/bin:/opt/cray/pe/cray-mvapich2_nogpu_svealpha/2.3.4/infiniband/cray/10.0/bin:/cm/shared/apps/slurm/current/sbin:/cm/shared/apps/slurm/current/bin:/opt/cray/pe/craype/2.7.0/bin:/opt/cray/pe/cce-sve/10.0.1/binutils/aarch64/aarch64-unknown-linux-gnu/bin:/opt/cray/pe/cce-sve/10.0.1/utils/aarch64/bin:/lustre/projects/Buffalo/spack/opt/spack/cray-centos8-aarch64/cce-10.0.1/hpcg-3.1-gkcnwbaycu5rpivkb2r3s6lwqgeghvxx/bin:/opt/cray/pe/cray-mvapich2_nogpu_svealpha/2.3.4/infiniband/cray/10.0/bin:/lustre/projects/Buffalo/spack/bin:/cm/local/apps/environment-modules/4.4.0//bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/sbin:/cm/local/apps/environment-modules/4.4.0/bin:/lustre/home/nsimakov/bin:/opt/cray/pe/bin)
+srun: fatal: No command given to execute.

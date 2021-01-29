@@ -1,0 +1,41 @@
+Unloading mvapich2/2.3.4
+Unloading gcc/10.2.0
+Unloading slurm/slurm/19.05.7
+WARNING: Did not unuse /lustre/shared/modulefiles
+WARNING: Did not unuse /cm/shared/modulefiles
+WARNING: Did not unuse /cm/local/modulefiles
+Loading cpe-cray
+Loading cce-sve/10.0.1
+Loading craype/2.7.0
+Loading craype-arm-nsp1
+Loading craype-network-infiniband
+Loading cray-libsci/20.10.1.2
+loaded modules:
+Currently Loaded Modulefiles:
+ 1) cpe-cray                    6) cray-libsci/20.10.1.2(default)               
+ 2) cce-sve/10.0.1(default)     7) slurm/slurm/19.05.7                          
+ 3) craype/2.7.0(default)       8) cray-mvapich2_nogpu_svealpha/2.3.4(default)  
+ 4) craype-arm-nsp1             9) cray-fftw/3.3.8.8(default)                   
+ 5) craype-network-infiniband  
+Running script on host: fj113
+Working directory: /lustre/projects/Buffalo/appker/benchmarks/hpcc/2020-11-30/cray_libsci_fftwcray_mvapich/run2/N_16/1
+SLURM_NTASKS: 768
+Hostnames to use: fj[113-123,149-152,157]
+fj113:48
+fj114:48
+fj115:48
+fj116:48
+fj117:48
+fj118:48
+fj119:48
+fj120:48
+fj121:48
+fj122:48
+fj123:48
+fj149:48
+fj150:48
+fj151:48
+fj152:48
+fj157:48
+which app: /lustre/projects/Buffalo/appker/execs/hpcc/hpcc/hpcc_cray_libsci_fftwcray_mvapich
+[fj113:mpi_rank_0][rdma_open_hca] [Warning] Setting the  multirail policy to MV2_MRAIL_SHARING since RDMA_CM based multicast  is enabled.

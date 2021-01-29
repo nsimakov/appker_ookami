@@ -1,0 +1,13 @@
+/lustre/projects/Buffalo/appker/benchmarks/hpcg/10-23-2020/cce-mvapich2
+Unloading slurm/slurm/19.05.7
+Unloading cray-mvapich2_nogpu_svealpha/2.3.4
+WARNING: Did not unuse /opt/cray/pe/craype/2.7.0/modulefiles
+WARNING: Did not unuse /cm/shared/modulefiles
+WARNING: Did not unuse /cm/local/modulefiles
+WARNING: Did not unuse /opt/cray/pe/modulefiles
+srun: error: fj002: tasks 0,3,5-6,9,12-13,17-19,22-25,27-33,35-37,39-41,43,45-47: Killed
+srun: error: fj002: task 14: Killed
+srun: error: fj002: task 15: Killed
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 2661.0 ON fj002 CANCELLED AT 2020-10-23T12:06:57 ***
+slurmstepd: error: *** JOB 2661 ON fj002 CANCELLED AT 2020-10-23T12:06:57 ***

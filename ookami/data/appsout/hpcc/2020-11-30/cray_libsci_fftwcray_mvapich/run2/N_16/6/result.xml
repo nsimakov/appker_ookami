@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<rep:report xmlns:rep="report">
+  <body>
+    <performance>
+      <ID>hpcc</ID>
+      <benchmark>
+        <ID>hpcc</ID>
+        <parameters/>
+        <statistics/>
+      </benchmark>
+    </performance>
+  </body>
+  <exitStatus>
+    <completed>false</completed>
+  </exitStatus>
+</rep:report>

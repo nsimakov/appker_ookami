@@ -1,0 +1,16 @@
+ERROR: Unable to locate a modulefile for '2019.6_cray_mvapich'
+loaded modules:
+Currently Loaded Modulefiles:
+ 1) cpe-cray                    6) cray-libsci/20.10.1.2(default)               
+ 2) cce-sve/10.0.1(default)     7) slurm/slurm/19.05.7                          
+ 3) craype/2.7.0(default)       8) cray-mvapich2_nogpu_svealpha/2.3.4(default)  
+ 4) craype-arm-nsp1             9) imb/2019.6_cray_mvapich                      
+ 5) craype-network-infiniband  
+Running script on host: fj116
+Working directory: /lustre/projects/Buffalo/appker/benchmarks/imb/2020-11-27/2019.6_cray_mvapich/run2/N_2/10
+SLURM_NTASKS: 2
+Hostnames to use: fj[116-117]
+cat: hostnames: No such file or directory
+which: no mpirun in (/lustre/projects/Buffalo/appker/execs/imb/2019.6_cray_mvapich:/opt/cray/pe/cray-mvapich2_nogpu_svealpha/2.3.4/infiniband/cray/10.0/bin:/cm/shared/apps/slurm/current/sbin:/cm/shared/apps/slurm/current/bin:/opt/cray/pe/craype/2.7.0/bin:/opt/cray/pe/cce-sve/10.0.1/binutils/aarch64/aarch64-unknown-linux-gnu/bin:/opt/cray/pe/cce-sve/10.0.1/utils/aarch64/bin:/lustre/projects/Buffalo/spack/bin:/cm/local/apps/environment-modules/4.4.0//bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/sbin:/cm/local/apps/environment-modules/4.4.0/bin:/lustre/home/nsimakov/bin:/opt/cray/pe/bin)
+which mpirun: 
+which app: /lustre/projects/Buffalo/appker/execs/imb/2019.6_cray_mvapich/IMB-MPI1

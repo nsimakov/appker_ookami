@@ -1,0 +1,168 @@
+<?xml version="1.0" ?>
+<rep:report xmlns:rep="report">
+  <body>
+    <performance>
+      <ID>hpcc</ID>
+      <benchmark>
+        <ID>hpcc</ID>
+        <parameters>
+          <parameter>
+            <ID>App:ExeBinSignature</ID>
+            <value>H4sIAGlvxV8CA63SS27jMAwG4H1PkQvUImlRj65n2zMEEkmhQR42bA+a49eOO4APMBuBC338RUmff/jjxAg+lIIgrc+BWuPURKJmX9AD55P7HqarA/SJ3FOXMrsyjleb3LyU+2hq9D5fn86eJrP7GkXeseMOXuXb5xZBfQaqVUTAegbBpg2yQoTWi/p0crdLDX5bx+VrsqLdPHTwiyOwIvserIoBUvTWss8hIlGVesD3jYWdQQvcZxQiNb/66L2VBCZpLTGXkxvGxV0ei92cDPfxcrNpPpeHntdGU5kuNp8JMHXUYc5r98ffp1u37WTPe2WOlzZMy5aMtEdzCzVyyqI95LqOGEtQrNIKeyjR/mP0MbbW6hP6yAyemH1M2MSwopbQtOLhovS2wX/HzZQ0trwSVYPquUqKRSBzTkXh4H7nfLkdF4p9NG5CQutnqdpztBYAWXKmQAcs++u8/QBi4/2edgIAAA==</value>
+          </parameter>
+          <parameter>
+            <ID>App:Version</ID>
+            <value>1.5.0f</value>
+          </parameter>
+          <parameter>
+            <ID>Input:DGEMM Problem Size</ID>
+            <value>1666</value>
+          </parameter>
+          <parameter>
+            <ID>Input:High Performance LINPACK Grid Cols</ID>
+            <value>12</value>
+          </parameter>
+          <parameter>
+            <ID>Input:High Performance LINPACK Grid Rows</ID>
+            <value>8</value>
+          </parameter>
+          <parameter>
+            <ID>Input:High Performance LINPACK Problem Size</ID>
+            <value>28284</value>
+          </parameter>
+          <parameter>
+            <ID>Input:MPI Ranks</ID>
+            <value>96</value>
+          </parameter>
+          <parameter>
+            <ID>Input:MPIRandom Problem Size</ID>
+            <value>512.0</value>
+            <units>MWord</units>
+          </parameter>
+          <parameter>
+            <ID>Input:OpenMP Threads</ID>
+            <value>0</value>
+          </parameter>
+          <parameter>
+            <ID>Input:PTRANS Problem Size</ID>
+            <value>14142</value>
+          </parameter>
+          <parameter>
+            <ID>Input:STREAM Array Size</ID>
+            <value>2777724</value>
+            <units>MWord</units>
+          </parameter>
+          <parameter>
+            <ID>RunEnv:CPU Speed</ID>
+            <value>2100.0</value>
+            <units>MHz</units>
+          </parameter>
+          <parameter>
+            <ID>RunEnv:Nodes</ID>
+            <value>H4sIAGlvxV8CA0s2NTDUNTAyVEgeZQwRhomugfkoY4gwuACgKo+MYQMAAA==</value>
+          </parameter>
+          <parameter>
+            <ID>app</ID>
+            <value>hpcc</value>
+          </parameter>
+          <parameter>
+            <ID>resource</ID>
+            <value>stampede2-skx</value>
+          </parameter>
+        </parameters>
+        <statistics>
+          <statistic>
+            <ID>App kernel executable exists</ID>
+            <value>1</value>
+          </statistic>
+          <statistic>
+            <ID>App kernel input exists</ID>
+            <value>1</value>
+          </statistic>
+          <statistic>
+            <ID>Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance</ID>
+            <value>41858.0</value>
+            <units>MFLOP per Second</units>
+          </statistic>
+          <statistic>
+            <ID>Average STREAM 'Add' Memory Bandwidth</ID>
+            <value>3079.03488</value>
+            <units>MByte per Second</units>
+          </statistic>
+          <statistic>
+            <ID>Average STREAM 'Copy' Memory Bandwidth</ID>
+            <value>2709.56544</value>
+            <units>MByte per Second</units>
+          </statistic>
+          <statistic>
+            <ID>Average STREAM 'Scale' Memory Bandwidth</ID>
+            <value>2699.1104</value>
+            <units>MByte per Second</units>
+          </statistic>
+          <statistic>
+            <ID>Average STREAM 'Triad' Memory Bandwidth</ID>
+            <value>3065.62048</value>
+            <units>MByte per Second</units>
+          </statistic>
+          <statistic>
+            <ID>Fast Fourier Transform (FFTW) Floating-Point Performance</ID>
+            <value>57304.8</value>
+            <units>MFLOP per Second</units>
+          </statistic>
+          <statistic>
+            <ID>High Performance LINPACK Floating-Point Performance</ID>
+            <value>2197130.0</value>
+            <units>MFLOP per Second</units>
+          </statistic>
+          <statistic>
+            <ID>High Performance LINPACK Run Time</ID>
+            <value>6.86611</value>
+            <units>Second</units>
+          </statistic>
+          <statistic>
+            <ID>MPI Random Access</ID>
+            <value>72.37689999999999</value>
+            <units>MUpdate per Second</units>
+          </statistic>
+          <statistic>
+            <ID>Network scratch directory accessible</ID>
+            <value>1</value>
+          </statistic>
+          <statistic>
+            <ID>Network scratch directory exists</ID>
+            <value>1</value>
+          </statistic>
+          <statistic>
+            <ID>Parallel Matrix Transpose (PTRANS)</ID>
+            <value>27897.1392</value>
+            <units>MByte per Second</units>
+          </statistic>
+          <statistic>
+            <ID>Task working directory accessible</ID>
+            <value>1</value>
+          </statistic>
+          <statistic>
+            <ID>Task working directory exists</ID>
+            <value>1</value>
+          </statistic>
+          <statistic>
+            <ID>Wall Clock Time</ID>
+            <value>100.0</value>
+            <units>Second</units>
+          </statistic>
+          <statistic>
+            <ID>local scratch directory accessible</ID>
+            <value>1</value>
+          </statistic>
+          <statistic>
+            <ID>local scratch directory exists</ID>
+            <value>1</value>
+          </statistic>
+        </statistics>
+      </benchmark>
+    </performance>
+  </body>
+  <exitStatus>
+    <completed>true</completed>
+  </exitStatus>
+</rep:report>

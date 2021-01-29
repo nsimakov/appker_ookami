@@ -1,0 +1,37 @@
+Unloading mvapich2/2.3.4
+Unloading gcc/10.2.0
+Unloading slurm/slurm/19.05.7
+WARNING: Did not unuse /lustre/shared/modulefiles
+WARNING: Did not unuse /cm/shared/modulefiles
+WARNING: Did not unuse /cm/local/modulefiles
+Loading cpe-cray
+Loading cce-sve/10.0.1
+Loading craype/2.7.0
+Loading craype-arm-nsp1
+Loading craype-network-infiniband
+Loading cray-libsci/20.10.1.2
+loaded modules:
+Currently Loaded Modulefiles:
+ 1) cpe-cray                    6) cray-libsci/20.10.1.2(default)               
+ 2) cce-sve/10.0.1(default)     7) slurm/slurm/19.05.7                          
+ 3) craype/2.7.0(default)       8) cray-mvapich2_nogpu_svealpha/2.3.4(default)  
+ 4) craype-arm-nsp1             9) cray-fftw/3.3.8.8(default)                   
+ 5) craype-network-infiniband  
+Running script on host: fj049
+Working directory: /lustre/projects/Buffalo/appker/benchmarks/hpcc/2020-11-30/cray_libsci_fftwcray_mvapich/run2/N_8/3
+SLURM_NTASKS: 384
+Hostnames to use: fj[049-056]
+fj049:48
+fj050:48
+fj051:48
+fj052:48
+fj053:48
+fj054:48
+fj055:48
+fj056:48
+which app: /lustre/projects/Buffalo/appker/execs/hpcc/hpcc/hpcc_cray_libsci_fftwcray_mvapich
+[fj049:mpi_rank_0][rdma_open_hca] [Warning] Setting the  multirail policy to MV2_MRAIL_SHARING since RDMA_CM based multicast  is enabled.
+[fj050:mpi_rank_59][error_sighandler] Caught error: Segmentation fault (signal 11)
+srun: error: fj050: task 59: Segmentation fault (core dumped)
+srun: Job step aborted: Waiting up to 62 seconds for job step to finish.
+slurmstepd: error: *** JOB 37477 ON fj049 CANCELLED AT 2020-11-30T17:10:27 ***
