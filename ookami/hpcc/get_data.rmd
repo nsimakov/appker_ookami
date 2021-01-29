@@ -7,51 +7,116 @@ output: html_notebook
 
 
 ```{r setup, include=FALSE}
-library(stringr)
+library(data.table)
+library(XML)
+#library(DBI)
+library(dplyr)
 ```
 
 
 ```{r}
-process_hpcg_out <- function(filename) {
-    con <- file(filename, "r", blocking = FALSE)
-    text <- readLines(con)
-    close(con)
-    text <- text[grepl("=", text, fixed = T)]
-    text <- text[!grepl("==", text, fixed = T)]
-    text <- text[!grepl("##", text, fixed = T)]
-    text <- text[!grepl("=$", text, fixed = F, perl=T)]
-    text <- text[!grepl("PASSED", text, fixed = T)]
-    text <- text[!grepl("version=", text, fixed = F, perl=T)]
-    text <- text[!grepl("Release date=", text, fixed = F, perl=T)]
-    text <- text[!grepl("Performance results are most likely suboptimal", text, fixed = T)]
-    text <- text[!grepl("Final Summary::Results are valid but execution time" , text , fixed = T)]
-    text <- text[!grepl("Final Summary::Official results execution time (sec) must be at least" , text , fixed = T)]
-
-    level <- 0
-    for(i in grep("Multigrid Information::Coarse Grids", text, fixed = T)) {
-        m <- str_match(text[i], "Multigrid Information::Coarse Grids::Grid Level=([0-9]+)")
-        if(!is.na(m[1,1])) {
-            level <- m[1,2]
+process_hpcc_out <- function(pathname,mode="benchmark") {
+    if(mode=="benchmark") {
+        if(!file.exists(file.path(pathname,"hpccoutf.txt"))) {
+            return(NULL)
         } else {
-            text[i] <- str_replace(text[i], "Multigrid Information::Coarse Grids::",paste0("Multigrid Information::Coarse Grids::Level ",level,"::"))
+            con <- file(file.path(pathname,"hpccoutf.txt"), "r", blocking = FALSE)
+            text <- readLines(con)
+            close(con)
+            if(sum(grepl("End of HPC Challenge tests.",text,fixed = T))==0) {
+                return(NULL)
+            }
+        }
+    } else if(mode=="akrr") {
+        if(!file.exists(file.path(pathname,"result.xml"))) {
+            return(NULL)
         }
     }
-    text <- text[!grepl("Multigrid Information::Coarse Grids::Grid Level=[0-9]+" , text , perl = T)]
+    cwd <- getwd()
+    setwd(pathname)
 
-    level <- 0
-    for(i in grep("Memory Use Information::Coarse Grids::", text, fixed = T)) {
-        m <- str_match(text[i], "Memory Use Information::Coarse Grids::Grid Level=([0-9]+)")
-        if(!is.na(m[1,1])) {
-            level <- m[1,2]
-        } else {
-            text[i] <- str_replace(text[i], "Memory Use Information::Coarse Grids::",paste0("Memory Use Information::Coarse Grids::Level ",level,"::"))
-        }
+    if(mode=="benchmark") {
+        system("touch gen.info")
+        file.copy("hpccoutf.txt", "appstdout")
+        system("PYTHONPATH=/home/nikolays/xdmod_wsp/akrr python3 /home/nikolays/xdmod_wsp/akrr/akrr/parsers/hpcc_parser.py ./ ./result.xml", ignore.stderr = TRUE, ignore.stdout = TRUE)
+        file.remove("appstdout", "gen.info")
     }
-    text <- text[!grepl("Memory Use Information::Coarse Grids::Grid Level=[0-9]+" , text , perl = T)]
-    metrics <- str_split_fixed(text,"=",n=2)
-    data.frame(metric=metrics[,1], value=metrics[,2])
+
+    resultpath <- file.path(pathname, "result.xml")
+
+    xml_doc <- xmlParse(file = resultpath)
+    params <- xmlToDataFrame(nodes = getNodeSet(xml_doc, "//body/performance/benchmark/parameters/parameter"))
+    params$metric_type <- "parameter"
+    stats <- xmlToDataFrame(nodes = getNodeSet(xml_doc, "//body/performance/benchmark/statistics/statistic"))
+    stats$metric_type <- "statistic"
+
+    result <- rbind(params,stats)
+    result <- result %>% rename(metric=ID) %>% filter(metric !="App:Version")
+    result$cores <- as.integer(result$value[result$metric=="Input:MPI Ranks"])
+    result$value <- as.numeric(result$value)
+    result <- relocate(result,cores)
+
+    setwd(cwd)
+
+    result
 }
-process_many_hpcg_out <- function(resource, config, pathname, id=1L) {
+process_many_hpcc_out <- function(config, pathname, id=1L, mode="benchmark") {
+    results <- NULL
+
+    path1 <- list.dirs(path=pathname, full.names = F, recursive = F)
+    if(mode=="benchmark") {
+        path1 <- path1[grepl("run",path1, perl = T)]
+    } else if(mode=="akrr") {
+        path1 <- path1[grepl("[0-9]+",path1, perl = T)]
+    }
+    for(m_path1 in path1) {
+        path2 <- list.dirs(path=file.path(pathname,m_path1), full.names = F, recursive = F)
+        if(mode=="benchmark") {
+            path2 <- path2[grepl("N_",path2, perl = T)]
+        } else if(mode=="akrr") {
+            path2 <- path2[grepl("[0-9]+",path2, perl = T)]
+        }
+
+        for(m_path2 in path2) {
+            path3 <- list.dirs(path=file.path(pathname,m_path1,m_path2), full.names = F, recursive = F)
+
+            if(mode=="benchmark") {
+                path3 <- path3[grepl("[0-9]+",path3, perl = T)]
+            } else if(mode=="akrr") {
+                path3 <- path3[grepl("[0-9.]+",path3, perl = T)]
+            }
+            for(m_path3 in path3) {
+                if(mode=="benchmark") {
+                    path4 <- file.path(pathname,m_path1,m_path2,m_path3)
+                    m_path4 <- file.path(path4,"hpccoutf.txt")
+                } else if(mode=="akrr") {
+                    path4 <- file.path(pathname,m_path1,m_path2,m_path3)
+                    m_path4 <- file.path(path4,"result.xml")
+                }
+
+                if(file.exists(m_path4)) {
+                    cat(paste0("Processing: ", path4, "\n"))
+                    df <- process_hpcc_out(path4, mode=mode)
+                    if(!is.null(df) && nrow(df)>5) {
+                        results<-rbind(
+                            results,
+                            cbind(data.frame(
+                                config=config,
+                                id=id
+                            ),df)
+                        )
+                    }
+
+                }
+                id <- id + 1L
+            }
+        }
+    }
+
+    results
+}
+
+process_many_hpcc_out0 <- function(config, pathname, id=1L) {
     results <- NULL
 
     path1 <- list.dirs(path=pathname, full.names = F, recursive = F)
@@ -64,19 +129,17 @@ process_many_hpcg_out <- function(resource, config, pathname, id=1L) {
             path3 <- list.dirs(path=file.path(pathname,m_path1,m_path2), full.names = F, recursive = F)
             path3 <- path3[grepl("[0-9]+",path3, perl = T)]
             for(m_path3 in path3) {
-                path4 <- file.path(pathname,m_path1,m_path2,m_path3,"appstdout")
-                if(file.exists(path4)) {
-                    df <- process_hpcg_out(path4)
-                    if(!is.null(df) & nrow(df)>5) {
+                path4 <- file.path(pathname,m_path1,m_path2,m_path3)
+                if(file.exists(file.path(path4,"hpccoutf.txt"))) {
+                    cat(paste0("Processing: ", path4, "\n"))
+                    df <- process_hpcc_out(path4)
+                    if(!is.null(df) && nrow(df)>5) {
                         results<-rbind(
                             results,
-                            data.frame(
-                                resource="ookami",
-                                config="gcc_openmpi",
-                                id=id,
-                                metric=df$metric,
-                                value=df$value
-                            )
+                            cbind(data.frame(
+                                config=config,
+                                id=id
+                            ),df)
                         )
                     }
 
@@ -90,14 +153,24 @@ process_many_hpcg_out <- function(resource, config, pathname, id=1L) {
 }
 ```
 
+
 ```{r}
-pathname <- "/home/nikolays/xdmod_wsp/appker_ookami/ookami/data/appsout/hpcg/2020-11-27/gcc_openmpi/run1/N_2/1/appstdout"
-
-results <- rbind(
-    process_name_hpcg_out("ookami", "gcc_openmpi",
-                          "/home/nikolays/xdmod_wsp/appker_ookami/ookami/data/appsout/hpcg/2020-11-27/gcc_openmpi"),
-    process_name_hpcg_out("ookami", "gcc_mvapich2",
-                          "/home/nikolays/xdmod_wsp/appker_ookami/ookami/data/appsout/hpcg/2020-11-27/gcc_mvapich2")
+hpcc <- rbind(
+    process_many_hpcc_out("Ookami; cray,libsci,fftw-cray,mvapich",
+                          "/home/nikolays/xdmod_wsp/appker_ookami/ookami/data/appsout/hpcc/2020-11-30/cray_libsci_fftwcray_mvapich"),
+    process_many_hpcc_out("Ookami; gcc,armpl,mvapich",
+                          "/home/nikolays/xdmod_wsp/appker_ookami/ookami/data/appsout/hpcc/2020-11-30/gcc_armpl_mvapich"),
+    process_many_hpcc_out("Ookami; gcc,openblas,fftw-rd,mvapich",
+                          "/home/nikolays/xdmod_wsp/appker_ookami/ookami/data/appsout/hpcc/2020-11-30/gcc_openblas_fftwrd_mvapich"),
+    process_many_hpcc_out("Stampede2-SKX; icc,mkl,intel-mpi",
+                          "/home/nikolays/xdmod_wsp/appker_ookami/ookami/data/appsout/hpcc/stampede2-skx", mode="akrr")
 )
+```
 
+
+
+
+
+```{r}
+save(hpcc, file = "/home/nikolays/xdmod_wsp/appker_ookami/ookami/hpcc/hpcc.Rdata")
 ```
