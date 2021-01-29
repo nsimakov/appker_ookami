@@ -1,0 +1,15 @@
+#!/bin/bash
+
+hostname
+echo "Hosts: $SLURM_JOB_NODELIST"
+echo "Woring dir: $(pwd)"
+
+module load slurm cmake gcc mvapich2/2.3.4
+source /lustre/projects/Buffalo/appker/execs/gromacs-2021-beta1-b1/bin/GMXRC.bash
+
+scontrol show hostnames $SLURM_JOB_NODELIST > hostnames0
+awk '$0=$0":48"' hostnames0 > hostnames
+
+MV2_ENABLE_AFFINITY=0 mpirun -n $SLURM_NTASKS -f hostnames  gmx_mpi mdrun -nsteps 100000 -ntomp 1 -v >& out.log
+
+

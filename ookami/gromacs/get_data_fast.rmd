@@ -1,0 +1,175 @@
+---
+title: "R Notebook"
+author: nikolays
+date: 11/30/20
+output: html_notebook
+---
+
+
+```{r setup, include=FALSE}
+library(stringr)
+```
+
+```{r}
+process_gromacs_output <- function(filename,config,sys) {
+    speed_mean <- NA
+    speed_sd <- NA
+    max_step <- NA
+    passed <- TRUE
+    cores <- NA
+    note <- NA
+    
+    text <- system(paste0("grep -P 'vol .* step .* performance: .*' ", filename), intern = TRUE)
+    if(length(text)>0L) {
+        m <- str_match(text, paste0("step ([0-9]*) performance: ([0-9.]*) ns/day"))
+        speed_mean <- mean(as.numeric(m[,3]))
+        speed_sd <- sd(as.numeric(m[,3]))
+        max_step <- max(as.integer(m[,2]))
+    } else {
+        passed <- FALSE
+        note <- "no speed info"
+    }
+    text <- system(paste0("grep -P 'Using [0-9]* MPI processes' ", filename), intern = TRUE)
+    if(length(text)>0L) {
+        m <- str_match(text, paste0("Using ([0-9]*) MPI processes"))
+        cores <- max(as.integer(m[1,2]))
+    } else {
+        passed <- FALSE
+        note <- "no cores info"
+    }
+    text <- system(paste0("grep -F '(Segmentation fault)' ", filename), intern = TRUE)
+    if(length(text)>0L) {
+        passed <- FALSE
+        note <- text[1]
+    }
+    
+    data.frame(
+        config=config,sys=sys, cores=cores,
+        passed=passed, speed_mean=speed_mean, speed_sd=speed_sd,max_step=max_step, note=note,
+        filename=filename)
+}
+process_many_gromacs_out <- function(pathname, sys, config, id=1L) {
+    results <- NULL
+
+
+    path2 <- list.dirs(path=pathname, full.names = F, recursive = F)
+    path2 <- path2[grepl("N_",path2, perl = T)]
+
+    for(m_path2 in path2) {
+        path3 <- list.dirs(path=file.path(pathname,m_path2), full.names = F, recursive = F)
+
+        path3 <- path3[grepl("[0-9]+",path3, perl = T)]
+
+        for(m_path3 in path3) {
+            path4 <- file.path(pathname,m_path2,m_path3)
+            m_path4 <- file.path(path4,"out.log")
+
+
+            if(file.exists(m_path4)) {
+                cat(paste0("Processing: ", path4, "\n"))
+                df <- process_gromacs_output(m_path4,config,sys)
+                if(!is.null(df)) {
+                    results<-rbind(
+                        results,df
+                    )
+                }
+
+            } else {
+                print("can not do",m_path4)
+            }
+            id <- id + 1L
+        }
+    }
+
+    results
+}
+```
+
+```{r}
+gromacs <- rbind(
+    process_many_gromacs_out(
+    "/home/nikolays/xdmod_wsp/appker_ookami/ookami/data/appsout/gromacs/2020-11-30/run_mem_2",
+    "mem","Ookami, gcc,openmpi"),
+    process_many_gromacs_out(
+    "/home/nikolays/xdmod_wsp/appker_ookami/ookami/data/appsout/gromacs/2020-11-30/run_rib_2",
+    "rib","Ookami, gcc,openmpi"),
+    process_many_gromacs_out(
+    "/home/nikolays/xdmod_wsp/appker_ookami/ookami/data/appsout/gromacs/2020-11-30/run_pep_2",
+    "pep","Ookami, gcc,openmpi")
+)
+gromacs$nodes <- as.integer(gromacs$cores/48L)
+
+save(gromacs, file = "gromacs.Rdata")
+load(file = "gromacs.Rdata")
+```
+
+```{r}
+
+mean(gromacs$passed)
+gromacs %>% filter(gromacs$passed==FALSE)
+nrow(gromacs)
+```
+```{r}
+
+mean(gromacs$passed)
+gromacs %>% filter(gromacs$passed==FALSE)
+nrow(gromacs)
+```
+```{r results='asis', echo=FALSE, fig.width = 3, fig.height = 3}
+
+# Averaged over all MPI process
+# so report per core
+speed <- gromacs %>% filter(passed==TRUE) %>%
+        group_by(config,sys,nodes) %>%
+        summarise(average=mean(speed_mean),stdev=sd(speed_mean),.groups = "drop_last") %>%
+        ungroup()
+#dput(unique(speed$config))
+speed$sys <- factor(speed$sys, levels = c("mem","rib","pep"))
+#speed$config <- recode(speed$config,!!!LArename)
+#speed$config <- factor(speed$config,levels = config_rev_order)
+#speed$average <- speed$average
+#speed$stdev <- speed$stdev
+
+# ookami: single core peak (57.6 GFLOP/s)
+# stampede avx512 base 1.4 GHz turbo 2.0
+# https://www.intel.com/content/dam/www/public/us/en/documents/specification-updates/xeon-scalable-spec-update.pdf
+# freq*8(width)*2*(fma)*2(units)
+# stampede peak=44.8 (64 at turbo)
+
+ggplot(speed, aes(x=nodes, y=average, color=sys)) + geom_point() + geom_line() +
+  geom_errorbar(aes(ymin=average-stdev, ymax=average+stdev), width=0.05) + labs(color="") +
+  scale_x_continuous(trans='log2') +
+  scale_y_continuous(trans='log10') +
+  ylab("Simulation speed, ns/day")+
+  theme(legend.position="bottom")
+ggsave("gromacs2.png",width = 3, height = 3,dpi = 300)
+ggsave("gromacs2.svg",width = 3, height = 3,dpi = 300)
+```
+
+```{r results='asis', echo=FALSE, fig.width = 6, fig.height = 2}
+speed2 <- c(
+    "Stampede2-SKX,80.504,NA",
+    "Ookami,15.67,5.6"
+)  %>% strsplit(",") %>% do.call(rbind, .) %>%
+  data.frame() %>% setNames(c("config","average","stdev")) %>%
+    mutate(average=as.numeric(average),stdev=as.numeric(stdev))
+speed2$config <- factor(speed2$config,levels = c("Stampede2-SKX","Ookami"))
+
+ggplot(speed2, aes(x=config, y=average)) +
+        geom_bar(stat="identity", fill="royalblue", color="royalblue4") +
+        geom_errorbar(aes(ymin=average-stdev, ymax=average+stdev), width=.2)+
+        ylab("Simulation speed, ns/day")+
+        coord_flip()+
+  theme(axis.title.y=element_blank(),
+        axis.text.y = element_text(color="black",size=12))
+
+```
+
+
+```{r}
+gromacs2 <- process_many_gromacs_out(
+    "/home/nikolays/xdmod_wsp/appker_ookami/ookami/data/appsout/gromacs/2020-12-03/run_mem_3",
+    "mem","Ookami, gcc-10.2.1-git,openmpi")
+gromacs2 %>% filter(passed==FALSE)
+mean(gromacs2$passed)
+```

@@ -1,0 +1,27 @@
+#!/bin/bash
+# run gromacs for stress test
+# first argument to scipt is input which can be mem (82k atoms), rib (2M atoms) or pep (12M atoms)
+
+WORKSPACE=/lustre/projects/global/testsuite/gromacs
+INPUT=${1:mem}
+module use $WORKSPACE/modulefiles
+
+echo "Hosts: $SLURM_JOB_NODELIST"
+echo "Woring dir: $(pwd)"
+echo "Script executed on: $(hostname)"
+
+# load modules
+module load slurm gcc/10.2.0 mvapich2/2.3.4
+module load fftw/3.3.8-serial-single gromacs/2021-beta2
+module list
+
+# set hostnames
+scontrol show hostnames $SLURM_JOB_NODELIST > hostnames0
+awk '$0=$0":48"' hostnames0 > hostnames
+
+# copy input
+cp $WORKSPACE/input/$INPUT/input.tpr ./
+
+# run
+MV2_ENABLE_AFFINITY=0 mpirun -n $SLURM_NTASKS -f hostnames  gmx_mpi mdrun -nsteps -1 -ntomp 1 -v >& out.log
+

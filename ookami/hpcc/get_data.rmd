@@ -1,0 +1,103 @@
+---
+title: "R Notebook"
+author: nikolays
+date: 11/30/20
+output: html_notebook
+---
+
+
+```{r setup, include=FALSE}
+library(stringr)
+```
+
+
+```{r}
+process_hpcg_out <- function(filename) {
+    con <- file(filename, "r", blocking = FALSE)
+    text <- readLines(con)
+    close(con)
+    text <- text[grepl("=", text, fixed = T)]
+    text <- text[!grepl("==", text, fixed = T)]
+    text <- text[!grepl("##", text, fixed = T)]
+    text <- text[!grepl("=$", text, fixed = F, perl=T)]
+    text <- text[!grepl("PASSED", text, fixed = T)]
+    text <- text[!grepl("version=", text, fixed = F, perl=T)]
+    text <- text[!grepl("Release date=", text, fixed = F, perl=T)]
+    text <- text[!grepl("Performance results are most likely suboptimal", text, fixed = T)]
+    text <- text[!grepl("Final Summary::Results are valid but execution time" , text , fixed = T)]
+    text <- text[!grepl("Final Summary::Official results execution time (sec) must be at least" , text , fixed = T)]
+
+    level <- 0
+    for(i in grep("Multigrid Information::Coarse Grids", text, fixed = T)) {
+        m <- str_match(text[i], "Multigrid Information::Coarse Grids::Grid Level=([0-9]+)")
+        if(!is.na(m[1,1])) {
+            level <- m[1,2]
+        } else {
+            text[i] <- str_replace(text[i], "Multigrid Information::Coarse Grids::",paste0("Multigrid Information::Coarse Grids::Level ",level,"::"))
+        }
+    }
+    text <- text[!grepl("Multigrid Information::Coarse Grids::Grid Level=[0-9]+" , text , perl = T)]
+
+    level <- 0
+    for(i in grep("Memory Use Information::Coarse Grids::", text, fixed = T)) {
+        m <- str_match(text[i], "Memory Use Information::Coarse Grids::Grid Level=([0-9]+)")
+        if(!is.na(m[1,1])) {
+            level <- m[1,2]
+        } else {
+            text[i] <- str_replace(text[i], "Memory Use Information::Coarse Grids::",paste0("Memory Use Information::Coarse Grids::Level ",level,"::"))
+        }
+    }
+    text <- text[!grepl("Memory Use Information::Coarse Grids::Grid Level=[0-9]+" , text , perl = T)]
+    metrics <- str_split_fixed(text,"=",n=2)
+    data.frame(metric=metrics[,1], value=metrics[,2])
+}
+process_many_hpcg_out <- function(resource, config, pathname, id=1L) {
+    results <- NULL
+
+    path1 <- list.dirs(path=pathname, full.names = F, recursive = F)
+    path1 <- path1[grepl("run",path1, perl = T)]
+    for(m_path1 in path1) {
+        path2 <- list.dirs(path=file.path(pathname,m_path1), full.names = F, recursive = F)
+        path2 <- path2[grepl("N_",path2, perl = T)]
+
+        for(m_path2 in path2) {
+            path3 <- list.dirs(path=file.path(pathname,m_path1,m_path2), full.names = F, recursive = F)
+            path3 <- path3[grepl("[0-9]+",path3, perl = T)]
+            for(m_path3 in path3) {
+                path4 <- file.path(pathname,m_path1,m_path2,m_path3,"appstdout")
+                if(file.exists(path4)) {
+                    df <- process_hpcg_out(path4)
+                    if(!is.null(df) & nrow(df)>5) {
+                        results<-rbind(
+                            results,
+                            data.frame(
+                                resource="ookami",
+                                config="gcc_openmpi",
+                                id=id,
+                                metric=df$metric,
+                                value=df$value
+                            )
+                        )
+                    }
+
+                }
+                id <- id + 1L
+            }
+        }
+    }
+
+    results
+}
+```
+
+```{r}
+pathname <- "/home/nikolays/xdmod_wsp/appker_ookami/ookami/data/appsout/hpcg/2020-11-27/gcc_openmpi/run1/N_2/1/appstdout"
+
+results <- rbind(
+    process_name_hpcg_out("ookami", "gcc_openmpi",
+                          "/home/nikolays/xdmod_wsp/appker_ookami/ookami/data/appsout/hpcg/2020-11-27/gcc_openmpi"),
+    process_name_hpcg_out("ookami", "gcc_mvapich2",
+                          "/home/nikolays/xdmod_wsp/appker_ookami/ookami/data/appsout/hpcg/2020-11-27/gcc_mvapich2")
+)
+
+```
