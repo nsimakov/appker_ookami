@@ -1,0 +1,204 @@
+---
+title: "R Notebook"
+author: nikolays
+date: 11/30/20
+output: html_notebook
+---
+
+
+```{r setup, include=FALSE}
+library(data.table)
+library(XML)
+#library(DBI)
+library(dplyr)
+library(stringr)
+library(tidyr)
+library(ggplot2)
+```
+
+
+```{r}
+process_mdtest_out <- function(pathname) {
+    pathname2 <- file.path(pathname,"jobfiles")
+    if(!file.exists(file.path(pathname2,"appstdout"))) {
+        return(NULL)
+    } else {
+        con <- file(file.path(pathname2,"appstdout"), "r", blocking = FALSE)
+        text <- readLines(con)
+        close(con)
+        if(sum(grepl("finished at",text,fixed = T))<4) {
+            return(NULL)
+        }
+    }
+    cwd <- getwd()
+    setwd(pathname2)
+
+
+
+    system(
+        "PYTHONPATH=/home/nikolays/xdmod_wsp/akrr python3 /home/nikolays/xdmod_wsp/akrr/akrr/parsers/mdtest_parser.py ./ ./result.xml",
+        ignore.stderr = T, ignore.stdout = T)
+
+
+    resultpath <- file.path(pathname2, "result.xml")
+
+    xml_doc <- xmlParse(file = resultpath)
+    params <- xmlToDataFrame(nodes = getNodeSet(xml_doc, "//body/performance/benchmark/parameters/parameter"))
+    params$metric_type <- "parameter"
+    stats <- xmlToDataFrame(nodes = getNodeSet(xml_doc, "//body/performance/benchmark/statistics/statistic"))
+    stats$metric_type <- "statistic"
+
+    params$units <- NA
+    result <- rbind(params,stats)
+    result <- result %>% rename(metric=ID) %>% filter(metric !="App:Version")
+    result$nodes <- as.integer(result[result$metric=="Nodes","value"])
+    result$cores <- as.integer(result[result$metric=="Tasks","value"])
+    result <- filter(result, !(metric %in% c("Nodes","Tasks")))
+    
+    result <- relocate(result,nodes,cores)
+
+    result$value <- as.numeric(result$value)
+    result <- result %>% filter(!is.na(result$value))
+    result$filename <- pathname2
+
+    setwd(cwd)
+
+    result
+}
+
+process_many_mdtest_out <- function(config, pathname, id=1L) {
+    results <- NULL
+
+    path1 <- list.dirs(path=pathname, full.names = F, recursive = F)
+    for(m_path1 in path1) {
+        path2 <- list.dirs(path=file.path(pathname,m_path1), full.names = F, recursive = F)
+
+        for(m_path2 in path2) {
+            path3 <- list.dirs(path=file.path(pathname,m_path1,m_path2), full.names = F, recursive = F)
+            for(m_path3 in path3) {
+                path4 <- file.path(pathname,m_path1,m_path2,m_path3)
+                if(file.exists(file.path(path4,"jobfiles","appstdout"))) {
+                    cat(paste0("Processing: ", path4, "\n"))
+                    df <- process_mdtest_out(path4)
+                    if(!is.null(df) && nrow(df)>5) {
+                        results<-rbind(
+                            results,
+                            cbind(data.frame(
+                                config=config,
+                                id=id
+                            ),df)
+                        )
+                    }
+
+                }
+                id <- id + 1L
+            }
+        }
+    }
+
+    results
+}
+```
+
+```{r}
+#pathname <- "/home/nikolays/xdmod_wsp/appker_ookami/ookami/ior/Ookami-Cray/mdtest/2020/12/2020.12.02.04.19.18.894271"
+#df <- process_ior_out("/home/nikolays/xdmod_wsp/appker_ookami/ookami/ior/Ookami-Cray/ior/2020/12/2020.12.02.04.08.23.105788")
+#df <- process_ior_out("/home/nikolays/xdmod_wsp/appker_ookami/ookami/ior/Ookami-Cray/ior/2020/12/2020.12.02.13.16.13.361534")
+#df
+mdtest <- process_many_mdtest_out("Ookami, Cray","/home/nikolays/xdmod_wsp/appker_ookami/ookami/ior/Ookami-Cray/mdtest")
+
+mdtest %>% filter(metric_type=="statistic")
+```
+
+```{r}
+mdtest1 <- mdtest %>% filter(metric_type=="statistic" & nodes==1 & metric!="Wall Clock Time") %>% group_by(metric) %>%
+    summarise(average=mean(value),stdev=sd(value),n=n()) %>% ungroup()
+
+m <- str_match(mdtest1$metric,"([A-Za-z ]*) \\(([A-Za-z ]*)\\)")
+mdtest1$metric <- m[,2]
+mdtest1$mode <- m[,3]
+mdtest1 <- relocate(mdtest1,metric,mode)
+mdtest1 %>% filter(mode=="single tree directory per process") %>% select(-mode) %>%
+    mutate(average=round(average,0)) %>%
+    knitr::kable(format = "pipe")
+```
+
+
+
+
+
+```{r}
+m_ior_stat %>% filter(API=="POSIX" & metric=="IOPS" & access_pattern=="N-to-N")
+#m_ior_stat %>% filter(API=="POSIX" & metric=="IOPS")
+#m_ior_stat$access_pattern
+```
+
+```{r}
+m_ior_stat2 <- m_ior_stat %>% filter(API=="POSIX" & metric=="Aggregate Throughput" & access_pattern=="N-to-N") %>%
+    ungroup() %>%
+    mutate(sval=paste0(round(average,1),"+-",round(stdev,1)," ",units," (n=",n,")")) %>%
+    select(-average,-stdev,-n,-units, -API,-col_ind,-metric,-access_pattern) %>%
+    spread(access,sval)
+knitr::kable(m_ior_stat2,format = "pipe")
+```
+
+```{r results='asis', echo=FALSE, fig.width = 5, fig.height = 3.5}
+m_ior_stat2 <- m_ior_stat %>% filter(API=="POSIX" & metric=="Aggregate Throughput" & access_pattern=="N-to-N")
+m_ior_stat2$nodes <- factor(m_ior_stat2$nodes,levels = c(8,4,2,1))
+m_ior_stat2$label <- round(m_ior_stat2$average,1)
+#m_ior_stat2
+ggplot(m_ior_stat2,aes(x=nodes,y=average, fill=access)) +
+        geom_bar(stat="identity", position=position_dodge()) +
+        geom_errorbar(aes(ymin=average-stdev, ymax=average+stdev), width=.2, position=position_dodge(width=0.8))+
+        geom_text(aes(label=label),hjust=-0.5, vjust=0.5, position=position_dodge(width=0.8),size=5)+
+        ylab("Bandwidth, GB/s")+
+        coord_flip()+ ylim(0,50)+
+  theme(axis.title.y=element_text(color="black",size=14),
+        axis.text.y = element_text(color="black",size=12),
+        axis.title.x=element_text(color="black",size=14),
+        axis.text.x = element_text(color="black",size=12),
+        legend.position="bottom",
+        legend.title = element_blank(),
+        legend.text = element_text(size=14))
+```
+
+
+```{r}
+m_ior_stat2 <- m_ior_stat %>% filter(API=="POSIX" & metric=="IOPS" & access_pattern=="N-to-N") %>%
+    ungroup() %>%
+    mutate(sval=paste0(round(average,1),"+-",round(stdev,1)," ",units," (n=",n,")")) %>%
+    select(-average,-stdev,-n,-units, -API,-col_ind,-metric,-access_pattern) %>%
+    spread(access,sval)
+knitr::kable(m_ior_stat2,format = "pipe")
+```
+
+
+```{r}
+m_ior_stat2 <- m_ior_stat %>% filter(API=="POSIX" & metric=="Aggregate Throughput" & access_pattern=="N-to-1") %>%
+    ungroup() %>%
+    mutate(sval=paste0(round(average,1),"+-",round(stdev,1)," ",units," (n=",n,")")) %>%
+    select(-average,-stdev,-n,-units, -API,-col_ind,-metric,-access_pattern) %>%
+    spread(access,sval)
+knitr::kable(m_ior_stat2,format = "pipe")
+```
+
+
+```{r}
+m_ior_stat2 <- m_ior_stat %>% filter(API=="POSIX" & metric=="Aggregate Throughput" & access_pattern=="N-to-N") %>%
+    ungroup() %>%
+    mutate(sval=paste0(round(average,1),"+-",round(stdev,1)," ",units," (n=",n,")")) %>%
+    select(-average,-stdev,-n,-units, -API,-col_ind,-metric,-access_pattern) %>%
+    spread(access,sval)
+knitr::kable(m_ior_stat2,format = "pipe")
+```
+
+
+```{r}
+m_ior_stat2 <- m_ior_stat %>% filter(nodes==1 & metric=="Aggregate Throughput") %>%
+    ungroup() %>%
+    mutate(sval=paste0(round(average,1))) %>%
+    select(-average,-stdev,-n,-units,-metric,-nodes) %>%
+    spread(access,sval)
+knitr::kable(m_ior_stat2,format = "pipe")
+m_ior_stat2
+```
