@@ -1,0 +1,156 @@
+title: "Convert Raw Data into R data tables"
+author: nikolays
+date: 7/28/20
+output:
+  html_notebook:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+```{r}
+library(data.table)
+library(XML)
+library(DBI)
+library(dplyr)
+# read xml from file
+read_results_xml <- function(results_dir_path, exe_type="std", problem_size="akstd", nruns=20L, results_file_prefix="result_") {
+    results <- NULL
+    for(i in seq(1,nruns)) {
+        resultpath <- file.path(results_dir_path, paste0(results_file_prefix, i, ".xml"))
+
+        xml_doc <- xmlParse(file = resultpath)
+        params <- xmlToDataFrame(nodes = getNodeSet(xml_doc, "//body/performance/benchmark/parameters/parameter"))
+        params$metric_type <- "parameter"
+        stats <- xmlToDataFrame(nodes = getNodeSet(xml_doc, "//body/performance/benchmark/statistics/statistic"))
+        stats$metric_type <- "statistic"
+
+        result <- rbind(params,stats)
+        result$run_id <- i
+        results <- rbind(results,result)
+    }
+    results$exe_type <- exe_type
+    results$problem_size <- problem_size
+    results$metric <- results$ID
+    results[c("exe_type", "problem_size", "run_id", "metric_type", "metric", "value", "units")]
+}
+
+# read xml from db
+read_results_xml_from_db <- function(con, akrr_resource, app, nodes, start_date, end_date, resource=NULL, problem_size="akstd", exe_type="na", nruns=20L, ppn=48L) {
+    results <- NULL
+    if(is.null(resource)) {
+      resource <- akrr_resource
+    }
+    
+    for(n in nodes) {
+      q <- paste0("SELECT instance_id,collected,resource,reporter,CONVERT(REPLACE(reporternickname, CONCAT(reporter,'.'),''),INTEGER) as nodes,body
+      FROM akrr_xdmod_instanceinfo
+      WHERE resource='", akrr_resource,"' AND status=1 AND reporternickname='",app,".", n,"' AND collected>='",start_date,"' AND collected<='", end_date,"'
+      ORDER BY instance_id DESC
+      LIMIT ", nruns,";
+      ")
+      cat(q)
+      rs <- dbSendQuery(con, q)
+      raw <- dbFetch(rs)
+      dbClearResult(rs)
+      
+  print(nrow(raw))
+      if(nrow(raw)>0) {
+        for(i in seq(1,nrow(raw))) {
+            xml_doc <- xmlParse(raw$body[[i]])
+            params <- xmlToDataFrame(nodes = getNodeSet(xml_doc, "//parameters/parameter"))
+            params$metric_type <- "parameter"
+            stats <- xmlToDataFrame(nodes = getNodeSet(xml_doc, "//statistics/statistic"))
+            stats$metric_type <- "statistic"
+    
+            result <- bind_rows(params,stats)
+            result$id <- raw$instance_id[[i]]
+            result$nodes <-raw$nodes[[i]]
+            results <- bind_rows(results,result)
+        }
+        results$exe_type <- exe_type
+        results$problem_size <- problem_size
+        results$metric <- results$ID
+        results$resource <- resource
+        results$cores <- ppn*results$nodes
+      }
+    }
+    results[c("resource", "exe_type", "problem_size", "nodes", "cores", "id", "metric_type", "metric", "value", "units")]
+}
+con <- dbConnect(RMySQL::MySQL(), group = "ookami", dbname="mod_akrr")
+con_xsede <- dbConnect(RMySQL::MySQL(), group = "appkernel", dbname="mod_akrr")
+
+hpcc_results <- NULL
+```
+
+
+```{r}
+# hpcc
+# Ookami
+results <- read_results_xml_from_db(con, "Ookami-Fujitsu", "hpcc", c(1,2,4,8), "2020-10-01", "2021-07-15",
+                                    resource="Ookami",
+                                    exe_type="Fujitsu",
+                                    problem_size="akstd", ppn=48L, nruns=20L)
+hpcc_results <- rbind(hpcc_results,results)
+results <- read_results_xml_from_db(con, "Ookami-Cray", "hpcc", c(1,2,4,8),  "2020-10-01", "2021-07-15",
+                                    resource="Ookami",
+                                    exe_type="Cray",
+                                    problem_size="akstd", ppn=48L, nruns=20L)
+hpcc_results <- rbind(hpcc_results,results)
+results <- read_results_xml_from_db(con, "Ookami-ARM", "hpcc", c(1,2,4,8),  "2020-10-01", "2021-07-15",
+                                    resource="Ookami",
+                                    exe_type="ARM",
+                                    problem_size="akstd", ppn=48L, nruns=20L)
+hpcc_results <- rbind(hpcc_results,results)
+results <- read_results_xml_from_db(con, "Ookami-OSS", "hpcc", c(1,2,4,8),  "2020-10-01", "2021-07-15",
+                                    resource="Ookami",
+                                    exe_type="OSS",
+                                    problem_size="akstd", ppn=48L, nruns=20L)
+hpcc_results <- rbind(hpcc_results,results)
+results <- read_results_xml_from_db(con, "Ookami-OSSFE", "hpcc", c(1,2,4,8),  "2020-10-01", "2021-07-15",
+                                    resource="Ookami",
+                                    exe_type="OSSFE",
+                                    problem_size="akstd", ppn=48L, nruns=20L)
+hpcc_results <- rbind(hpcc_results,results)
+```
+
+
+```{r}
+# hpcc
+# xsede
+results <- read_results_xml_from_db(con_xsede, "stampede2-knl", "hpcc", c(1,2,4,8), "2020-01-01", "2020-07-15",
+                                    resource="Stampede2-KNL",
+                                    exe_type="intel",
+                                    problem_size="akstd", ppn=68L, nruns=40L)
+hpcc_results <- rbind(hpcc_results,results)
+results <- read_results_xml_from_db(con_xsede, "stampede2-skx", "hpcc", c(1,2,4,8),  "2020-10-01", "2021-07-15",
+                                    resource="Stampede2-SKX",
+                                    exe_type="intel",
+                                    problem_size="akstd", ppn=48L, nruns=40L)
+hpcc_results <- rbind(hpcc_results,results)
+results <- read_results_xml_from_db(con_xsede, "Bridges-2", "hpcc", c(1,2,4),  "2020-10-01", "2021-07-15",
+                                    resource="Bridges-2",
+                                    exe_type="OSS",
+                                    problem_size="akstd", ppn=128L, nruns=40L)
+hpcc_results <- rbind(hpcc_results,results)
+results <- read_results_xml_from_db(con_xsede, "Expanse", "hpcc", c(1,2,4),  "2020-10-01", "2021-07-15",
+                                    resource="Expanse",
+                                    exe_type="OSS",
+                                    problem_size="akstd", ppn=128L, nruns=40L)
+hpcc_results <- rbind(hpcc_results,results)
+```
+
+
+
+```{r}
+write.csv(hpcc_results, file="hpcc2.csv")
+```
+
+
+```{r rows.print=50}
+s_dgemm <- "Average Double-Precision General Matrix Multiplication (DGEMM) Floating-Point Performance"
+#results %>% filter(metric==s_dgemm) %>% mutate(value=as.numeric(value)) %>% group_by(exe_type,nodes) %>%
+#  summarise(DGEMM=mean(value),N=n())
+hpcc_results %>% filter(metric==s_dgemm) %>% mutate(value=as.numeric(value)) %>% group_by(resource,exe_type,nodes) %>%
+  summarise(DGEMM=mean(value),N=n())
+```

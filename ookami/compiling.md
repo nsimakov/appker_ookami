@@ -188,7 +188,7 @@ cmake .. -DGMX_FFT_LIBRARY=mkl -DREGRESSIONTEST_DOWNLOAD=ON \
 
 
 idev -m 120 -N 1 -n 48 -p skx-dev
-
+/p
 module load gcc/9.1.0 impi/19.0.7 mkl/19.1.1
 cmake .. -DGMX_FFT_LIBRARY=mkl -DREGRESSIONTEST_DOWNLOAD=ON   -DCMAKE_C_COMPILER=mpicc -DCMAKE_CXX_COMPILER=mpicxx -DGMX_MPI=on   -DGMX_SIMD=AVX_512 -DBUILD_SHARED_LIBS=off -DGMX_PYTHON_PACKAGE=off   -DGMX_INSTALL_NBLIB_API=OFF -DGMXAPI=OFF   -DCMAKE_INSTALL_PREFIX=/work/01482/xdtas/appker/stampede2-skx/execs/gromacs-2021-beta1-b2
 ``` 
@@ -221,3 +221,16 @@ cmake .. -DGMX_FFT_LIBRARY=mkl -DREGRESSIONTEST_DOWNLOAD=ON   -DCMAKE_C_COMPILER
 module load gcc/10.2.0 mvapich2/2.3.4
 cd build7-serial
 ```
+
+
+# 2021-06-16
+
+
+## OSS
+gcc/10.3.0
+
+
+# GROMACS
+
+
+
