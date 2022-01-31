@@ -1,5 +1,203 @@
 Based on stable open source libraries
+# Initial: gcc-11.2.0 and openmpi-4.1.2
+```bash
+cd /lustre/home/xdmod/appker/Ookami-OSS/execs/soft/gcc-11.2.0/openmpi-gcc11-4.1.2
+module load gcc/11.2.0 openmpi/gcc11/4.1.2
+```
 
+
+## OpenBlas 0.3.19
+* added basic support and cputype detection for Fujitsu A64FX
+* added a generic ARMV8SVE target
+* added SVE-enabled SGEMM and DGEMM kernels for ARMV8SVE and A64FX
+
+```bash
+wget https://github.com/xianyi/OpenBLAS/releases/download/v0.3.19/OpenBLAS-0.3.19.tar.gz
+tar -xf OpenBLAS-0.3.19.tar.gz 
+cd OpenBLAS-0.3.19
+```
+
+ARMV8SVE is already Makefile.arm64, do we need -msve-vector-bits=512 where?
+
+
+build and installl
+```bash
+make BINARY=64 CC=`which gcc` \
+FC=`which gfortran` HOSTCC=`which gcc` USE_THREAD=0 -j
+
+make install PREFIX=/lustre/home/xdmod/appker/Ookami-OSS/execs/soft/gcc-11.2.0/openmpi-gcc11-4.1.2/OpenBLAS-0.3.19
+
+#OpenBLAS-0.3.19
+export OPENBLAS_ROOT=/lustre/home/xdmod/appker/Ookami-OSS/execs/soft/gcc-11.2.0/openmpi-gcc11-4.1.2/OpenBLAS-0.3.19
+export CMAKE_INCLUDE_PATH=${OPENBLAS_ROOT}/include:${CMAKE_INCLUDE_PATH}
+export INCLUDE_PATH=${OPENBLAS_ROOT}/include:${INCLUDE_PATH}
+export CMAKE_LIBRARY_PATH=${OPENBLAS_ROOT}/lib:${CMAKE_LIBRARY_PATH}
+export LD_LIBRARY_PATH=${OPENBLAS_ROOT}/lib:${LD_LIBRARY_PATH}
+export LIBRARY_PATH=${OPENBLAS_ROOT}/lib:${LIBRARY_PATH}
+export PKG_CONFIG_PATH=${OPENBLAS_ROOT}/lib/pkgconfig:${PKG_CONFIG_PATH}
+
+```
+
+```
+ OpenBLAS build complete. (BLAS CBLAS LAPACK LAPACKE)
+
+  OS               ... Linux             
+  Architecture     ... arm64               
+  BINARY           ... 64bit                 
+  C compiler       ... GCC  (cmd & version : gcc (GCC) 11.2.0)
+  Fortran compiler ... GFORTRAN  (cmd & version : GNU Fortran (GCC) 11.2.0)
+  Library Name     ... libopenblas_a64fx-r0.3.19.a (Single-threading)  
+```
+
+
+## fftw-3.3.10
+
+```bash
+cd /lustre/home/xdmod/appker/Ookami-OSS/execs/soft/gcc-11.2.0/openmpi-gcc11-4.1.2/build
+wget https://www.fftw.org/fftw-3.3.10.tar.gz
+tar -xf fftw-3.3.10.tar.gz
+cd fftw-3.3.10/
+mkdir bld
+cd bld
+../configure --prefix=/lustre/home/xdmod/appker/Ookami-OSS/execs/soft/gcc-11.2.0/openmpi-gcc11-4.1.2/fftw-3.3.10  \
+    --enable-mpi --disable-openmp --disable-threads \
+    CFLAGS="-O3 -fomit-frame-pointer -mtune=native -mcpu=native -march=armv8.2-a+sve -msve-vector-bits=512 -fstrict-aliasing -fno-schedule-insns" \
+    FFLAGS="-O3 -fomit-frame-pointer -mtune=native -mcpu=native -march=armv8.2-a+sve -msve-vector-bits=512 -fstrict-aliasing -fno-schedule-insns" ;\
+;\
+make -j;\
+make check;\
+make -j install;\
+rm -rf *;\
+../configure --prefix=/lustre/home/xdmod/appker/Ookami-OSS/execs/soft/gcc-11.2.0/openmpi-gcc11-4.1.2/fftw-3.3.10  \
+    --enable-mpi --disable-openmp --disable-threads \
+    CFLAGS="-O3 -fomit-frame-pointer -mtune=native -mcpu=native -march=armv8.2-a+sve -msve-vector-bits=512 -fstrict-aliasing -fno-schedule-insns" \
+    FFLAGS="-O3 -fomit-frame-pointer -mtune=native -mcpu=native -march=armv8.2-a+sve -msve-vector-bits=512 -fstrict-aliasing -fno-schedule-insns" --enable-single --program-suffix=f;\
+make -j;\
+make check;\
+make -j install;\
+rm -rf *;\
+../configure --prefix=/lustre/home/xdmod/appker/Ookami-OSS/execs/soft/gcc-11.2.0/openmpi-gcc11-4.1.2/fftw-3.3.10  \
+    --enable-mpi --disable-openmp --disable-threads --enable-single \
+    CFLAGS="-O3 -fomit-frame-pointer -mtune=native -mcpu=native -march=armv8.2-a+sve -msve-vector-bits=512 -fstrict-aliasing -fno-schedule-insns" \
+    FFLAGS="-O3 -fomit-frame-pointer -mtune=native -mcpu=native -march=armv8.2-a+sve -msve-vector-bits=512 -fstrict-aliasing -fno-schedule-insns" ;\
+;\
+make -j;\
+make check;\
+make -j install;\
+rm -rf *;\
+../configure --prefix=/lustre/home/xdmod/appker/Ookami-OSS/execs/soft/gcc-11.2.0/openmpi-gcc11-4.1.2/fftw-3.3.10  \
+    --enable-mpi --disable-openmp --disable-threads --enable-single \
+    CFLAGS="-O3 -fomit-frame-pointer -mtune=native -mcpu=native -march=armv8.2-a+sve -msve-vector-bits=512 -fstrict-aliasing -fno-schedule-insns" \
+    FFLAGS="-O3 -fomit-frame-pointer -mtune=native -mcpu=native -march=armv8.2-a+sve -msve-vector-bits=512 -fstrict-aliasing -fno-schedule-insns" --enable-single --program-suffix=f;\
+make -j;\
+make check;\
+make -j install;\
+rm -rf *;\
+
+echo "Done"
+
+
+# export vars for reuse
+export FFTW_ROOT=/lustre/home/xdmod/appker/Ookami-OSS/execs/soft/gcc-11.2.0/openmpi-gcc11-4.1.2/fftw-3.3.10
+export FFTW_DIR=${FFTW_ROOT}/lib
+export FFTW_INC=${FFTW_ROOT}/include
+export LD_LIBRARY_PATH=${FFTW_DIR}:${LD_LIBRARY_PATH}
+
+```
+## gromacs-2021.4
+```bash
+module load cmake/3.19.0 gcc/11.2.0 openmpi/gcc11/4.1.2
+
+
+cd /lustre/home/xdmod/appker/Ookami-OSS/execs/soft/gcc-11.2.0/openmpi-gcc11-4.1.2/build
+wget https://ftp.gromacs.org/gromacs/gromacs-2021.4.tar.gz
+tar -xf gromacs-2021.4.tar.gz
+cd gromacs-2021.4
+mkdir bld
+cd bld
+
+
+# fftw
+export FFTW_ROOT=/lustre/home/xdmod/appker/Ookami-OSS/execs/soft/gcc-11.2.0/openmpi-gcc11-4.1.2/fftw-3.3.10
+export FFTW_DIR=${FFTW_ROOT}/lib
+export FFTW_INC=${FFTW_ROOT}/include
+export LD_LIBRARY_PATH=${FFTW_DIR}:${LD_LIBRARY_PATH}
+
+#OpenBLAS
+export OPENBLAS_ROOT=/lustre/home/xdmod/appker/Ookami-OSS/execs/soft/gcc-11.2.0/openmpi-gcc11-4.1.2/OpenBLAS-0.3.19
+export CMAKE_INCLUDE_PATH=${OPENBLAS_ROOT}/include:${CMAKE_INCLUDE_PATH}
+export INCLUDE_PATH=${OPENBLAS_ROOT}/include:${INCLUDE_PATH}
+export CMAKE_LIBRARY_PATH=${OPENBLAS_ROOT}/lib:${CMAKE_LIBRARY_PATH}
+export LD_LIBRARY_PATH=${OPENBLAS_ROOT}/lib:${LD_LIBRARY_PATH}
+export LIBRARY_PATH=${OPENBLAS_ROOT}/lib:${LIBRARY_PATH}
+export PKG_CONFIG_PATH=${OPENBLAS_ROOT}/lib/pkgconfig:${PKG_CONFIG_PATH}
+
+cmake .. -DGMX_FFT_LIBRARY=fftw3 -DREGRESSIONTEST_DOWNLOAD=ON \
+  -DGMX_PHYSICAL_VALIDATION=OFF \
+  -DCMAKE_C_COMPILER=mpicc -DCMAKE_CXX_COMPILER=mpicxx \
+  -DGMX_MPI=ON -DGMX_SIMD=ARM_SVE -DBUILD_SHARED_LIBS=OFF \
+  -DGMX_PYTHON_PACKAGE=OFF   -DGMX_INSTALL_NBLIB_API=OFF -DGMXAPI=OFF \
+  -DCMAKE_C_FLAGS="-O3 -mtune=native -mcpu=native -march=armv8.2-a+sve -msve-vector-bits=512" \
+  -DCMAKE_CXX_FLAGS="-O3 -mtune=native -mcpu=native -march=armv8.2-a+sve -msve-vector-bits=512" \
+  -DCMAKE_INSTALL_PREFIX=/lustre/home/xdmod/appker/Ookami-OSS/execs/soft/gcc-11.2.0/openmpi-gcc11-4.1.2/gromacs-2021.4
+make -j 32
+make -j 32 install
+
+```
+## hpcc
+
+```bash
+
+cd /lustre/home/xdmod/appker/Ookami-OSS/execs/soft/gcc-11.2.0/openmpi-gcc11-4.1.2
+rsync -a ../../gcc-10.3.0/hpcc ./
+cd hpcc
+module load gcc/11.2.0 openmpi/gcc11/4.1.2
+# edit hpl/Make.gcc_openblas_fftw_openmpi
+make arch=gcc_openblas_fftw_openmpi -j 32
+```
+## nwchem
+```bash
+cd /lustre/home/xdmod/appker/Ookami-OSS/execs/soft/gcc-11.2.0/openmpi-gcc11-4.1.2
+wget https://github.com/nwchemgit/nwchem/releases/download/v7.0.2-release/nwchem-7.0.2-release.revision-b9985dfa-src.2020-10-12.tar.gz
+tar -xf nwchem-7.0.2-release.revision-b9985dfa-src.2020-10-12.tar.gz
+cd nwchem-7.0.2
+export NWCHEM_TOP=/lustre/home/xdmod/appker/Ookami-OSS/execs/soft/gcc-11.2.0/openmpi-gcc11-4.1.2/nwchem-7.0.2
+export NWCHEM_TARGET=LINUX64
+export ARMCI_NETWORK=MPI-PR
+export USE_MPI=y
+export USE_MPIF=y
+export USE_MPIF4=y
+export NWCHEM_MODULES=all
+export USE_NOFSCHECK=TRUE
+export USE_NOIO=TRUE
+export USE_64TO32=y 
+export BLAS_SIZE=4
+export BLASOPT="-L/lustre/home/xdmod/appker/Ookami-OSS/execs/soft/gcc-11.2.0/openmpi-gcc11-4.1.2/OpenBLAS-0.3.19/lib -lopenblas"
+export LAPACK_LIB="-L/lustre/home/xdmod/appker/Ookami-OSS/execs/soft/gcc-11.2.0/openmpi-gcc11-4.1.2/OpenBLAS-0.3.19/lib -lopenblas"
+
+cd src
+make clean
+make nwchem_config 
+make 64_to_32
+make -j
+```
+## imb
+
+```bash
+
+cd /lustre/home/xdmod/appker/Ookami-OSS/execs/soft/gcc-11.2.0/openmpi-gcc11-4.1.2
+rsync -a ../../gcc-10.3.0/mpi-benchmarks-IMB-v2021.2 ./
+make clean\
+cd /lustre/home/xdmod/appker/Ookami-OSS/execs/soft/gcc-11.2.0/openmpi-gcc11-4.1.2/mpi-benchmarks-IMB-v2021.2
+
+module load gcc/11.2.0 openmpi/gcc11/4.1.2
+
+export CC=mpicc
+export CXX=mpicxx
+make IMB-MPI1
+make IMB-EXT
+
+```
 # Initial: gcc-10.2.0 and openmpi-4.0.5
 
 ```bash
